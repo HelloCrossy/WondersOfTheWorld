@@ -1,6 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
-
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -13,11 +12,8 @@ import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 import javax.annotation.Nullable;
 
 public class ServalEntity extends ZawaLandEntity {
-    private final World world;
-
-    public ServalEntity (EntityType<? extends ZawaBaseEntity> type, World world) {
+    public ServalEntity(EntityType<? extends ZawaBaseEntity> type, World world) {
         super(type, world);
-        this.world = world;
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
