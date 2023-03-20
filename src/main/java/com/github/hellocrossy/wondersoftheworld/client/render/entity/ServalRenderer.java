@@ -13,13 +13,11 @@ public class ServalRenderer extends ZawaMobRenderer<ServalEntity, ServalModel> {
     private final ServalModel adultModel;
     private final ServalModel babyModel;
 
-
     public ServalRenderer(EntityRendererManager rendererManager) {
         super(rendererManager, new ServalModel.Adult(), 1.0F);
         adultModel = model;
         babyModel = new ServalModel.Child();
     }
-
 
     @Override
     public void render(ServalEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {

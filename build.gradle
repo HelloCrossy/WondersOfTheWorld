@@ -57,7 +57,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                zawaessentials {
+                wondersoftheworld {
                     source sourceSets.main
                 }
             }
