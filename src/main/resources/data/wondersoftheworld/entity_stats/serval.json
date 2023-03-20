@@ -3,7 +3,7 @@
   "kibble": "zawa:carnivore_kibble",
   "size": "medium",
   "fertility": "low",
-  "breeding_item": "minecraft:raw_porkchop",
+  "breeding_item": "minecraft:porkchop",
   "litter_size": {
     "min": 2,
     "max": 3

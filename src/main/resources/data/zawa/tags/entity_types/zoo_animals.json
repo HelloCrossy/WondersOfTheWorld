@@ -1,20 +1,6 @@
 {
   "replace": false,
   "values": [
-    "wondersoftheworld:bongo",
-    "wondersoftheworld:discus_fish",
-    "wondersoftheworld:emu",
-    "wondersoftheworld:freshwater_angelfish",
-    "wondersoftheworld:kiwi",
-    "wondersoftheworld:lynx",
-    "wondersoftheworld:nyala",
-    "wondersoftheworld:oryx",
-    "wondersoftheworld:oscar",
-    "wondersoftheworld:saiga_antelope",
-    "wondersoftheworld:serval",
-    "wondersoftheworld:sitatunga",
-    "wondersoftheworld:takahe",
-    "wondersoftheworld:takin",
-    "wondersoftheworld:tibetan_antelope"
+    "wondersoftheworld:serval"
   ]
 }
