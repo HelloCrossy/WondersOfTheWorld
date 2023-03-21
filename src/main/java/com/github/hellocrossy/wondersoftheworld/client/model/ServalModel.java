@@ -59,11 +59,9 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
             MAIN = new ZawaModelRenderer(this, 0, 0);
             MAIN.setPos(0.0F, 24.0F, 0.0F);
 
-
             HEAD = new ZawaModelRenderer(this, 0, 0);
             HEAD.setPos(-0.55F, -0.525F, -2.125F);
             MAIN.addChild(HEAD);
-
 
             Head_r1_r1 = new ZawaModelRenderer(this, 50, 29);
             Head_r1_r1.setPos(0.55F, 0.7019F, 1.8985F);
@@ -104,7 +102,6 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
             BODY = new ZawaModelRenderer(this, 0, 0);
             BODY.setPos(-0.55F, -1.6F, 1.55F);
             MAIN.addChild(BODY);
-
 
             Neck_Lower_r7_r1 = new ZawaModelRenderer(this, 49, 35);
             Neck_Lower_r7_r1.setPos(0.55F, 4.8561F, 0.0469F);

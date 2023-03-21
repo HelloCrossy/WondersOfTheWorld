@@ -1,6 +1,7 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
+import com.github.hellocrossy.wondersoftheworld.client.render.entity.EmuRenderer;
 import com.github.hellocrossy.wondersoftheworld.client.render.entity.ServalRenderer;
 import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
 import net.minecraft.entity.Entity;
@@ -18,11 +19,19 @@ public class WOTWEntities {
 
     public static final RegistryObject<EntityType<ServalEntity>> SERVAL =
             new Builder<>(ServalEntity::new, EntityClassification.CREATURE)
-                    .attributes(ServalEntity::registerAttributes) // this is the method we created in the entity class
+                    .attributes(ServalEntity::registerAttributes)
                     .renderer(() -> ServalRenderer::new)
                     .spawn(ZawaSpawnCategory.WET_SAVANNA, 15, 1, 1)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "serval");
+
+    public static final RegistryObject<EntityType<EmuEntity>> EMU =
+            new Builder<>(EmuEntity::new, EntityClassification.CREATURE)
+                    .attributes(EmuEntity::registerAttributes)
+                    .renderer(() -> EmuRenderer::new)
+                    .spawn(ZawaSpawnCategory.DRY_GRASSLAND, 10, 1, 3)
+                    .data(entityBuilder -> entityBuilder.sized(2.0F, 2.0F).clientTrackingRange(10))
+                    .build(REGISTRAR, "emu.json");
 
     public static class Builder<T extends Entity> extends ZawaEntities.Builder<T> {
         public Builder(EntityType.IFactory<T> factory, EntityClassification category) {
