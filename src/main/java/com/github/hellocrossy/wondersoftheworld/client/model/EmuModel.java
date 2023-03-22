@@ -23,8 +23,6 @@ public abstract class EmuModel extends ZawaBaseModel<EmuEntity> {
     }
 
     public static class Adult extends EmuModel {
-
-        protected ZawaModelRenderer MAIN;
         protected ZawaModelRenderer HEAD;
         protected ZawaModelRenderer a_r1;
         protected ZawaModelRenderer c_r1;
@@ -232,8 +230,6 @@ public abstract class EmuModel extends ZawaBaseModel<EmuEntity> {
     }
 
     public static class Child extends EmuModel {
-
-        protected ZawaModelRenderer MAIN;
         protected ZawaModelRenderer HEAD;
         protected ZawaModelRenderer f_r1;
         protected ZawaModelRenderer a_r1;

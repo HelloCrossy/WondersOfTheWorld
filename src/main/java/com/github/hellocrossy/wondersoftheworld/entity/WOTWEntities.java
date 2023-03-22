@@ -31,7 +31,7 @@ public class WOTWEntities {
                     .renderer(() -> EmuRenderer::new)
                     .spawn(ZawaSpawnCategory.DRY_GRASSLAND, 10, 1, 3)
                     .data(entityBuilder -> entityBuilder.sized(2.0F, 2.0F).clientTrackingRange(10))
-                    .build(REGISTRAR, "emu.json");
+                    .build(REGISTRAR, "emu");
 
     public static class Builder<T extends Entity> extends ZawaEntities.Builder<T> {
         public Builder(EntityType.IFactory<T> factory, EntityClassification category) {

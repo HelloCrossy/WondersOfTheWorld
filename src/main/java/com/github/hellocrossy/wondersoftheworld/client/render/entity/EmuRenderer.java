@@ -30,7 +30,7 @@ public class EmuRenderer extends ZawaMobRenderer<EmuEntity, EmuModel> {
         int variantCount = entity.getTotalVariants();
         adultTextures = new ResourceLocation[variantCount];
         for (int i = 0; i < variantCount; i++)
-            adultTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/Emu/Emu_" + (i + 1) + ".png");
+            adultTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/emu/emu_" + (i + 1) + ".png");
     }
 
     @Override
@@ -38,6 +38,6 @@ public class EmuRenderer extends ZawaMobRenderer<EmuEntity, EmuModel> {
         int variantCount = entity.getTotalVariants();
         babyTextures = new ResourceLocation[variantCount];
         for (int i = 0; i < variantCount; i++)
-            babyTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/Emu/Emu_" + (i + 1) + ".png");
+            babyTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/emu/emu_" + (i + 1) + ".png");
     }
 }
