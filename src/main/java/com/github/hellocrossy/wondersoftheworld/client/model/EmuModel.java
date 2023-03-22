@@ -51,6 +51,9 @@ public abstract class EmuModel extends ZawaBaseModel<EmuEntity> {
         protected ZawaModelRenderer a_r4;
         
         public Adult() {
+            texWidth = 64;
+            texHeight = 64;
+
             MAIN = new ZawaModelRenderer(this, 0, 0);
             MAIN.setPos(-0.5F, 8.4F, -10.575F);
 
@@ -229,7 +232,7 @@ public abstract class EmuModel extends ZawaBaseModel<EmuEntity> {
         }
     }
 
-    public static class Child extends EmuModel {
+     public static class Child extends EmuModel {
         protected ZawaModelRenderer HEAD;
         protected ZawaModelRenderer f_r1;
         protected ZawaModelRenderer a_r1;
