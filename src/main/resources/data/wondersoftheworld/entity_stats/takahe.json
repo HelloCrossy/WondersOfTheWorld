@@ -12,7 +12,6 @@
   "speed": "fast",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:hanging_browse",
       "zawa:puzzle_feeder"
     ],
     "zawa:entities": [
