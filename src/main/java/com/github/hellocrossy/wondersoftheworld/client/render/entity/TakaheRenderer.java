@@ -1,9 +1,7 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
-import com.github.hellocrossy.wondersoftheworld.client.model.EmuModel;
 import com.github.hellocrossy.wondersoftheworld.client.model.TakaheModel;
-import com.github.hellocrossy.wondersoftheworld.entity.EmuEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.TakaheEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
@@ -32,7 +30,7 @@ public class TakaheRenderer extends ZawaMobRenderer<TakaheEntity, TakaheModel> {
         int variantCount = entity.getTotalVariants();
         adultTextures = new ResourceLocation[variantCount];
         for (int i = 0; i < variantCount; i++)
-            adultTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/Takahe/Takahe_" + (i + 1) + ".png");
+            adultTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/takahe/takahe_" + (i + 1) + ".png");
     }
 
     @Override
@@ -40,6 +38,6 @@ public class TakaheRenderer extends ZawaMobRenderer<TakaheEntity, TakaheModel> {
         int variantCount = entity.getTotalVariants();
         babyTextures = new ResourceLocation[variantCount];
         for (int i = 0; i < variantCount; i++)
-            babyTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/Takahe/Takahe_" + (i + 1) + ".png");
+            babyTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/takahe/takahe_" + (i + 1) + ".png");
     }
 }
