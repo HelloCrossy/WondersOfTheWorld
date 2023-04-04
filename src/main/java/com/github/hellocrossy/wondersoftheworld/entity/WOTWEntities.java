@@ -2,6 +2,7 @@ package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.render.entity.EmuRenderer;
+import com.github.hellocrossy.wondersoftheworld.client.render.entity.KiwiRenderer;
 import com.github.hellocrossy.wondersoftheworld.client.render.entity.ServalRenderer;
 import com.github.hellocrossy.wondersoftheworld.client.render.entity.TakaheRenderer;
 import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
@@ -41,6 +42,14 @@ public class WOTWEntities {
                     .spawn(ZawaSpawnCategory.DRY_GRASSLAND, 15, 1, 4)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "takahe");
+
+    public static final RegistryObject<EntityType<KiwiEntity>> KIWI =
+            new Builder<>(KiwiEntity::new, EntityClassification.CREATURE)
+                    .attributes(KiwiEntity::registerAttributes)
+                    .renderer(() -> KiwiRenderer::new)
+                    .spawn(ZawaSpawnCategory.WET_FOREST, 15, 1, 2)
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .build(REGISTRAR, "kiwi");
 
     public static class Builder<T extends Entity> extends ZawaEntities.Builder<T> {
         public Builder(EntityType.IFactory<T> factory, EntityClassification category) {

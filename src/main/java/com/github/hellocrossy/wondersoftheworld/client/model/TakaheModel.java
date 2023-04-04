@@ -18,13 +18,13 @@ public abstract class TakaheModel extends ZawaBaseModel<TakaheEntity> {
     public Iterable<ModelRenderer> parts() {
         if (this.parts == null) {
             this.parts = ImmutableList.of(MAIN);
+
         }
 
         return this.parts;
     }
 
     public static class Adult extends TakaheModel {
-        protected ZawaModelRenderer MAIN;
         protected ZawaModelRenderer HEAD;
         protected ZawaModelRenderer Head_r1;
         protected ZawaModelRenderer Beak_r1;
@@ -297,7 +297,6 @@ public abstract class TakaheModel extends ZawaBaseModel<TakaheEntity> {
     }
     public static class Child extends TakaheModel {
 
-        protected ZawaModelRenderer MAIN;
         protected ZawaModelRenderer HEAD;
         protected ZawaModelRenderer beak_r1;
         protected ZawaModelRenderer beak_r2;
@@ -324,8 +323,8 @@ public abstract class TakaheModel extends ZawaBaseModel<TakaheEntity> {
         protected ZawaModelRenderer cube_r16;
 
         public Child() {
-            texWidth = 32;
-            texHeight = 32;
+            texWidth = 64;
+            texHeight = 64;
 
             MAIN = new ZawaModelRenderer(this, 0, 0);
             MAIN.setPos(-1.3F, 11.45F, -8.125F);
