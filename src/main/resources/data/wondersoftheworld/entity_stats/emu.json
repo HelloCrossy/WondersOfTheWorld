@@ -1,19 +1,19 @@
 {
-  "temperament": "aggressive",
+  "temperament": "territorial",
   "kibble": "zawa:omnivore_kibble",
-  "size": "medium",
-  "fertility": "medium",
+  "size": "large",
+  "fertility": "high",
   "breeding_item": "zawa:brown_rat",
   "litter_size": {
-    "min": 3,
-    "max": 4
+    "min": 1,
+    "max": 6
   },
   "diet": "zawa:omnivore",
-  "speed": "fast",
+  "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:scratching_post",
-      "zawa:puzzle_feeder"
+      "zawa:sprinkler",
+      "zawa:apple_ice_treat"
     ]
   },
   "variant_count": 5
