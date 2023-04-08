@@ -23,7 +23,7 @@ public class WOTWEntities {
             new Builder<>(ServalEntity::new, EntityClassification.CREATURE)
                     .attributes(ServalEntity::registerAttributes)
                     .renderer(() -> ServalRenderer::new)
-                    .spawn(ZawaSpawnCategory.WET_SAVANNA, 15, 1, 1)
+                    .spawns(15, 1, 1, ZawaSpawnCategory.DRY_SAVANNA, ZawaSpawnCategory.WET_SAVANNA)
                     .data(entityBuilder -> entityBuilder.sized(1.5F, 1.5F).clientTrackingRange(10))
                     .build(REGISTRAR, "serval");
 
@@ -31,7 +31,7 @@ public class WOTWEntities {
             new Builder<>(EmuEntity::new, EntityClassification.CREATURE)
                     .attributes(EmuEntity::registerAttributes)
                     .renderer(() -> EmuRenderer::new)
-                    .spawn(ZawaSpawnCategory.DRY_GRASSLAND, 10, 1, 3)
+                    .spawns(10, 1, 3, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.DRY_SAVANNA,ZawaSpawnCategory.WET_SAVANNA )
                     .data(entityBuilder -> entityBuilder.sized(3.0F, 2.5F).clientTrackingRange(10))
                     .build(REGISTRAR, "emu");
 
@@ -39,7 +39,7 @@ public class WOTWEntities {
             new Builder<>(TakaheEntity::new, EntityClassification.CREATURE)
                     .attributes(TakaheEntity::registerAttributes)
                     .renderer(() -> TakaheRenderer::new)
-                    .spawn(ZawaSpawnCategory.DRY_GRASSLAND, 15, 1, 4)
+                    .spawns(5, 1, 4, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_FOREST)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "takahe");
 
@@ -47,7 +47,7 @@ public class WOTWEntities {
             new Builder<>(KiwiEntity::new, EntityClassification.CREATURE)
                     .attributes(KiwiEntity::registerAttributes)
                     .renderer(() -> KiwiRenderer::new)
-                    .spawn(ZawaSpawnCategory.WET_FOREST, 15, 1, 2)
+                    .spawn(ZawaSpawnCategory.WET_FOREST, 5, 1, 2)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "kiwi");
 
