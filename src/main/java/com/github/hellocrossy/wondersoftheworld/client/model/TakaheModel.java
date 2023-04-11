@@ -323,8 +323,8 @@ public abstract class TakaheModel extends ZawaBaseModel<TakaheEntity> {
         protected ZawaModelRenderer cube_r16;
 
         public Child() {
-            texWidth = 64;
-            texHeight = 64;
+            texWidth = 32;
+            texHeight = 32;
 
             MAIN = new ZawaModelRenderer(this, 0, 0);
             MAIN.setPos(-1.3F, 11.45F, -8.125F);
