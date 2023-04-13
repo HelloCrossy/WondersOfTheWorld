@@ -2,7 +2,7 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.SaigaAntelopeModel;
-import com.github.hellocrossy.wondersoftheworld.entity.TakaheEntity;
+import com.github.hellocrossy.wondersoftheworld.entity.SaigaAntelopeEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
@@ -13,7 +13,7 @@ public class SaigaAntelopeRenderer extends ZawaMobRenderer<SaigaAntelopeEntity, 
     private final SaigaAntelopeModel adultModel;
     private final SaigaAntelopeModel babyModel;
 
-    public TakaheRenderer(EntityRendererManager rendererManager) {
+    public SaigaAntelopeRenderer(EntityRendererManager rendererManager) {
         super(rendererManager, new SaigaAntelopeModel.Adult(), 1.0F);
         adultModel = model;
         babyModel = new SaigaAntelopeModel.Child();

@@ -3,7 +3,6 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.EmuModel;
 import com.github.hellocrossy.wondersoftheworld.entity.EmuEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.TakaheEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;

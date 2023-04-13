@@ -32,7 +32,7 @@ public class WOTWEntities {
                     .attributes(EmuEntity::registerAttributes)
                     .renderer(() -> EmuRenderer::new)
                     .spawns(10, 1, 3, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.DRY_SAVANNA,ZawaSpawnCategory.WET_SAVANNA )
-                    .data(entityBuilder -> entityBuilder.sized(3.0F, 2.5F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.5F).clientTrackingRange(10))
                     .build(REGISTRAR, "emu");
 
     public static final RegistryObject<EntityType<TakaheEntity>> TAKAHE =
@@ -50,6 +50,23 @@ public class WOTWEntities {
                     .spawn(ZawaSpawnCategory.WET_FOREST, 5, 1, 2)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "kiwi");
+
+    public static final RegistryObject<EntityType<SaigaAntelopeEntity>> SAIGA_ANTELOPE =
+            new Builder<>(SaigaAntelopeEntity::new, EntityClassification.CREATURE)
+                    .attributes(SaigaAntelopeEntity::registerAttributes)
+                    .renderer(() -> SaigaAntelopeRenderer::new)
+                    .spawn(ZawaSpawnCategory.DRY_SAVANNA, 3, 1, 3)
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .build(REGISTRAR, "saiga_antelope");
+
+    public static final RegistryObject<EntityType<BongoEntity>> BONGO =
+            new Builder<>(BongoEntity::new, EntityClassification.CREATURE)
+                    .attributes(BongoEntity::registerAttributes)
+                    .renderer(() -> BongoRenderer::new)
+                    .spawn(ZawaSpawnCategory.DEEP_RAINFOREST, 3, 1, 3)
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .build(REGISTRAR, "bongo");
+
 
     public static class Builder<T extends Entity> extends ZawaEntities.Builder<T> {
         public Builder(EntityType.IFactory<T> factory, EntityClassification category) {
