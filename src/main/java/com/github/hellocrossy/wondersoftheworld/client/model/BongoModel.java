@@ -1,7 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
 import com.github.hellocrossy.wondersoftheworld.entity.BongoEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.SaigaAntelopeEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -10,14 +9,14 @@ import org.zawamod.zawa.client.model.ZawaBaseModel;
 import org.zawamod.zawa.client.model.ZawaModelRenderer;
 
 public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
-    protected ZawaModelRenderer MAIN;
+    protected ZawaModelRenderer BONGO;
     protected Iterable<ModelRenderer> parts;
 
     @Override
     @MethodsReturnNonnullByDefault
     public Iterable<ModelRenderer> parts() {
         if (this.parts == null) {
-            this.parts = ImmutableList.of(MAIN);
+            this.parts = ImmutableList.of(BONGO);
         }
 
         return this.parts;
@@ -25,7 +24,6 @@ public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
 
     public static class Adult extends BongoModel {
 
-        protected ZawaModelRenderer BONGO;
         protected ZawaModelRenderer HEAD;
         protected ZawaModelRenderer cube_r1;
         protected ZawaModelRenderer cube_r2;
@@ -64,8 +62,8 @@ public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
         protected ZawaModelRenderer Thigh_r2;
 
         public Adult() {
-            texWidth = 64;
-            texHeight = 64;
+            texWidth = 128;
+            texHeight = 128;
 
             BONGO = new ZawaModelRenderer(this, 0, 0);
             BONGO.setPos(0.0F, -1.6219F, -15.3004F);
@@ -349,8 +347,8 @@ public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
         protected ZawaModelRenderer Thigh_r2;
 
         public Child() {
-            texWidth = 64;
-            texHeight = 64;
+            texWidth = 128;
+            texHeight = 128;
 
             BONGO = new ZawaModelRenderer(this, 0, 0);
             BONGO.setPos(0.0F, -1.6219F, -15.3004F);
