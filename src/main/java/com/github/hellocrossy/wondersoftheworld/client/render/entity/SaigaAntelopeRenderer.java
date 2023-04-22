@@ -28,13 +28,33 @@ public class SaigaAntelopeRenderer extends ZawaMobRenderer<SaigaAntelopeEntity, 
     @Override
     public void setupAdultTextures(SaigaAntelopeEntity entity) {
         int variantCount = entity.getTotalVariants();
-        adultTextures = new ResourceLocation[variantCount];
-        for (int i = 0; i < variantCount; i++)
-            adultTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/saiga_antelope/saiga_" + (i + 1) + ".png");
+        adultTextures = new ResourceLocation[variantCount * 2];
+        for (int i = 0; i < variantCount; i++) {
+            adultTextures[i * 2] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/saiga_antelope/saiga_antelope_" + (i + 1) + "_female.png");
+            adultTextures[i * 2 + 1] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/saiga_antelope/saiga_antelope_" + (i + 1) + "_male.png");
+        }
     }
 
     @Override
     public void setupBabyTextures(SaigaAntelopeEntity entity) {
         babyTexture = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/saiga_antelope/saiga_baby.png");
+    }
+    @Override
+    public ResourceLocation getTextureLocation(SaigaAntelopeEntity entity) {
+        if (!entity.isBaby()) {
+            int variantCount = entity.getTotalVariants();
+            int variant = entity.getVariant();
+            if (variant >= variantCount) {
+                return UNKNOWN_VARIANT;
+            } else {
+                if (this.getAdultTextures() == null || this.getAdultTextures().length != variantCount * 2) {
+                    this.setupAdultTextures(entity);
+                }
+
+                return this.getAdultTextures()[variant * 2 + entity.getGender().ordinal()];
+            }
+        } else {
+            return super.getTextureLocation(entity);
+        }
     }
 }

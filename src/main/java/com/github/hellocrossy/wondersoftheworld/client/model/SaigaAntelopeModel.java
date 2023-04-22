@@ -1,7 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
 import com.github.hellocrossy.wondersoftheworld.entity.SaigaAntelopeEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.ServalEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -18,7 +17,6 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
     public Iterable<ModelRenderer> parts() {
         if (this.parts == null) {
             this.parts = ImmutableList.of(MAIN);
-
         }
 
         return this.parts;
@@ -26,7 +24,6 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
     public static class Adult extends SaigaAntelopeModel {
 
-        protected ZawaModelRenderer Saiga;
         protected ZawaModelRenderer HEAD;
         protected ZawaModelRenderer Head_r1;
         protected ZawaModelRenderer Horn1Right_r1;
@@ -72,13 +69,13 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
             texWidth = 64;
             texHeight = 64;
 
-            Saiga = new ZawaModelRenderer(this, 0, 0);
-            Saiga.setPos(0.0F, 25.0114F, -3.1231F);
+            MAIN = new ZawaModelRenderer(this, 0, 0);
+            MAIN.setPos(0.0F, 25.0114F, -3.1231F);
 
 
             HEAD = new ZawaModelRenderer(this, 0, 0);
             HEAD.setPos(0.0F, 0.0F, 0.0F);
-            Saiga.addChild(HEAD);
+            MAIN.addChild(HEAD);
 
 
             Head_r1 = new ZawaModelRenderer(this, 20, 0);
@@ -155,7 +152,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
             BODY = new ZawaModelRenderer(this, 0, 0);
             BODY.setPos(0.0F, 0.0F, 0.0F);
-            Saiga.addChild(BODY);
+            MAIN.addChild(BODY);
 
 
             Chest_r1 = new ZawaModelRenderer(this, 0, 15);
@@ -196,7 +193,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
             LEFTFRONT = new ZawaModelRenderer(this, 0, 0);
             LEFTFRONT.setPos(0.0F, 0.0F, 0.0F);
-            Saiga.addChild(LEFTFRONT);
+            MAIN.addChild(LEFTFRONT);
 
 
             ArmBaseRight_r1 = new ZawaModelRenderer(this, 28, 27);
@@ -225,7 +222,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
             RIGHTFRONT = new ZawaModelRenderer(this, 0, 0);
             RIGHTFRONT.setPos(0.0F, 0.0F, 0.0F);
-            Saiga.addChild(RIGHTFRONT);
+            MAIN.addChild(RIGHTFRONT);
 
 
             ArmBaseLeft_r1 = new ZawaModelRenderer(this, 32, 4);
@@ -254,7 +251,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
             LEFTBACK = new ZawaModelRenderer(this, 0, 0);
             LEFTBACK.setPos(0.0F, 0.0F, 0.0F);
-            Saiga.addChild(LEFTBACK);
+            MAIN.addChild(LEFTBACK);
 
             ThighRight_r1 = new ZawaModelRenderer(this, 0, 27);
             ThighRight_r1.setPos(0.0F, -0.557F, 1.4183F);
@@ -282,7 +279,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
             RIGHTBACK = new ZawaModelRenderer(this, 0, 0);
             RIGHTBACK.setPos(0.0F, 0.0F, 0.0F);
-            Saiga.addChild(RIGHTBACK);
+            MAIN.addChild(RIGHTBACK);
 
 
             ThighLeft_r1 = new ZawaModelRenderer(this, 14, 27);
@@ -327,7 +324,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
     }
 
     public static class Child extends SaigaAntelopeModel {
-        protected ZawaModelRenderer Saiga;
+        protected ZawaModelRenderer MAIN;
         protected ZawaModelRenderer HEAD;
         protected ZawaModelRenderer Head_r1;
         protected ZawaModelRenderer Horn1Right_r1;
@@ -373,13 +370,13 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
             texWidth = 64;
             texHeight = 64;
 
-            Saiga = new ZawaModelRenderer(this, 0, 0);
-            Saiga.setPos(0.0F, 25.0114F, -3.1231F);
+            MAIN = new ZawaModelRenderer(this, 0, 0);
+            MAIN.setPos(0.0F, 25.0114F, -3.1231F);
 
 
             HEAD = new ZawaModelRenderer(this, 0, 0);
             HEAD.setPos(0.0F, 0.0F, 0.0F);
-            Saiga.addChild(HEAD);
+            MAIN.addChild(HEAD);
 
 
             Head_r1 = new ZawaModelRenderer(this, 20, 0);
@@ -456,7 +453,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
             BODY = new ZawaModelRenderer(this, 0, 0);
             BODY.setPos(0.0F, 0.0F, 0.0F);
-            Saiga.addChild(BODY);
+            MAIN.addChild(BODY);
 
 
             Chest_r1 = new ZawaModelRenderer(this, 0, 15);
@@ -497,7 +494,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
             LEFTFRONT = new ZawaModelRenderer(this, 0, 0);
             LEFTFRONT.setPos(0.0F, 0.0F, 0.0F);
-            Saiga.addChild(LEFTFRONT);
+            MAIN.addChild(LEFTFRONT);
 
 
             ArmBaseRight_r1 = new ZawaModelRenderer(this, 28, 27);
@@ -526,7 +523,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
             RIGHTFRONT = new ZawaModelRenderer(this, 0, 0);
             RIGHTFRONT.setPos(0.0F, 0.0F, 0.0F);
-            Saiga.addChild(RIGHTFRONT);
+            MAIN.addChild(RIGHTFRONT);
 
 
             ArmBaseLeft_r1 = new ZawaModelRenderer(this, 32, 4);
@@ -555,7 +552,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
             LEFTBACK = new ZawaModelRenderer(this, 0, 0);
             LEFTBACK.setPos(0.0F, 0.0F, 0.0F);
-            Saiga.addChild(LEFTBACK);
+            MAIN.addChild(LEFTBACK);
 
             ThighRight_r1 = new ZawaModelRenderer(this, 0, 27);
             ThighRight_r1.setPos(0.0F, -0.557F, 1.4183F);
@@ -583,7 +580,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
             RIGHTBACK = new ZawaModelRenderer(this, 0, 0);
             RIGHTBACK.setPos(0.0F, 0.0F, 0.0F);
-            Saiga.addChild(RIGHTBACK);
+            MAIN.addChild(RIGHTBACK);
 
 
             ThighLeft_r1 = new ZawaModelRenderer(this, 14, 27);

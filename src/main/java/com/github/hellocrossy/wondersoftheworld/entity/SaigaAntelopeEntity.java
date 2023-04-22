@@ -4,13 +4,15 @@ import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class SaigaAntelopeEntity extends ZawaLandEntity {
+public class SaigaAntelopeEntity extends ZawaLandEntity implements SpeciesVariantsEntity {
     public SaigaAntelopeEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
@@ -23,6 +25,10 @@ public class SaigaAntelopeEntity extends ZawaLandEntity {
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.SAIGA_ANTELOPE.get().create(world);
+    }
+        @Override
+        public int getVariantByBiome(IWorld iWorld) {
+            return random.nextInt(getWildVariants());
     }
 }
 
