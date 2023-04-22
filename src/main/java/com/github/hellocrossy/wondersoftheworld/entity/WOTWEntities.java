@@ -5,6 +5,8 @@ import com.github.hellocrossy.wondersoftheworld.client.render.entity.EmuRenderer
 import com.github.hellocrossy.wondersoftheworld.client.render.entity.KiwiRenderer;
 import com.github.hellocrossy.wondersoftheworld.client.render.entity.ServalRenderer;
 import com.github.hellocrossy.wondersoftheworld.client.render.entity.TakaheRenderer;
+import com.github.hellocrossy.wondersoftheworld.client.render.entity.SaigaAntelopeRenderer;
+import com.github.hellocrossy.wondersoftheworld.client.render.entity.BongoRenderer;
 import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
@@ -66,6 +68,14 @@ public class WOTWEntities {
                     .spawn(ZawaSpawnCategory.DEEP_RAINFOREST, 3, 1, 3)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "bongo");
+
+    public static final RegistryObject<EntityType<OscarEntity>> OSCAR =
+            new Builder<>(OscarEntity::new, EntityClassification.WATER_AMBIENT)
+            .attributes(OscarEntity::registerOscarAttributes)
+            .renderer(() -> OscarRenderer::new)
+            .spawns(10, 2, 6, ZawaSpawnCategory.DEEP_RAINFOREST)
+            .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
+            .build(REGISTRAR, "oscar");
 
 
     public static class Builder<T extends Entity> extends ZawaEntities.Builder<T> {
