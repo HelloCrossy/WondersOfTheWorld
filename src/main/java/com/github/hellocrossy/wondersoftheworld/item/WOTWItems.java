@@ -19,4 +19,10 @@ public static final RegistryObject<Item>
 OSCAR_BUCKET = REGISTRAR.register("oscar_bucket", () -> new ZawaFishBucketItem(WOTWEntities.OSCAR, () -> Fluids.WATER,
         new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
 
+    public  static final RegistryObject<Item>
+            DISCUS_FISH = REGISTRAR.register("discus_fish", () -> new Item(new Item.Properties().tab(Zawa.ITEMS_GROUP)));
+    public static final RegistryObject<Item>
+            DISCUS_FISH_BUCKET = REGISTRAR.register("discus_fish_bucket", () -> new ZawaFishBucketItem(WOTWEntities.DISCUS_FISH, () -> Fluids.WATER,
+            new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
+
 }

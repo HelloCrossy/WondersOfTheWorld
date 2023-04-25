@@ -72,6 +72,14 @@ public class WOTWEntities {
             .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
             .build(REGISTRAR, "oscar");
 
+    public static final RegistryObject<EntityType<DiscusFishEntity>> DISCUS_FISH =
+            new Builder<>(DiscusFishEntity::new, EntityClassification.WATER_AMBIENT)
+                    .attributes(DiscusFishEntity::registerAttributes)
+                    .renderer (() -> DiscusFishRenderer::new)
+                    .spawns(10, 2, 6, ZawaSpawnCategory.DEEP_RAINFOREST)
+                    .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
+                    .build(REGISTRAR, "discus_fish");
+
 
     public static class Builder<T extends Entity> extends ZawaEntities.Builder<T> {
         public Builder(EntityType.IFactory<T> factory, EntityClassification category) {
