@@ -21,7 +21,7 @@ public class WOTWEntities {
                     .attributes(ServalEntity::registerAttributes)
                     .renderer(() -> ServalRenderer::new)
                     .spawns(15, 1, 1, ZawaSpawnCategory.DRY_SAVANNA, ZawaSpawnCategory.WET_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(1.5F, 1.5F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "serval");
 
     public static final RegistryObject<EntityType<EmuEntity>> EMU =
@@ -29,7 +29,7 @@ public class WOTWEntities {
                     .attributes(EmuEntity::registerAttributes)
                     .renderer(() -> EmuRenderer::new)
                     .spawns(10, 1, 3, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.DRY_SAVANNA,ZawaSpawnCategory.WET_SAVANNA )
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.5F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "emu");
 
     public static final RegistryObject<EntityType<TakaheEntity>> TAKAHE =
@@ -79,6 +79,14 @@ public class WOTWEntities {
                     .spawns(10, 2, 6, ZawaSpawnCategory.DEEP_RAINFOREST)
                     .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
                     .build(REGISTRAR, "discus_fish");
+
+    public static final RegistryObject<EntityType<TakinEntity>> TAKIN =
+            new Builder<>(TakinEntity::new, EntityClassification.CREATURE)
+                    .attributes(TakinEntity::registerAttributes)
+                    .renderer(() -> TakinRenderer::new)
+                    .spawns(5, 1, 4, ZawaSpawnCategory.TEMPERATE_ALPINE, ZawaSpawnCategory.TUNDRA_ALPINE)
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .build(REGISTRAR, "takin");
 
 
     public static class Builder<T extends Entity> extends ZawaEntities.Builder<T> {
