@@ -96,6 +96,14 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "fennec_fox");
 
+    public static final RegistryObject<EntityType<TibetanAntelopeEntity>> TIBETAN_ANTELOPE =
+            new Builder<>(TibetanAntelopeEntity::new, EntityClassification.CREATURE)
+                    .attributes(TibetanAntelopeEntity::registerAttributes)
+                    .renderer(() -> TibetanAntelopeRenderer::new)
+                    .spawns(5, 1, 4, ZawaSpawnCategory.TUNDRA_ALPINE, ZawaSpawnCategory.DRY_ALPINE)
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .build(REGISTRAR, "tibetan_antelope");
+
 
     public static class Builder<T extends Entity> extends ZawaEntities.Builder<T> {
         public Builder(EntityType.IFactory<T> factory, EntityClassification category) {
