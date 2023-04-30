@@ -88,6 +88,14 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "takin");
 
+    public static final RegistryObject<EntityType<FennecFoxEntity>> FENNEC_FOX =
+            new Builder<>(FennecFoxEntity::new, EntityClassification.CREATURE)
+                    .attributes(FennecFoxEntity::registerAttributes)
+                    .renderer(() -> FennecFoxRenderer::new)
+                    .spawns(5, 1, 4, ZawaSpawnCategory.HOT_DESERT)
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .build(REGISTRAR, "fennec_fox");
+
 
     public static class Builder<T extends Entity> extends ZawaEntities.Builder<T> {
         public Builder(EntityType.IFactory<T> factory, EntityClassification category) {
