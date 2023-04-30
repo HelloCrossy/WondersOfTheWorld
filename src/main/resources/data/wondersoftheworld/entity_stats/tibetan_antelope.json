@@ -5,7 +5,7 @@
   "fertility": "low",
   "breeding_item": "zawa:arctic_moss",
   "litter_size": 1,
-  "diet": "zawa:herbviore",
+  "diet": "zawa:herbivore",
   "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
