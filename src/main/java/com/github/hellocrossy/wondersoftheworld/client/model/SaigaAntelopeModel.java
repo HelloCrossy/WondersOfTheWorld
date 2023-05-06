@@ -126,7 +126,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
             setRotateAngle(shape57_r1, 0.5927F, 0.0F, 0.0F);
             shape57_r1.addBox(-1.5F, -20.9F, -13.0F, 3.0F, 3.0F, 2.0F, 0.0F, false);
 
-            shape59_r1 = new ZawaModelRenderer(this, 28, 26);
+            shape59_r1 = new ZawaModelRenderer(this, 38, 26);
             shape59_r1.setPos(0.0F, 3.973F, -3.4241F);
             HEAD.addChild(shape59_r1);
             setRotateAngle(shape59_r1, -0.1813F, 0.0F, 0.0F);
@@ -138,7 +138,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
             setRotateAngle(shape58_r1, 0.0918F, 0.0F, 0.0F);
             shape58_r1.addBox(-1.0F, -18.2F, -12.9F, 2.0F, 1.0F, 1.0F, 0.0F, false);
 
-            EarRight_r1 = new ZawaModelRenderer(this, 23, 45);
+            EarRight_r1 = new ZawaModelRenderer(this, 29, 45);
             EarRight_r1.setPos(21.5431F, -10.877F, -9.8513F);
             HEAD.addChild(EarRight_r1);
             setRotateAngle(EarRight_r1, -0.481F, 0.0057F, -1.2297F);
@@ -153,7 +153,6 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
             BODY = new ZawaModelRenderer(this, 0, 0);
             BODY.setPos(0.0F, 0.0F, 0.0F);
             MAIN.addChild(BODY);
-
 
             Chest_r1 = new ZawaModelRenderer(this, 0, 15);
             Chest_r1.setPos(0.0F, 0.0F, 0.0F);
