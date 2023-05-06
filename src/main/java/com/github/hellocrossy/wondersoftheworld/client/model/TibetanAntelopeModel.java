@@ -53,8 +53,8 @@ public abstract class TibetanAntelopeModel extends ZawaBaseModel<TibetanAntelope
         protected ZawaModelRenderer cube_r22;
 
         public Adult() {
-            texWidth = 128;
-            texHeight = 128;
+            texWidth = 64;
+            texHeight = 64;
 
             bb_main = new ZawaModelRenderer(this, 0, 0);
             bb_main.setPos(0.0F, 24.0F, 0.0F);
@@ -282,8 +282,8 @@ public abstract class TibetanAntelopeModel extends ZawaBaseModel<TibetanAntelope
         protected ZawaModelRenderer cube_r22;
 
         public Child() {
-            texWidth = 128;
-            texHeight = 128;
+            texWidth = 64;
+            texHeight = 64;
 
             bb_main = new ZawaModelRenderer(this, 0, 0);
             bb_main.setPos(0.0F, 24.0F, 0.0F);

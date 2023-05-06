@@ -104,6 +104,14 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "tibetan_antelope");
 
+    public static final RegistryObject<EntityType<OryxEntity>> ORYX =
+            new Builder<>(OryxEntity::new, EntityClassification.CREATURE)
+                    .attributes(OryxEntity::registerAttributes)
+                    .renderer(() -> OryxRenderer::new)
+                    .spawns(10, 1, 4, ZawaSpawnCategory.HOT_DESERT, ZawaSpawnCategory.DRY_SAVANNA, ZawaSpawnCategory.DRY_GRASSLAND)
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .build(REGISTRAR, "oryx");
+
 
     public static class Builder<T extends Entity> extends ZawaEntities.Builder<T> {
         public Builder(EntityType.IFactory<T> factory, EntityClassification category) {
