@@ -112,6 +112,14 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "oryx");
 
+    public static final RegistryObject<EntityType<TuracoEntity>> TURACO =
+            new Builder<>(TuracoEntity::new, EntityClassification.CREATURE)
+                    .attributes(TuracoEntity::registerAttributes)
+                    .renderer(() -> TuracoRenderer::new)
+                    .spawns(10, 1, 4, ZawaSpawnCategory.HOT_DESERT, ZawaSpawnCategory.DRY_SAVANNA, ZawaSpawnCategory.DRY_GRASSLAND)
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .build(REGISTRAR, "turaco");
+
 
     public static class Builder<T extends Entity> extends ZawaEntities.Builder<T> {
         public Builder(EntityType.IFactory<T> factory, EntityClassification category) {
