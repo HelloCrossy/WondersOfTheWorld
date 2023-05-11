@@ -116,10 +116,25 @@ public class WOTWEntities {
             new Builder<>(TuracoEntity::new, EntityClassification.CREATURE)
                     .attributes(TuracoEntity::registerAttributes)
                     .renderer(() -> TuracoRenderer::new)
-                    .spawns(10, 1, 4, ZawaSpawnCategory.HOT_DESERT, ZawaSpawnCategory.DRY_SAVANNA, ZawaSpawnCategory.DRY_GRASSLAND)
+                    .spawns(10, 1, 2, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TEMPERATE_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "turaco");
 
+    public static final RegistryObject<EntityType<VultureEntity>> VULTURE =
+            new Builder<>(VultureEntity::new, EntityClassification.CREATURE)
+                    .attributes(VultureEntity::registerAttributes)
+                    .renderer(() -> VultureRenderer::new)
+                    .spawns(5, 2, 5, ZawaSpawnCategory.HOT_DESERT, ZawaSpawnCategory.DRY_SAVANNA, ZawaSpawnCategory.DRY_GRASSLAND)
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .build(REGISTRAR, "vulture");
+
+    public static final RegistryObject<EntityType<LowlandNyalaEntity>> LOWLAND_NYALA =
+            new Builder<>(LowlandNyalaEntity::new, EntityClassification.CREATURE)
+                    .attributes(LowlandNyalaEntity::registerAttributes)
+                    .renderer(() -> LowlandNyalaRenderer::new)
+                    .spawns(5, 1, 4, ZawaSpawnCategory.DRY_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
+                    .build(REGISTRAR, "lowland_nyala");
 
     public static class Builder<T extends Entity> extends ZawaEntities.Builder<T> {
         public Builder(EntityType.IFactory<T> factory, EntityClassification category) {
