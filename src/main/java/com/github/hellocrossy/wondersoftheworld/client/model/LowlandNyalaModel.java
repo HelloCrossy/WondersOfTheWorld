@@ -32,6 +32,12 @@ public abstract class LowlandNyalaModel extends ZawaBaseModel<LowlandNyalaEntity
     protected ZawaModelRenderer cube_r19;
     protected ZawaModelRenderer cube_r20;
     protected ZawaModelRenderer cube_r21;
+    protected ZawaModelRenderer Face;
+    protected ZawaModelRenderer Chest;
+    protected ZawaModelRenderer Leg1;
+    protected ZawaModelRenderer Leg2;
+    protected ZawaModelRenderer Leg3;
+    protected ZawaModelRenderer Leg4;
     protected Iterable<ModelRenderer> parts;
 
     @Override
@@ -46,21 +52,15 @@ public abstract class LowlandNyalaModel extends ZawaBaseModel<LowlandNyalaEntity
 
     public static class Male extends LowlandNyalaModel {
 
-        protected ZawaModelRenderer Face;
-        protected ZawaModelRenderer Chest;
         protected ZawaModelRenderer cube_r22;
         protected ZawaModelRenderer cube_r23;
         protected ZawaModelRenderer cube_r24;
         protected ZawaModelRenderer cube_r25;
         protected ZawaModelRenderer cube_r26;
-        protected ZawaModelRenderer Leg1;
         protected ZawaModelRenderer cube_r27;
-        protected ZawaModelRenderer Leg2;
         protected ZawaModelRenderer cube_r28;
-        protected ZawaModelRenderer Leg3;
         protected ZawaModelRenderer cube_r29;
         protected ZawaModelRenderer cube_r30;
-        protected ZawaModelRenderer Leg4;
         protected ZawaModelRenderer cube_r31;
         protected ZawaModelRenderer cube_r32;
 
@@ -519,13 +519,6 @@ public abstract class LowlandNyalaModel extends ZawaBaseModel<LowlandNyalaEntity
     }
     public static class Child extends LowlandNyalaModel {
 
-        protected ZawaModelRenderer NyalaMale;
-        protected ZawaModelRenderer Face;
-        protected ZawaModelRenderer Chest;
-        protected ZawaModelRenderer Leg1;
-        protected ZawaModelRenderer Leg2;
-        protected ZawaModelRenderer Leg3;
-        protected ZawaModelRenderer Leg4;
 
         public Child() {
             texWidth = 64;

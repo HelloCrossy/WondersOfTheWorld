@@ -13,16 +13,19 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 public class TuracoRenderer extends ZawaMobRenderer<TuracoEntity, TuracoModel> {
     private final TuracoModel adultModel;
     private final TuracoModel babyModel;
+    private final TuracoModel flyingModel;
 
     public TuracoRenderer(EntityRendererManager rendererManager) {
         super(rendererManager, new TuracoModel.Adult(), 1.0F);
         adultModel = model;
+        flyingModel = new TuracoModel.Flying();
         babyModel = new TuracoModel.Child();
     }
 
     @Override
     public void render(TuracoEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
-        model = entity.isBaby() ? babyModel : adultModel;
+        if (entity.isBaby()) model = babyModel;
+        else model = entity.isFlying() ? flyingModel : adultModel;
         super.render(entity, entityYaw, partialTicks, matrixStack, buffer, packedLight);
     }
 

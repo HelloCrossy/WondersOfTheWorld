@@ -37,7 +37,7 @@ public class TibetanAntelopeRenderer extends ZawaMobRenderer<TibetanAntelopeEnti
 
     @Override
     public void setupBabyTextures(TibetanAntelopeEntity entity) {
-        babyTexture = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/tibetan_antelope/tibetan_antelope_baby.png");
+        babyTexture = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/tibetan_antelope/tibetan_baby.png");
     }
     @Override
     public ResourceLocation getTextureLocation(TibetanAntelopeEntity entity) {

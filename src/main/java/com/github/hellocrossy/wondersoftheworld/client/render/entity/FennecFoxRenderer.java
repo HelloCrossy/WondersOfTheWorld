@@ -20,7 +20,12 @@ public class FennecFoxRenderer extends ZawaMobRenderer<FennecFoxEntity, FennecFo
         adultModel = model;
         babyModel = new FennecFoxModel.Child();
     }
-
+    @Override
+    protected void scale(FennecFoxEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 1.0F : 1.2F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
+    }
     @Override
     public void render(FennecFoxEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
         model = entity.isBaby() ? babyModel : adultModel;

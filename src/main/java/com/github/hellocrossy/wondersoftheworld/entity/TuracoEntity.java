@@ -8,17 +8,18 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
+import org.zawamod.zawa.world.entity.animal.ZawaFlyingEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class TuracoEntity extends ZawaLandEntity implements SpeciesVariantsEntity {
-    public TuracoEntity(EntityType<? extends ZawaLandEntity> type, World world) {
+public class TuracoEntity extends ZawaFlyingEntity implements SpeciesVariantsEntity {
+    public TuracoEntity(EntityType<? extends ZawaFlyingEntity> type, World world) {
         super(type, world);
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.3F).add(Attributes.MAX_HEALTH, 3.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.FLYING_SPEED, 1.2F).add(Attributes.MOVEMENT_SPEED, 0.3F).add(Attributes.MAX_HEALTH, 3.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Nullable

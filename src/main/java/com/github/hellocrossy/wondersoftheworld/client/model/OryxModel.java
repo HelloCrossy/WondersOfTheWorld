@@ -865,13 +865,13 @@ public abstract class OryxModel extends ZawaBaseModel<OryxEntity> {
             texWidth = 128;
             texHeight = 128;
 
-            CALF = new ZawaModelRenderer(this, 0, 0);
-            CALF.setPos(0.0F, 17.25F, -3.0F);
+            MAIN = new ZawaModelRenderer(this, 0, 0);
+            MAIN.setPos(0.0F, 17.25F, -3.0F);
 
 
             BODY = new ZawaModelRenderer(this, 0, 0);
             BODY.setPos(0.0F, -3.0F, 0.0F);
-            CALF.addChild(BODY);
+            MAIN.addChild(BODY);
 
 
             Hips_r1 = new ZawaModelRenderer(this, 13, 7);
@@ -906,7 +906,7 @@ public abstract class OryxModel extends ZawaBaseModel<OryxEntity> {
 
             NECK = new ZawaModelRenderer(this, 0, 0);
             NECK.setPos(0.0F, -2.4958F, -2.8659F);
-            CALF.addChild(NECK);
+            MAIN.addChild(NECK);
 
 
             Skin_2_r1 = new ZawaModelRenderer(this, 22, 8);
@@ -961,7 +961,7 @@ public abstract class OryxModel extends ZawaBaseModel<OryxEntity> {
 
             HEAD = new ZawaModelRenderer(this, 0, 0);
             HEAD.setPos(0.0F, -6.5937F, -2.9104F);
-            CALF.addChild(HEAD);
+            MAIN.addChild(HEAD);
             setRotateAngle(HEAD, -0.0873F, 0.0F, 0.0F);
 
 
@@ -1011,7 +1011,7 @@ public abstract class OryxModel extends ZawaBaseModel<OryxEntity> {
 
             Limb_Front_L = new ZawaModelRenderer(this, 0, 0);
             Limb_Front_L.setPos(-1.15F, -5.3F, -14.975F);
-            CALF.addChild(Limb_Front_L);
+            MAIN.addChild(Limb_Front_L);
             Limb_Front_L.texOffs(0, 0).addBox(1.65F, 7.3801F, 15.1005F, 1.0F, 4.0F, 1.0F, 0.0F, true);
             Limb_Front_L.texOffs(17, 0).addBox(1.675F, 11.05F, 14.6F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 
@@ -1029,7 +1029,7 @@ public abstract class OryxModel extends ZawaBaseModel<OryxEntity> {
 
             Limb_Front_R = new ZawaModelRenderer(this, 0, 0);
             Limb_Front_R.setPos(1.15F, -5.3F, -14.975F);
-            CALF.addChild(Limb_Front_R);
+            MAIN.addChild(Limb_Front_R);
             Limb_Front_R.texOffs(0, 0).addBox(-2.65F, 7.3801F, 15.1005F, 1.0F, 4.0F, 1.0F, 0.0F, false);
             Limb_Front_R.texOffs(17, 0).addBox(-2.675F, 11.05F, 14.6F, 1.0F, 1.0F, 1.0F, 0.0F, true);
 
@@ -1047,7 +1047,7 @@ public abstract class OryxModel extends ZawaBaseModel<OryxEntity> {
 
             Limb_Back_L = new ZawaModelRenderer(this, 0, 0);
             Limb_Back_L.setPos(-0.9F, -5.3F, -8.725F);
-            CALF.addChild(Limb_Back_L);
+            MAIN.addChild(Limb_Back_L);
             Limb_Back_L.texOffs(8, 10).addBox(1.65F, 6.3801F, 15.8505F, 1.0F, 5.0F, 1.0F, 0.0F, true);
             Limb_Back_L.texOffs(17, 0).addBox(1.675F, 11.05F, 15.35F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 
@@ -1065,7 +1065,7 @@ public abstract class OryxModel extends ZawaBaseModel<OryxEntity> {
 
             Limb_Back_R = new ZawaModelRenderer(this, 0, 0);
             Limb_Back_R.setPos(0.9F, -5.3F, -8.725F);
-            CALF.addChild(Limb_Back_R);
+            MAIN.addChild(Limb_Back_R);
             Limb_Back_R.texOffs(8, 10).addBox(-2.65F, 6.3801F, 15.8505F, 1.0F, 5.0F, 1.0F, 0.0F, false);
             Limb_Back_R.texOffs(17, 0).addBox(-2.675F, 11.05F, 15.35F, 1.0F, 1.0F, 1.0F, 0.0F, true);
 

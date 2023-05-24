@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "wondersoftheworld:item/nyala_spawn_egg"
+    "layer0": "wondersoftheworld:item/lowland_nyala_spawn_egg"
   }
 }
