@@ -2,6 +2,7 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.ServalModel;
+import com.github.hellocrossy.wondersoftheworld.entity.FennecFoxEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.ServalEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
@@ -18,7 +19,12 @@ public class ServalRenderer extends ZawaMobRenderer<ServalEntity, ServalModel> {
         adultModel = model;
         babyModel = new ServalModel.Child();
     }
-
+    @Override
+    protected void scale(ServalEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 0.9F : 1.2F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
+    }
     @Override
     public void render(ServalEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
         model = entity.isBaby() ? babyModel : adultModel;

@@ -3,6 +3,7 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.TuracoModel;
 import com.github.hellocrossy.wondersoftheworld.client.model.TuracoModel;
+import com.github.hellocrossy.wondersoftheworld.entity.FennecFoxEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.TuracoEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
@@ -21,7 +22,12 @@ public class TuracoRenderer extends ZawaMobRenderer<TuracoEntity, TuracoModel> {
         flyingModel = new TuracoModel.Flying();
         babyModel = new TuracoModel.Child();
     }
-
+    @Override
+    protected void scale(TuracoEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 0.8F : 1.2F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
+    }
     @Override
     public void render(TuracoEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
         if (entity.isBaby()) model = babyModel;

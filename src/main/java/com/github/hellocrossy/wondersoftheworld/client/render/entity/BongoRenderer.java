@@ -3,6 +3,7 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.BongoModel;
 import com.github.hellocrossy.wondersoftheworld.entity.BongoEntity;
+import com.github.hellocrossy.wondersoftheworld.entity.FennecFoxEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
@@ -17,6 +18,12 @@ public class BongoRenderer extends ZawaMobRenderer<BongoEntity, BongoModel> {
         super(rendererManager, new BongoModel.Adult(), 1.0F);
         adultModel = model;
         babyModel = new BongoModel.Child();
+    }
+    @Override
+    protected void scale(BongoEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 0.9F : 1.1F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
     }
     @Override
 

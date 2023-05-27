@@ -2,6 +2,7 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.TakaheModel;
+import com.github.hellocrossy.wondersoftheworld.entity.ServalEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.TakaheEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
@@ -18,7 +19,12 @@ public class TakaheRenderer extends ZawaMobRenderer<TakaheEntity, TakaheModel> {
         adultModel = model;
         babyModel = new TakaheModel.Child();
     }
-
+    @Override
+    protected void scale(TakaheEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 0.8F : 1.0F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
+    }
     @Override
     public void render(TakaheEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
         model = entity.isBaby() ? babyModel : adultModel;

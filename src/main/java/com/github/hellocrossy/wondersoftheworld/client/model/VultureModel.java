@@ -1,6 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
-import com.github.hellocrossy.wondersoftheworld.entity.TuracoEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.VultureEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
@@ -326,7 +325,7 @@ public abstract class VultureModel extends ZawaBaseModel<VultureEntity> {
         }
     }
 
-    public static class Child extends VultureModel {
+    public static class Flying extends VultureModel {
         protected ZawaModelRenderer cube_r1;
         protected ZawaModelRenderer cube_r2;
         protected ZawaModelRenderer cube_r3;
@@ -366,7 +365,7 @@ public abstract class VultureModel extends ZawaBaseModel<VultureEntity> {
         protected ZawaModelRenderer cube_r37;
         protected ZawaModelRenderer cube_r38;
 
-        public Child() {
+        public Flying() {
             texWidth = 64;
             texHeight = 64;
 
@@ -610,6 +609,199 @@ public abstract class VultureModel extends ZawaBaseModel<VultureEntity> {
             bb_main.addChild(cube_r38);
             setRotateAngle(cube_r38, 0.1191F, -0.3077F, -0.0362F);
             cube_r38.addBox(-0.1215F, -0.45F, -1.5376F, 1.0F, 1.0F, 3.0F, 0.0F, false);
+            this.saveBase();
+        }
+
+        @Override
+        public void setupAnim(VultureEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+        }
+
+        @Override
+        public void playIdleAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+
+        }
+
+        @Override
+        public void playMovementAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+
+        }
+    }
+
+    public static class Child extends VultureModel {
+        protected ZawaModelRenderer Head;
+        protected ZawaModelRenderer cube_r1;
+        protected ZawaModelRenderer cube_r2;
+        protected ZawaModelRenderer cube_r3;
+        protected ZawaModelRenderer Body;
+        protected ZawaModelRenderer cube_r4;
+        protected ZawaModelRenderer cube_r5;
+        protected ZawaModelRenderer cube_r6;
+        protected ZawaModelRenderer cube_r7;
+        protected ZawaModelRenderer cube_r8;
+        protected ZawaModelRenderer LeftLeg;
+        protected ZawaModelRenderer cube_r9;
+        protected ZawaModelRenderer cube_r10;
+        protected ZawaModelRenderer cube_r11;
+        protected ZawaModelRenderer cube_r12;
+        protected ZawaModelRenderer cube_r13;
+        protected ZawaModelRenderer cube_r14;
+        protected ZawaModelRenderer RightLeg;
+        protected ZawaModelRenderer cube_r15;
+        protected ZawaModelRenderer cube_r16;
+        protected ZawaModelRenderer cube_r17;
+        protected ZawaModelRenderer cube_r18;
+        protected ZawaModelRenderer cube_r19;
+        protected ZawaModelRenderer cube_r20;
+
+        public Child() {
+            texWidth = 64;
+            texHeight = 64;
+
+            bb_main = new ZawaModelRenderer(this, 0, 0);
+            bb_main.setPos(0.0F, 25.0F, 0.0F);
+
+
+            Head = new ZawaModelRenderer(this, 0, 0);
+            Head.setPos(0.0F, 0.0F, 0.0F);
+            bb_main.addChild(Head);
+
+
+            cube_r1 = new ZawaModelRenderer(this, 6, 20);
+            cube_r1.setPos(0.0F, -8.9166F, -2.8758F);
+            Head.addChild(cube_r1);
+            setRotateAngle(cube_r1, -0.2923F, 0.0F, 0.0F);
+            cube_r1.addBox(-0.5F, 0.0722F, -0.2987F, 1.0F, 2.0F, 1.0F, 0.0F, false);
+
+            cube_r2 = new ZawaModelRenderer(this, 20, 5);
+            cube_r2.setPos(0.0F, -8.6666F, 1.1742F);
+            Head.addChild(cube_r2);
+            setRotateAngle(cube_r2, 0.2007F, 0.0F, 0.0F);
+            cube_r2.addBox(-1.0F, -1.125F, -4.225F, 2.0F, 2.0F, 1.0F, 0.0F, false);
+
+            cube_r3 = new ZawaModelRenderer(this, 0, 8);
+            cube_r3.setPos(-1.0F, -0.375F, 0.3F);
+            Head.addChild(cube_r3);
+            setRotateAngle(cube_r3, 0.0436F, 0.0F, 0.0F);
+            cube_r3.addBox(-0.55F, -9.55F, -2.25F, 3.0F, 3.0F, 3.0F, 0.0F, false);
+
+            Body = new ZawaModelRenderer(this, 0, 0);
+            Body.setPos(0.0F, 0.0F, 0.0F);
+            bb_main.addChild(Body);
+
+
+            cube_r4 = new ZawaModelRenderer(this, 0, 15);
+            cube_r4.setPos(-0.0125F, -4.156F, 3.1221F);
+            Body.addChild(cube_r4);
+            setRotateAngle(cube_r4, -1.0516F, 0.0F, 0.0F);
+            cube_r4.addBox(-1.4875F, -1.7845F, -1.1584F, 3.0F, 3.0F, 2.0F, 0.0F, false);
+
+            cube_r5 = new ZawaModelRenderer(this, 16, 15);
+            cube_r5.setPos(1.5F, -5.251F, 8.3259F);
+            Body.addChild(cube_r5);
+            setRotateAngle(cube_r5, -0.2269F, 0.0F, 0.0F);
+            cube_r5.addBox(-2.0F, -0.3156F, -9.8268F, 1.0F, 2.0F, 2.0F, 0.0F, false);
+
+            cube_r6 = new ZawaModelRenderer(this, 12, 0);
+            cube_r6.setPos(1.75F, -4.501F, 8.3259F);
+            Body.addChild(cube_r6);
+            setRotateAngle(cube_r6, 0.3185F, 0.0F, 0.0F);
+            cube_r6.addBox(-2.75F, -4.3906F, -9.0518F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+
+            cube_r7 = new ZawaModelRenderer(this, 0, 0);
+            cube_r7.setPos(-1.5F, -4.501F, 8.3259F);
+            Body.addChild(cube_r7);
+            setRotateAngle(cube_r7, -0.3883F, 0.0F, 0.0F);
+            cube_r7.texOffs(8, 10).addBox(-0.75F, -0.0107F, -7.9878F, 1.0F, 3.0F, 4.0F, 0.0F, true);
+            cube_r7.texOffs(8, 10).addBox(2.75F, -0.0107F, -7.9878F, 1.0F, 3.0F, 4.0F, 0.0F, false);
+            cube_r7.texOffs(0, 0).addBox(-0.5F, 0.1143F, -8.4878F, 4.0F, 4.0F, 4.0F, 0.0F, false);
+
+            cube_r8 = new ZawaModelRenderer(this, 13, 5);
+            cube_r8.setPos(-0.0125F, -4.156F, 3.1221F);
+            Body.addChild(cube_r8);
+            setRotateAngle(cube_r8, 3.0936F, 0.0F, 0.0F);
+            cube_r8.addBox(-1.0125F, -1.7082F, -1.6138F, 2.0F, 2.0F, 3.0F, 0.0F, false);
+
+            LeftLeg = new ZawaModelRenderer(this, 0, 0);
+            LeftLeg.setPos(0.0F, 0.0F, 0.0F);
+            bb_main.addChild(LeftLeg);
+
+            cube_r9 = new ZawaModelRenderer(this, 14, 19);
+            cube_r9.setPos(1.325F, -1.7F, -0.6216F);
+            LeftLeg.addChild(cube_r9);
+            setRotateAngle(cube_r9, 0.1191F, 0.3077F, 0.0362F);
+            cube_r9.addBox(-0.8785F, -0.45F, -0.5376F, 1.0F, 1.0F, 2.0F, 0.0F, false);
+
+            cube_r10 = new ZawaModelRenderer(this, 0, 20);
+            cube_r10.setPos(1.325F, -1.7F, -0.7466F);
+            LeftLeg.addChild(cube_r10);
+            setRotateAngle(cube_r10, 0.1134F, 0.0F, 0.0F);
+            cube_r10.addBox(-0.5F, -0.55F, -0.6034F, 1.0F, 1.0F, 2.0F, 0.0F, false);
+
+            cube_r11 = new ZawaModelRenderer(this, 10, 17);
+            cube_r11.setPos(0.775F, -1.75F, 0.8F);
+            LeftLeg.addChild(cube_r11);
+            setRotateAngle(cube_r11, -0.2051F, 0.0F, 0.0F);
+            cube_r11.addBox(-0.25F, -0.625F, -0.225F, 1.0F, 1.0F, 2.0F, 0.0F, false);
+
+            cube_r12 = new ZawaModelRenderer(this, 18, 2);
+            cube_r12.setPos(1.325F, -1.7F, -0.6216F);
+            LeftLeg.addChild(cube_r12);
+            setRotateAngle(cube_r12, 0.1191F, -0.3077F, -0.0362F);
+            cube_r12.addBox(-0.1215F, -0.45F, -0.5376F, 1.0F, 1.0F, 2.0F, 0.0F, false);
+
+            cube_r13 = new ZawaModelRenderer(this, 0, 0);
+            cube_r13.setPos(-0.7F, 0.0F, -1.75F);
+            LeftLeg.addChild(cube_r13);
+            setRotateAngle(cube_r13, -0.3054F, 0.0F, 0.0F);
+            cube_r13.addBox(1.5F, -4.25F, 1.5F, 1.0F, 2.0F, 1.0F, 0.0F, false);
+
+            cube_r14 = new ZawaModelRenderer(this, 14, 10);
+            cube_r14.setPos(-0.7F, 0.0F, -1.75F);
+            LeftLeg.addChild(cube_r14);
+            setRotateAngle(cube_r14, 0.1309F, 0.0F, 0.0F);
+            cube_r14.addBox(0.75F, -4.175F, 2.5F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+
+            RightLeg = new ZawaModelRenderer(this, 0, 0);
+            RightLeg.setPos(0.0F, 0.0F, 0.0F);
+            bb_main.addChild(RightLeg);
+
+
+            cube_r15 = new ZawaModelRenderer(this, 14, 19);
+            cube_r15.setPos(-1.325F, -1.7F, -0.6216F);
+            RightLeg.addChild(cube_r15);
+            setRotateAngle(cube_r15, 0.1191F, -0.3077F, -0.0362F);
+            cube_r15.addBox(-0.1215F, -0.45F, -0.5376F, 1.0F, 1.0F, 2.0F, 0.0F, true);
+
+            cube_r16 = new ZawaModelRenderer(this, 0, 20);
+            cube_r16.setPos(-1.325F, -1.7F, -0.7466F);
+            RightLeg.addChild(cube_r16);
+            setRotateAngle(cube_r16, 0.1134F, 0.0F, 0.0F);
+            cube_r16.addBox(-0.5F, -0.55F, -0.6034F, 1.0F, 1.0F, 2.0F, 0.0F, true);
+
+            cube_r17 = new ZawaModelRenderer(this, 18, 2);
+            cube_r17.setPos(-1.325F, -1.7F, -0.6216F);
+            RightLeg.addChild(cube_r17);
+            setRotateAngle(cube_r17, 0.1191F, 0.3077F, 0.0362F);
+            cube_r17.addBox(-0.8785F, -0.45F, -0.5376F, 1.0F, 1.0F, 2.0F, 0.0F, true);
+
+            cube_r18 = new ZawaModelRenderer(this, 10, 17);
+            cube_r18.setPos(-0.775F, -1.75F, 0.8F);
+            RightLeg.addChild(cube_r18);
+            setRotateAngle(cube_r18, -0.2051F, 0.0F, 0.0F);
+            cube_r18.addBox(-0.75F, -0.625F, -0.225F, 1.0F, 1.0F, 2.0F, 0.0F, true);
+
+            cube_r19 = new ZawaModelRenderer(this, 0, 0);
+            cube_r19.setPos(0.7F, 0.0F, -1.75F);
+            RightLeg.addChild(cube_r19);
+            setRotateAngle(cube_r19, -0.3054F, 0.0F, 0.0F);
+            cube_r19.addBox(-2.5F, -4.25F, 1.5F, 1.0F, 2.0F, 1.0F, 0.0F, true);
+
+            cube_r20 = new ZawaModelRenderer(this, 14, 10);
+            cube_r20.setPos(0.7F, 0.0F, -1.75F);
+            RightLeg.addChild(cube_r20);
+            setRotateAngle(cube_r20, 0.1309F, 0.0F, 0.0F);
+            cube_r20.addBox(-2.75F, -4.175F, 2.5F, 2.0F, 2.0F, 2.0F, 0.0F, true);
             this.saveBase();
         }
 

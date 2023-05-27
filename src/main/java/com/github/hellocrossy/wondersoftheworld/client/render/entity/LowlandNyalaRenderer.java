@@ -4,10 +4,7 @@ import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.LowlandNyalaModel;
 import com.github.hellocrossy.wondersoftheworld.client.model.OryxModel;
 import com.github.hellocrossy.wondersoftheworld.client.model.TakinModel;
-import com.github.hellocrossy.wondersoftheworld.entity.BongoEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.LowlandNyalaEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.OryxEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.TakinEntity;
+import com.github.hellocrossy.wondersoftheworld.entity.*;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
@@ -26,7 +23,12 @@ public class LowlandNyalaRenderer extends ZawaMobRenderer<LowlandNyalaEntity, Lo
         Female = new LowlandNyalaModel.Female();
         Child = new LowlandNyalaModel.Child();
     }
-
+    @Override
+    protected void scale(LowlandNyalaEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 0.9F : 1.1F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
+    }
     @Override
     public void render(LowlandNyalaEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
         if (entity.isBaby()) {

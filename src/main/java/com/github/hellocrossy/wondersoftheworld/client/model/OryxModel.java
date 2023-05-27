@@ -862,8 +862,8 @@ public abstract class OryxModel extends ZawaBaseModel<OryxEntity> {
         protected ZawaModelRenderer ArmBase_r4;
         public Child () {
 
-            texWidth = 128;
-            texHeight = 128;
+            texWidth = 64;
+            texHeight = 64;
 
             MAIN = new ZawaModelRenderer(this, 0, 0);
             MAIN.setPos(0.0F, 17.25F, -3.0F);

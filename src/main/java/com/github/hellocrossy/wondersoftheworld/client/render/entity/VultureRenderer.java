@@ -3,7 +3,8 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.TuracoModel;
 import com.github.hellocrossy.wondersoftheworld.client.model.VultureModel;
-import com.github.hellocrossy.wondersoftheworld.entity.TuracoEntity;
+import com.github.hellocrossy.wondersoftheworld.entity.ServalEntity;
+import com.github.hellocrossy.wondersoftheworld.entity.VultureEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.VultureEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
@@ -14,19 +15,27 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 public class VultureRenderer extends ZawaMobRenderer<VultureEntity, VultureModel> {
     private final VultureModel adultModel;
     private final VultureModel babyModel;
+    private final VultureModel flyingModel;
 
     public VultureRenderer(EntityRendererManager rendererManager) {
         super(rendererManager, new VultureModel.Adult(), 1.0F);
         adultModel = model;
+        flyingModel = new VultureModel.Flying();
         babyModel = new VultureModel.Child();
     }
 
     @Override
     public void render(VultureEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
-        model = entity.isBaby() ? babyModel : adultModel;
+        if (entity.isBaby()) model = babyModel;
+        else model = entity.isFlying() ? flyingModel : adultModel;
         super.render(entity, entityYaw, partialTicks, matrixStack, buffer, packedLight);
     }
-
+    @Override
+    protected void scale(VultureEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 1.0F : 1.0F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
+    }
     @Override
     public void setupAdultTextures(VultureEntity entity) {
         int variantCount = entity.getTotalVariants();

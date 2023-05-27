@@ -3,6 +3,7 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.TakinModel;
 import com.github.hellocrossy.wondersoftheworld.client.model.TakinModel;
+import com.github.hellocrossy.wondersoftheworld.entity.ServalEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.TakinEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
@@ -19,7 +20,12 @@ public class TakinRenderer extends ZawaMobRenderer<TakinEntity, TakinModel> {
         adultModel = model;
         babyModel = new TakinModel.Child();
     }
-
+    @Override
+    protected void scale(TakinEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 1.1F : 1.0F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
+    }
     @Override
     public void render(TakinEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
         model = entity.isBaby() ? babyModel : adultModel;

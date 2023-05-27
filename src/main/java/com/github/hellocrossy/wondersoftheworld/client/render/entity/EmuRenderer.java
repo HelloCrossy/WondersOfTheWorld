@@ -3,6 +3,7 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.EmuModel;
 import com.github.hellocrossy.wondersoftheworld.entity.EmuEntity;
+import com.github.hellocrossy.wondersoftheworld.entity.FennecFoxEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
@@ -18,7 +19,12 @@ public class EmuRenderer extends ZawaMobRenderer<EmuEntity, EmuModel> {
         adultModel = model;
         babyModel = new EmuModel.Child();
     }
-
+    @Override
+    protected void scale(EmuEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 0.8F : 1.0F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
+    }
     @Override
     public void render(EmuEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
         model = entity.isBaby() ? babyModel : adultModel;

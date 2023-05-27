@@ -38,6 +38,6 @@ public class KiwiRenderer extends ZawaMobRenderer<KiwiEntity, KiwiModel> {
         int variantCount = entity.getTotalVariants();
         babyTextures = new ResourceLocation[variantCount];
         for (int i = 0; i < variantCount; i++)
-            babyTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/kiwi/kiwi_" + (i + 1) + ".png");
+            babyTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/kiwi/kiwi_baby.png");
     }
 }

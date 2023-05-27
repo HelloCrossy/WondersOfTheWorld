@@ -2,6 +2,7 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.OryxModel;
+import com.github.hellocrossy.wondersoftheworld.entity.FennecFoxEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.OryxEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
@@ -21,10 +22,16 @@ public class OryxRenderer extends ZawaMobRenderer<OryxEntity, OryxModel> {
         oryxTwo = new OryxModel.oryxTwo();
         babyModel = new OryxModel.Child();
     }
+    @Override
+    protected void scale(OryxEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 1.4F : 1.2F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
+    }
 
     @Override
     public void render(OryxEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
-        if (entity.isBaby()) { // Still need to set the baby model
+        if (entity.isBaby()) {
             model = babyModel;
 
         } else {
