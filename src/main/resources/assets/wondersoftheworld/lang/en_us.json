@@ -37,8 +37,8 @@
   "item.wondersoftheworld.oscar_spawn_egg": "Oscar Spawn Egg",
   "item.wondersoftheworld.discus_fish": "Raw Discus",
   "item.wondersoftheworld.oscar": "Raw Oscar",
-  "item.wondersoftheworld.discus_fish_bucket": "Bucket Of Discus",
-  "item.wondersoftheworld.oscar_bucket": "Bucket Of Oscar",
+  "item.wondersoftheworld.bucket_of_discus": "Bucket Of Discus",
+  "item.wondersoftheworld.bucket_of_oscar": "Bucket Of Oscar",
 
   "__comment": "Entity Variant and Scientific Names, and Informational Blurbs",
 
@@ -68,8 +68,8 @@
 
   "scientific.wondersoftheworld.bongo_0": "Tragelaphus eurycerus",
   "scientific.wondersoftheworld.bongo_1": "Tragelaphus isaaci",
-  "variant.wondersoftheworld.bongo_0": "Western Lowland Bongo",
-  "variant.wondersoftheworld.bongo_1": "Eastern Mountain Bongo",
+  "variant.wondersoftheworld.bongo_0": "Western Lowland",
+  "variant.wondersoftheworld.bongo_1": "Eastern Mountain",
   "taxonomic_class.wondersoftheworld.bongo": "Mammal",
   "range.wondersoftheworld.bongo": "Central/East Africa",
   "range.wondersoftheworld.bongo_0": "Central Africa",
@@ -110,7 +110,7 @@
   "informational_blurb.wondersoftheworld.oryx_4": "Scimitar Horned Oryx is a Oryx species that was once widespread all across North Africa. In 2000, it was declared Extinct In The Wild on the IUCN Red List.The Scimitar Horned Oryx formed herds of mixed sexes of up to 70 members, usually guided by the dominant males. They inhabited semideserts and dry deserts and were adapted to live in extreme hot climate, with their efficient cooling mechanism and very low requirement of water.",
 
   "scientific.wondersoftheworld.lowland_nyala": "Tragelaphus angasii",
-  "variant.wondersoftheworld.lowland_nyala_0": "",
+  "variant.wondersoftheworld.lowland_nyala_0": "Common",
   "taxonomic_class.wondersoftheworld.lowland_nyala": "Mammal",
   "range.wondersoftheworld.lowland_nyala": "Southern Africa",
   "conservation_status.wondersoftheworld.lowland_nyala": "Least Concern",
@@ -131,7 +131,7 @@
   "informational_blurb.wondersoftheworld.saiga_antelope_1": "Mongolian Saiga is a species of Saiga found only in the Western Mongolia dry steppes. They are smallest species compared to the Russian counterpart and can develop a sandy colour. Their coat develops a pale, grayish-brown colour in winter. And sometimes can show a hint of brown on the belly and the neck. This species is listed as Endangered by the IUCN status, mainly because of the habitat loss and excessive poarching (for their horns).",
 
   "scientific.wondersoftheworld.tibetan_antelope": "Panthlops hodgsonii",
-  "variant.wondersoftheworld.tibetan_antelope_0": "",
+  "variant.wondersoftheworld.tibetan_antelope_0": "Common",
   "taxonomic_class.wondersoftheworld.tibetan_antelope": "Mammal",
   "range.wondersoftheworld.tibetan_antelope": "Tibetan Plateau",
   "conservation_status.wondersoftheworld.tibetan_antelope": "Near Threatened",

@@ -17,7 +17,7 @@ public class OryxRenderer extends ZawaMobRenderer<OryxEntity, OryxModel> {
     private final OryxModel babyModel;
 
     public OryxRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new OryxModel.oryxOne(), 0.5F);
+        super(rendererManager, new OryxModel.oryxOne(), 1.0F);
         oryxOne = model;
         oryxTwo = new OryxModel.oryxTwo();
         babyModel = new OryxModel.Child();

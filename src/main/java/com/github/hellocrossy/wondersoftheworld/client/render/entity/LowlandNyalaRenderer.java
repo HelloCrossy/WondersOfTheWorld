@@ -18,14 +18,14 @@ public class LowlandNyalaRenderer extends ZawaMobRenderer<LowlandNyalaEntity, Lo
     private final LowlandNyalaModel Child;
 
     public LowlandNyalaRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new LowlandNyalaModel.Male(), 0.5F);
+        super(rendererManager, new LowlandNyalaModel.Male(), 1.0F);
         Male = model;
         Female = new LowlandNyalaModel.Female();
         Child = new LowlandNyalaModel.Child();
     }
     @Override
     protected void scale(LowlandNyalaEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.9F : 1.1F;
+        float scale = entity.isBaby() ? 0.8F : 1.0F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

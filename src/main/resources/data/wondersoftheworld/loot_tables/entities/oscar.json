@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:raw_oscar",
+          "name": "wondersoftheworld:oscar",
           "functions": [
             {
               "function": "minecraft:set_count",

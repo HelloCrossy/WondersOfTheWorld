@@ -14,7 +14,7 @@ public class SaigaAntelopeRenderer extends ZawaMobRenderer<SaigaAntelopeEntity, 
     private final SaigaAntelopeModel babyModel;
 
     public SaigaAntelopeRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new SaigaAntelopeModel.Adult(), 1.0F);
+        super(rendererManager, new SaigaAntelopeModel.Adult(), 0.75F);
         adultModel = model;
         babyModel = new SaigaAntelopeModel.Child();
     }

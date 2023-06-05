@@ -15,13 +15,13 @@ public class ServalRenderer extends ZawaMobRenderer<ServalEntity, ServalModel> {
     private final ServalModel babyModel;
 
     public ServalRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new ServalModel.Adult(), 1.0F);
+        super(rendererManager, new ServalModel.Adult(), 0.75F);
         adultModel = model;
         babyModel = new ServalModel.Child();
     }
     @Override
     protected void scale(ServalEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.9F : 1.2F;
+        float scale = entity.isBaby() ? 0.7F : 1.0F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

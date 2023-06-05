@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wondersoftheworld:raw_discus_fish",
+          "name": "wondersoftheworld:discus_fish",
           "functions": [
             {
               "function": "minecraft:set_count",

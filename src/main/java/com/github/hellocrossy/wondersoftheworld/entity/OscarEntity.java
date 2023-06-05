@@ -7,6 +7,7 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
@@ -48,5 +49,10 @@ public class OscarEntity extends ZawaAmbientFishEntity {
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.OSCAR.get().create(world);
+    }
+    @Override
+    protected void registerGoals () {
+        super.registerGoals();
+        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
     }
 }

@@ -18,7 +18,7 @@ public class VultureRenderer extends ZawaMobRenderer<VultureEntity, VultureModel
     private final VultureModel flyingModel;
 
     public VultureRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new VultureModel.Adult(), 1.0F);
+        super(rendererManager, new VultureModel.Adult(), 0.5F);
         adultModel = model;
         flyingModel = new VultureModel.Flying();
         babyModel = new VultureModel.Child();

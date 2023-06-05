@@ -14,7 +14,7 @@ public class KiwiRenderer extends ZawaMobRenderer<KiwiEntity, KiwiModel> {
     private final KiwiModel babyModel;
 
     public KiwiRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new KiwiModel.Adult(), 1.0F);
+        super(rendererManager, new KiwiModel.Adult(), 0.3F);
         adultModel = model;
         babyModel = new KiwiModel.Child();
     }

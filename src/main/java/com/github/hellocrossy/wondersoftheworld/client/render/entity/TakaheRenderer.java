@@ -15,7 +15,7 @@ public class TakaheRenderer extends ZawaMobRenderer<TakaheEntity, TakaheModel> {
     private final TakaheModel babyModel;
 
     public TakaheRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new TakaheModel.Adult(), 1.0F);
+        super(rendererManager, new TakaheModel.Adult(), 0.5F);
         adultModel = model;
         babyModel = new TakaheModel.Child();
     }

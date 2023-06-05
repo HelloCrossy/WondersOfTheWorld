@@ -16,7 +16,7 @@ public class FennecFoxRenderer extends ZawaMobRenderer<FennecFoxEntity, FennecFo
     private final FennecFoxModel babyModel;
 
     public FennecFoxRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new FennecFoxModel.Adult(), 1.0F);
+        super(rendererManager, new FennecFoxModel.Adult(), 0.3F);
         adultModel = model;
         babyModel = new FennecFoxModel.Child();
     }

@@ -14,7 +14,7 @@ public class TibetanAntelopeRenderer extends ZawaMobRenderer<TibetanAntelopeEnti
     private final TibetanAntelopeModel babyModel;
 
     public TibetanAntelopeRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new TibetanAntelopeModel.Adult(), 1.0F);
+        super(rendererManager, new TibetanAntelopeModel.Adult(), 0.75F);
         adultModel = model;
         babyModel = new TibetanAntelopeModel.Child();
     }

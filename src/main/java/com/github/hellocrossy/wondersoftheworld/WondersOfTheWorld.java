@@ -22,5 +22,6 @@ public class WondersOfTheWorld {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+        WOTWEntities.registerSpawnPlacements();
     }
 }

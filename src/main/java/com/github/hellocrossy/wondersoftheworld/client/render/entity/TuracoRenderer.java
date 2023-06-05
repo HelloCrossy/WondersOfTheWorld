@@ -17,7 +17,7 @@ public class TuracoRenderer extends ZawaMobRenderer<TuracoEntity, TuracoModel> {
     private final TuracoModel flyingModel;
 
     public TuracoRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new TuracoModel.Adult(), 1.0F);
+        super(rendererManager, new TuracoModel.Adult(), 0.5F);
         adultModel = model;
         flyingModel = new TuracoModel.Flying();
         babyModel = new TuracoModel.Child();

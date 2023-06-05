@@ -15,7 +15,7 @@ public class EmuRenderer extends ZawaMobRenderer<EmuEntity, EmuModel> {
     private final EmuModel babyModel;
 
     public EmuRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new EmuModel.Adult(), 1.0F);
+        super(rendererManager, new EmuModel.Adult(), 0.75F);
         adultModel = model;
         babyModel = new EmuModel.Child();
     }
