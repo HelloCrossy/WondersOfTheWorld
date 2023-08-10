@@ -15,8 +15,8 @@ import org.zawamod.zawa.world.entity.animal.ZawaFlyingEntity;
 
 import javax.annotation.Nullable;
 
-public class TuracoEntity extends ZawaFlyingEntity implements SpeciesVariantsEntity {
-    public TuracoEntity(EntityType<? extends ZawaFlyingEntity> type, World world) {
+public class TitEntity extends ZawaFlyingEntity implements SpeciesVariantsEntity {
+    public TitEntity(EntityType<? extends ZawaFlyingEntity> type, World world) {
         super(type, world);
     }
 
@@ -27,7 +27,7 @@ public class TuracoEntity extends ZawaFlyingEntity implements SpeciesVariantsEnt
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
-        return WOTWEntities.TURACO.get().create(world);
+        return WOTWEntities.TIT.get().create(world);
     }
 
     @Override
@@ -42,3 +42,4 @@ public class TuracoEntity extends ZawaFlyingEntity implements SpeciesVariantsEnt
         this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, PlayerEntity.class, 16.0F, 0.8D, 1.33D, (entity) -> AVOID_PLAYERS.test(entity) && !this.isTame()));
     }
 }
+

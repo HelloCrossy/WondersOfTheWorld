@@ -3,7 +3,6 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.BongoModel;
 import com.github.hellocrossy.wondersoftheworld.entity.BongoEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.FennecFoxEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;

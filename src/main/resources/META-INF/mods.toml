@@ -11,7 +11,7 @@ displayName="Wonders Of The World ZAWA Addon"
 #updateJSONURL=""
 displayURL="https://www.curseforge.com/minecraft/mc-mods/wonders-of-the-world"
 logoFile="logo.png"
-credits="Devs: HelloCrossy67, Kiew, chilotic, 808s, LleoZCL, Arty"
+credits="Devs: HelloCrossy67, Kiew, chilotic, 808s, SpiggitySpag, Arty, Kelvillar, Sophia"
 authors="HelloCrossy67"
 description='''
 Addon for ZAWA Evolved, with the aim to bring animals from all across the world to YOUR screen!'''
@@ -19,7 +19,7 @@ Addon for ZAWA Evolved, with the aim to bring animals from all across the world 
 [[dependencies.wondersoftheworld]]
 modId="forge"
 mandatory=true
-versionRange="[36.2.0,)"
+versionRange="[36.2.20,)"
 ordering="NONE"
 side="BOTH"
 
