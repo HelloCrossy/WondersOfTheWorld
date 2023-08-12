@@ -9,308 +9,412 @@ import org.zawamod.zawa.client.model.ZawaBaseModel;
 import org.zawamod.zawa.client.model.ZawaModelRenderer;
 
 public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
-    protected ZawaModelRenderer MAIN;
+    protected ZawaModelRenderer CHEST;
     protected Iterable<ModelRenderer> parts;
 
     @Override
     @MethodsReturnNonnullByDefault
     public Iterable<ModelRenderer> parts() {
         if (this.parts == null) {
-            this.parts = ImmutableList.of(MAIN);
+            this.parts = ImmutableList.of(CHEST);
         }
 
         return this.parts;
     }
 
     public static class Adult extends BongoModel {
-
-        protected ZawaModelRenderer HEAD;
-        protected ZawaModelRenderer Ear_R_r1;
-        protected ZawaModelRenderer Ear_L_r1;
-        protected ZawaModelRenderer Mouth_r1;
-        protected ZawaModelRenderer Muzzle_r1;
-        protected ZawaModelRenderer TopSnout_r1;
-        protected ZawaModelRenderer Head_r1;
-        protected ZawaModelRenderer Snout;
-        protected ZawaModelRenderer Snout_L_r1;
-        protected ZawaModelRenderer Horns_L;
-        protected ZawaModelRenderer Horn_3_r1;
-        protected ZawaModelRenderer Horn_2_r1;
-        protected ZawaModelRenderer Horn_1_r1;
-        protected ZawaModelRenderer Horn_R;
-        protected ZawaModelRenderer Horn_3_r2;
-        protected ZawaModelRenderer Horn_2_r2;
-        protected ZawaModelRenderer Horn_1_r2;
-        protected ZawaModelRenderer BODY;
-        protected ZawaModelRenderer Mane_3_r1;
-        protected ZawaModelRenderer Hips_r1;
-        protected ZawaModelRenderer Mane_2_r1;
-        protected ZawaModelRenderer Mane_1_r1;
+        
         protected ZawaModelRenderer Chest_r1;
-        protected ZawaModelRenderer Neck;
-        protected ZawaModelRenderer Lower_r1;
-        protected ZawaModelRenderer Upper_r1;
-        protected ZawaModelRenderer Tail;
-        protected ZawaModelRenderer Tail_4_r1;
-        protected ZawaModelRenderer Tail_2_r1;
-        protected ZawaModelRenderer Tail_1_r1;
-        protected ZawaModelRenderer Limb_Front_R;
-        protected ZawaModelRenderer ArmBase_r1;
-        protected ZawaModelRenderer Limb_Front_L;
-        protected ZawaModelRenderer ArmBase_r2;
-        protected ZawaModelRenderer Limb_Back_L;
-        protected ZawaModelRenderer UpperLeg_r1;
+        protected ZawaModelRenderer BODY;
+        protected ZawaModelRenderer Body_r1;
+        protected ZawaModelRenderer HIPS;
+        protected ZawaModelRenderer Hips_r1;
+        protected ZawaModelRenderer TAIL;
+        protected ZawaModelRenderer Tail1_r1;
+        protected ZawaModelRenderer bone;
+        protected ZawaModelRenderer Tail2_r1;
+        protected ZawaModelRenderer bone2;
+        protected ZawaModelRenderer Tail4_r1;
+        protected ZawaModelRenderer Tail3_r1;
+        protected ZawaModelRenderer THIGH;
         protected ZawaModelRenderer Thigh_r1;
-        protected ZawaModelRenderer Limb_Back_R;
-        protected ZawaModelRenderer UpperLeg_r2;
+        protected ZawaModelRenderer UPPERLEG;
+        protected ZawaModelRenderer UpperLeg_r1;
+        protected ZawaModelRenderer LOWERLEG;
+        protected ZawaModelRenderer LowerLeg_r1;
+        protected ZawaModelRenderer FOOT;
+        protected ZawaModelRenderer Foot_r1;
+        protected ZawaModelRenderer THIGH2;
         protected ZawaModelRenderer Thigh_r2;
+        protected ZawaModelRenderer UPPERLEG2;
+        protected ZawaModelRenderer UpperLeg_r2;
+        protected ZawaModelRenderer LOWERLEG2;
+        protected ZawaModelRenderer FOOT2;
+        protected ZawaModelRenderer NECK;
+        protected ZawaModelRenderer NeckBase_r1;
+        protected ZawaModelRenderer Neck_r1;
+        protected ZawaModelRenderer HEAD;
+        protected ZawaModelRenderer RightHorn3_r1;
+        protected ZawaModelRenderer LeftHorn3_r1;
+        protected ZawaModelRenderer Mouth_r1;
+        protected ZawaModelRenderer Ear1_r1;
+        protected ZawaModelRenderer RightHorn1_r1;
+        protected ZawaModelRenderer RightHorn2_r1;
+        protected ZawaModelRenderer LeftHorn2_r1;
+        protected ZawaModelRenderer Ear2_r1;
+        protected ZawaModelRenderer Snout_r1;
+        protected ZawaModelRenderer UpperSnout_r1;
+        protected ZawaModelRenderer LeftHorn1_r1;
+        protected ZawaModelRenderer Head_r1;
+        protected ZawaModelRenderer ARMBASE;
+        protected ZawaModelRenderer ArmBase_r1;
+        protected ZawaModelRenderer ARM;
+        protected ZawaModelRenderer Arm_r1;
+        protected ZawaModelRenderer FOREARM;
+        protected ZawaModelRenderer Forearm_r1;
+        protected ZawaModelRenderer HAND;
+        protected ZawaModelRenderer Hand_r1;
+        protected ZawaModelRenderer ARMBASE2;
+        protected ZawaModelRenderer ArmBase_r2;
+        protected ZawaModelRenderer ARM2;
+        protected ZawaModelRenderer Arm_r2;
+        protected ZawaModelRenderer FOREARM2;
+        protected ZawaModelRenderer Forearm_r2;
+        protected ZawaModelRenderer HAND2;
+        protected ZawaModelRenderer Hand_r2;
 
         public Adult() {
             texWidth = 128;
             texHeight = 128;
 
-            MAIN = new ZawaModelRenderer(this, 0, 0);
-            MAIN.setPos(0.0F, 24.0F, 0.0F);
+            CHEST = new ZawaModelRenderer(this, 0, 0);
+            CHEST.setPos(0.0F, 6.9992F, -7.4782F);
 
-
-            HEAD = new ZawaModelRenderer(this, 0, 0);
-            HEAD.setPos(0.0F, -22.5117F, -18.3637F);
-            MAIN.addChild(HEAD);
-
-
-            Ear_R_r1 = new ZawaModelRenderer(this, 92, 33);
-            Ear_R_r1.setPos(-2.1973F, -2.5944F, 4.7687F);
-            HEAD.addChild(Ear_R_r1);
-            setRotateAngle(Ear_R_r1, 0.5681F, 0.5207F, 0.6628F);
-            Ear_R_r1.addBox(-2.5F, -0.8F, -0.9F, 4.0F, 2.0F, 1.0F, 0.0F, false);
-
-            Ear_L_r1 = new ZawaModelRenderer(this, 112, 33);
-            Ear_L_r1.setPos(2.1973F, -2.5944F, 4.7687F);
-            HEAD.addChild(Ear_L_r1);
-            setRotateAngle(Ear_L_r1, 0.5681F, -0.5207F, -0.6628F);
-            Ear_L_r1.addBox(-1.5F, -0.8F, -0.9F, 4.0F, 2.0F, 1.0F, 0.0F, false);
-
-            Mouth_r1 = new ZawaModelRenderer(this, 102, 53);
-            Mouth_r1.setPos(0.0F, 0.075F, 0.0F);
-            HEAD.addChild(Mouth_r1);
-            setRotateAngle(Mouth_r1, 0.1353F, 0.0F, 0.0F);
-            Mouth_r1.addBox(-1.0F, -0.0835F, -1.7977F, 2.0F, 2.0F, 3.0F, 0.0F, false);
-
-            Muzzle_r1 = new ZawaModelRenderer(this, 102, 49);
-            Muzzle_r1.setPos(0.0F, 0.9591F, -1.2921F);
-            HEAD.addChild(Muzzle_r1);
-            setRotateAngle(Muzzle_r1, 0.6938F, 0.0F, 0.0F);
-            Muzzle_r1.addBox(-1.5F, -1.0F, -1.0F, 3.0F, 2.0F, 2.0F, 0.0F, false);
-
-            TopSnout_r1 = new ZawaModelRenderer(this, 101, 41);
-            TopSnout_r1.setPos(0.0F, -2.9851F, 0.5414F);
-            HEAD.addChild(TopSnout_r1);
-            setRotateAngle(TopSnout_r1, 0.7679F, 0.0F, 0.0F);
-            TopSnout_r1.addBox(-1.0F, 0.574F, -4.1433F, 2.0F, 2.0F, 4.0F, 0.0F, true);
-
-            Head_r1 = new ZawaModelRenderer(this, 97, 31);
-            Head_r1.setPos(0.0F, -3.1101F, 3.0633F);
-            HEAD.addChild(Head_r1);
-            setRotateAngle(Head_r1, 0.0305F, 0.0F, 0.0F);
-            Head_r1.addBox(-2.5F, -0.0031F, -2.2246F, 5.0F, 5.0F, 5.0F, 0.0F, false);
-
-            Snout = new ZawaModelRenderer(this, 0, 0);
-            Snout.setPos(0.0F, 0.0F, 0.0F);
-            HEAD.addChild(Snout);
-
-
-            Snout_L_r1 = new ZawaModelRenderer(this, 0, 0);
-            Snout_L_r1.setPos(0.0F, 0.0F, 0.0F);
-            Snout.addChild(Snout_L_r1);
-            setRotateAngle(Snout_L_r1, 0.3098F, 0.0F, 0.0F);
-            Snout_L_r1.texOffs(91, 42).addBox(-0.75F, -0.3835F, -1.6227F, 2.0F, 2.0F, 3.0F, 0.0F, false);
-            Snout_L_r1.texOffs(91, 42).addBox(-1.25F, -0.3835F, -1.6227F, 2.0F, 2.0F, 3.0F, 0.0F, true);
-
-            Horns_L = new ZawaModelRenderer(this, 0, 0);
-            Horns_L.setPos(0.0F, -6.1081F, 4.8571F);
-            HEAD.addChild(Horns_L);
-
-
-            Horn_3_r1 = new ZawaModelRenderer(this, 114, 16);
-            Horn_3_r1.setPos(0.0F, 0.0F, 0.0F);
-            Horns_L.addChild(Horn_3_r1);
-            setRotateAngle(Horn_3_r1, -0.5682F, 0.0815F, 0.348F);
-            Horn_3_r1.addBox(0.3689F, -5.2086F, -0.5573F, 1.0F, 3.0F, 1.0F, 0.0F, false);
-
-            Horn_2_r1 = new ZawaModelRenderer(this, 113, 20);
-            Horn_2_r1.setPos(0.0F, 0.0F, 0.0F);
-            Horns_L.addChild(Horn_2_r1);
-            setRotateAngle(Horn_2_r1, -0.7769F, -0.2114F, 0.0162F);
-            Horn_2_r1.addBox(1.2108F, -1.826F, -1.0121F, 1.0F, 4.0F, 1.0F, 0.0F, false);
-
-            Horn_1_r1 = new ZawaModelRenderer(this, 111, 25);
-            Horn_1_r1.setPos(0.0F, 0.0F, 0.0F);
-            Horns_L.addChild(Horn_1_r1);
-            setRotateAngle(Horn_1_r1, -0.5361F, 0.0798F, 0.2312F);
-            Horn_1_r1.addBox(1.1716F, 0.7518F, -1.4385F, 2.0F, 4.0F, 2.0F, 0.0F, false);
-
-            Horn_R = new ZawaModelRenderer(this, 0, 0);
-            Horn_R.setPos(0.0F, -6.1081F, 4.8571F);
-            HEAD.addChild(Horn_R);
-
-
-            Horn_3_r2 = new ZawaModelRenderer(this, 98, 16);
-            Horn_3_r2.setPos(0.0F, 0.0F, 0.0F);
-            Horn_R.addChild(Horn_3_r2);
-            setRotateAngle(Horn_3_r2, -0.5682F, -0.0815F, -0.348F);
-            Horn_3_r2.addBox(-1.3689F, -5.2086F, -0.5573F, 1.0F, 3.0F, 1.0F, 0.0F, false);
-
-            Horn_2_r2 = new ZawaModelRenderer(this, 99, 20);
-            Horn_2_r2.setPos(0.0F, 0.0F, 0.0F);
-            Horn_R.addChild(Horn_2_r2);
-            setRotateAngle(Horn_2_r2, -0.7769F, 0.2114F, -0.0162F);
-            Horn_2_r2.addBox(-2.2108F, -1.826F, -1.0121F, 1.0F, 4.0F, 1.0F, 0.0F, false);
-
-            Horn_1_r2 = new ZawaModelRenderer(this, 98, 25);
-            Horn_1_r2.setPos(0.0F, 0.0F, 0.0F);
-            Horn_R.addChild(Horn_1_r2);
-            setRotateAngle(Horn_1_r2, -0.5361F, -0.0798F, -0.2312F);
-            Horn_1_r2.addBox(-3.1716F, 0.7518F, -1.4385F, 2.0F, 4.0F, 2.0F, 0.0F, false);
-
-            BODY = new ZawaModelRenderer(this, 0, 0);
-            BODY.setPos(0.0F, -16.5503F, 12.0844F);
-            MAIN.addChild(BODY);
-
-
-            Mane_3_r1 = new ZawaModelRenderer(this, 110,7);
-            Mane_3_r1.setPos(0.0F, -6.7007F, -5.0479F);
-            BODY.addChild(Mane_3_r1);
-            setRotateAngle(Mane_3_r1, -0.3665F, 0.0F, 0.0F);
-            Mane_3_r1.addBox(-1.0F, -0.0069F, -0.0198F, 2.0F, 1.0F, 5.0F, 0.0F, false);
-
-            Hips_r1 = new ZawaModelRenderer(this, 58, 112);
-            Hips_r1.setPos(0.0F, -0.6097F, -5.7134F);
-            BODY.addChild(Hips_r1);
-            setRotateAngle(Hips_r1, -0.2225F, 0.0F, 0.0F);
-            Hips_r1.addBox(-3.0F, -5.4F, -1.025F, 6.0F, 10.0F, 6.0F, 0.0F, false);
-
-            Mane_2_r1 = new ZawaModelRenderer(this, 0, 0);
-            Mane_2_r1.setPos(-2.4767F, -0.7184F, -12.0319F);
-            BODY.addChild(Mane_2_r1);
-            setRotateAngle(Mane_2_r1, 0.0F, 0.0F, 0.0F);
-            Mane_2_r1.texOffs(79, 0).addBox(1.475F, -6.025F, -5.0F, 2.0F, 1.0F, 12.0F, 0.0F, false);
-            Mane_2_r1.texOffs(82, 105).addBox(-1.0233F, -5.5F, -5.5F, 7.0F, 11.0F, 12.0F, 0.0F, false);
-
-            Mane_1_r1 = new ZawaModelRenderer(this, 63, 5);
-            Mane_1_r1.setPos(-2.0F, -0.6771F, -19.5818F);
-            BODY.addChild(Mane_1_r1);
-            setRotateAngle(Mane_1_r1, 0.2094F, 0.0F, 0.0F);
-            Mane_1_r1.addBox(1.0F, -5.4F, -2.25F, 2.0F, 1.0F, 6.0F, 0.0F, false);
 
             Chest_r1 = new ZawaModelRenderer(this, 89, 89);
-            Chest_r1.setPos(0.0F, -0.6771F, -19.5818F);
-            BODY.addChild(Chest_r1);
+            Chest_r1.setPos(0.0F, 0.0F, 0.0F);
+            CHEST.addChild(Chest_r1);
             setRotateAngle(Chest_r1, 0.096F, 0.0F, 0.0F);
-            Chest_r1.addBox(-3.0F, -5.05F, -3.0F, 6.0F, 10.0F, 6.0F, 0.0F, false);
+            Chest_r1.addBox(-3.0F, -5.0F, -3.0F, 6.0F, 10.0F, 6.0F, 0.0F, false);
 
-            Neck = new ZawaModelRenderer(this, 0, 0);
-            Neck.setPos(-0.5F, -2.9447F, -24.6539F);
-            BODY.addChild(Neck);
-
-
-            Lower_r1 = new ZawaModelRenderer(this, 89, 76);
-            Lower_r1.setPos(0.0F, 0.0F, 0.0F);
-            Neck.addChild(Lower_r1);
-            setRotateAngle(Lower_r1, -0.8247F, 0.0F, 0.0F);
-            Lower_r1.addBox(-1.0F, -3.15F, -2.775F, 3.0F, 4.0F, 9.0F, 0.0F, false);
-
-            Upper_r1 = new ZawaModelRenderer(this, 89, 63);
-            Upper_r1.setPos(0.5F, -1.4416F, -0.3568F);
-            Neck.addChild(Upper_r1);
-            setRotateAngle(Upper_r1, -0.6109F, 0.0F, 0.0F);
-            Upper_r1.addBox(-2.0F, -3.8F, -2.375F, 4.0F, 5.0F, 8.0F, 0.0F, false);
-
-            Tail = new ZawaModelRenderer(this, 0, 0);
-            Tail.setPos(0.0F, 0.0F, 0.0F);
-            BODY.addChild(Tail);
+            BODY = new ZawaModelRenderer(this, 0, 0);
+            BODY.setPos(0.0836F, -5.2179F, 2.0307F);
+            CHEST.addChild(BODY);
 
 
-            Tail_4_r1 = new ZawaModelRenderer(this, 0, 0);
-            Tail_4_r1.setPos(0.0F, 0.0F, 0.0F);
-            Tail.addChild(Tail_4_r1);
-            setRotateAngle(Tail_4_r1, -1.5752F, 0.0F, 0.0F);
-            Tail_4_r1.texOffs(15, 118).addBox(-1.0F, -0.9988F, 4.5025F, 2.0F, 2.0F, 3.0F, 0.0F, false);
-            Tail_4_r1.texOffs(12, 110).addBox(-1.5F, -1.6238F, 1.7025F, 3.0F, 3.0F, 5.0F, 0.0F, false);
+            Body_r1 = new ZawaModelRenderer(this, 82, 105);
+            Body_r1.setPos(0.0F, 0.95F, 0.5F);
+            BODY.addChild(Body_r1);
+            setRotateAngle(Body_r1, 0.0F, 0.0075F, -0.0045F);
+            Body_r1.addBox(-3.5554F, -1.5001F, -0.5002F, 7.0F, 11.0F, 12.0F, 0.0F, false);
 
-            Tail_2_r1 = new ZawaModelRenderer(this, 16, 106);
-            Tail_2_r1.setPos(0.0F, 0.0F, 0.6F);
-            Tail.addChild(Tail_2_r1);
-            setRotateAngle(Tail_2_r1, -1.597F, 0.0F, 0.0F);
-            Tail_2_r1.addBox(-1.0F, -0.5488F, 0.1525F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+            HIPS = new ZawaModelRenderer(this, 0, 0);
+            HIPS.setPos(-0.0836F, -0.4413F, 11.9186F);
+            BODY.addChild(HIPS);
 
-            Tail_1_r1 = new ZawaModelRenderer(this, 13, 99);
-            Tail_1_r1.setPos(0.0F, -0.975F, 0.3F);
-            Tail.addChild(Tail_1_r1);
-            setRotateAngle(Tail_1_r1, -1.405F, 0.0F, 0.0F);
-            Tail_1_r1.addBox(-1.0F, -0.6488F, -3.6975F, 2.0F, 2.0F, 5.0F, 0.0F, false);
 
-            Limb_Front_R = new ZawaModelRenderer(this, 0, 0);
-            Limb_Front_R.setPos(-0.125F, -10.55F, -7.05F);
-            MAIN.addChild(Limb_Front_R);
-            Limb_Front_R.texOffs(34, 52).addBox(-3.925F, -0.275F, -1.325F, 3.0F, 4.0F, 3.0F, 0.0F, false);
-            Limb_Front_R.texOffs(36, 59).addBox(-3.25F, 3.4301F, -0.8495F, 2.0F, 6.0F, 2.0F, 0.0F, false);
-            Limb_Front_R.texOffs(36, 67).addBox(-3.2F, 8.55F, -1.45F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+            Hips_r1 = new ZawaModelRenderer(this, 58, 112);
+            Hips_r1.setPos(0.0F, 0.0F, 0.0F);
+            HIPS.addChild(Hips_r1);
+            setRotateAngle(Hips_r1, -0.2225F, 0.0F, 0.0F);
+            Hips_r1.addBox(-3.0F, -0.0135F, 0.0913F, 6.0F, 10.0F, 6.0F, 0.0F, false);
 
-            ArmBase_r1 = new ZawaModelRenderer(this, 32, 40);
-            ArmBase_r1.setPos(-0.725F, 0.6F, -4.1F);
-            Limb_Front_R.addChild(ArmBase_r1);
-            setRotateAngle(ArmBase_r1, 0.0742F, 0.0F, 0.0F);
-            ArmBase_r1.addBox(-3.25F, -6.75F, 1.675F, 3.0F, 7.0F, 5.0F, 0.0F, false);
+            TAIL = new ZawaModelRenderer(this, 0, 0);
+            TAIL.setPos(0.0F, 2.2418F, 5.6707F);
+            HIPS.addChild(TAIL);
 
-            Limb_Front_L = new ZawaModelRenderer(this, 0, 0);
-            Limb_Front_L.setPos(0.125F, -10.55F, -7.05F);
-            MAIN.addChild(Limb_Front_L);
-            Limb_Front_L.texOffs(34, 87).addBox(0.925F, -0.275F, -1.325F, 3.0F, 4.0F, 3.0F, 0.0F, false);
-            Limb_Front_L.texOffs(36, 94).addBox(1.25F, 3.4301F, -0.8495F, 2.0F, 6.0F, 2.0F, 0.0F, false);
-            Limb_Front_L.texOffs(36, 103).addBox(1.2F, 8.55F, -1.45F, 2.0F, 2.0F, 2.0F, 0.0F, false);
 
-            ArmBase_r2 = new ZawaModelRenderer(this, 32, 75);
-            ArmBase_r2.setPos(0.725F, 0.6F, -4.1F);
-            Limb_Front_L.addChild(ArmBase_r2);
-            setRotateAngle(ArmBase_r2, 0.0742F, 0.0F, 0.0F);
-            ArmBase_r2.addBox(0.25F, -6.75F, 1.675F, 3.0F, 7.0F, 5.0F, 0.0F, false);
+            Tail1_r1 = new ZawaModelRenderer(this, 13, 99);
+            Tail1_r1.setPos(0.0F, 0.0F, 0.0F);
+            TAIL.addChild(Tail1_r1);
+            setRotateAngle(Tail1_r1, -1.4923F, 0.0F, 0.0F);
+            Tail1_r1.texOffs(13, 99).addBox(-1.0F, -0.4134F, -0.7067F, 2.0F, 2.0F, 5.0F, 0.0F, false);
 
-            Limb_Back_L = new ZawaModelRenderer(this, 0, 0);
-            Limb_Back_L.setPos(0.35F, -10.55F, 0.75F);
-            MAIN.addChild(Limb_Back_L);
-            Limb_Back_L.texOffs(62, 97).addBox(1.15F, 2.5745F, 7.5366F, 2.0F, 7.0F, 2.0F, 0.0F, false);
-            Limb_Back_L.texOffs(62, 106).addBox(1.225F, 8.55F, 6.825F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+            bone = new ZawaModelRenderer(this, 0, 0);
+            bone.setPos(0.0F, 4.1474F, -0.1861F);
+            TAIL.addChild(bone);
 
-            UpperLeg_r1 = new ZawaModelRenderer(this, 60, 89);
-            UpperLeg_r1.setPos(2.125F, 1.1441F, 7.0257F);
-            Limb_Back_L.addChild(UpperLeg_r1);
-            setRotateAngle(UpperLeg_r1, 0.4014F, 0.0F, 0.0F);
-            UpperLeg_r1.addBox(-1.5F, -2.5F, -1.225F, 3.0F, 5.0F, 3.0F, 0.0F, false);
+
+            Tail2_r1 = new ZawaModelRenderer(this, 16, 106);
+            Tail2_r1.setPos(0.0F, 0.6F, 0.4F);
+            bone.addChild(Tail2_r1);
+            setRotateAngle(Tail2_r1, -1.6842F, 0.0F, 0.0F);
+            Tail2_r1.addBox(-1.0F, -0.4639F, -0.5927F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+
+            bone2 = new ZawaModelRenderer(this, 0, 0);
+            bone2.setPos(0.0F, 2.0477F, -0.1977F);
+            bone.addChild(bone2);
+
+
+            Tail4_r1 = new ZawaModelRenderer(this, 15, 118);
+            Tail4_r1.setPos(0.0F, 3.0F, 0.0F);
+            bone2.addChild(Tail4_r1);
+            setRotateAngle(Tail4_r1, -1.6624F, 0.0F, 0.0F);
+            Tail4_r1.texOffs(15, 118).addBox(-1.0F, -0.5184F, -0.7255F, 2.0F, 2.0F, 3.0F, 0.0F, false);
+
+            Tail3_r1 = new ZawaModelRenderer(this, 12, 110);
+            Tail3_r1.setPos(0.0F, 0.0F, 0.0F);
+            bone2.addChild(Tail3_r1);
+            setRotateAngle(Tail3_r1, -1.6624F, 0.0F, 0.0F);
+            Tail3_r1.addBox(-1.5F, -1.4179F, -0.538F, 3.0F, 3.0F, 5.0F, 0.0F, false);
+
+            THIGH = new ZawaModelRenderer(this, 0, 0);
+            THIGH.setPos(3.0F, 4.2268F, 1.698F);
+            HIPS.addChild(THIGH);
+
 
             Thigh_r1 = new ZawaModelRenderer(this, 57, 76);
-            Thigh_r1.setPos(2.65F, -3.8832F, 7.4191F);
-            Limb_Back_L.addChild(Thigh_r1);
+            Thigh_r1.setPos(0.0F, 1.0F, 0.0F);
+            THIGH.addChild(Thigh_r1);
             setRotateAngle(Thigh_r1, -0.0872F, 0.0F, 0.0F);
-            Thigh_r1.addBox(-2.5F, -4.0F, -3.0F, 4.0F, 8.0F, 5.0F, 0.0F, false);
+            Thigh_r1.addBox(-2.5913F, -1.0128F, -2.7385F, 4.0F, 8.0F, 5.0F, 0.0F, false);
 
-            Limb_Back_R = new ZawaModelRenderer(this, 0, 0);
-            Limb_Back_R.setPos(-0.35F, -10.55F, 0.75F);
-            MAIN.addChild(Limb_Back_R);
-            Limb_Back_R.texOffs(61, 58).addBox(-3.15F, 2.5745F, 7.5366F, 2.0F, 7.0F, 2.0F, 0.0F, false);
-            Limb_Back_R.texOffs(61, 67).addBox(-3.225F, 8.55F, 6.825F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+            UPPERLEG = new ZawaModelRenderer(this, 0, 0);
+            UPPERLEG.setPos(0.0F, 7.8F, -2.1F);
+            THIGH.addChild(UPPERLEG);
 
-            UpperLeg_r2 = new ZawaModelRenderer(this, 59, 50);
-            UpperLeg_r2.setPos(-2.125F, 1.1441F, 7.0257F);
-            Limb_Back_R.addChild(UpperLeg_r2);
-            setRotateAngle(UpperLeg_r2, 0.4014F, 0.0F, 0.0F);
-            UpperLeg_r2.addBox(-1.5F, -2.5F, -1.225F, 3.0F, 5.0F, 3.0F, 0.0F, false);
 
-            Thigh_r2 = new ZawaModelRenderer(this, 55, 37);
-            Thigh_r2.setPos(-2.65F, -3.8832F, 7.4191F);
-            Limb_Back_R.addChild(Thigh_r2);
+            UpperLeg_r1 = new ZawaModelRenderer(this, 60, 89);
+            UpperLeg_r1.setPos(0.0F, 0.2F, 1.1F);
+            UPPERLEG.addChild(UpperLeg_r1);
+            setRotateAngle(UpperLeg_r1, 0.4014F, 0.0F, 0.0F);
+            UpperLeg_r1.addBox(-2.025F, -1.3173F, -1.068F, 3.0F, 5.0F, 3.0F, 0.0F, false);
+
+            LOWERLEG = new ZawaModelRenderer(this, 0, 0);
+            LOWERLEG.setPos(0.0F, 2.8F, 4.2F);
+            UPPERLEG.addChild(LOWERLEG);
+
+
+            LowerLeg_r1 = new ZawaModelRenderer(this, 62, 97);
+            LowerLeg_r1.setPos(0.0F, 1.4F, -1.1F);
+            LOWERLEG.addChild(LowerLeg_r1);
+            setRotateAngle(LowerLeg_r1, 0.0F, 0.0F, 0.0F);
+            LowerLeg_r1.addBox(-1.5F, -1.5423F, -0.8825F, 2.0F, 7.0F, 2.0F, 0.0F, false);
+
+            FOOT = new ZawaModelRenderer(this, 0, 0);
+            FOOT.setPos(0.0F, 6.4F, -1.1F);
+            LOWERLEG.addChild(FOOT);
+
+
+            Foot_r1 = new ZawaModelRenderer(this, 62, 106);
+            Foot_r1.setPos(0.0F, 0.0F, 0.0F);
+            FOOT.addChild(Foot_r1);
+            setRotateAngle(Foot_r1, 0.0F, 0.0F, 0.0F);
+            Foot_r1.addBox(-1.425F, -0.5668F, -1.5941F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+
+            THIGH2 = new ZawaModelRenderer(this, 0, 0);
+            THIGH2.setPos(-3.0F, 4.2268F, 1.698F);
+            HIPS.addChild(THIGH2);
+
+
+            Thigh_r2 = new ZawaModelRenderer(this, 57, 76);
+            Thigh_r2.setPos(0.0F, 1.0F, 0.0F);
+            THIGH2.addChild(Thigh_r2);
             setRotateAngle(Thigh_r2, -0.0872F, 0.0F, 0.0F);
-            Thigh_r2.addBox(-1.5F, -4.0F, -3.0F, 4.0F, 8.0F, 5.0F, 0.0F, false);
+            Thigh_r2.addBox(-1.4087F, -1.0128F, -2.7385F, 4.0F, 8.0F, 5.0F, 0.0F, true);
 
+            UPPERLEG2 = new ZawaModelRenderer(this, 0, 0);
+            UPPERLEG2.setPos(0.0F, 7.8F, -2.1F);
+            THIGH2.addChild(UPPERLEG2);
+
+
+            UpperLeg_r2 = new ZawaModelRenderer(this, 60, 89);
+            UpperLeg_r2.setPos(0.0F, 0.2F, 1.1F);
+            UPPERLEG2.addChild(UpperLeg_r2);
+            setRotateAngle(UpperLeg_r2, 0.4014F, 0.0F, 0.0F);
+            UpperLeg_r2.addBox(-0.975F, -1.3173F, -1.068F, 3.0F, 5.0F, 3.0F, 0.0F, true);
+
+            LOWERLEG2 = new ZawaModelRenderer(this, 62, 97);
+            LOWERLEG2.setPos(0.0F, 2.8F, 4.2F);
+            UPPERLEG2.addChild(LOWERLEG2);
+            LOWERLEG2.addBox(-0.5F, -0.1423F, -1.9825F, 2.0F, 7.0F, 2.0F, 0.0F, true);
+
+            FOOT2 = new ZawaModelRenderer(this, 62, 106);
+            FOOT2.setPos(0.0F, 6.4F, -1.1F);
+            LOWERLEG2.addChild(FOOT2);
+            FOOT2.addBox(-0.575F, -0.5668F, -1.5941F, 2.0F, 2.0F, 2.0F, 0.0F, true);
+
+            NECK = new ZawaModelRenderer(this, 0, 0);
+            NECK.setPos(0.0F, -1.8211F, -0.8222F);
+            CHEST.addChild(NECK);
+
+
+            NeckBase_r1 = new ZawaModelRenderer(this, 89, 76);
+            NeckBase_r1.setPos(0.0F, 0.2F, -2.0F);
+            NECK.addChild(NeckBase_r1);
+            setRotateAngle(NeckBase_r1, -0.8683F, 0.0019F, 0.0F);
+            NeckBase_r1.addBox(-1.5037F, -2.0363F, -5.1084F, 3.0F, 4.0F, 9.0F, 0.0F, false);
+
+            Neck_r1 = new ZawaModelRenderer(this, 89, 63);
+            Neck_r1.setPos(0.0F, -2.8F, 0.0F);
+            NECK.addChild(Neck_r1);
+            setRotateAngle(Neck_r1, -0.6108F, 0.0019F, 0.0F);
+            Neck_r1.addBox(-2.0F, -0.5854F, -5.7713F, 4.0F, 5.0F, 8.0F, 0.0F, false);
+
+            HEAD = new ZawaModelRenderer(this, 0, 0);
+            HEAD.setPos(0.0F, -4.3F, -7.0F);
+            NECK.addChild(HEAD);
+
+
+            RightHorn3_r1 = new ZawaModelRenderer(this, 114, 16);
+            RightHorn3_r1.setPos(-2.0F, -7.25F, 3.5F);
+            HEAD.addChild(RightHorn3_r1);
+            setRotateAngle(RightHorn3_r1, -0.61F, -0.0945F, -0.3443F);
+            RightHorn3_r1.addBox(-0.1503F, -2.6064F, -0.5906F, 1.0F, 3.0F, 1.0F, 0.0F, false);
+
+            LeftHorn3_r1 = new ZawaModelRenderer(this, 114, 16);
+            LeftHorn3_r1.setPos(1.75F, -7.25F, 3.25F);
+            HEAD.addChild(LeftHorn3_r1);
+            setRotateAngle(LeftHorn3_r1, -0.6087F, 0.0981F, 0.3444F);
+            LeftHorn3_r1.addBox(-0.6525F, -2.8223F, -0.4205F, 1.0F, 3.0F, 1.0F, 0.0F, false);
+
+            Mouth_r1 = new ZawaModelRenderer(this, 102, 46);
+            Mouth_r1.setPos(0.0F, 0.5F, -3.75F);
+            HEAD.addChild(Mouth_r1);
+            setRotateAngle(Mouth_r1, 0.4756F, 0.0019F, 0.0F);
+            Mouth_r1.addBox(-1.5205F, -0.5647F, -1.4471F, 3.0F, 2.0F, 2.0F, 0.0F, false);
+
+            Ear1_r1 = new ZawaModelRenderer(this, 112, 33);
+            Ear1_r1.setPos(2.0F, -2.25F, 1.5F);
+            HEAD.addChild(Ear1_r1);
+            setRotateAngle(Ear1_r1, 0.5265F, -0.5457F, -0.6417F);
+            Ear1_r1.addBox(-1.2054F, -0.5559F, -0.7642F, 4.0F, 2.0F, 1.0F, 0.0F, false);
+
+            RightHorn1_r1 = new ZawaModelRenderer(this, 111, 25);
+            RightHorn1_r1.setPos(-1.25F, -3.0F, -0.75F);
+            HEAD.addChild(RightHorn1_r1);
+            setRotateAngle(RightHorn1_r1, -0.5792F, -0.0879F, -0.2276F);
+            RightHorn1_r1.addBox(-1.1064F, -2.6986F, -0.4895F, 2.0F, 4.0F, 2.0F, 0.0F, true);
+
+            RightHorn2_r1 = new ZawaModelRenderer(this, 113, 20);
+            RightHorn2_r1.setPos(-1.75F, -4.75F, 0.75F);
+            HEAD.addChild(RightHorn2_r1);
+            setRotateAngle(RightHorn2_r1, -0.8215F, 0.2124F, -0.0256F);
+            RightHorn2_r1.addBox(-0.7713F, -3.6962F, -0.5335F, 1.0F, 4.0F, 1.0F, 0.0F, false);
+
+            LeftHorn2_r1 = new ZawaModelRenderer(this, 113, 20);
+            LeftHorn2_r1.setPos(2.25F, -4.75F, 1.0F);
+            HEAD.addChild(LeftHorn2_r1);
+            setRotateAngle(LeftHorn2_r1, -0.8214F, -0.2086F, 0.0255F);
+            LeftHorn2_r1.addBox(-0.7946F, -3.5829F, -0.6209F, 1.0F, 4.0F, 1.0F, 0.0F, false);
+
+            Ear2_r1 = new ZawaModelRenderer(this, 112, 33);
+            Ear2_r1.setPos(-1.75F, -2.0F, 1.5F);
+            HEAD.addChild(Ear2_r1);
+            setRotateAngle(Ear2_r1, 0.5292F, 0.5487F, 0.643F);
+            Ear2_r1.addBox(-3.1116F, -0.6814F, -0.905F, 4.0F, 2.0F, 1.0F, 0.0F, true);
+
+            Snout_r1 = new ZawaModelRenderer(this, 91, 42);
+            Snout_r1.setPos(0.0F, 0.5F, -2.0F);
+            HEAD.addChild(Snout_r1);
+            setRotateAngle(Snout_r1, 0.2662F, 0.0019F, 0.0436F);
+            Snout_r1.addBox(-0.7235F, -0.8455F, -2.1346F, 2.0F, 2.0F, 3.0F, 0.0F, false);
+
+            UpperSnout_r1 = new ZawaModelRenderer(this, 101, 41);
+            UpperSnout_r1.setPos(0.0F, -1.5F, -2.0F);
+            HEAD.addChild(UpperSnout_r1);
+            setRotateAngle(UpperSnout_r1, 0.8553F, 0.0019F, 0.0F);
+            UpperSnout_r1.addBox(-1.0172F, -0.8163F, -3.1492F, 2.0F, 2.0F, 4.0F, 0.0F, false);
+
+            LeftHorn1_r1 = new ZawaModelRenderer(this, 111, 25);
+            LeftHorn1_r1.setPos(1.25F, -2.75F, 0.5F);
+            HEAD.addChild(LeftHorn1_r1);
+            setRotateAngle(LeftHorn1_r1, -0.5783F, 0.0916F, 0.2276F);
+            LeftHorn1_r1.addBox(-0.864F, -2.2098F, -1.6718F, 2.0F, 4.0F, 2.0F, 0.0F, false);
+
+            Head_r1 = new ZawaModelRenderer(this, 97, 31);
+            Head_r1.setPos(0.0F, 0.0F, 0.0F);
+            HEAD.addChild(Head_r1);
+            setRotateAngle(Head_r1, -0.013F, 0.0019F, 0.0F);
+            Head_r1.addBox(-2.5134F, -2.8065F, -2.0802F, 5.0F, 5.0F, 5.0F, 0.0F, false);
+
+            ARMBASE = new ZawaModelRenderer(this, 0, 0);
+            ARMBASE.setPos(3.0836F, 0.0321F, 0.0307F);
+            CHEST.addChild(ARMBASE);
+
+
+            ArmBase_r1 = new ZawaModelRenderer(this, 32, 75);
+            ArmBase_r1.setPos(0.0F, 0.7F, -0.5F);
+            ARMBASE.addChild(ArmBase_r1);
+            setRotateAngle(ArmBase_r1, 0.0742F, 0.0F, 0.0F);
+            ArmBase_r1.addBox(-1.9836F, -0.686F, -1.9869F, 3.0F, 7.0F, 5.0F, 0.0F, false);
+
+            ARM = new ZawaModelRenderer(this, 0, 0);
+            ARM.setPos(0.0F, 6.4F, 1.9F);
+            ARMBASE.addChild(ARM);
+
+
+            Arm_r1 = new ZawaModelRenderer(this, 34, 87);
+            Arm_r1.setPos(0.0F, 0.3F, -0.4F);
+            ARM.addChild(Arm_r1);
+            setRotateAngle(Arm_r1, 0.0F, 0.0F, 0.0F);
+            Arm_r1.addBox(-1.9464F, -0.5563F, -2.4256F, 3.0F, 4.0F, 3.0F, 0.0F, false);
+
+            FOREARM = new ZawaModelRenderer(this, 0, 0);
+            FOREARM.setPos(-0.75F, 3.7F, -2.4F);
+            ARM.addChild(FOREARM);
+
+
+            Forearm_r1 = new ZawaModelRenderer(this, 36, 94);
+            Forearm_r1.setPos(0.0F, 0.6F, 1.5F);
+            FOREARM.addChild(Forearm_r1);
+            setRotateAngle(Forearm_r1, 0.0F, 0.0F, 0.0F);
+            Forearm_r1.addBox(-0.8939F, -0.8511F, -1.4178F, 2.0F, 6.0F, 2.0F, 0.0F, false);
+
+            HAND = new ZawaModelRenderer(this, 0, 0);
+            HAND.setPos(0.75F, 5.6F, 1.0F);
+            FOREARM.addChild(HAND);
+
+
+            Hand_r1 = new ZawaModelRenderer(this, 36, 103);
+            Hand_r1.setPos(0.0F, 0.0F, 0.0F);
+            HAND.addChild(Hand_r1);
+            setRotateAngle(Hand_r1, 0.0F, 0.0436F, 0.0F);
+            Hand_r1.addBox(-1.715F, -0.7313F, -1.5515F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+
+            ARMBASE2 = new ZawaModelRenderer(this, 0, 0);
+            ARMBASE2.setPos(-3.0836F, 0.0321F, 0.0307F);
+            CHEST.addChild(ARMBASE2);
+
+
+            ArmBase_r2 = new ZawaModelRenderer(this, 32, 75);
+            ArmBase_r2.setPos(0.0F, 0.7F, -0.5F);
+            ARMBASE2.addChild(ArmBase_r2);
+            setRotateAngle(ArmBase_r2, 0.0742F, 0.0F, 0.0F);
+            ArmBase_r2.addBox(-1.0164F, -0.686F, -1.9869F, 3.0F, 7.0F, 5.0F, 0.0F, true);
+
+            ARM2 = new ZawaModelRenderer(this, 0, 0);
+            ARM2.setPos(0.0F, 6.4F, 1.9F);
+            ARMBASE2.addChild(ARM2);
+
+
+            Arm_r2 = new ZawaModelRenderer(this, 34, 87);
+            Arm_r2.setPos(0.0F, 0.3F, -0.4F);
+            ARM2.addChild(Arm_r2);
+            setRotateAngle(Arm_r2, 0.0F, 0.0F, 0.0F);
+            Arm_r2.addBox(-1.0536F, -0.5563F, -2.4256F, 3.0F, 4.0F, 3.0F, 0.0F, true);
+
+            FOREARM2 = new ZawaModelRenderer(this, 0, 0);
+            FOREARM2.setPos(0.75F, 3.7F, -2.4F);
+            ARM2.addChild(FOREARM2);
+
+
+            Forearm_r2 = new ZawaModelRenderer(this, 36, 94);
+            Forearm_r2.setPos(0.0F, 0.6F, 1.5F);
+            FOREARM2.addChild(Forearm_r2);
+            setRotateAngle(Forearm_r2, 0.0F, 0.0F, 0.0F);
+            Forearm_r2.addBox(-1.1061F, -0.8511F, -1.4178F, 2.0F, 6.0F, 2.0F, 0.0F, true);
+
+            HAND2 = new ZawaModelRenderer(this, 0, 0);
+            HAND2.setPos(-0.75F, 5.6F, 1.0F);
+            FOREARM2.addChild(HAND2);
+
+
+            Hand_r2 = new ZawaModelRenderer(this, 36, 103);
+            Hand_r2.setPos(0.0F, 0.0F, 0.0F);
+            HAND2.addChild(Hand_r2);
+            setRotateAngle(Hand_r2, 0.0F, -0.0436F, 0.0F);
+            Hand_r2.addBox(-0.285F, -0.7313F, -1.5515F, 2.0F, 2.0F, 2.0F, 0.0F, true);
             this.saveBase();
 
         }
@@ -363,13 +467,13 @@ public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
             texWidth = 64;
             texHeight = 64;
 
-            MAIN = new ZawaModelRenderer(this, 0, 0);
-            MAIN.setPos(-1.9473F, 5.8939F, -8.845F);
+            CHEST = new ZawaModelRenderer(this, 0, 0);
+            CHEST.setPos(-1.9473F, 5.8939F, -8.845F);
 
 
             Face = new ZawaModelRenderer(this, 32, 9);
             Face.setPos(0.0F, 0.0F, 0.0F);
-            MAIN.addChild(Face);
+            CHEST.addChild(Face);
             Face.addBox(-0.0527F, -0.1939F, -3.28F, 4.0F, 4.0F, 4.0F, 0.0F, false);
 
             cube_r1 = new ZawaModelRenderer(this, 0, 5);
@@ -411,7 +515,7 @@ public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
 
             Chest = new ZawaModelRenderer(this, 0, 0);
             Chest.setPos(0.0F, 0.0F, 0.0F);
-            MAIN.addChild(Chest);
+            CHEST.addChild(Chest);
 
 
             cube_r7 = new ZawaModelRenderer(this, 0, 0);
@@ -460,7 +564,7 @@ public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
 
             Leg1 = new ZawaModelRenderer(this, 0, 0);
             Leg1.setPos(0.0F, 0.0F, 0.0F);
-            MAIN.addChild(Leg1);
+            CHEST.addChild(Leg1);
             Leg1.texOffs(46, 15).addBox(-0.8777F, 16.1061F, 2.045F, 2.0F, 2.0F, 2.0F, 0.0F, true);
             Leg1.texOffs(0, 44).addBox(-0.9527F, 11.0561F, 2.745F, 2.0F, 3.0F, 2.0F, 0.0F, true);
 
@@ -478,7 +582,7 @@ public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
 
             Leg2 = new ZawaModelRenderer(this, 0, 0);
             Leg2.setPos(0.0F, 0.0F, 0.0F);
-            MAIN.addChild(Leg2);
+            CHEST.addChild(Leg2);
             Leg2.texOffs(46, 15).addBox(2.7723F, 16.1061F, 2.045F, 2.0F, 2.0F, 2.0F, 0.0F, false);
             Leg2.texOffs(0, 44).addBox(2.8473F, 11.0561F, 2.745F, 2.0F, 3.0F, 2.0F, 0.0F, false);
 
@@ -496,7 +600,7 @@ public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
 
             Leg3 = new ZawaModelRenderer(this, 0, 0);
             Leg3.setPos(0.0F, 0.0F, 0.0F);
-            MAIN.addChild(Leg3);
+            CHEST.addChild(Leg3);
             Leg3.texOffs(46, 23).addBox(2.6723F, 16.1061F, 12.545F, 2.0F, 2.0F, 2.0F, 0.0F, false);
             Leg3.texOffs(42, 29).addBox(2.6973F, 13.0306F, 13.0066F, 2.0F, 4.0F, 2.0F, 0.0F, false);
 
@@ -514,7 +618,7 @@ public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
 
             Leg4 = new ZawaModelRenderer(this, 0, 0);
             Leg4.setPos(0.0F, 0.0F, 0.0F);
-            MAIN.addChild(Leg4);
+            CHEST.addChild(Leg4);
             Leg4.texOffs(42, 29).addBox(-0.8027F, 13.0306F, 13.0066F, 2.0F, 4.0F, 2.0F, 0.0F, true);
             Leg4.texOffs(46, 23).addBox(-0.7777F, 16.1061F, 12.545F, 2.0F, 2.0F, 2.0F, 0.0F, true);
 

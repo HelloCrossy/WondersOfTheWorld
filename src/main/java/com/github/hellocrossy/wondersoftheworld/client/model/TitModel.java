@@ -38,7 +38,8 @@ public abstract class TitModel extends ZawaBaseModel<TitEntity> {
         protected ZawaModelRenderer LeftFootLeftToe_r1;
         protected ZawaModelRenderer RightFootRightToe_r1;
         protected ZawaModelRenderer RightFootLeftToe_r1;
-        protected ZawaModelRenderer TailBase_r1;
+
+        protected ZawaModelRenderer cube_r1;
         protected ZawaModelRenderer TailMiddle_r1;
         protected ZawaModelRenderer TailRight_r1;
         protected ZawaModelRenderer TailLeft_r1;
@@ -81,17 +82,17 @@ public abstract class TitModel extends ZawaBaseModel<TitEntity> {
             setRotateAngle(LowerBill_r1, 1.151F, 0.0F, 0.0F);
             LowerBill_r1.addBox(-0.5F, -6.8272F, 1.3498F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 
-            RightWing_r1 = new ZawaModelRenderer(this, 16, 16);
-            RightWing_r1.setPos(0.8441F, -1.8747F, 3.5536F);
+            RightWing_r1 = new ZawaModelRenderer(this, 24, 17);
+            RightWing_r1.setPos(0.6009F, 2.2229F, 3.6299F);
             root.addChild(RightWing_r1);
             setRotateAngle(RightWing_r1, 1.089F, 0.0732F, -0.147F);
-            RightWing_r1.addBox(1.6562F, -5.2653F, -1.1645F, 1.0F, 4.0F, 3.0F, 0.0F, true);
+            RightWing_r1.addBox(2.5003F, -7.14F, 2.3891F, 1.0F, 4.0F, 3.0F, 0.0F, true);
 
-            LeftWing_r1 = new ZawaModelRenderer(this, 16, 16);
-            LeftWing_r1.setPos(-0.8441F, -1.8747F, 3.5536F);
+            LeftWing_r1 = new ZawaModelRenderer(this, 24, 17);
+            LeftWing_r1.setPos(-0.6009F, 2.2229F, 3.6299F);
             root.addChild(LeftWing_r1);
             setRotateAngle(LeftWing_r1, 1.089F, -0.0732F, 0.147F);
-            LeftWing_r1.addBox(-2.6562F, -5.2653F, -1.1645F, 1.0F, 4.0F, 3.0F, 0.0F, false);
+            LeftWing_r1.addBox(-3.5003F, -7.14F, 2.3891F, 1.0F, 4.0F, 3.0F, 0.0F, false);
 
             LeftLeg_r1 = new ZawaModelRenderer(this, 0, 0);
             LeftLeg_r1.setPos(0.0F, -1.3259F, 3.2086F);
@@ -131,11 +132,11 @@ public abstract class TitModel extends ZawaBaseModel<TitEntity> {
             setRotateAngle(RightFootLeftToe_r1, 1.5445F, -0.5917F, 0.0147F);
             RightFootLeftToe_r1.addBox(0.8F, -3.7F, -3.91F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 
-            TailBase_r1 = new ZawaModelRenderer(this, 9, 11);
-            TailBase_r1.setPos(0.0F, -1.9324F, 3.3058F);
-            root.addChild(TailBase_r1);
-            setRotateAngle(TailBase_r1, 1.0582F, 0.0F, 0.0F);
-            TailBase_r1.addBox(-1.5F, -1.6529F, -1.2614F, 3.0F, 1.0F, 3.0F, 0.0F, false);
+            cube_r1 = new ZawaModelRenderer(this, 7, 15);
+            cube_r1.setPos(0.0F, 0.0F, 0.0F);
+            root.addChild(cube_r1);
+            setRotateAngle(cube_r1, 1.0582F, 0.0F, 0.0F);
+            cube_r1.addBox(-1.5F, 0.3109F, 2.2129F, 3.0F, 1.0F, 3.0F, 0.0F, false);
 
             TailMiddle_r1 = new ZawaModelRenderer(this, 0, 11);
             TailMiddle_r1.setPos(0.0F, -1.9324F, 3.3058F);
@@ -372,12 +373,12 @@ public abstract class TitModel extends ZawaBaseModel<TitEntity> {
             setRotateAngle(Toe1L_r1, 2.0583F, -0.5359F, -0.2644F);
             Toe1L_r1.addBox(0.8F, -3.7F, -3.91F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 
-            TailBase_r1 = new ZawaModelRenderer(this, 0 , 0);
-            TailBase_r1.setPos(0.0F, -4.597F, 2.3222F);
+            TailBase_r1 = new ZawaModelRenderer(this, 0, 0);
+            TailBase_r1.setPos(-0.8371F, 0.23F, 0.2326F);
             root.addChild(TailBase_r1);
             setRotateAngle(TailBase_r1, 1.4945F, 0.0F, 0.0F);
-            TailBase_r1.texOffs(9, 11).addBox(-1.5F, -1.6529F, -0.7614F, 3.0F, 1.0F, 3.0F, 0.0F, false);
-            TailBase_r1.texOffs(0, 11).addBox(-1.0F, -1.5529F, 0.7286F, 2.0F, 4.0F, 1.0F, 0.0F, false);
+            TailBase_r1.texOffs(7, 15).addBox(-1.5F, -6.2499F, 1.5608F, 3.0F, 1.0F, 3.0F, 0.0F, false);
+            TailBase_r1.texOffs(0, 11).addBox(-1.0F, -6.1499F, 3.0508F, 2.0F, 4.0F, 1.0F, 0.0F, false);
 
             Tail2_r1 = new ZawaModelRenderer(this, 0, 21);
             Tail2_r1.setPos(-0.1267F, -4.6132F, 2.1105F);
