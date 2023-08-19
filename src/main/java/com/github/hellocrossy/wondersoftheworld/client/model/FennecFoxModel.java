@@ -1,7 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
-
 import com.github.hellocrossy.wondersoftheworld.entity.FennecFoxEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.TakaheEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.client.renderer.model.ModelRenderer;

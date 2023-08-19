@@ -1,34 +1,13 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
-
-import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
-import com.github.hellocrossy.wondersoftheworld.client.model.TuracoModel;
 import com.github.hellocrossy.wondersoftheworld.client.model.VultureModel;
-import com.github.hellocrossy.wondersoftheworld.entity.ServalEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.VultureEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.VultureEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
-import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
-import net.minecraft.util.ResourceLocation;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class VultureRenderer extends ZawaMobRenderer<VultureEntity, VultureModel> {
-    private final VultureModel adultModel;
-    private final VultureModel babyModel;
-    private final VultureModel flyingModel;
-
-    public VultureRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new VultureModel.Adult(), 0.5F);
-        adultModel = model;
-        flyingModel = new VultureModel.Flying();
-        babyModel = new VultureModel.Child();
-    }
-
-    @Override
-    public void render(VultureEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
-        if (entity.isBaby()) model = babyModel;
-        else model = entity.isFlying() ? flyingModel : adultModel;
-        super.render(entity, entityYaw, partialTicks, matrixStack, buffer, packedLight);
+    public VultureRenderer(EntityRendererManager manager) {
+        super (manager, new VultureModel.Adult(), new VultureModel.Flying(), new VultureModel.Child(), 1.0F);
     }
     @Override
     protected void scale(VultureEntity entity, MatrixStack matrixStack, float partialTickTime) {
@@ -37,18 +16,8 @@ public class VultureRenderer extends ZawaMobRenderer<VultureEntity, VultureModel
         super.scale(entity, matrixStack, partialTickTime);
     }
     @Override
-    public void setupAdultTextures(VultureEntity entity) {
-        int variantCount = entity.getTotalVariants();
-        adultTextures = new ResourceLocation[variantCount];
-        for (int i = 0; i < variantCount; i++)
-            adultTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/vulture/vulture_" + (i + 1) + ".png");
+    protected boolean hasBabyVariants(VultureEntity entity) {
+        return false;
+    }
     }
 
-    @Override
-    public void setupBabyTextures(VultureEntity entity) {
-        int variantCount = entity.getTotalVariants();
-        babyTextures = new ResourceLocation[variantCount];
-        for (int i = 0; i < variantCount; i++)
-            babyTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/vulture/vulture_baby.png");
-    }
-}

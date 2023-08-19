@@ -268,7 +268,7 @@ public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
             setRotateAngle(LeftHorn3_r1, -0.6087F, 0.0981F, 0.3444F);
             LeftHorn3_r1.addBox(-0.6525F, -2.8223F, -0.4205F, 1.0F, 3.0F, 1.0F, 0.0F, false);
 
-            Mouth_r1 = new ZawaModelRenderer(this, 102, 46);
+            Mouth_r1 = new ZawaModelRenderer(this, 102, 49);
             Mouth_r1.setPos(0.0F, 0.5F, -3.75F);
             HEAD.addChild(Mouth_r1);
             setRotateAngle(Mouth_r1, 0.4756F, 0.0019F, 0.0F);

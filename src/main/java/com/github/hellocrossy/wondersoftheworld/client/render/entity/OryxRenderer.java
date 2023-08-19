@@ -1,65 +1,30 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
-
-import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.OryxModel;
-import com.github.hellocrossy.wondersoftheworld.entity.FennecFoxEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.OryxEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
-import net.minecraft.util.ResourceLocation;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
-import org.zawamod.zawa.world.entity.animal.ZawaBaseEntity;
 
 public class OryxRenderer extends ZawaMobRenderer<OryxEntity, OryxModel> {
     private final OryxModel oryxOne;
     private final OryxModel oryxTwo;
-    private final OryxModel babyModel;
 
     public OryxRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new OryxModel.oryxOne(), 1.0F);
-        oryxOne = model;
+        super(rendererManager, new OryxModel.oryxOne(), new OryxModel.Child(), 0.25F);
+        oryxOne = adultModel;
         oryxTwo = new OryxModel.oryxTwo();
-        babyModel = new OryxModel.Child();
-    }
-    @Override
-    protected void scale(OryxEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 1.4F : 1.2F;
-        matrixStack.scale(scale, scale, scale);
-        super.scale(entity, matrixStack, partialTickTime);
     }
 
     @Override
     public void render(OryxEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
-        if (entity.isBaby()) {
-            model = babyModel;
-
-        } else {
-
-            if (entity.getVariant() > 0 && entity.getVariant() < 3) {
-                model = oryxOne;
-
+        if (!entity.isBaby()) {
+            if (entity.getVariant() >= 3) {
+                adultModel = oryxOne;
             } else {
-                model = oryxTwo;
+                adultModel = oryxTwo;
             }
         }
-
         super.render(entity, entityYaw, partialTicks, matrixStack, buffer, packedLight);
-    }
-
-
-    @Override
-    public void setupAdultTextures(OryxEntity entity) {
-        int variantCount = entity.getTotalVariants();
-        adultTextures = new ResourceLocation[variantCount];
-        for (int i = 0; i < variantCount; i++)
-            adultTextures[i] = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/oryx/oryx_" + (i + 1) + ".png");
-        }
-
-
-
-    @Override
-    public void setupBabyTextures(OryxEntity entity) {
-        babyTexture = new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/oryx/oryx_baby.png");
     }
 }
