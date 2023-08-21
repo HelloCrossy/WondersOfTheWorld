@@ -1,17 +1,20 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
+import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.PanicGoal;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import org.zawamod.zawa.world.entity.OviparousEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class TakaheEntity extends ZawaLandEntity {
+public class TakaheEntity extends ZawaLandEntity implements OviparousEntity {
     public TakaheEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
@@ -24,6 +27,10 @@ public class TakaheEntity extends ZawaLandEntity {
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.TAKAHE.get().create(world);
+    }
+    @Override
+    public ItemStack getBreedEggItem() {
+        return WOTWItems.TAKAHE_EGG.get().getDefaultInstance();
     }
 
     @Override
