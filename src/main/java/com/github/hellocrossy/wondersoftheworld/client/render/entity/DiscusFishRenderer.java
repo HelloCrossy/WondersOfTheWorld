@@ -23,8 +23,7 @@ public class DiscusFishRenderer extends ZawaMobRenderer<DiscusFishEntity, Discus
     public ResourceLocation getBabyTexture(DiscusFishEntity entity, int variant) {
         if (variant >= entity.getWildVariants()) {
             String variantName = EntityStatsManager.INSTANCE.getStats(entity).getCaptiveVariantsList().get(variant - entity.getWildVariants());
-            return new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/discus_fish/discus_fish_" + variantName + ".png");
+            return new ResourceLocation(WondersOfTheWorld.MOD_ID, "textures/entity/discus/discus_" + variantName + ".png");
         } else return this.babyTexture != null ? this.babyTexture : this.babyTextures[variant];
     }
 }
-

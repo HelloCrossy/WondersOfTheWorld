@@ -18,7 +18,6 @@ public class OscarRenderer extends ZawaMobRenderer<OscarEntity, OscarModel> {
         matrixStack.scale(0.5F, 0.5F, 0.5F);
         super.scale(entity, matrixStack, partialTickTime);
     }
-
     @Override
     public ResourceLocation getBabyTexture(OscarEntity entity, int variant) {
         if (variant >= entity.getWildVariants()) {
