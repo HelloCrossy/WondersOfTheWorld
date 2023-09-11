@@ -1,306 +1,287 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
-
 import com.github.hellocrossy.wondersoftheworld.entity.LowlandNyalaEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.OryxEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
-import org.zawamod.zawa.client.model.ZawaModelRenderer;
 
 public abstract class LowlandNyalaModel extends ZawaBaseModel<LowlandNyalaEntity> {
-    protected ZawaModelRenderer NyalaMale;
-    protected ZawaModelRenderer cube_r1;
-    protected ZawaModelRenderer cube_r2;
-    protected ZawaModelRenderer cube_r3;
-    protected ZawaModelRenderer cube_r4;
-    protected ZawaModelRenderer cube_r5;
-    protected ZawaModelRenderer cube_r6;
-    protected ZawaModelRenderer cube_r7;
-    protected ZawaModelRenderer cube_r8;
-    protected ZawaModelRenderer cube_r9;
-    protected ZawaModelRenderer cube_r10;
-    protected ZawaModelRenderer cube_r11;
-    protected ZawaModelRenderer cube_r12;
-    protected ZawaModelRenderer cube_r13;
-    protected ZawaModelRenderer cube_r14;
-    protected ZawaModelRenderer cube_r15;
-    protected ZawaModelRenderer cube_r16;
-    protected ZawaModelRenderer cube_r17;
-    protected ZawaModelRenderer cube_r18;
-    protected ZawaModelRenderer cube_r19;
-    protected ZawaModelRenderer cube_r20;
-    protected ZawaModelRenderer cube_r21;
-    protected ZawaModelRenderer Face;
-    protected ZawaModelRenderer Chest;
-    protected ZawaModelRenderer Leg1;
-    protected ZawaModelRenderer Leg2;
-    protected ZawaModelRenderer Leg3;
-    protected ZawaModelRenderer Leg4;
+
+    public ModelRenderer Chest;
     protected Iterable<ModelRenderer> parts;
 
     @Override
     @MethodsReturnNonnullByDefault
     public Iterable<ModelRenderer> parts() {
         if (this.parts == null) {
-            this.parts = ImmutableList.of(NyalaMale);
+            this.parts = ImmutableList.of(Chest);
         }
 
         return this.parts;
     }
 
-    public static class Male extends LowlandNyalaModel {
-
-        protected ZawaModelRenderer cube_r22;
-        protected ZawaModelRenderer cube_r23;
-        protected ZawaModelRenderer cube_r24;
-        protected ZawaModelRenderer cube_r25;
-        protected ZawaModelRenderer cube_r26;
-        protected ZawaModelRenderer cube_r27;
-        protected ZawaModelRenderer cube_r28;
-        protected ZawaModelRenderer cube_r29;
-        protected ZawaModelRenderer cube_r30;
-        protected ZawaModelRenderer cube_r31;
-        protected ZawaModelRenderer cube_r32;
-
-        public Male() {
-            texWidth = 128;
-            texHeight = 128;
-
-            NyalaMale = new ZawaModelRenderer(this, 0, 0);
-            NyalaMale.setPos(0.0F, -1.6219F, -15.3004F);
+    public static class Adult extends LowlandNyalaModel {
 
 
-            Face = new ZawaModelRenderer(this, 0, 0);
-            Face.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Face);
+        public ModelRenderer Body;
+        public ModelRenderer Neck;
+        public ModelRenderer Fluff;
+        public ModelRenderer LeftArmBase;
+        public ModelRenderer RightArmBase;
+        public ModelRenderer BackFur1;
+        public ModelRenderer Hips;
+        public ModelRenderer BackFur2;
+        public ModelRenderer LeftThigh;
+        public ModelRenderer BackFur3;
+        public ModelRenderer RightThigh;
+        public ModelRenderer Tail1;
+        public ModelRenderer LeftUpperLeg;
+        public ModelRenderer LeftLowerLeg;
+        public ModelRenderer LeftFoot;
+        public ModelRenderer RightUpperLeg;
+        public ModelRenderer RightLowerLeg;
+        public ModelRenderer RightFoot;
+        public ModelRenderer Tail2;
+        public ModelRenderer Tail3;
+        public ModelRenderer Tail4;
+        public ModelRenderer NeckBase;
+        public ModelRenderer Head;
+        public ModelRenderer Beard;
+        public ModelRenderer UpperSnout;
+        public ModelRenderer LeftHorn1;
+        public ModelRenderer RightHorn1;
+        public ModelRenderer LeftEar;
+        public ModelRenderer RightEar;
+        public ModelRenderer Snout;
+        public ModelRenderer Mouth;
+        public ModelRenderer LeftHorn2;
+        public ModelRenderer LeftHorn3;
+        public ModelRenderer RightHorn2;
+        public ModelRenderer RightHorn3;
+        public ModelRenderer LeftArm;
+        public ModelRenderer LeftForearm;
+        public ModelRenderer LeftHand;
+        public ModelRenderer RightArm;
+        public ModelRenderer RightForearm;
+        public ModelRenderer RightHand;
 
-
-            cube_r1 = new ZawaModelRenderer(this, 108, 48);
-            cube_r1.setPos(0.0F, 0.0F, 0.0F);
-            Face.addChild(cube_r1);
-            setRotateAngle(cube_r1, 0.0305F, 0.0F, 0.0F);
-            cube_r1.addBox(-2.5F, -0.0031F, -2.2246F, 5.0F, 5.0F, 5.0F, 0.0F, false);
-
-            cube_r2 = new ZawaModelRenderer(this, 120, 38);
-            cube_r2.setPos(1.2095F, 0.8242F, -1.2458F);
-            Face.addChild(cube_r2);
-            setRotateAngle(cube_r2, -0.5937F, 0.2518F, 0.5396F);
-            cube_r2.addBox(-1.2482F, -3.7919F, -0.5652F, 2.0F, 4.0F, 2.0F, 0.0F, false);
-
-            cube_r3 = new ZawaModelRenderer(this, 116, 69);
-            cube_r3.setPos(0.0F, 0.1251F, -2.1219F);
-            Face.addChild(cube_r3);
-            setRotateAngle(cube_r3, 0.8988F, 0.0F, 0.0F);
-            cube_r3.addBox(-1.0F, -0.026F, -4.1433F, 2.0F, 2.0F, 4.0F, 0.0F, false);
-
-            cube_r4 = new ZawaModelRenderer(this, 0, 0);
-            cube_r4.setPos(0.0F, 3.1101F, -2.6633F);
-            Face.addChild(cube_r4);
-            setRotateAngle(cube_r4, 0.3098F, 0.0F, 0.0F);
-            cube_r4.texOffs(118, 79).addBox(-0.75F, -0.3835F, -1.6227F, 2.0F, 2.0F, 3.0F, 0.0F, false);
-            cube_r4.texOffs(118, 79).addBox(-1.25F, -0.3835F, -1.6227F, 2.0F, 2.0F, 3.0F, 0.0F, true);
-
-            cube_r5 = new ZawaModelRenderer(this, 113, 84);
-            cube_r5.setPos(0.0F, 3.1851F, -2.6633F);
-            Face.addChild(cube_r5);
-            setRotateAngle(cube_r5, 0.1353F, 0.0F, 0.0F);
-            cube_r5.addBox(-1.0F, -0.0835F, -1.7977F, 2.0F, 2.0F, 3.0F, 0.0F, false);
-
-            cube_r6 = new ZawaModelRenderer(this, 122, 28);
-            cube_r6.setPos(2.7945F, -2.9096F, 3.3629F);
-            Face.addChild(cube_r6);
-            setRotateAngle(cube_r6, -0.5772F, 0.2204F, 0.2832F);
-            cube_r6.addBox(-0.9435F, -3.801F, 0.3422F, 1.0F, 4.0F, 1.0F, 0.0F, false);
-
-            cube_r7 = new ZawaModelRenderer(this, 122, 28);
-            cube_r7.setPos(-2.7945F, -2.9096F, 3.3629F);
-            Face.addChild(cube_r7);
-            setRotateAngle(cube_r7, -0.5772F, -0.2204F, -0.2832F);
-            cube_r7.addBox(-0.0565F, -3.801F, 0.3422F, 1.0F, 4.0F, 1.0F, 0.0F, true);
-
-            cube_r8 = new ZawaModelRenderer(this, 122, 33);
-            cube_r8.setPos(2.7945F, -2.9096F, 3.3629F);
-            Face.addChild(cube_r8);
-            setRotateAngle(cube_r8, -1.2256F, -0.1841F, 0.1058F);
-            cube_r8.addBox(-0.77F, -0.6121F, 0.2153F, 1.0F, 4.0F, 1.0F, 0.0F, false);
-
-            cube_r9 = new ZawaModelRenderer(this, 122, 33);
-            cube_r9.setPos(-2.7945F, -2.9096F, 3.3629F);
-            Face.addChild(cube_r9);
-            setRotateAngle(cube_r9, -1.2256F, 0.1841F, -0.1058F);
-            cube_r9.addBox(-0.23F, -0.6121F, 0.2153F, 1.0F, 4.0F, 1.0F, 0.0F, true);
-
-            cube_r10 = new ZawaModelRenderer(this, 120, 38);
-            cube_r10.setPos(-1.2095F, 0.8242F, -1.2458F);
-            Face.addChild(cube_r10);
-            setRotateAngle(cube_r10, -0.5937F, -0.2518F, -0.5396F);
-            cube_r10.addBox(-0.7518F, -3.7919F, -0.5652F, 2.0F, 4.0F, 2.0F, 0.0F, true);
-
-            cube_r11 = new ZawaModelRenderer(this, 118, 45);
-            cube_r11.setPos(2.1973F, 0.5158F, 1.7054F);
-            Face.addChild(cube_r11);
-            setRotateAngle(cube_r11, 0.5681F, -0.5207F, -0.6628F);
-            cube_r11.addBox(-1.5F, -0.8F, -0.9F, 4.0F, 2.0F, 1.0F, 0.0F, false);
-
-            cube_r12 = new ZawaModelRenderer(this, 118, 45);
-            cube_r12.setPos(-2.1973F, 0.5158F, 1.7054F);
-            Face.addChild(cube_r12);
-            setRotateAngle(cube_r12, 0.5681F, 0.5207F, 0.6628F);
-            cube_r12.addBox(-2.5F, -0.8F, -0.9F, 4.0F, 2.0F, 1.0F, 0.0F, true);
-
-            cube_r13 = new ZawaModelRenderer(this, 117, 75);
-            cube_r13.setPos(0.0F, 3.1101F, -2.6633F);
-            Face.addChild(cube_r13);
-            setRotateAngle(cube_r13, 0.5192F, 0.0F, 0.0F);
-            cube_r13.addBox(-1.5F, -0.8085F, -2.5977F, 3.0F, 2.0F, 2.0F, 0.0F, false);
-
-            Chest = new ZawaModelRenderer(this, 0, 0);
-            Chest.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Chest);
-
-
-            cube_r14 = new ZawaModelRenderer(this, 55, 86);
-            cube_r14.setPos(0.0F, 8.3945F, 7.803F);
-            Chest.addChild(cube_r14);
-            setRotateAngle(cube_r14, 0.096F, 0.0F, 0.0F);
-            cube_r14.addBox(-3.0F, -5.05F, -3.0F, 6.0F, 10.0F, 6.0F, 0.0F, false);
-
-            cube_r15 = new ZawaModelRenderer(this, 0, 0);
-            cube_r15.setPos(0.0836F, 8.3532F, 15.3529F);
-            Chest.addChild(cube_r15);
-            setRotateAngle(cube_r15, 0.0F, 0.0075F, -0.0045F);
-            cube_r15.addBox(-3.5F, -5.5F, -5.5F, 7.0F, 11.0F, 12.0F, 0.0F, false);
-
-            cube_r16 = new ZawaModelRenderer(this, 0, 95);
-            cube_r16.setPos(0.0F, 8.0966F, 27.6848F);
-            Chest.addChild(cube_r16);
-            setRotateAngle(cube_r16, -1.405F, 0.0F, 0.0F);
-            cube_r16.addBox(-1.0F, -0.6488F, -3.6975F, 2.0F, 2.0F, 5.0F, 0.0F, false);
-
-            cube_r17 = new ZawaModelRenderer(this, 0, 0);
-            cube_r17.setPos(0.0F, 9.0716F, 27.3848F);
-            Chest.addChild(cube_r17);
-            setRotateAngle(cube_r17, -1.5752F, 0.0F, 0.0F);
-            cube_r17.texOffs(0, 106).addBox(-1.5F, -1.6238F, 1.7025F, 3.0F, 3.0F, 5.0F, 0.0F, false);
-            cube_r17.texOffs(0, 114).addBox(-1.0F, -0.9988F, 4.5025F, 2.0F, 2.0F, 3.0F, 0.0F, false);
-
-            cube_r18 = new ZawaModelRenderer(this, 0, 102);
-            cube_r18.setPos(0.0F, 9.0716F, 27.9848F);
-            Chest.addChild(cube_r18);
-            setRotateAngle(cube_r18, -1.597F, 0.0F, 0.0F);
-            cube_r18.addBox(-1.0F, -0.5488F, 0.1525F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-
-            cube_r19 = new ZawaModelRenderer(this, 53, 102);
-            cube_r19.setPos(0.0F, 4.6852F, 2.3741F);
-            Chest.addChild(cube_r19);
-            setRotateAngle(cube_r19, -0.6109F, 0.0F, 0.0F);
-            cube_r19.addBox(-2.0F, -3.8F, -2.375F, 4.0F, 5.0F, 8.0F, 0.0F, false);
-
-            cube_r20 = new ZawaModelRenderer(this, 26, 97);
-            cube_r20.setPos(-2.0F, 4.6852F, 2.3741F);
-            Chest.addChild(cube_r20);
-            setRotateAngle(cube_r20, -0.1091F, 0.0F, 0.0F);
-            cube_r20.addBox(2.0F, 0.375F, -3.125F, 0.0F, 10.0F, 13.0F, 0.0F, false);
-
-            cube_r21 = new ZawaModelRenderer(this, 26, 109);
-            cube_r21.setPos(-2.0F, 4.6852F, 2.3741F);
-            Chest.addChild(cube_r21);
-            setRotateAngle(cube_r21, 0.0F, 0.0F, 0.0F);
-            cube_r21.addBox(2.0F, 8.875F, 8.875F, 0.0F, 6.0F, 13.0F, 0.0F, false);
-
-            cube_r22 = new ZawaModelRenderer(this, 52, 115);
-            cube_r22.setPos(-0.5F, 6.1268F, 2.7309F);
-            Chest.addChild(cube_r22);
-            setRotateAngle(cube_r22, -0.8901F, 0.0F, 0.0F);
-            cube_r22.addBox(-1.0F, -2.925F, -2.775F, 3.0F, 4.0F, 9.0F, 0.0F, false);
-
-            cube_r23 = new ZawaModelRenderer(this, 26, 11);
-            cube_r23.setPos(-2.4767F, 8.3532F, 15.3529F);
-            Chest.addChild(cube_r23);
-            setRotateAngle(cube_r23, 0.0F, 0.0075F, -0.0045F);
-            cube_r23.addBox(2.5F, -7.0F, -5.0F, 0.0F, 2.0F, 12.0F, 0.0F, false);
-
-            cube_r24 = new ZawaModelRenderer(this, 33, 18);
-            cube_r24.setPos(-0.0862F, 1.3422F, 10.3096F);
-            Chest.addChild(cube_r24);
-            setRotateAngle(cube_r24, 0.1571F, 0.0075F, -0.0045F);
-            cube_r24.addBox(0.0404F, -0.6249F, -4.9998F, 0.0F, 3.0F, 5.0F, 0.0F, false);
-
-            cube_r25 = new ZawaModelRenderer(this, 33, 18);
-            cube_r25.setPos(0.0677F, 3.0821F, 21.8142F);
-            Chest.addChild(cube_r25);
-            setRotateAngle(cube_r25, -0.5891F, 0.0075F, -0.0045F);
-            cube_r25.addBox(-0.0197F, -1.6809F, -0.5734F, 0.0F, 2.0F, 5.0F, 0.0F, false);
-
-            cube_r26 = new ZawaModelRenderer(this, 55, 70);
-            cube_r26.setPos(0.0F, 8.4618F, 21.6714F);
-            Chest.addChild(cube_r26);
-            setRotateAngle(cube_r26, -0.2225F, 0.0F, 0.0F);
-            cube_r26.addBox(-3.0F, -5.4F, -1.025F, 6.0F, 10.0F, 6.0F, 0.0F, false);
-
-            Leg1 = new ZawaModelRenderer(this, 0, 0);
-            Leg1.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Leg1);
-            Leg1.texOffs(99, 75).addBox(1.05F, 14.7969F, 6.9254F, 3.0F, 4.0F, 3.0F, 0.0F, false);
-            Leg1.texOffs(100, 90).addBox(1.325F, 23.6219F, 6.8004F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-            Leg1.texOffs(100, 82).addBox(1.375F, 18.502F, 7.4009F, 2.0F, 6.0F, 2.0F, 0.0F, false);
-
-            cube_r27 = new ZawaModelRenderer(this, 97, 63);
-            cube_r27.setPos(0.85F, 15.6719F, 4.1504F);
-            Leg1.addChild(cube_r27);
-            setRotateAngle(cube_r27, 0.0742F, 0.0F, 0.0F);
-            cube_r27.addBox(0.25F, -6.75F, 1.675F, 3.0F, 7.0F, 5.0F, 0.0F, false);
-
-            Leg2 = new ZawaModelRenderer(this, 0, 0);
-            Leg2.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Leg2);
-            Leg2.texOffs(100, 90).addBox(-3.325F, 23.6219F, 6.8004F, 2.0F, 2.0F, 2.0F, 0.0F, true);
-            Leg2.texOffs(100, 82).addBox(-3.375F, 18.502F, 7.4009F, 2.0F, 6.0F, 2.0F, 0.0F, true);
-            Leg2.texOffs(99, 75).addBox(-4.05F, 14.7969F, 6.9254F, 3.0F, 4.0F, 3.0F, 0.0F, true);
-
-            cube_r28 = new ZawaModelRenderer(this, 97, 63);
-            cube_r28.setPos(-0.85F, 15.6719F, 4.1504F);
-            Leg2.addChild(cube_r28);
-            setRotateAngle(cube_r28, 0.0742F, 0.0F, 0.0F);
-            cube_r28.addBox(-3.25F, -6.75F, 1.675F, 3.0F, 7.0F, 5.0F, 0.0F, true);
-
-            Leg3 = new ZawaModelRenderer(this, 0, 0);
-            Leg3.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Leg3);
-            Leg3.texOffs(115, 115).addBox(1.5F, 17.6464F, 23.587F, 2.0F, 7.0F, 2.0F, 0.0F, false);
-            Leg3.texOffs(115, 124).addBox(1.575F, 23.6219F, 22.8754F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-
-            cube_r29 = new ZawaModelRenderer(this, 110, 94);
-            cube_r29.setPos(3.0F, 11.1887F, 23.4695F);
-            Leg3.addChild(cube_r29);
-            setRotateAngle(cube_r29, -0.0872F, -0.0027F, -0.0304F);
-            cube_r29.addBox(-2.5F, -4.0F, -3.0F, 4.0F, 8.0F, 5.0F, 0.0F, false);
-
-            cube_r30 = new ZawaModelRenderer(this, 113, 107);
-            cube_r30.setPos(2.475F, 16.216F, 23.0761F);
-            Leg3.addChild(cube_r30);
-            setRotateAngle(cube_r30, 0.4014F, 0.0F, 0.0F);
-            cube_r30.addBox(-1.5F, -2.5F, -1.225F, 3.0F, 5.0F, 3.0F, 0.0F, false);
-
-            Leg4 = new ZawaModelRenderer(this, 0, 0);
-            Leg4.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Leg4);
-            Leg4.texOffs(115, 124).addBox(-3.575F, 23.6219F, 22.8754F, 2.0F, 2.0F, 2.0F, 0.0F, true);
-            Leg4.texOffs(115, 115).addBox(-3.5F, 17.6464F, 23.587F, 2.0F, 7.0F, 2.0F, 0.0F, true);
-
-            cube_r31 = new ZawaModelRenderer(this, 113, 107);
-            cube_r31.setPos(-2.475F, 16.216F, 23.0761F);
-            Leg4.addChild(cube_r31);
-            setRotateAngle(cube_r31, 0.4014F, 0.0F, 0.0F);
-            cube_r31.addBox(-1.5F, -2.5F, -1.225F, 3.0F, 5.0F, 3.0F, 0.0F, true);
-
-            cube_r32 = new ZawaModelRenderer(this, 110, 94);
-            cube_r32.setPos(-3.0F, 11.1887F, 23.4695F);
-            Leg4.addChild(cube_r32);
-            setRotateAngle(cube_r32, -0.0872F, 0.0027F, 0.0304F);
-            cube_r32.addBox(-1.5F, -4.0F, -3.0F, 4.0F, 8.0F, 5.0F, 0.0F, true);
+        public Adult() {
+            this.texWidth = 128;
+            this.texHeight = 128;
+            this.RightThigh = new ModelRenderer(this, 43, 0);
+            this.RightThigh.mirror = true;
+            this.RightThigh.setPos(-3.0F, 3.5F, 2.9F);
+            this.RightThigh.addBox(-1.5F, 0.0F, -2.5F, 4.0F, 8.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(RightThigh, 0.03490658503988659F, 0.0F, 0.0F);
+            this.RightHorn1 = new ModelRenderer(this, 0, 106);
+            this.RightHorn1.mirror = true;
+            this.RightHorn1.setPos(-1.7F, -2.5F, -0.5F);
+            this.RightHorn1.addBox(-1.0F, -3.0F, 0.0F, 2.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(RightHorn1, -0.5235987755982988F, -0.13962634015954636F, -0.4363323129985824F);
+            this.LeftFoot = new ModelRenderer(this, 42, 30);
+            this.LeftFoot.setPos(-0.1F, 7.2F, -1.5F);
+            this.LeftFoot.addBox(-1.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.LeftHorn1 = new ModelRenderer(this, 0, 106);
+            this.LeftHorn1.setPos(1.7F, -2.5F, -0.5F);
+            this.LeftHorn1.addBox(-1.0F, -3.0F, 0.0F, 2.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LeftHorn1, -0.5235987755982988F, 0.13962634015954636F, 0.4363323129985824F);
+            this.LeftArmBase = new ModelRenderer(this, 26, 0);
+            this.LeftArmBase.setPos(3.0F, 0.0F, 0.0F);
+            this.LeftArmBase.addBox(-2.0F, 0.0F, -2.5F, 3.0F, 7.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LeftArmBase, -0.061086523819801536F, 0.0F, 0.0F);
+            this.BackFur2 = new ModelRenderer(this, 61, 10);
+            this.BackFur2.setPos(0.0F, -0.4F, 0.1F);
+            this.BackFur2.addBox(0.0F, -1.8F, 0.0F, 0.0F, 2.0F, 12.5F, 0.0F, 0.0F, 0.0F);
+            this.BackFur3 = new ModelRenderer(this, 61, 18);
+            this.BackFur3.setPos(0.0F, 0.0F, 0.0F);
+            this.BackFur3.addBox(0.0F, -1.8F, 0.0F, 0.0F, 2.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(BackFur3, -0.14137167606944342F, 0.0F, 0.0F);
+            this.Snout = new ModelRenderer(this, 0, 97);
+            this.Snout.setPos(0.0F, 2.3F, -1.7F);
+            this.Snout.addBox(-1.0F, 0.0F, -3.0F, 2.0F, 2.0F, 3.0F, 0.1F, 0.0F, 0.0F);
+            this.setRotateAngle(Snout, -0.6981317007977318F, 0.0F, 0.0F);
+            this.LeftEar = new ModelRenderer(this, 1, 18);
+            this.LeftEar.setPos(2.0F, -1.7F, 1.0F);
+            this.LeftEar.addBox(-0.5F, 0.0F, 0.0F, 4.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LeftEar, 0.0F, -0.4363323129985824F, -0.4363323129985824F);
+            this.RightEar = new ModelRenderer(this, 1, 18);
+            this.RightEar.mirror = true;
+            this.RightEar.setPos(-2.0F, -1.7F, 1.0F);
+            this.RightEar.addBox(-3.5F, 0.0F, 0.0F, 4.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(RightEar, 0.0F, 0.4363323129985824F, 0.4363323129985824F);
+            this.LeftLowerLeg = new ModelRenderer(this, 42, 21);
+            this.LeftLowerLeg.setPos(0.1F, 4.8F, 3.0F);
+            this.LeftLowerLeg.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 7.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LeftLowerLeg, -0.47123889803846897F, 0.0F, 0.0F);
+            this.RightHand = new ModelRenderer(this, 34, 23);
+            this.RightHand.mirror = true;
+            this.RightHand.setPos(0.1F, 5.5F, 0.5F);
+            this.RightHand.addBox(-1.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.Body = new ModelRenderer(this, 0, 16);
+            this.Body.setPos(0.0F, -5.0F, 3.0F);
+            this.Body.addBox(-3.5F, -0.3F, 0.0F, 7.0F, 11.0F, 12.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Body, -0.09599310885968812F, 0.0F, 0.0F);
+            this.RightFoot = new ModelRenderer(this, 42, 30);
+            this.RightFoot.mirror = true;
+            this.RightFoot.setPos(0.1F, 7.2F, -1.5F);
+            this.RightFoot.addBox(-1.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.RightArmBase = new ModelRenderer(this, 26, 0);
+            this.RightArmBase.mirror = true;
+            this.RightArmBase.setPos(-3.0F, 0.0F, 0.0F);
+            this.RightArmBase.addBox(-1.1F, 0.0F, -2.5F, 3.0F, 7.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(RightArmBase, -0.061086523819801536F, 0.0F, 0.0F);
+            this.BackFur1 = new ModelRenderer(this, 61, 14);
+            this.BackFur1.setPos(0.0F, -5.0F, -1.5F);
+            this.BackFur1.addBox(0.0F, -1.5F, 0.0F, 0.0F, 2.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(BackFur1, 0.02617993877991494F, 0.0F, 0.0F);
+            this.Neck = new ModelRenderer(this, 0, 55);
+            this.Neck.setPos(0.0F, -5.0F, -1.0F);
+            this.Neck.addBox(-2.0F, 0.0F, -5.0F, 4.0F, 5.0F, 8.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Neck, -0.6981317007977318F, 0.0F, 0.0F);
+            this.RightHorn2 = new ModelRenderer(this, -1, 112);
+            this.RightHorn2.mirror = true;
+            this.RightHorn2.setPos(0.3F, -2.8F, 0.5F);
+            this.RightHorn2.addBox(-0.5F, -3.5F, 0.0F, 1.0F, 4.0F, 1.0F, 0.2F, 0.0F, 0.2F);
+            this.setRotateAngle(RightHorn2, -0.5235987755982988F, 0.0F, 0.6108652381980153F);
+            this.RightForearm = new ModelRenderer(this, 26, 19);
+            this.RightForearm.mirror = true;
+            this.RightForearm.setPos(0.0F, 4.0F, -2.5F);
+            this.RightForearm.addBox(-1.0F, -0.5F, 0.0F, 2.0F, 6.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.Tail2 = new ModelRenderer(this, 27, 47);
+            this.Tail2.setPos(0.0F, 0.0F, 5.0F);
+            this.Tail2.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 2.0F, -0.1F, 0.0F, 0.0F);
+            this.setRotateAngle(Tail2, -0.19198621771937624F, 0.0F, 0.0F);
+            this.Tail3 = new ModelRenderer(this, 27, 51);
+            this.Tail3.setPos(0.0F, 0.0F, 1.5F);
+            this.Tail3.addBox(-1.5F, -0.5F, 0.0F, 3.0F, 3.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Tail3, -0.13962634015954636F, 0.0F, 0.0F);
+            this.RightLowerLeg = new ModelRenderer(this, 42, 21);
+            this.RightLowerLeg.mirror = true;
+            this.RightLowerLeg.setPos(0.1F, 4.8F, 3.0F);
+            this.RightLowerLeg.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 7.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(RightLowerLeg, -0.47123889803846897F, 0.0F, 0.0F);
+            this.LeftArm = new ModelRenderer(this, 26, 12);
+            this.LeftArm.setPos(-0.59F, 7.0F, 1.6F);
+            this.LeftArm.addBox(-1.5F, 0.0F, -3.0F, 3.0F, 4.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LeftArm, -0.04363323129985824F, 0.0F, 0.0F);
+            this.LeftUpperLeg = new ModelRenderer(this, 42, 13);
+            this.LeftUpperLeg.setPos(-0.5F, 8.0F, -1.3F);
+            this.LeftUpperLeg.addBox(-1.5F, 0.0F, 0.0F, 3.0F, 5.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LeftUpperLeg, 0.5235987755982988F, 0.0F, 0.0F);
+            this.RightArm = new ModelRenderer(this, 26, 12);
+            this.RightArm.mirror = true;
+            this.RightArm.setPos(0.49F, 7.0F, 1.6F);
+            this.RightArm.addBox(-1.5F, 0.0F, -3.0F, 3.0F, 4.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(RightArm, -0.04363323129985824F, 0.0F, 0.0F);
+            this.Tail1 = new ModelRenderer(this, 27, 40);
+            this.Tail1.setPos(0.0F, 0.2F, 6.0F);
+            this.Tail1.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Tail1, -1.1344640137963142F, 0.0F, 0.0F);
+            this.Hips = new ModelRenderer(this, 0, 39);
+            this.Hips.setPos(0.0F, 0.0F, 12.0F);
+            this.Hips.addBox(-3.0F, 0.0F, 0.0F, 6.0F, 10.0F, 6.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Hips, -0.09599310885968812F, 0.0F, 0.0F);
+            this.Mouth = new ModelRenderer(this, 0, 102);
+            this.Mouth.setPos(0.0F, 0.0F, -3.0F);
+            this.Mouth.addBox(-1.5F, 0.0F, -2.0F, 3.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Mouth, -0.17453292519943295F, 0.0F, 0.0F);
+            this.Fluff = new ModelRenderer(this, 62, -1);
+            this.Fluff.setPos(0.0F, 4.5F, 0.0F);
+            this.Fluff.addBox(0.0F, 0.0F, 0.0F, 0.0F, 6.0F, 12.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Fluff, 0.017453292519943295F, 0.0F, 0.0F);
+            this.LeftForearm = new ModelRenderer(this, 26, 19);
+            this.LeftForearm.setPos(0.0F, 4.0F, -2.5F);
+            this.LeftForearm.addBox(-1.0F, -0.5F, 0.0F, 2.0F, 6.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.NeckBase = new ModelRenderer(this, 0, 68);
+            this.NeckBase.setPos(0.0F, 2.0F, -0.5F);
+            this.NeckBase.addBox(-1.5F, 0.0F, -4.3F, 3.0F, 4.0F, 9.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(NeckBase, -0.1563815016444822F, 0.0F, 0.0F);
+            this.LeftHorn2 = new ModelRenderer(this, -1, 112);
+            this.LeftHorn2.setPos(-0.2F, -2.8F, 0.5F);
+            this.LeftHorn2.addBox(-0.5F, -3.5F, 0.0F, 1.1F, 4.0F, 1.0F, 0.2F, 0.0F, 0.2F);
+            this.setRotateAngle(LeftHorn2, -0.5235987755982988F, 0.0F, -0.6108652381980153F);
+            this.Chest = new ModelRenderer(this, 0, 0);
+            this.Chest.setPos(0.0F, 6.5F, -6.5F);
+            this.Chest.addBox(-3.0F, -5.0F, -3.0F, 6.0F, 10.0F, 6.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Chest, 0.09599310885968812F, 0.0F, 0.0F);
+            this.Beard = new ModelRenderer(this, 61, -9);
+            this.Beard.setPos(0.0F, 3.8F, -3.5F);
+            this.Beard.addBox(0.0F, 0.0F, 0.0F, 0.0F, 7.0F, 12.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Beard, 0.5745623577986002F, 0.0F, 0.0F);
+            this.LeftHorn3 = new ModelRenderer(this, 0, 117);
+            this.LeftHorn3.setPos(0.0F, -3.1F, 0.1F);
+            this.LeftHorn3.addBox(-0.5F, -3.5F, 0.0F, 1.0F, 4.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LeftHorn3, 0.3490658503988659F, 0.0F, 0.4363323129985824F);
+            this.RightHorn3 = new ModelRenderer(this, 0, 117);
+            this.RightHorn3.mirror = true;
+            this.RightHorn3.setPos(0.0F, -3.1F, 0.1F);
+            this.RightHorn3.addBox(-0.5F, -3.5F, 0.0F, 1.0F, 4.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(RightHorn3, 0.3490658503988659F, 0.0F, -0.4363323129985824F);
+            this.RightUpperLeg = new ModelRenderer(this, 42, 13);
+            this.RightUpperLeg.mirror = true;
+            this.RightUpperLeg.setPos(0.5F, 8.0F, -1.3F);
+            this.RightUpperLeg.addBox(-1.5F, 0.0F, 0.0F, 3.0F, 5.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(RightUpperLeg, 0.5235987755982988F, 0.0F, 0.0F);
+            this.LeftHand = new ModelRenderer(this, 34, 23);
+            this.LeftHand.setPos(-0.1F, 5.5F, 0.5F);
+            this.LeftHand.addBox(-1.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.LeftThigh = new ModelRenderer(this, 43, 0);
+            this.LeftThigh.setPos(3.0F, 3.5F, 2.9F);
+            this.LeftThigh.addBox(-2.5F, 0.0F, -2.5F, 4.0F, 8.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LeftThigh, 0.03490658503988659F, 0.0F, 0.0F);
+            this.Head = new ModelRenderer(this, 0, 81);
+            this.Head.setPos(0.0F, 2.5F, -4.8F);
+            this.Head.addBox(-2.5F, -2.5F, -2.5F, 5.0F, 5.0F, 5.0F, 0.1F, 0.0F, 0.0F);
+            this.setRotateAngle(Head, 0.6108652381980153F, 0.0F, 0.0F);
+            this.UpperSnout = new ModelRenderer(this, 0, 91);
+            this.UpperSnout.setPos(0.0F, -2.5F, -2.5F);
+            this.UpperSnout.addBox(-1.0F, 0.0F, -4.0F, 2.0F, 2.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperSnout, 0.8726646259971648F, 0.0F, 0.0F);
+            this.Tail4 = new ModelRenderer(this, 28, 60);
+            this.Tail4.setPos(0.0F, 0.0F, 5.0F);
+            this.Tail4.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.Hips.addChild(this.RightThigh);
+            this.Head.addChild(this.RightHorn1);
+            this.LeftLowerLeg.addChild(this.LeftFoot);
+            this.Head.addChild(this.LeftHorn1);
+            this.Chest.addChild(this.LeftArmBase);
+            this.Body.addChild(this.BackFur2);
+            this.Hips.addChild(this.BackFur3);
+            this.UpperSnout.addChild(this.Snout);
+            this.Head.addChild(this.LeftEar);
+            this.Head.addChild(this.RightEar);
+            this.LeftUpperLeg.addChild(this.LeftLowerLeg);
+            this.RightForearm.addChild(this.RightHand);
+            this.Chest.addChild(this.Body);
+            this.RightLowerLeg.addChild(this.RightFoot);
+            this.Chest.addChild(this.RightArmBase);
+            this.Chest.addChild(this.BackFur1);
+            this.Chest.addChild(this.Neck);
+            this.RightHorn1.addChild(this.RightHorn2);
+            this.RightArm.addChild(this.RightForearm);
+            this.Tail1.addChild(this.Tail2);
+            this.Tail2.addChild(this.Tail3);
+            this.RightUpperLeg.addChild(this.RightLowerLeg);
+            this.LeftArmBase.addChild(this.LeftArm);
+            this.LeftThigh.addChild(this.LeftUpperLeg);
+            this.RightArmBase.addChild(this.RightArm);
+            this.Hips.addChild(this.Tail1);
+            this.Body.addChild(this.Hips);
+            this.UpperSnout.addChild(this.Mouth);
+            this.Chest.addChild(this.Fluff);
+            this.LeftArm.addChild(this.LeftForearm);
+            this.Neck.addChild(this.NeckBase);
+            this.LeftHorn1.addChild(this.LeftHorn2);
+            this.NeckBase.addChild(this.Beard);
+            this.LeftHorn2.addChild(this.LeftHorn3);
+            this.RightHorn2.addChild(this.RightHorn3);
+            this.RightThigh.addChild(this.RightUpperLeg);
+            this.LeftForearm.addChild(this.LeftHand);
+            this.Hips.addChild(this.LeftThigh);
+            this.Neck.addChild(this.Head);
+            this.Head.addChild(this.UpperSnout);
+            this.Tail3.addChild(this.Tail4);
             this.saveBase();
         }
 
@@ -319,377 +300,200 @@ public abstract class LowlandNyalaModel extends ZawaBaseModel<LowlandNyalaEntity
         }
     }
 
-    public static class Female extends LowlandNyalaModel {
-
-        protected ZawaModelRenderer Head;
-        protected ZawaModelRenderer Body;
-        protected ZawaModelRenderer FirstLeg;
-        protected ZawaModelRenderer cube_r16;
-        protected ZawaModelRenderer SecondLeg;
-        protected ZawaModelRenderer ThirdLeg;
-        protected ZawaModelRenderer FourthLeg;
-
-        public Female() {
-            texWidth = 64;
-            texHeight = 64;
-
-            NyalaMale = new ZawaModelRenderer(this, 0, 0);
-            NyalaMale.setPos(2.475F, 14.5941F, 7.7757F);
-
-
-            Head = new ZawaModelRenderer(this, 0, 0);
-            Head.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Head);
-
-
-            cube_r1 = new ZawaModelRenderer(this, 38, 13);
-            cube_r1.setPos(-2.475F, -16.216F, -23.0761F);
-            Head.addChild(cube_r1);
-            setRotateAngle(cube_r1, 0.0305F, 0.0F, 0.0F);
-            cube_r1.addBox(-2.5F, -0.0031F, -2.2246F, 5.0F, 5.0F, 5.0F, 0.0F, false);
-
-            cube_r2 = new ZawaModelRenderer(this, 18, 23);
-            cube_r2.setPos(-2.475F, -16.0909F, -25.198F);
-            Head.addChild(cube_r2);
-            setRotateAngle(cube_r2, 0.8988F, 0.0F, 0.0F);
-            cube_r2.addBox(-1.0F, -0.026F, -4.1433F, 2.0F, 2.0F, 4.0F, 0.0F, false);
-
-            cube_r3 = new ZawaModelRenderer(this, 0, 0);
-            cube_r3.setPos(-2.475F, -13.1059F, -25.7395F);
-            Head.addChild(cube_r3);
-            setRotateAngle(cube_r3, 0.3098F, 0.0F, 0.0F);
-            cube_r3.texOffs(37, 0).addBox(-0.75F, -0.3835F, -1.6227F, 2.0F, 2.0F, 3.0F, 0.0F, false);
-            cube_r3.texOffs(37, 0).addBox(-1.25F, -0.3835F, -1.6227F, 2.0F, 2.0F, 3.0F, 0.0F, true);
-
-            cube_r4 = new ZawaModelRenderer(this, 16, 39);
-            cube_r4.setPos(-2.475F, -13.0309F, -25.7395F);
-            Head.addChild(cube_r4);
-            setRotateAngle(cube_r4, 0.1353F, 0.0F, 0.0F);
-            cube_r4.addBox(-1.0F, -0.0835F, -1.7977F, 2.0F, 2.0F, 3.0F, 0.0F, false);
-
-            cube_r5 = new ZawaModelRenderer(this, 26, 8);
-            cube_r5.setPos(-0.2777F, -15.2252F, -21.3708F);
-            Head.addChild(cube_r5);
-            setRotateAngle(cube_r5, 0.5681F, -0.5207F, -0.6628F);
-            cube_r5.addBox(-1.5F, -0.8F, -0.9F, 4.0F, 2.0F, 1.0F, 0.0F, false);
-
-            cube_r6 = new ZawaModelRenderer(this, 26, 8);
-            cube_r6.setPos(-4.6723F, -15.2252F, -21.3708F);
-            Head.addChild(cube_r6);
-            setRotateAngle(cube_r6, 0.5681F, 0.5207F, 0.6628F);
-            cube_r6.addBox(-2.5F, -0.8F, -0.9F, 4.0F, 2.0F, 1.0F, 0.0F, true);
-
-            cube_r7 = new ZawaModelRenderer(this, 0, 8);
-            cube_r7.setPos(-2.475F, -13.1059F, -25.7395F);
-            Head.addChild(cube_r7);
-            setRotateAngle(cube_r7, 0.5192F, 0.0F, 0.0F);
-            cube_r7.addBox(-1.5F, -0.8085F, -2.5977F, 3.0F, 2.0F, 2.0F, 0.0F, false);
-
-            Body = new ZawaModelRenderer(this, 0, 0);
-            Body.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Body);
-
-
-            cube_r8 = new ZawaModelRenderer(this, 24, 23);
-            cube_r8.setPos(-2.475F, -7.8215F, -15.2731F);
-            Body.addChild(cube_r8);
-            setRotateAngle(cube_r8, 0.096F, 0.0F, 0.0F);
-            cube_r8.addBox(-3.0F, -5.05F, -3.0F, 6.0F, 10.0F, 6.0F, 0.0F, false);
-
-            cube_r9 = new ZawaModelRenderer(this, 0, 0);
-            cube_r9.setPos(-2.3914F, -7.8629F, -7.7233F);
-            Body.addChild(cube_r9);
-            setRotateAngle(cube_r9, 0.0F, 0.0075F, -0.0045F);
-            cube_r9.addBox(-3.5F, -5.5F, -5.5F, 7.0F, 11.0F, 12.0F, 0.0F, false);
-
-            cube_r10 = new ZawaModelRenderer(this, 48, 23);
-            cube_r10.setPos(-2.475F, -8.1194F, 4.6087F);
-            Body.addChild(cube_r10);
-            setRotateAngle(cube_r10, -1.405F, 0.0F, 0.0F);
-            cube_r10.addBox(-1.0F, -0.6488F, -3.6975F, 2.0F, 2.0F, 5.0F, 0.0F, false);
-
-            cube_r11 = new ZawaModelRenderer(this, 0, 0);
-            cube_r11.setPos(-2.475F, -7.1444F, 4.3087F);
-            Body.addChild(cube_r11);
-            setRotateAngle(cube_r11, -1.5752F, 0.0F, 0.0F);
-            cube_r11.texOffs(26, 0).addBox(-1.5F, -1.6238F, 1.7025F, 3.0F, 3.0F, 5.0F, 0.0F, false);
-            cube_r11.texOffs(37, 39).addBox(-1.0F, -0.9988F, 4.5025F, 2.0F, 2.0F, 3.0F, 0.0F, false);
-
-            cube_r12 = new ZawaModelRenderer(this, 42, 23);
-            cube_r12.setPos(-2.475F, -7.1444F, 4.9087F);
-            Body.addChild(cube_r12);
-            setRotateAngle(cube_r12, -1.597F, 0.0F, 0.0F);
-            cube_r12.addBox(-1.0F, -0.5488F, 0.1525F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-
-            cube_r13 = new ZawaModelRenderer(this, 0, 39);
-            cube_r13.setPos(-2.475F, -11.5308F, -20.702F);
-            Body.addChild(cube_r13);
-            setRotateAngle(cube_r13, -0.6109F, 0.0F, 0.0F);
-            cube_r13.addBox(-2.0F, -3.8F, -2.375F, 4.0F, 5.0F, 8.0F, 0.0F, false);
-
-            cube_r14 = new ZawaModelRenderer(this, 38, 0);
-            cube_r14.setPos(-2.975F, -10.0892F, -20.3452F);
-            Body.addChild(cube_r14);
-            setRotateAngle(cube_r14, -0.8247F, 0.0F, 0.0F);
-            cube_r14.addBox(-1.0F, -3.15F, -2.775F, 3.0F, 4.0F, 9.0F, 0.0F, false);
-
-            cube_r15 = new ZawaModelRenderer(this, 0, 23);
-            cube_r15.setPos(-2.475F, -7.7542F, -1.4047F);
-            Body.addChild(cube_r15);
-            setRotateAngle(cube_r15, -0.2225F, 0.0F, 0.0F);
-            cube_r15.addBox(-3.0F, -5.4F, -1.025F, 6.0F, 10.0F, 6.0F, 0.0F, false);
-
-            FirstLeg = new ZawaModelRenderer(this, 0, 0);
-            FirstLeg.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(FirstLeg);
-            FirstLeg.texOffs(0, 52).addBox(-5.8F, 7.4059F, -16.2757F, 2.0F, 2.0F, 2.0F, 0.0F, true);
-            FirstLeg.texOffs(0, 39).addBox(-5.85F, 2.286F, -15.6752F, 2.0F, 6.0F, 2.0F, 0.0F, true);
-            FirstLeg.texOffs(48, 30).addBox(-6.525F, -1.4191F, -16.1507F, 3.0F, 4.0F, 3.0F, 0.0F, true);
-
-            cube_r16 = new ZawaModelRenderer(this, 42, 39);
-            cube_r16.setPos(-3.325F, -0.5441F, -18.9257F);
-            FirstLeg.addChild(cube_r16);
-            setRotateAngle(cube_r16, 0.0742F, 0.0F, 0.0F);
-            cube_r16.addBox(-3.25F, -6.75F, 1.675F, 3.0F, 7.0F, 5.0F, 0.0F, true);
-
-            SecondLeg = new ZawaModelRenderer(this, 0, 0);
-            SecondLeg.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(SecondLeg);
-            SecondLeg.texOffs(48, 30).addBox(-1.425F, -1.4191F, -16.1507F, 3.0F, 4.0F, 3.0F, 0.0F, false);
-            SecondLeg.texOffs(0, 52).addBox(-1.15F, 7.4059F, -16.2757F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-            SecondLeg.texOffs(0, 39).addBox(-1.1F, 2.286F, -15.6752F, 2.0F, 6.0F, 2.0F, 0.0F, false);
-
-            cube_r17 = new ZawaModelRenderer(this, 42, 39);
-            cube_r17.setPos(-1.625F, -0.5441F, -18.9257F);
-            SecondLeg.addChild(cube_r17);
-            setRotateAngle(cube_r17, 0.0742F, 0.0F, 0.0F);
-            cube_r17.addBox(0.25F, -6.75F, 1.675F, 3.0F, 7.0F, 5.0F, 0.0F, false);
-
-            ThirdLeg = new ZawaModelRenderer(this, 0, 0);
-            ThirdLeg.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(ThirdLeg);
-            ThirdLeg.texOffs(40, 51).addBox(-0.975F, 1.4304F, 0.5108F, 2.0F, 7.0F, 2.0F, 0.0F, false);
-            ThirdLeg.texOffs(48, 51).addBox(-0.9F, 7.4059F, -0.2007F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-
-            cube_r18 = new ZawaModelRenderer(this, 24, 39);
-            cube_r18.setPos(0.525F, -5.0273F, 0.3933F);
-            ThirdLeg.addChild(cube_r18);
-            setRotateAngle(cube_r18, -0.0872F, -0.0027F, -0.0304F);
-            cube_r18.addBox(-2.5F, -4.0F, -3.0F, 4.0F, 8.0F, 5.0F, 0.0F, false);
-
-            cube_r19 = new ZawaModelRenderer(this, 0, 0);
-            cube_r19.setPos(0.0F, 0.0F, 0.0F);
-            ThirdLeg.addChild(cube_r19);
-            setRotateAngle(cube_r19, 0.4014F, 0.0F, 0.0F);
-            cube_r19.addBox(-1.5F, -2.5F, -1.225F, 3.0F, 5.0F, 3.0F, 0.0F, false);
-
-            FourthLeg = new ZawaModelRenderer(this, 0, 0);
-            FourthLeg.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(FourthLeg);
-            FourthLeg.texOffs(48, 51).addBox(-6.05F, 7.4059F, -0.2007F, 2.0F, 2.0F, 2.0F, 0.0F, true);
-            FourthLeg.texOffs(40, 51).addBox(-5.975F, 1.4304F, 0.5108F, 2.0F, 7.0F, 2.0F, 0.0F, true);
-
-            cube_r20 = new ZawaModelRenderer(this, 24, 39);
-            cube_r20.setPos(-5.475F, -5.0273F, 0.3933F);
-            FourthLeg.addChild(cube_r20);
-            setRotateAngle(cube_r20, -0.0872F, 0.0027F, 0.0304F);
-            cube_r20.addBox(-1.5F, -4.0F, -3.0F, 4.0F, 8.0F, 5.0F, 0.0F, true);
-
-            cube_r21 = new ZawaModelRenderer(this, 0, 0);
-            cube_r21.setPos(-4.95F, 0.0F, 0.0F);
-            FourthLeg.addChild(cube_r21);
-            setRotateAngle(cube_r21, 0.4014F, 0.0F, 0.0F);
-            cube_r21.addBox(-1.5F, -2.5F, -1.225F, 3.0F, 5.0F, 3.0F, 0.0F, true);
-            this.saveBase();
-        }
-
-        @Override
-        public void setupAnim(LowlandNyalaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-        }
-
-        @Override
-        public void playIdleAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
-
-        }
-
-        @Override
-        public void playMovementAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
-        }
-    }
     public static class Child extends LowlandNyalaModel {
 
-
+        public ModelRenderer Body;
+        public ModelRenderer Neck;
+        public ModelRenderer ArmBaseLeft;
+        public ModelRenderer ArmBaseRight;
+        public ModelRenderer Hips;
+        public ModelRenderer ThighLeft;
+        public ModelRenderer ThighRight;
+        public ModelRenderer Tail1;
+        public ModelRenderer UpperLegLeft;
+        public ModelRenderer LowerLegLeft;
+        public ModelRenderer FootLeft;
+        public ModelRenderer UpperLegRight;
+        public ModelRenderer LowerLegRight;
+        public ModelRenderer FootRight;
+        public ModelRenderer Tail2;
+        public ModelRenderer Tail3;
+        public ModelRenderer Tail4;
+        public ModelRenderer Head;
+        public ModelRenderer NeckLower;
+        public ModelRenderer Snout;
+        public ModelRenderer EarLeft;
+        public ModelRenderer EarRight;
+        public ModelRenderer Nose;
+        public ModelRenderer TopSnout;
+        public ModelRenderer ArmLeft;
+        public ModelRenderer ForearmLeft;
+        public ModelRenderer HandLeft;
+        public ModelRenderer ArmRight;
+        public ModelRenderer ForearmRight;
+        public ModelRenderer HandRight;
         public Child() {
             texWidth = 64;
             texHeight = 64;
-
-            NyalaMale = new ZawaModelRenderer(this, 0, 0);
-            NyalaMale.setPos(-1.9473F, 5.8939F, -8.845F);
-
-
-            Face = new ZawaModelRenderer(this, 32, 9);
-            Face.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Face);
-            Face.addBox(-0.0527F, -0.1939F, -3.28F, 4.0F, 4.0F, 4.0F, 0.0F, false);
-
-            cube_r1 = new ZawaModelRenderer(this, 0, 5);
-            cube_r1.setPos(1.9473F, -1.0157F, -2.5273F);
-            Face.addChild(cube_r1);
-            setRotateAngle(cube_r1, 0.8988F, 0.0F, 0.0F);
-            cube_r1.addBox(-1.0F, -0.026F, -4.1433F, 2.0F, 2.0F, 3.0F, 0.0F, false);
-
-            cube_r2 = new ZawaModelRenderer(this, 38, 25);
-            cube_r2.setPos(1.9473F, 1.9694F, -3.0687F);
-            Face.addChild(cube_r2);
-            setRotateAngle(cube_r2, 0.5192F, 0.0F, 0.0F);
-            cube_r2.addBox(-1.5F, -0.8085F, -2.5977F, 3.0F, 2.0F, 2.0F, 0.0F, false);
-
-            cube_r3 = new ZawaModelRenderer(this, 0, 0);
-            cube_r3.setPos(1.9473F, 1.9694F, -3.0687F);
-            Face.addChild(cube_r3);
-            setRotateAngle(cube_r3, 0.3098F, 0.0F, 0.0F);
-            cube_r3.texOffs(22, 44).addBox(-0.75F, -0.3835F, -1.6227F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-            cube_r3.texOffs(24, 28).addBox(-1.25F, -0.3835F, -1.6227F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-
-            cube_r4 = new ZawaModelRenderer(this, 0, 0);
-            cube_r4.setPos(1.9473F, 2.0444F, -3.0687F);
-            Face.addChild(cube_r4);
-            setRotateAngle(cube_r4, 0.1353F, 0.0F, 0.0F);
-            cube_r4.addBox(-1.0F, -0.0835F, -1.7977F, 2.0F, 2.0F, 3.0F, 0.0F, false);
-
-            cube_r5 = new ZawaModelRenderer(this, 33, 0);
-            cube_r5.setPos(3.8947F, 0.0F, 0.0F);
-            Face.addChild(cube_r5);
-            setRotateAngle(cube_r5, 0.5681F, -0.5207F, -0.6628F);
-            cube_r5.addBox(-1.5F, -0.8F, -0.9F, 4.0F, 2.0F, 1.0F, 0.0F, false);
-
-            cube_r6 = new ZawaModelRenderer(this, 33, 0);
-            cube_r6.setPos(0.0F, 0.0F, 0.0F);
-            Face.addChild(cube_r6);
-            setRotateAngle(cube_r6, 0.5681F, 0.5207F, 0.6628F);
-            cube_r6.addBox(-2.5F, -0.8F, -0.9F, 4.0F, 2.0F, 1.0F, 0.0F, true);
-
-            Chest = new ZawaModelRenderer(this, 0, 0);
-            Chest.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Chest);
-
-
-            cube_r7 = new ZawaModelRenderer(this, 0, 0);
-            cube_r7.setPos(1.9473F, 5.5851F, 9.3938F);
-            Chest.addChild(cube_r7);
-            setRotateAngle(cube_r7, -0.0218F, 0.0F, 0.0F);
-            cube_r7.addBox(-3.0F, -4.025F, -5.5F, 6.0F, 8.0F, 10.0F, 0.0F, false);
-
-            cube_r8 = new ZawaModelRenderer(this, 0, 18);
-            cube_r8.setPos(1.9059F, 5.5738F, 14.7726F);
-            Chest.addChild(cube_r8);
-            setRotateAngle(cube_r8, -0.4931F, 0.0F, 0.0F);
-            cube_r8.addBox(-2.5F, -2.825F, -2.575F, 5.0F, 7.0F, 4.0F, 0.0F, false);
-
-            cube_r9 = new ZawaModelRenderer(this, 16, 45);
-            cube_r9.setPos(1.4473F, 6.0558F, 20.0294F);
-            Chest.addChild(cube_r9);
-            setRotateAngle(cube_r9, -1.4661F, 0.0F, 0.0F);
-            cube_r9.addBox(0.0F, 2.4762F, -2.4975F, 1.0F, 1.0F, 3.0F, 0.0F, false);
-
-            cube_r10 = new ZawaModelRenderer(this, 0, 0);
-            cube_r10.setPos(1.9473F, 8.3585F, 17.2788F);
-            Chest.addChild(cube_r10);
-            setRotateAngle(cube_r10, -1.597F, 0.0F, 0.0F);
-            cube_r10.texOffs(8, 45).addBox(-0.5F, -0.3F, -1.575F, 1.0F, 1.0F, 3.0F, 0.0F, false);
-            cube_r10.texOffs(0, 18).addBox(-0.5F, -0.3F, 3.775F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-            cube_r10.texOffs(24, 38).addBox(-1.0F, -0.8F, -0.125F, 2.0F, 2.0F, 4.0F, 0.0F, false);
-
-            cube_r11 = new ZawaModelRenderer(this, 22, 0);
-            cube_r11.setPos(2.4473F, 3.7694F, 0.6437F);
-            Chest.addChild(cube_r11);
-            setRotateAngle(cube_r11, -0.6109F, 0.0F, 0.0F);
-            cube_r11.addBox(-2.0F, -2.8F, -2.375F, 3.0F, 4.0F, 5.0F, 0.0F, false);
-
-            cube_r12 = new ZawaModelRenderer(this, 0, 29);
-            cube_r12.setPos(1.9473F, 5.2111F, 1.0006F);
-            Chest.addChild(cube_r12);
-            setRotateAngle(cube_r12, -0.8247F, 0.0F, 0.0F);
-            cube_r12.addBox(-1.0F, -1.15F, -2.775F, 2.0F, 2.0F, 5.0F, 0.0F, false);
-
-            cube_r13 = new ZawaModelRenderer(this, 18, 18);
-            cube_r13.setPos(1.4473F, 2.6287F, 1.3476F);
-            Chest.addChild(cube_r13);
-            setRotateAngle(cube_r13, 0.096F, 0.0F, 0.0F);
-            cube_r13.addBox(-2.0F, -0.55F, 0.0F, 5.0F, 7.0F, 3.0F, 0.0F, false);
-
-            Leg1 = new ZawaModelRenderer(this, 0, 0);
-            Leg1.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Leg1);
-            Leg1.texOffs(46, 15).addBox(-0.8777F, 16.1061F, 2.045F, 2.0F, 2.0F, 2.0F, 0.0F, true);
-            Leg1.texOffs(0, 44).addBox(-0.9527F, 11.0561F, 2.745F, 2.0F, 3.0F, 2.0F, 0.0F, true);
-
-            cube_r14 = new ZawaModelRenderer(this, 34, 17);
-            cube_r14.setPos(1.8473F, 8.0561F, 4.12F);
-            Leg1.addChild(cube_r14);
-            setRotateAngle(cube_r14, 0.0742F, 0.0F, 0.0F);
-            cube_r14.addBox(-3.25F, -1.8026F, -1.9807F, 3.0F, 5.0F, 3.0F, 0.0F, true);
-
-            cube_r15 = new ZawaModelRenderer(this, 44, 7);
-            cube_r15.setPos(1.9473F, 14.9863F, 3.6455F);
-            Leg1.addChild(cube_r15);
-            setRotateAngle(cube_r15, -0.0436F, 0.0F, 0.0F);
-            cube_r15.addBox(-2.875F, -1.0F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, true);
-
-            Leg2 = new ZawaModelRenderer(this, 0, 0);
-            Leg2.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Leg2);
-            Leg2.texOffs(46, 15).addBox(2.7723F, 16.1061F, 2.045F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-            Leg2.texOffs(0, 44).addBox(2.8473F, 11.0561F, 2.745F, 2.0F, 3.0F, 2.0F, 0.0F, false);
-
-            cube_r16 = new ZawaModelRenderer(this, 34, 17);
-            cube_r16.setPos(2.0473F, 8.0561F, 4.12F);
-            Leg2.addChild(cube_r16);
-            setRotateAngle(cube_r16, 0.0742F, 0.0F, 0.0F);
-            cube_r16.addBox(0.25F, -1.8026F, -1.9807F, 3.0F, 5.0F, 3.0F, 0.0F, false);
-
-            cube_r17 = new ZawaModelRenderer(this, 44, 7);
-            cube_r17.setPos(1.9473F, 14.9863F, 3.6455F);
-            Leg2.addChild(cube_r17);
-            setRotateAngle(cube_r17, -0.0436F, 0.0F, 0.0F);
-            cube_r17.addBox(0.875F, -1.0F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
-
-            Leg3 = new ZawaModelRenderer(this, 0, 0);
-            Leg3.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Leg3);
-            Leg3.texOffs(46, 23).addBox(2.6723F, 16.1061F, 12.545F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-            Leg3.texOffs(42, 29).addBox(2.6973F, 13.0306F, 13.0066F, 2.0F, 4.0F, 2.0F, 0.0F, false);
-
-            cube_r18 = new ZawaModelRenderer(this, 28, 28);
-            cube_r18.setPos(4.1973F, 7.0729F, 12.3891F);
-            Leg3.addChild(cube_r18);
-            setRotateAngle(cube_r18, -0.0872F, -0.0027F, -0.0304F);
-            cube_r18.addBox(-1.75F, -2.0F, -1.25F, 3.0F, 6.0F, 4.0F, 0.0F, false);
-
-            cube_r19 = new ZawaModelRenderer(this, 12, 38);
-            cube_r19.setPos(3.6723F, 12.5502F, 12.0458F);
-            Leg3.addChild(cube_r19);
-            setRotateAngle(cube_r19, 0.4014F, 0.0F, 0.0F);
-            cube_r19.addBox(-1.5F, -2.5F, -0.225F, 3.0F, 4.0F, 3.0F, 0.0F, false);
-
-            Leg4 = new ZawaModelRenderer(this, 0, 0);
-            Leg4.setPos(0.0F, 0.0F, 0.0F);
-            NyalaMale.addChild(Leg4);
-            Leg4.texOffs(42, 29).addBox(-0.8027F, 13.0306F, 13.0066F, 2.0F, 4.0F, 2.0F, 0.0F, true);
-            Leg4.texOffs(46, 23).addBox(-0.7777F, 16.1061F, 12.545F, 2.0F, 2.0F, 2.0F, 0.0F, true);
-
-            cube_r20 = new ZawaModelRenderer(this, 28, 28);
-            cube_r20.setPos(-0.3027F, 7.0729F, 12.3891F);
-            Leg4.addChild(cube_r20);
-            setRotateAngle(cube_r20, -0.0872F, 0.0027F, 0.0304F);
-            cube_r20.addBox(-1.25F, -2.0F, -1.25F, 3.0F, 6.0F, 4.0F, 0.0F, true);
-
-            cube_r21 = new ZawaModelRenderer(this, 12, 38);
-            cube_r21.setPos(0.2223F, 12.5502F, 12.0458F);
-            Leg4.addChild(cube_r21);
-            setRotateAngle(cube_r21, 0.4014F, 0.0F, 0.0F);
-            cube_r21.addBox(-1.5F, -2.5F, -0.225F, 3.0F, 4.0F, 3.0F, 0.0F, true);
+            this.FootRight = new ModelRenderer(this, 52, 19);
+            this.FootRight.mirror = true;
+            this.FootRight.setPos(0.1F, 3.0F, -1.3F);
+            this.FootRight.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(FootRight, 0.017453292519943295F, 0.0F, 0.0F);
+            this.EarRight = new ModelRenderer(this, 0, 10);
+            this.EarRight.mirror = true;
+            this.EarRight.setPos(-1.6F, -0.7F, 0.0F);
+            this.EarRight.addBox(0.0F, -1.0F, 0.0F, 1.0F, 2.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(EarRight, 0.5864306020384839F, -0.8600982340775168F, 0.0F);
+            this.HandRight = new ModelRenderer(this, 32, 18);
+            this.HandRight.mirror = true;
+            this.HandRight.setPos(-0.1F, 2.0F, 0.5F);
+            this.HandRight.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.LowerLegLeft = new ModelRenderer(this, 44, 17);
+            this.LowerLegLeft.setPos(0.0F, 4.0F, 2.5F);
+            this.LowerLegLeft.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LowerLegLeft, -0.3909537457888271F, 0.0F, 0.0F);
+            this.Chest = new ModelRenderer(this, 0, 0);
+            this.Chest.setPos(0.0F, 11.0F, -5.0F);
+            this.Chest.addBox(-2.5F, -3.5F, -1.5F, 5.0F, 7.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Chest, 0.09599310885968812F, 0.0F, 0.0F);
+            this.Neck = new ModelRenderer(this, 0, 39);
+            this.Neck.setPos(0.0F, -2.0F, -1.1F);
+            this.Neck.addBox(-1.5F, -2.0F, -3.2F, 3.0F, 4.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Neck, -0.7562511968470761F, 0.0F, 0.0F);
+            this.Hips = new ModelRenderer(this, 0, 28);
+            this.Hips.setPos(0.0F, -0.5F, 10.0F);
+            this.Hips.addBox(-2.5F, 0.0F, 0.0F, 5.0F, 7.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Hips, -0.43039819087864056F, 0.0F, 0.0F);
+            this.NeckLower = new ModelRenderer(this, 16, 41);
+            this.NeckLower.setPos(0.0F, 1.8F, -3.0F);
+            this.NeckLower.addBox(-1.0F, -2.0F, 0.4F, 2.0F, 2.0F, 5.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(NeckLower, -0.1563815016444822F, 0.0F, 0.0F);
+            this.Head = new ModelRenderer(this, 0, 48);
+            this.Head.setPos(0.0F, 0.0F, -3.0F);
+            this.Head.addBox(-2.0F, -2.0F, -2.0F, 4.0F, 4.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Head, 0.7428121536172364F, 0.0F, 0.0F);
+            this.Nose = new ModelRenderer(this, 0, 56);
+            this.Nose.setPos(0.0F, -1.0F, -2.8F);
+            this.Nose.addBox(-1.5F, 0.0F, 0.0F, 3.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Nose, 0.27366763203903305F, 0.0F, 0.0F);
+            this.HandLeft = new ModelRenderer(this, 32, 18);
+            this.HandLeft.setPos(-0.1F, 2.0F, 0.5F);
+            this.HandLeft.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.ThighLeft = new ModelRenderer(this, 44, 0);
+            this.ThighLeft.setPos(2.0F, 2.5F, 1.6F);
+            this.ThighLeft.addBox(-1.5F, 0.0F, -2.0F, 3.0F, 6.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ThighLeft, 0.3295181481291434F, 0.0F, 0.0F);
+            this.Snout = new ModelRenderer(this, 0, 60);
+            this.Snout.setPos(0.0F, 1.0F, -1.6F);
+            this.Snout.addBox(-1.0F, -1.0F, -2.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Snout, 0.1563815016444822F, 0.0F, 0.0F);
+            this.Body = new ModelRenderer(this, 0, 10);
+            this.Body.setPos(0.0F, -3.0F, 1.0F);
+            this.Body.addBox(-3.0F, -1.0F, 0.0F, 6.0F, 8.0F, 10.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Body, -0.09599310885968812F, 0.0F, 0.0F);
+            this.TopSnout = new ModelRenderer(this, 10, 56);
+            this.TopSnout.setPos(0.0F, -2.8F, 0.0F);
+            this.TopSnout.addBox(-1.0F, 0.0F, -3.0F, 2.0F, 2.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(TopSnout, 0.6646214111173737F, 0.0F, 0.0F);
+            this.Tail2 = new ModelRenderer(this, 17, 4);
+            this.Tail2.setPos(0.0F, 0.0F, 3.0F);
+            this.Tail2.addBox(-0.5F, 0.0F, 0.0F, 1.0F, 1.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Tail2, -0.10471975511965977F, 0.0F, 0.0F);
+            this.FootLeft = new ModelRenderer(this, 52, 19);
+            this.FootLeft.setPos(-0.1F, 3.0F, -1.3F);
+            this.FootLeft.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(FootLeft, 0.017453292519943295F, 0.0F, 0.0F);
+            this.ArmLeft = new ModelRenderer(this, 32, 8);
+            this.ArmLeft.setPos(0.0F, 5.0F, 1.0F);
+            this.ArmLeft.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ArmLeft, -0.06981317007977318F, 0.0F, 0.0F);
+            this.Tail4 = new ModelRenderer(this, 23, 0);
+            this.Tail4.setPos(0.0F, 0.0F, 4.0F);
+            this.Tail4.addBox(-0.5F, -0.5F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.UpperLegLeft = new ModelRenderer(this, 44, 10);
+            this.UpperLegLeft.setPos(-0.1F, 6.0F, -1.7F);
+            this.UpperLegLeft.addBox(-1.5F, 0.0F, 0.0F, 3.0F, 4.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperLegLeft, 0.46914448828868976F, 0.0F, 0.0F);
+            this.EarLeft = new ModelRenderer(this, 0, 10);
+            this.EarLeft.setPos(1.6F, -0.7F, 0.0F);
+            this.EarLeft.addBox(-1.0F, -1.0F, 0.0F, 1.0F, 2.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(EarLeft, 0.5864306020384839F, 0.8600982340775168F, 0.0F);
+            this.LowerLegRight = new ModelRenderer(this, 44, 17);
+            this.LowerLegRight.mirror = true;
+            this.LowerLegRight.setPos(0.0F, 4.0F, 2.5F);
+            this.LowerLegRight.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LowerLegRight, -0.3909537457888271F, 0.0F, 0.0F);
+            this.Tail3 = new ModelRenderer(this, 19, 29);
+            this.Tail3.setPos(0.0F, 0.5F, 1.5F);
+            this.Tail3.addBox(-1.0F, -1.0F, 0.0F, 2.0F, 2.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.ArmRight = new ModelRenderer(this, 32, 8);
+            this.ArmRight.mirror = true;
+            this.ArmRight.setPos(0.0F, 5.0F, 1.0F);
+            this.ArmRight.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ArmRight, -0.06981317007977318F, 0.0F, 0.0F);
+            this.ForearmRight = new ModelRenderer(this, 32, 13);
+            this.ForearmRight.mirror = true;
+            this.ForearmRight.setPos(-0.1F, 3.0F, -2.0F);
+            this.ForearmRight.addBox(-1.0F, -0.1F, 0.0F, 2.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ForearmRight, -0.05235987755982988F, 0.0F, 0.0F);
+            this.UpperLegRight = new ModelRenderer(this, 44, 10);
+            this.UpperLegRight.mirror = true;
+            this.UpperLegRight.setPos(0.1F, 6.0F, -1.7F);
+            this.UpperLegRight.addBox(-1.5F, 0.0F, 0.0F, 3.0F, 4.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperLegRight, 0.46914448828868976F, 0.0F, 0.0F);
+            this.ForearmLeft = new ModelRenderer(this, 32, 13);
+            this.ForearmLeft.setPos(-0.1F, 3.0F, -2.0F);
+            this.ForearmLeft.addBox(-1.0F, -0.1F, 0.0F, 2.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ForearmLeft, -0.05235987755982988F, 0.0F, 0.0F);
+            this.ArmBaseRight = new ModelRenderer(this, 32, 0);
+            this.ArmBaseRight.mirror = true;
+            this.ArmBaseRight.setPos(-1.6F, 1.0F, 0.3F);
+            this.ArmBaseRight.addBox(-1.5F, 0.0F, -1.5F, 3.0F, 5.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ArmBaseRight, 0.03490658503988659F, 0.0F, 0.0F);
+            this.Tail1 = new ModelRenderer(this, 17, 0);
+            this.Tail1.setPos(0.0F, 0.3F, 4.0F);
+            this.Tail1.addBox(-0.5F, 0.0F, 0.0F, 1.0F, 1.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Tail1, -1.029569755046227F, 0.0F, 0.0F);
+            this.ThighRight = new ModelRenderer(this, 44, 0);
+            this.ThighRight.mirror = true;
+            this.ThighRight.setPos(-2.0F, 2.5F, 1.6F);
+            this.ThighRight.addBox(-1.5F, 0.0F, -2.0F, 3.0F, 6.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ThighRight, 0.3295181481291434F, 0.0F, 0.0F);
+            this.ArmBaseLeft = new ModelRenderer(this, 32, 0);
+            this.ArmBaseLeft.setPos(1.6F, 1.0F, 0.3F);
+            this.ArmBaseLeft.addBox(-1.5F, 0.0F, -1.5F, 3.0F, 5.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(ArmBaseLeft, 0.03490658503988659F, 0.0F, 0.0F);
+            this.LowerLegRight.addChild(this.FootRight);
+            this.Head.addChild(this.EarRight);
+            this.ForearmRight.addChild(this.HandRight);
+            this.UpperLegLeft.addChild(this.LowerLegLeft);
+            this.Chest.addChild(this.Neck);
+            this.Body.addChild(this.Hips);
+            this.Neck.addChild(this.NeckLower);
+            this.Neck.addChild(this.Head);
+            this.Snout.addChild(this.Nose);
+            this.ForearmLeft.addChild(this.HandLeft);
+            this.Hips.addChild(this.ThighLeft);
+            this.Head.addChild(this.Snout);
+            this.Chest.addChild(this.Body);
+            this.Snout.addChild(this.TopSnout);
+            this.Tail1.addChild(this.Tail2);
+            this.LowerLegLeft.addChild(this.FootLeft);
+            this.ArmBaseLeft.addChild(this.ArmLeft);
+            this.Tail3.addChild(this.Tail4);
+            this.ThighLeft.addChild(this.UpperLegLeft);
+            this.Head.addChild(this.EarLeft);
+            this.UpperLegRight.addChild(this.LowerLegRight);
+            this.Tail2.addChild(this.Tail3);
+            this.ArmBaseRight.addChild(this.ArmRight);
+            this.ArmRight.addChild(this.ForearmRight);
+            this.ThighRight.addChild(this.UpperLegRight);
+            this.ArmLeft.addChild(this.ForearmLeft);
+            this.Chest.addChild(this.ArmBaseRight);
+            this.Hips.addChild(this.Tail1);
+            this.Hips.addChild(this.ThighRight);
+            this.Chest.addChild(this.ArmBaseLeft);
             this.saveBase();
         }
 

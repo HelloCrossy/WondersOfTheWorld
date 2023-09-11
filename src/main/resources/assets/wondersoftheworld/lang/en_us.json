@@ -14,6 +14,9 @@
   "entity.wondersoftheworld.fennec_fox": "Fennec Fox",
   "entity.wondersoftheworld.turaco": "Turaco",
   "entity.wondersoftheworld.tit": "Tit",
+  "entity.wondersoftheworld.mouse_deer": "Mouse Deer",
+  "entity.wondersoftheworld.margay": "Margay",
+  "entity.wondersoftheworld.bird_of_paradise": "Greater Bird Of Paradise",
   "entity.wondersoftheworld.discus_fish": "Discus Fish",
   "entity.wondersoftheworld.oscar": "Oscar",
 
@@ -33,6 +36,9 @@
   "item.wondersoftheworld.turaco_spawn_egg": "Turaco Spawn Egg", 
   "item.wondersoftheworld.fennec_fox_spawn_egg": "Fennec Fox Spawn Egg",
   "item.wondersoftheworld.tit_spawn_egg": "Tit Spawn Egg",
+  "item.wondersoftheworld.mouse_deer_spawn_egg": "Mouse Deer Spawn Egg",
+  "item.wondersoftheworld.margay_spawn_egg": "Margay Spawn Egg",
+  "item.wondersoftheworld.bird_of_paradise_spawn_egg": "Greater Bird Of Paradise Spawn Egg",
   "item.wondersoftheworld.discus_fish_spawn_egg": "Discus Fish Spawn Egg",
   "item.wondersoftheworld.oscar_spawn_egg": "Oscar Spawn Egg",
   "item.wondersoftheworld.discus_fish": "Raw Discus",
@@ -45,6 +51,7 @@
   "item.wondersoftheworld.tit_egg": "Tit Egg",
   "item.wondersoftheworld.turaco_egg": "Turaco Egg",
   "item.wondersoftheworld.vulture_egg": "Vulture Egg",
+  "item.wondersoftheworld.bird_of_paradise_egg": "Greater Bird Of Paradise Egg",
 
   "__comment": "Entity Variant and Scientific Names, and Informational Blurbs",
 

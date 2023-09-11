@@ -3,7 +3,7 @@
   "kibble": "zawa:herbivore_kibble",
   "size": "large",
   "fertility": "low",
-  "breeding_item": "zawa:arctic_moss",
+  "breeding_item": "zawa:arctic_poppy",
   "litter_size": 1,
   "diet": "zawa:herbivore",
   "speed": "medium",
@@ -13,5 +13,5 @@
       "zawa:sprinkler"
     ]
   },
-  "variant_count": 1
+  "variant_count": 4
 }

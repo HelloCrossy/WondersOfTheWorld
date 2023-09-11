@@ -2,25 +2,22 @@ package com.github.hellocrossy.wondersoftheworld.client.model;
 
 import com.github.hellocrossy.wondersoftheworld.entity.OscarEntity;
 import com.google.common.collect.ImmutableList;
-import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import org.zawamod.zawa.client.model.ZawaBaseModel;
-import org.zawamod.zawa.client.model.ZawaModelRenderer;
 
 public class OscarModel extends SegmentedModel<OscarEntity> {
-    protected ModelRenderer Body;
-    protected ModelRenderer PectoralFinRight;
-    protected ModelRenderer UnderFinLeft;
-    protected ModelRenderer Head;
-    protected ModelRenderer Face;
-    protected ModelRenderer Tail;
-    protected ModelRenderer TailFinTop;
-    protected ModelRenderer TailFinBottom;
-    protected ModelRenderer UnderFinRight;
-    protected ModelRenderer PectoralFinLeft;
-    protected ModelRenderer BackFin;
-    protected ModelRenderer AnalFin;
+    public ModelRenderer Body;
+    public ModelRenderer PectoralFinRight;
+    public ModelRenderer UnderFinLeft;
+    public ModelRenderer Head;
+    public ModelRenderer Tail;
+    public ModelRenderer UnderFinRight;
+    public ModelRenderer PectoralFinLeft;
+    public ModelRenderer BackFin;
+    public ModelRenderer AnalFin;
+    public ModelRenderer Face;
+    public ModelRenderer TailFinTop;
+    public ModelRenderer TailFinBottom;
     private Iterable<ModelRenderer> parts;
 
     public Iterable<ModelRenderer> parts() {
@@ -33,73 +30,63 @@ public class OscarModel extends SegmentedModel<OscarEntity> {
     public OscarModel() {
         this.texWidth = 32;
         this.texHeight = 32;
-
-        Body = new ModelRenderer(this, 0, 0);
-        Body.setPos(0.0F, 17.5F, -2.0F);
-        Body.addBox(-1.5F, -3.5F, -3.0F, 3.0F, 6.0F, 6.0F, 0.0F, false);
-
-        PectoralFinRight = new ModelRenderer(this, 8, 21);
-        PectoralFinRight.setPos(1.5F, 1.0F, -2.0F);
-        Body.addChild(PectoralFinRight);
-        setRotateAngle(PectoralFinRight, 0.0F, 0.5009F, 0.0F);
-        PectoralFinRight.addBox(0.0F, -1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, true);
-
-        UnderFinLeft = new ModelRenderer(this, 10, 14);
-        UnderFinLeft.setPos(0.0F, 2.5F, -2.0F);
-        Body.addChild(UnderFinLeft);
-        setRotateAngle(UnderFinLeft, 0.5009F, -0.2731F, 0.0F);
-        UnderFinLeft.addBox(0.0F, 0.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, false);
-
-        Head = new ModelRenderer(this, 0, 12);
-        Head.setPos(0.0F, -2.1F, -3.0F);
-        Body.addChild(Head);
-        setRotateAngle(Head, 0.4538F, 0.0F, 0.0F);
-        Head.addBox(-1.0F, -1.0F, -2.0F, 2.0F, 5.0F, 3.0F, 0.0F, false);
-
-        Face = new ModelRenderer(this, 0, 20);
-        Face.setPos(0.0F, 0.0F, -2.0F);
-        Head.addChild(Face);
-        setRotateAngle(Face, 0.7854F, 0.0F, 0.0F);
-        Face.addBox(-0.5F, -0.7F, -2.3F, 1.0F, 3.0F, 3.0F, 0.0F, false);
-
-        Tail = new ModelRenderer(this, 12, 0);
-        Tail.setPos(0.0F, -0.5F, 3.0F);
-        Body.addChild(Tail);
-        Tail.addBox(-1.0F, -1.5F, 0.0F, 2.0F, 3.0F, 3.0F, 0.0F, false);
-
-        TailFinTop = new ModelRenderer(this, 18, 3);
-        TailFinTop.setPos(0.0F, 0.0F, 2.0F);
-        Tail.addChild(TailFinTop);
-        setRotateAngle(TailFinTop, 0.5009F, 0.0F, 0.0F);
-        TailFinTop.addBox(0.0F, -1.5F, 0.0F, 0.0F, 3.0F, 3.0F, 0.0F, false);
-
-        TailFinBottom = new ModelRenderer(this, 18, 6);
-        TailFinBottom.setPos(0.0F, 0.0F, 0.0F);
-        TailFinTop.addChild(TailFinBottom);
-        setRotateAngle(TailFinBottom, -0.9318F, 0.0F, 0.0F);
-        TailFinBottom.addBox(0.0F, -1.5F, 0.0F, 0.0F, 3.0F, 3.0F, 0.0F, false);
-
-        UnderFinRight = new ModelRenderer(this, 10, 14);
-        UnderFinRight.setPos(0.0F, 2.5F, -2.0F);
-        Body.addChild(UnderFinRight);
-        setRotateAngle(UnderFinRight, 0.5009F, 0.2731F, 0.0F);
-        UnderFinRight.addBox(0.0F, 0.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, true);
-
-        PectoralFinLeft = new ModelRenderer(this, 8, 21);
-        PectoralFinLeft.setPos(-1.5F, 1.0F, -2.0F);
-        Body.addChild(PectoralFinLeft);
-        setRotateAngle(PectoralFinLeft, 0.0F, -0.5009F, 0.0F);
-        PectoralFinLeft.addBox(0.0F, -1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, false);
-
-        BackFin = new ModelRenderer(this, 0, 19);
-        BackFin.setPos(0.0F, -1.0F, -2.5F);
-        Body.addChild(BackFin);
-        BackFin.addBox(0.0F, -4.0F, 0.0F, 0.0F, 3.0F, 7.0F, 0.0F, false);
-
-        AnalFin = new ModelRenderer(this, 16, 8);
-        AnalFin.setPos(0.0F, 1.5F, 0.5F);
-        Body.addChild(AnalFin);
-        AnalFin.addBox(0.0F, -1.0F, 0.0F, 0.0F, 3.0F, 4.0F, 0.0F, false);
+        this.Head = new ModelRenderer(this, 0, 12);
+        this.Head.setPos(0.0F, -2.1F, -3.0F);
+        this.Head.addBox(-1.0F, -1.0F, -2.0F, 2.0F, 5.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(Head, 0.45378560551852565F, 0.0F, 0.0F);
+        this.Tail = new ModelRenderer(this, 12, 0);
+        this.Tail.setPos(0.0F, -0.5F, 3.0F);
+        this.Tail.addBox(-1.0F, -1.5F, 0.0F, 2.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+        this.Body = new ModelRenderer(this, 0, 0);
+        this.Body.setPos(0.0F, 17.5F, -2.0F);
+        this.Body.addBox(-1.5F, -3.5F, -3.0F, 3.0F, 6.0F, 6.0F, 0.0F, 0.0F, 0.0F);
+        this.PectoralFinRight = new ModelRenderer(this, 8, 21);
+        this.PectoralFinRight.mirror = true;
+        this.PectoralFinRight.setPos(-1.5F, 1.0F, -2.0F);
+        this.PectoralFinRight.addBox(0.0F, -1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(PectoralFinRight, 0.0F, -0.500909508638178F, 0.0F);
+        this.TailFinBottom = new ModelRenderer(this, 18, 6);
+        this.TailFinBottom.setPos(0.0F, 0.0F, 0.0F);
+        this.TailFinBottom.addBox(0.0F, -1.5F, 0.0F, 0.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(TailFinBottom, -0.9318312769871282F, 0.0F, 0.0F);
+        this.UnderFinLeft = new ModelRenderer(this, 10, 14);
+        this.UnderFinLeft.setPos(0.0F, 2.5F, -2.0F);
+        this.UnderFinLeft.addBox(0.0F, 0.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(UnderFinLeft, 0.500909508638178F, 0.27314402127920984F, 0.0F);
+        this.PectoralFinLeft = new ModelRenderer(this, 8, 21);
+        this.PectoralFinLeft.setPos(1.5F, 1.0F, -2.0F);
+        this.PectoralFinLeft.addBox(0.0F, -1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(PectoralFinLeft, 0.0F, 0.500909508638178F, 0.0F);
+        this.UnderFinRight = new ModelRenderer(this, 10, 14);
+        this.UnderFinRight.mirror = true;
+        this.UnderFinRight.setPos(0.0F, 2.5F, -2.0F);
+        this.UnderFinRight.addBox(0.0F, 0.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(UnderFinRight, 0.500909508638178F, -0.27314402127920984F, 0.0F);
+        this.AnalFin = new ModelRenderer(this, 16, 8);
+        this.AnalFin.setPos(0.0F, 1.5F, 0.5F);
+        this.AnalFin.addBox(0.0F, -1.0F, 0.0F, 0.0F, 3.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+        this.BackFin = new ModelRenderer(this, 0, 19);
+        this.BackFin.setPos(0.0F, -1.0F, -2.5F);
+        this.BackFin.addBox(0.0F, -4.0F, 0.0F, 0.0F, 3.0F, 7.0F, 0.0F, 0.0F, 0.0F);
+        this.TailFinTop = new ModelRenderer(this, 18, 3);
+        this.TailFinTop.setPos(0.0F, 0.0F, 2.0F);
+        this.TailFinTop.addBox(0.0F, -1.5F, 0.0F, 0.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(TailFinTop, 0.500909508638178F, 0.0F, 0.0F);
+        this.Face = new ModelRenderer(this, 0, 20);
+        this.Face.setPos(0.0F, 0.0F, -2.0F);
+        this.Face.addBox(-0.5F, -0.7F, -2.3F, 1.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(Face, 0.7853981633974483F, 0.0F, 0.0F);
+        this.Body.addChild(this.Head);
+        this.Body.addChild(this.Tail);
+        this.Body.addChild(this.PectoralFinRight);
+        this.TailFinTop.addChild(this.TailFinBottom);
+        this.Body.addChild(this.UnderFinLeft);
+        this.Body.addChild(this.PectoralFinLeft);
+        this.Body.addChild(this.UnderFinRight);
+        this.Body.addChild(this.AnalFin);
+        this.Body.addChild(this.BackFin);
+        this.Tail.addChild(this.TailFinTop);
+        this.Head.addChild(this.Face);
     }
     @Override
     public void setupAnim(OscarEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {

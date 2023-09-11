@@ -1,4 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
+import com.github.hellocrossy.wondersoftheworld.client.model.BongoModel;
 import com.github.hellocrossy.wondersoftheworld.client.model.LowlandNyalaModel;
 import com.github.hellocrossy.wondersoftheworld.entity.*;
 import com.mojang.blaze3d.matrix.MatrixStack;
@@ -7,24 +8,23 @@ import net.minecraft.client.renderer.entity.EntityRendererManager;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class LowlandNyalaRenderer extends ZawaMobRenderer<LowlandNyalaEntity, LowlandNyalaModel> {
-    private final LowlandNyalaModel adultModel1;
-    private final LowlandNyalaModel adultModel2;
+    public LowlandNyalaRenderer(EntityRendererManager manager) {
+        super (manager, new LowlandNyalaModel.Adult(), new LowlandNyalaModel.Child(), 1.0F);
 
-    public LowlandNyalaRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new LowlandNyalaModel.Male(), new LowlandNyalaModel.Child(), 0.25F);
-        adultModel1 = adultModel;
-        adultModel2 = new LowlandNyalaModel.Female();
     }
     @Override
-    public void render(LowlandNyalaEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
-        if (!entity.isBaby()) {
-            if (entity.getVariant() >= 6) {
-                adultModel = adultModel1;
-            } else {
-                adultModel = adultModel2;
-            }
-        }
-        super.render(entity, entityYaw, partialTicks, matrixStack, buffer, packedLight);
+    protected void scale(LowlandNyalaEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 0.9F : 1.1F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
+    }
+    @Override
+    protected boolean hasBabyVariants(LowlandNyalaEntity entity) {
+        return false;
+    }
+    @Override
+    protected boolean isSexuallyDimorphic() {
+        return true;
     }
 }
 

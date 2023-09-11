@@ -21,7 +21,7 @@ public class BongoEntity extends ZawaLandEntity implements SpeciesVariantsEntity
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 21.0).add(Attributes.ATTACK_DAMAGE, 3.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 21.0).add(Attributes.ATTACK_DAMAGE, 3.0);
     }
 
     @Nullable
@@ -40,5 +40,9 @@ public class BongoEntity extends ZawaLandEntity implements SpeciesVariantsEntity
         super.registerGoals();
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
         this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, PlayerEntity.class, 16.0F, 0.8D, 1.33D, (entity) -> AVOID_PLAYERS.test(entity) && !this.isTame()));
+    }
+    @Override
+    public float getMaleRatio() {
+        return 0.33F;
     }
 }

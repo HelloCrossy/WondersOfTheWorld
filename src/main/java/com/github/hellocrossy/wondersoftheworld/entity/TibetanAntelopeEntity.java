@@ -37,5 +37,9 @@ public class TibetanAntelopeEntity extends ZawaLandEntity {
         this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0D));
 
     }
+    @Override
+    public float getMaleRatio() {
+        return 0.33F;
+    }
 }
 
