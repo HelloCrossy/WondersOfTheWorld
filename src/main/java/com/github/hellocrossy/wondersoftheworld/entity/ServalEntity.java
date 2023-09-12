@@ -38,7 +38,7 @@ public class ServalEntity extends ZawaLandEntity {
     }
     @Override
     public float getMaleRatio() {
-        return 0.50F;
+        return 0.33F;
     }
 }
 

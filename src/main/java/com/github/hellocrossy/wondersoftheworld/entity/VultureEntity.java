@@ -50,4 +50,8 @@ public class VultureEntity extends ZawaFlyingEntity implements OviparousEntity, 
         this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
         this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> !this.isBaby()));
     }
+    @Override
+    public float getMaleRatio() {
+        return 0.5F;
+    }
 }

@@ -43,6 +43,6 @@ public class BongoEntity extends ZawaLandEntity implements SpeciesVariantsEntity
     }
     @Override
     public float getMaleRatio() {
-        return 0.33F;
+        return 0.14F;
     }
 }

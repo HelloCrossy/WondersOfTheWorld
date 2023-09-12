@@ -35,7 +35,7 @@ public class SaigaAntelopeEntity extends ZawaLandEntity  {
 
     @Override
     public float getMaleRatio() {
-        return 0.33F;
+        return 0.25F;
     }
 }
 

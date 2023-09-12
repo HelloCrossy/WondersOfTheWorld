@@ -39,7 +39,7 @@ public class TibetanAntelopeEntity extends ZawaLandEntity {
     }
     @Override
     public float getMaleRatio() {
-        return 0.33F;
+        return 0.20F;
     }
 }
 

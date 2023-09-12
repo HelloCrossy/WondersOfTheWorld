@@ -38,4 +38,8 @@ public class TakaheEntity extends ZawaLandEntity implements OviparousEntity {
         super.registerGoals();
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
     }
+    @Override
+    public float getMaleRatio() {
+        return 0.17F;
+    }
 }

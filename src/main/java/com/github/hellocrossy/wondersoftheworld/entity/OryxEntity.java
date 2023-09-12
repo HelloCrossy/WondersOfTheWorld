@@ -40,4 +40,8 @@ public class OryxEntity extends ZawaLandEntity implements SpeciesVariantsEntity 
         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0D, 2.5D, true));
         this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
     }
+    @Override
+    public float getMaleRatio() {
+        return 0.14F;
+    }
 }

@@ -36,5 +36,9 @@ public class EmuEntity extends ZawaLandEntity implements OviparousEntity {
         return WOTWItems.EMU_EGG.get().getDefaultInstance();
     }
     @Override
+    public float getMaleRatio() {
+        return 0.5F;
+    }
+    @Override
     protected void registerGoals() {}
 }

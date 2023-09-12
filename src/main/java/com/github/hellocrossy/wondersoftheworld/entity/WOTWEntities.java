@@ -73,7 +73,7 @@ public class WOTWEntities {
             new Builder<>(OscarEntity::new, EntityClassification.WATER_AMBIENT)
             .attributes(OscarEntity::registerAttributes)
             .renderer (() -> OscarRenderer::new)
-            .spawns(8, 2, 6, ZawaSpawnCategory.DEEP_RAINFOREST)
+            .spawns(10, 3, 5, ZawaSpawnCategory.DEEP_RAINFOREST)
             .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
             .build(REGISTRAR, "oscar");
 
@@ -81,7 +81,7 @@ public class WOTWEntities {
             new Builder<>(DiscusFishEntity::new, EntityClassification.WATER_AMBIENT)
                     .attributes(DiscusFishEntity::registerAttributes)
                     .renderer (() -> DiscusFishRenderer::new)
-                    .spawns(8, 2, 6, ZawaSpawnCategory.DEEP_RAINFOREST)
+                    .spawns(10, 3, 5, ZawaSpawnCategory.DEEP_RAINFOREST)
                     .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
                     .build(REGISTRAR, "discus_fish");
 
@@ -97,7 +97,7 @@ public class WOTWEntities {
             new Builder<>(FennecFoxEntity::new, EntityClassification.CREATURE)
                     .attributes(FennecFoxEntity::registerAttributes)
                     .renderer(() -> FennecFoxRenderer::new)
-                    .spawns(10, 1, 4, ZawaSpawnCategory.HOT_DESERT)
+                    .spawns(10, 2, 4, ZawaSpawnCategory.HOT_DESERT)
                     .data(entityBuilder -> entityBuilder.sized(0.75F, 0.75F).clientTrackingRange(10))
                     .build(REGISTRAR, "fennec_fox");
 
@@ -113,7 +113,7 @@ public class WOTWEntities {
             new Builder<>(OryxEntity::new, EntityClassification.CREATURE)
                     .attributes(OryxEntity::registerAttributes)
                     .renderer(() -> OryxRenderer::new)
-                    .spawns(10, 1, 4, ZawaSpawnCategory.HOT_DESERT, ZawaSpawnCategory.DRY_SAVANNA)
+                    .spawns(8, 1, 4, ZawaSpawnCategory.HOT_DESERT, ZawaSpawnCategory.DRY_SAVANNA, ZawaSpawnCategory.DRY_GRASSLAND)
                     .data(entityBuilder -> entityBuilder.sized(1.5F, 2.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "oryx");
 
@@ -121,7 +121,7 @@ public class WOTWEntities {
             new Builder<>(TuracoEntity::new, EntityClassification.CREATURE)
                     .attributes(TuracoEntity::registerAttributes)
                     .renderer(() -> TuracoRenderer::new)
-                    .spawns(8, 1, 2, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TEMPERATE_ALPINE)
+                    .spawns(10, 2, 4, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(10))
                     .build(REGISTRAR, "turaco");
 
@@ -129,7 +129,7 @@ public class WOTWEntities {
             new Builder<>(VultureEntity::new, EntityClassification.CREATURE)
                     .attributes(VultureEntity::registerAttributes)
                     .renderer(() -> VultureRenderer::new)
-                    .spawns(15, 1, 3, ZawaSpawnCategory.DEEP_RAINFOREST, ZawaSpawnCategory.DRY_RAINFOREST, ZawaSpawnCategory.WET_RAINFOREST)
+                    .spawns(15, 2, 4, ZawaSpawnCategory.DEEP_RAINFOREST, ZawaSpawnCategory.DRY_RAINFOREST, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.0F).clientTrackingRange(8))
                     .build(REGISTRAR, "vulture");
 

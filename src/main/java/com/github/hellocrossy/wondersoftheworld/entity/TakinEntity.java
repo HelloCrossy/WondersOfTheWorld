@@ -45,7 +45,7 @@ public class TakinEntity extends ZawaLandEntity implements SpeciesVariantsEntity
     }
     @Override
     public float getMaleRatio() {
-        return 0.25F;
+        return 0.20F;
     }
 }
 
