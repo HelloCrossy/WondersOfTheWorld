@@ -857,7 +857,7 @@ public abstract class OryxModel extends ZawaBaseModel<OryxEntity> {
         protected ZawaModelRenderer Arm_r1;
         protected ZawaModelRenderer Arm_r2;
         protected ZawaModelRenderer Arm_r3;
-        protected ZawaModelRenderer ArmBase_r3;;
+        protected ZawaModelRenderer ArmBase_r3;
         protected ZawaModelRenderer Arm_r4;
         protected ZawaModelRenderer ArmBase_r4;
         public Child () {

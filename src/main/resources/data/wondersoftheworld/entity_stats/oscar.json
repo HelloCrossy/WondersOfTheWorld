@@ -1,7 +1,7 @@
 {
-  "temperament": "timid",
+  "temperament": "neutral",
   "size": "ambient",
-  "breeding_item": "zawa:earthworm",
+  "breeding_item": "zawa:termites",
   "speed": "fast",
   "variant_count": 12,
   "captive_variants": [

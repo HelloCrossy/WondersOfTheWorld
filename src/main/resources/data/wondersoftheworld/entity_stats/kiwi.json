@@ -1,7 +1,7 @@
 {
   "temperament": "timid",
   "kibble": "zawa:insectivore_kibble",
-  "size": "tiny",
+  "size": "small",
   "fertility": "medium",
   "breeding_item": "zawa:earthworm",
   "litter_size": {

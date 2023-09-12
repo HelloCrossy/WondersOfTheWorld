@@ -1,7 +1,7 @@
 {
-  "temperament": "aggressive",
+  "temperament": "territorial",
   "kibble": "zawa:carnivore_kibble",
-  "size": "small",
+  "size": "medium",
   "fertility": "high",
   "breeding_item": "zawa:large_meat",
   "litter_size": {

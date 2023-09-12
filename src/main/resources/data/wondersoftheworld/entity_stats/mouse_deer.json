@@ -2,7 +2,7 @@
   "temperament": "timid",
   "kibble": "zawa:herbivore_kibble",
   "size": "small",
-  "fertility": "medium",
+  "fertility": "low",
   "breeding_item": "zawa:prickly_pear",
   "litter_size": {
     "min": 1,

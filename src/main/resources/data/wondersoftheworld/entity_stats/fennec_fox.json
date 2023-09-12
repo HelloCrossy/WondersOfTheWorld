@@ -3,7 +3,7 @@
   "kibble": "zawa:carnivore_kibble",
   "size": "small",
   "fertility": "medium",
-  "breeding_item": "minecraft:cod",
+  "breeding_item": "minecraft:egg",
   "litter_size": {
     "min": 1,
     "max": 2

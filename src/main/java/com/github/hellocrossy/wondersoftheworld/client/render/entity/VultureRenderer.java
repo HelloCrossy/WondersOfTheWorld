@@ -11,7 +11,7 @@ public class VultureRenderer extends ZawaMobRenderer<VultureEntity, VultureModel
     }
     @Override
     protected void scale(VultureEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 1.0F : 1.0F;
+        float scale = 1.0F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
