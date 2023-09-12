@@ -7,21 +7,21 @@ import net.minecraft.entity.Entity;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
 public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
-    protected ModelRenderer Chest;
+    public ModelRenderer Body;
     protected Iterable<ModelRenderer> parts;
 
     @Override
     @MethodsReturnNonnullByDefault
     public Iterable<ModelRenderer> parts() {
         if (this.parts == null) {
-            this.parts = ImmutableList.of(Chest);
+            this.parts = ImmutableList.of(Body);
         }
 
         return this.parts;
     }
 
     public static class Adult extends MouseDeerModel {
-        public ModelRenderer Body;
+        public ModelRenderer Chest;
         public ModelRenderer Hips;
         public ModelRenderer Tail;
         public ModelRenderer ThighLeft;
@@ -207,7 +207,7 @@ public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
     }
 
     public static class Child extends MouseDeerModel {
-        public ModelRenderer Body;
+        public ModelRenderer Chest;
         public ModelRenderer Hips;
         public ModelRenderer Tail;
         public ModelRenderer ThighLeft;
