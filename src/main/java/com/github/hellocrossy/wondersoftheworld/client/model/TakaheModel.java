@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
+import com.github.hellocrossy.wondersoftheworld.entity.SaigaAntelopeEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.TakaheEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.TakaheEntity;
 import com.google.common.collect.ImmutableList;
@@ -286,13 +287,12 @@ public abstract class TakaheModel extends ZawaBaseModel<TakaheEntity> {
         }
 
         @Override
-        public void playIdleAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+        public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
         }
 
         @Override
-        public void playMovementAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
-
+        public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         }
     }
     public static class Child extends TakaheModel {
@@ -481,13 +481,12 @@ public abstract class TakaheModel extends ZawaBaseModel<TakaheEntity> {
         }
 
         @Override
-        public void playIdleAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+        public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
         }
 
         @Override
-        public void playMovementAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
-
+        public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         }
     }
 }

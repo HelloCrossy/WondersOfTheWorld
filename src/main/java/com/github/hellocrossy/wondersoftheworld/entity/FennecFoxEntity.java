@@ -19,7 +19,7 @@ public class FennecFoxEntity extends ZawaLandEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.3F).add(Attributes.MAX_HEALTH, 5.0).add(Attributes.ATTACK_DAMAGE, 3);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 5.0).add(Attributes.ATTACK_DAMAGE, 3);
     }
 
     @Nullable
@@ -30,9 +30,9 @@ public class FennecFoxEntity extends ZawaLandEntity {
 
     @Override
     protected void registerGoals() {
-        super.registerGoals();
-        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
-        this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, PlayerEntity.class, 16.0F, 0.8D, 1.33D, (entity) -> AVOID_PLAYERS.test(entity) && !this.isTame()));
+        //super.registerGoals();
+        //this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
+        //this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, PlayerEntity.class, 16.0F, 0.8D, 1.33D, (entity) -> AVOID_PLAYERS.test(entity) && !this.isTame()));
     }
     @Override
     public float getMaleRatio() {

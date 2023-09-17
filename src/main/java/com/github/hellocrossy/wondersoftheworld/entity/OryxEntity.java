@@ -20,7 +20,7 @@ public class OryxEntity extends ZawaLandEntity implements SpeciesVariantsEntity 
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.3F).add(Attributes.MAX_HEALTH, 21.0).add(Attributes.ATTACK_DAMAGE, 3.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 21.0).add(Attributes.ATTACK_DAMAGE, 3.0);
     }
 
     @Nullable
@@ -36,9 +36,9 @@ public class OryxEntity extends ZawaLandEntity implements SpeciesVariantsEntity 
 
     @Override
     protected void registerGoals() {
-        super.registerGoals();
-        this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0D, 2.5D, true));
-        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+        //super.registerGoals();
+        //this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0D, 2.5D, true));
+        //this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
     }
     @Override
     public float getMaleRatio() {

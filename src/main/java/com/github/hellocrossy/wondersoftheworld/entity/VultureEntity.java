@@ -25,7 +25,7 @@ public class VultureEntity extends ZawaFlyingEntity implements OviparousEntity, 
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.FLYING_SPEED, 0.60F).add(Attributes.MOVEMENT_SPEED, 0.3F).add(Attributes.MAX_HEALTH, 3.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.FLYING_SPEED, 1.2F).add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 3.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Nullable
@@ -45,10 +45,10 @@ public class VultureEntity extends ZawaFlyingEntity implements OviparousEntity, 
 
     @Override
     protected void registerGoals() {
-        super.registerGoals();
-        this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 1.5D, 1.33D, true));
-        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> !this.isBaby()));
+       // super.registerGoals();
+       // this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 1.5D, 1.33D, true));
+       // this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+       // this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> !this.isBaby()));
     }
     @Override
     public float getMaleRatio() {

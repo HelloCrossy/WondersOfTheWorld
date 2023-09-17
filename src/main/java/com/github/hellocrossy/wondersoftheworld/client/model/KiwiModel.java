@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
+import com.github.hellocrossy.wondersoftheworld.entity.BongoEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.KiwiEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
@@ -144,13 +145,12 @@ public abstract class KiwiModel extends ZawaBaseModel<KiwiEntity> {
         }
 
         @Override
-        public void playIdleAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+        public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
         }
 
         @Override
-        public void playMovementAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
-
+        public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         }
     }
         public static class Child extends KiwiModel {
@@ -264,19 +264,19 @@ public abstract class KiwiModel extends ZawaBaseModel<KiwiEntity> {
                 this.Head.addChild(this.BeakLower);
                 this.saveBase();
             }
+
             @Override
             public void setupAnim(KiwiEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
                 super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             }
 
             @Override
-            public void playIdleAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+            public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
             }
 
             @Override
-            public void playMovementAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
-
+            public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             }
         }
 }

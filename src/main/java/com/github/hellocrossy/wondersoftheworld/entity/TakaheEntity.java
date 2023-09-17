@@ -20,7 +20,7 @@ public class TakaheEntity extends ZawaLandEntity implements OviparousEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.3F).add(Attributes.MAX_HEALTH, 5.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 5.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Nullable
@@ -35,8 +35,8 @@ public class TakaheEntity extends ZawaLandEntity implements OviparousEntity {
 
     @Override
     protected void registerGoals() {
-        super.registerGoals();
-        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
+       // super.registerGoals();
+        //this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
     }
     @Override
     public float getMaleRatio() {

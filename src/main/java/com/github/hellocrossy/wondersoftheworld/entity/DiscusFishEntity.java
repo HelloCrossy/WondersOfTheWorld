@@ -21,7 +21,7 @@ public class DiscusFishEntity extends ZawaAmbientFishEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.3F).add(Attributes.MAX_HEALTH, 3.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 3.0);
     }
 
     @Override
@@ -42,8 +42,8 @@ public class DiscusFishEntity extends ZawaAmbientFishEntity {
     }
         @Override
         protected void registerGoals () {
-            super.registerGoals();
-            this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
+            //super.registerGoals();
+            //this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
         }
     }
 

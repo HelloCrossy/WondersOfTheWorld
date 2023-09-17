@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
+import com.github.hellocrossy.wondersoftheworld.entity.BongoEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.EmuEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
@@ -362,18 +363,11 @@ public abstract class EmuModel extends ZawaBaseModel<EmuEntity> {
 
         @Override
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            this.loadBase();
-            float speed = 1.0f;
-            float degree = 1.0f;
-            this.Neck1_r1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.1F) * 0.5F + -0.0393F;
-            this.Neck2_r1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.1F) * 0.5F + 0.925F;
-            this.Head_r1.xRot = MathHelper.cos(limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.1F) * 0.5F + 0.0742F;
 
         }
 
         @Override
-        public void playMovementAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
-
+        public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         }
     }
 
@@ -550,19 +544,18 @@ public abstract class EmuModel extends ZawaBaseModel<EmuEntity> {
             this.saveBase();
         }
 
-        @Override
-        public void setupAnim(EmuEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-        }
+         @Override
+         public void setupAnim(EmuEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+         }
 
-        @Override
-        public void playIdleAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+         @Override
+         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
-        }
+         }
 
-        @Override
-        public void playMovementAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
-
-        }
-    }
+         @Override
+         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+         }
+     }
 }

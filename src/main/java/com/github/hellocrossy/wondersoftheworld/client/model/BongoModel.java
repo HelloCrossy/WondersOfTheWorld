@@ -261,12 +261,12 @@ public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
         }
 
         @Override
-        public void playIdleAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+        public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
         }
 
         @Override
-        public void playMovementAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+        public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         }
     }
 
@@ -474,12 +474,12 @@ public abstract class BongoModel extends ZawaBaseModel<BongoEntity> {
         }
 
         @Override
-        public void playIdleAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+        public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
         }
 
         @Override
-        public void playMovementAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+        public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         }
     }
     }

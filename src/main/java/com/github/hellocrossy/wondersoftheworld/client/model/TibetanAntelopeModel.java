@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
+import com.github.hellocrossy.wondersoftheworld.entity.TakaheEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.TibetanAntelopeEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
@@ -255,12 +256,12 @@ public abstract class TibetanAntelopeModel extends ZawaBaseModel<TibetanAntelope
         }
 
         @Override
-        public void playIdleAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+        public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
         }
 
         @Override
-        public void playMovementAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+        public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         }
     }
 
@@ -486,20 +487,20 @@ public abstract class TibetanAntelopeModel extends ZawaBaseModel<TibetanAntelope
             this.Horn3Left.addChild(this.Horn4Left);
             this.LowerLegLeft.addChild(this.FootLeft);
             this.saveBase();
-    }
+        }
 
-    @Override
-    public void setupAnim(TibetanAntelopeEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-    }
+        @Override
+        public void setupAnim(TibetanAntelopeEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+        }
 
-    @Override
-    public void playIdleAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
+        @Override
+        public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
-    }
+        }
 
-    @Override
-    public void playMovementAnimation(Entity entity, float v, float v1, float v2, float v3, float v4) {
-    }
+        @Override
+        public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        }
 }
     }
