@@ -247,7 +247,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
-            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) -0.637F;
+            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) - 0.637F;
             this.Head.zRot = headPitch / (180F / (float) Math.PI) * 0.05F;
         }
 
@@ -261,7 +261,19 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            if (isSwimming) {
+                limbSwing = (float) entity.tickCount;
+                limbSwingAmount = 0.3F;
+            }
 
+            if (entity.isSprinting()) {
+                float speed = 1.0f;
+                float degree = 1.0f;
+
+
+            } else {
+
+            }
         }
     }
 
@@ -498,6 +510,17 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            if (isSwimming) {
+                limbSwing = (float) entity.tickCount;
+                limbSwingAmount = 0.3F;
+            }
+
+            if (entity.isSprinting()) {
+                float speed = 1.0f;
+                float degree = 1.0f;
+
+
+            } else {
         }
     }
-}
+}}

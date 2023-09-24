@@ -312,6 +312,7 @@ public abstract class TibetanAntelopeModel extends ZawaBaseModel<TibetanAntelope
                 this.FootRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.5F) * 0.5F;
             }
         }
+    }
 
         public static class Child extends TibetanAntelopeModel {
 
@@ -552,4 +553,4 @@ public abstract class TibetanAntelopeModel extends ZawaBaseModel<TibetanAntelope
             }
         }
     }
-}
+

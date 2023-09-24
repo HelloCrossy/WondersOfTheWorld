@@ -63,7 +63,7 @@ public abstract class TakaheModel extends ZawaBaseModel<TakaheEntity> {
         protected ZawaModelRenderer ToeLeft_r4;
 
         public Adult() {
-            
+
             texWidth = 64;
             texHeight = 64;
 
@@ -107,7 +107,7 @@ public abstract class TakaheModel extends ZawaBaseModel<TakaheEntity> {
             setRotateAngle(BeakTip_r1, -0.2932F, 0.0F, 0.0F);
             BeakTip_r1.addBox(-0.5F, -1.0F, -0.5F, 1.0F, 2.0F, 1.0F, 0.0F, false);
 
-            BODY = new ZawaModelRenderer(this,0, 0);
+            BODY = new ZawaModelRenderer(this, 0, 0);
             BODY.setPos(0.0F, 0.0F, 0.0F);
             MAIN.addChild(BODY);
 
@@ -293,6 +293,18 @@ public abstract class TakaheModel extends ZawaBaseModel<TakaheEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            if (isSwimming) {
+                limbSwing = (float) entity.tickCount;
+                limbSwingAmount = 0.3F;
+            }
+
+            if (entity.isSprinting()) {
+                float speed = 1.0f;
+                float degree = 1.0f;
+
+
+            } else {
+            }
         }
     }
     public static class Child extends TakaheModel {
@@ -487,6 +499,18 @@ public abstract class TakaheModel extends ZawaBaseModel<TakaheEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            if (isSwimming) {
+                limbSwing = (float) entity.tickCount;
+                limbSwingAmount = 0.3F;
+            }
+
+            if (entity.isSprinting()) {
+                float speed = 1.0f;
+                float degree = 1.0f;
+
+
+            } else {
+            }
         }
     }
 }

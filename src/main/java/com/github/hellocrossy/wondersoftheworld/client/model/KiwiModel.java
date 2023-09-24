@@ -151,12 +151,23 @@ public abstract class KiwiModel extends ZawaBaseModel<KiwiEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            if (isSwimming) {
+                limbSwing = (float) entity.tickCount;
+                limbSwingAmount = 0.3F;
+            }
+
+            if (entity.isSprinting()) {
+                float speed = 1.0f;
+                float degree = 1.0f;
+
+
+            } else {
+            }
         }
     }
         public static class Child extends KiwiModel {
 
 
-        
             public ModelRenderer Tail1;
             public ModelRenderer Neck;
             public ModelRenderer ThighLeft;
@@ -278,6 +289,17 @@ public abstract class KiwiModel extends ZawaBaseModel<KiwiEntity> {
 
             @Override
             public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+                if (isSwimming) {
+                    limbSwing = (float) entity.tickCount;
+                    limbSwingAmount = 0.3F;
+                }
+
+                if (entity.isSprinting()) {
+                    float speed = 1.0f;
+                    float degree = 1.0f;
+
+
+                } else {
             }
         }
-}
+}}
