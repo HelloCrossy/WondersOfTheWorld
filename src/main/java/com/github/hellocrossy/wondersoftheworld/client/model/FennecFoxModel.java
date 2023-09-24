@@ -42,7 +42,7 @@ public abstract class FennecFoxModel extends ZawaBaseModel<FennecFoxEntity> {
         public ModelRenderer FootLeft;
         public ModelRenderer UpperLegRight;
         public ModelRenderer LowerLegRight;
-        public ModelRenderer FootLeft_1;
+        public ModelRenderer FootRight;
         public ModelRenderer Head;
         public ModelRenderer NeckLower;
         public ModelRenderer SnoutLeft;
@@ -139,11 +139,11 @@ public abstract class FennecFoxModel extends ZawaBaseModel<FennecFoxEntity> {
             this.HandLeft.setPos(0.1F, 2.9F, -1.0F);
             this.HandLeft.addBox(-1.0F, 0.0F, -1.5F, 2.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(HandLeft, -0.017453292519943295F, 0.0F, 0.0F);
-            this.FootLeft_1 = new ModelRenderer(this, 24, 15);
-            this.FootLeft_1.mirror = true;
-            this.FootLeft_1.setPos(-0.1F, 2.4F, -0.9F);
-            this.FootLeft_1.addBox(-1.0F, 0.0F, -1.5F, 2.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(FootLeft_1, 0.017453292519943295F, 0.0F, 0.0F);
+            this.FootRight = new ModelRenderer(this, 24, 15);
+            this.FootRight.mirror = true;
+            this.FootRight.setPos(-0.1F, 2.4F, -0.9F);
+            this.FootRight.addBox(-1.0F, 0.0F, -1.5F, 2.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(FootRight, 0.017453292519943295F, 0.0F, 0.0F);
             this.NeckLower = new ModelRenderer(this, 0, 0);
             this.NeckLower.setPos(0.0F, -3.0F, -1.4F);
             this.NeckLower.addBox(-0.5F, 0.0F, 0.0F, 1.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F);
@@ -201,7 +201,7 @@ public abstract class FennecFoxModel extends ZawaBaseModel<FennecFoxEntity> {
             this.SnoutLeft.addChild(this.TopSnout);
             this.ForearmRight.addChild(this.HandRight);
             this.ForearmLeft.addChild(this.HandLeft);
-            this.LowerLegRight.addChild(this.FootLeft_1);
+            this.LowerLegRight.addChild(this.FootRight);
             this.Neck.addChild(this.NeckLower);
             this.Hips.addChild(this.ThighRight);
             this.Chest.addChild(this.Neck);
