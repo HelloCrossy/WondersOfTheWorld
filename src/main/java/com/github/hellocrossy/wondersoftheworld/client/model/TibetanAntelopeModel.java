@@ -312,6 +312,7 @@ public abstract class TibetanAntelopeModel extends ZawaBaseModel<TibetanAntelope
         }
     }
 
+
         public static class Child extends TibetanAntelopeModel {
 
             public ModelRenderer Body;
@@ -548,6 +549,18 @@ public abstract class TibetanAntelopeModel extends ZawaBaseModel<TibetanAntelope
 
             @Override
             public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+                if (isSwimming) {
+                    limbSwing = (float) entity.tickCount;
+                    limbSwingAmount = 0.3F;
+                }
+
+                if (entity.isSprinting()) {
+                    float speed = 1.0f;
+                    float degree = 1.0f;
+
+
+                } else {
+                }
             }
         }
     }
