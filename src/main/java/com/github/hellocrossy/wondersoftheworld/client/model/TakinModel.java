@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 import com.github.hellocrossy.wondersoftheworld.entity.BongoEntity;
+import com.github.hellocrossy.wondersoftheworld.entity.MouseDeerEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.TakaheEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.TakinEntity;
 import com.google.common.collect.ImmutableList;
@@ -546,8 +547,13 @@ public abstract class TakinModel extends ZawaBaseModel<TakinEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+            if (isSwimming) {
+                limbSwing = (float) entity.tickCount;
+                limbSwingAmount = 0.3F;
+            } else {
+            }
         }
     }
-
 }
+
 

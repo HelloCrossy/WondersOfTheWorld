@@ -15,7 +15,7 @@ public class WondersOfTheWorld {
     public WondersOfTheWorld() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        WOTWEntities.REGISTRAR.register(bus);
+        WOTWEntities.REGISTRY.initialize();
         WOTWItems.REGISTRAR.register(bus);
 
         bus.addListener(this::setup);
