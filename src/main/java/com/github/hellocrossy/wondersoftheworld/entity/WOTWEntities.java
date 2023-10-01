@@ -22,7 +22,7 @@ public class WOTWEntities {
                     .attributes(ServalEntity::registerAttributes)
                     .renderer(() -> ServalRenderer::new)
                     .spawns(10, 1, 1, ZawaSpawnCategory.DRY_SAVANNA, ZawaSpawnCategory.WET_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(0.9F, 0.9F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.1F, 1.1F).clientTrackingRange(10))
                     .build("serval");
 
     public static final RegistryObject<EntityType<EmuEntity>> EMU =
@@ -46,7 +46,7 @@ public class WOTWEntities {
                     .attributes(KiwiEntity::registerAttributes)
                     .renderer(() -> KiwiRenderer::new)
                     .spawn(ZawaSpawnCategory.WET_FOREST, 8, 1, 2)
-                    .data(entityBuilder -> entityBuilder.sized(0.5F, 0.5F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.4F, 0.4F).clientTrackingRange(10))
                     .build("kiwi");
 
     public static final RegistryObject<EntityType<SaigaAntelopeEntity>> SAIGA_ANTELOPE =
@@ -54,7 +54,7 @@ public class WOTWEntities {
                     .attributes(SaigaAntelopeEntity::registerAttributes)
                     .renderer(() -> SaigaAntelopeRenderer::new)
                     .spawn(ZawaSpawnCategory.DRY_SAVANNA, 2, 1, 6)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.25F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.1F, 1.35F).clientTrackingRange(10))
                     .build("saiga_antelope");
 
     public static final RegistryObject<EntityType<BongoEntity>> BONGO =
@@ -142,7 +142,7 @@ public class WOTWEntities {
                     .attributes(TitEntity::registerAttributes)
                     .renderer(() -> TitRenderer::new)
                     .spawns(15, 1, 3, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.TEMPERATE_ALPINE, ZawaSpawnCategory.DRY_FOREST, ZawaSpawnCategory.WET_FOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.5F, 0.5F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.4F, 0.4F).clientTrackingRange(10))
                     .build("tit");
     public static final RegistryObject<EntityType<MouseDeerEntity>> MOUSE_DEER =
             REGISTRY.builder(MouseDeerEntity::new, EntityClassification.CREATURE)

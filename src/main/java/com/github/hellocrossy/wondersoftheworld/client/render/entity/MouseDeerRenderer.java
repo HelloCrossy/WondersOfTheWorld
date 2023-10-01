@@ -7,7 +7,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class MouseDeerRenderer extends ZawaMobRenderer<MouseDeerEntity, MouseDeerModel> {
     public MouseDeerRenderer(EntityRendererManager manager) {
-        super(manager, new MouseDeerModel.Adult(), new MouseDeerModel.Child(), 1.0F);
+        super(manager, new MouseDeerModel.Adult(), new MouseDeerModel.Child(), 0.5F);
 
     }
 
