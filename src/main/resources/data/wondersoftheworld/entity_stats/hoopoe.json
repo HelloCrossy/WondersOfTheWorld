@@ -1,0 +1,21 @@
+{
+  "temperament": "neutral",
+  "kibble": "zawa:insectivore_kibble",
+  "size": "small",
+  "fertility": "medium",
+  "breeding_item": "minecraft:oxeye_daisy",
+  "litter_size": {
+    "min": 1,
+    "max": 5
+  },
+  "diet": "zawa:omnivore",
+  "speed": "fast",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:perching_stand",
+      "zawa:hay_browse",
+      "zawa:sprinkler"
+    ]
+  },
+  "variant_count": 4
+}

@@ -7,7 +7,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class BongoRenderer extends ZawaMobRenderer<BongoEntity, BongoModel> {
     public BongoRenderer(EntityRendererManager manager) {
-        super (manager, new BongoModel.Adult(), new BongoModel.Child(), 1.0F);
+        super (manager, new BongoModel.Adult(), new BongoModel.Child(), 0.7F);
 
     }
     @Override

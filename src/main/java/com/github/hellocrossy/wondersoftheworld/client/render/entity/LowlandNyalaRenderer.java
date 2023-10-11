@@ -9,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class LowlandNyalaRenderer extends ZawaMobRenderer<LowlandNyalaEntity, LowlandNyalaModel> {
     public LowlandNyalaRenderer(EntityRendererManager manager) {
-        super (manager, new LowlandNyalaModel.Adult(), new LowlandNyalaModel.Child(), 1.0F);
+        super (manager, new LowlandNyalaModel.Adult(), new LowlandNyalaModel.Child(), 0.85F);
 
     }
     @Override

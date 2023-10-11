@@ -10,7 +10,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class EmuRenderer extends ZawaMobRenderer<EmuEntity, EmuModel> {
     public EmuRenderer(EntityRendererManager manager) {
-        super(manager, new EmuModel.Adult(), new EmuModel.Child(), 0.75F);
+        super(manager, new EmuModel.Adult(), new EmuModel.Child(), 0.65F);
     }
 
     @Override

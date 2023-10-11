@@ -7,7 +7,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class VultureRenderer extends ZawaMobRenderer<VultureEntity, VultureModel> {
     public VultureRenderer(EntityRendererManager manager) {
-        super (manager, new VultureModel.Adult(), new VultureModel.Flying(), new VultureModel.Child(), 1.0F);
+        super (manager, new VultureModel.Adult(), new VultureModel.Flying(), new VultureModel.Child(), 0.25F);
     }
     @Override
     protected void scale(VultureEntity entity, MatrixStack matrixStack, float partialTickTime) {

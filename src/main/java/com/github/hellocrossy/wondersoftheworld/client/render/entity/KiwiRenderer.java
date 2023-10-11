@@ -6,7 +6,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class KiwiRenderer extends ZawaMobRenderer<KiwiEntity, KiwiModel> {
     public KiwiRenderer(EntityRendererManager manager) {
-        super (manager, new KiwiModel.Adult(), new KiwiModel.Child(), 0.3F);    }
+        super (manager, new KiwiModel.Adult(), new KiwiModel.Child(), 0.25F);    }
     @Override
     protected boolean hasBabyVariants(KiwiEntity entity) {
         return false;

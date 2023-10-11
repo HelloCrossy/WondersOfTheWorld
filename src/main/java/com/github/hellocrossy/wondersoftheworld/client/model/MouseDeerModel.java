@@ -1,5 +1,4 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
-import com.github.hellocrossy.wondersoftheworld.entity.LowlandNyalaEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.MouseDeerEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
