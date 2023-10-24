@@ -15,11 +15,12 @@ import net.minecraft.world.server.ServerWorld;
 import org.zawamod.zawa.world.entity.OviparousEntity;
 import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
+import org.zawamod.zawa.world.entity.animal.ZawaSemiAquaticEntity;
 
 import javax.annotation.Nullable;
 
-public class CaimanEntity extends ZawaLandEntity implements OviparousEntity {
-    public CaimanEntity(EntityType<? extends ZawaLandEntity> type, World world) {
+public class CaimanEntity extends ZawaSemiAquaticEntity implements OviparousEntity {
+    public CaimanEntity(EntityType<? extends ZawaSemiAquaticEntity> type, World world) {
         super(type, world);
     }
 
@@ -47,4 +48,13 @@ public class CaimanEntity extends ZawaLandEntity implements OviparousEntity {
     public float getMaleRatio() {
         return 0.5F;
     }
+    @Override
+    public boolean canBabySwim() {
+        return false;
+    }
+    @Override
+    public float swimSpeedMultiplier() {
+        return 2.0F;
+    }
 }
+

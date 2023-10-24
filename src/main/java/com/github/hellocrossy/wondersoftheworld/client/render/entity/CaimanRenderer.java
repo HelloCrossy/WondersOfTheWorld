@@ -9,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class CaimanRenderer extends ZawaMobRenderer<CaimanEntity, CaimanModel> {
     public CaimanRenderer(EntityRendererManager manager) {
-        super(manager, new CaimanModel.Adult(), new CaimanModel.Child(), 0.35F);
+        super(manager, new CaimanModel.Adult(), new CaimanModel.Child(), 0.6F);
 
     }
 

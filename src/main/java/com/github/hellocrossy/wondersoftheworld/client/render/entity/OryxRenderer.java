@@ -1,30 +1,27 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
+import com.github.hellocrossy.wondersoftheworld.client.model.MouseDeerModel;
 import com.github.hellocrossy.wondersoftheworld.client.model.OryxModel;
+import com.github.hellocrossy.wondersoftheworld.entity.MouseDeerEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.OryxEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
-import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class OryxRenderer extends ZawaMobRenderer<OryxEntity, OryxModel> {
-    private final OryxModel oryxOne;
-    private final OryxModel oryxTwo;
+    public OryxRenderer(EntityRendererManager manager) {
+        super(manager, new OryxModel.Adult(), new OryxModel.Child(), 0.35F);
 
-    public OryxRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new OryxModel.oryxOne(), new OryxModel.Child(), 1.1F);
-        oryxOne = adultModel;
-        oryxTwo = new OryxModel.oryxTwo();
     }
 
     @Override
-    public void render(OryxEntity entity, float entityYaw, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer, int packedLight) {
-        if (!entity.isBaby()) {
-            if (entity.getVariant() >= 3) {
-                adultModel = oryxOne;
-            } else {
-                adultModel = oryxTwo;
-            }
-        }
-        super.render(entity, entityYaw, partialTicks, matrixStack, buffer, packedLight);
+    protected void scale(OryxEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 0.9F : 1.1F;
+        matrixStack.scale(scale, scale, scale);
+        super.scale(entity, matrixStack, partialTickTime);
+    }
+
+    @Override
+    protected boolean hasBabyVariants(OryxEntity entity) {
+        return false;
     }
 }

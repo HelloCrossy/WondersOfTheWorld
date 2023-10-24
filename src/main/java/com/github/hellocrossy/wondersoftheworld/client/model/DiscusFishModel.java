@@ -8,22 +8,26 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 
 public class DiscusFishModel extends SegmentedModel<DiscusFishEntity> {
 
-    protected ModelRenderer Discus;
-    protected ModelRenderer Head_r1_r1;
-    protected ModelRenderer CaudalFin1_r1_r1;
-    protected ModelRenderer PectoralFin_r2_r1;
-    protected ModelRenderer PectoralFin_r1_r1;
-    protected ModelRenderer UnderFin_r2_r1;
-    protected ModelRenderer UnderFin_r1_r1;
-    protected ModelRenderer CaudalFinStart_r2_r1;
-    protected ModelRenderer CaudalFinStart_r1_r1;
-    protected ModelRenderer CaudalFin2_r1_r1;
+    public ModelRenderer Body;
+    public ModelRenderer Head;
+    public ModelRenderer TailBase;
+    public ModelRenderer BackFin;
+    public ModelRenderer AnalFin;
+    public ModelRenderer PectoralFinLeft;
+    public ModelRenderer PectoralFinRight;
+    public ModelRenderer UnderFinLeft;
+    public ModelRenderer UnderFinRight;
+    public ModelRenderer Tail;
+    public ModelRenderer TailJoinUpper;
+    public ModelRenderer TailJoinLower;
+    public ModelRenderer TailFinTop;
+    public ModelRenderer TailFinBottom;
 
     private Iterable<ModelRenderer> parts;
 
     public Iterable<ModelRenderer> parts() {
         if (this.parts == null) {
-            this.parts = ImmutableList.of(this.Discus);
+            this.parts = ImmutableList.of(this.Body);
         }
 
         return this.parts;
@@ -31,68 +35,76 @@ public class DiscusFishModel extends SegmentedModel<DiscusFishEntity> {
     public DiscusFishModel() {
         this.texWidth = 32;
         this.texHeight = 32;
-
-        Discus = new ModelRenderer(this, 0, 0);
-        Discus.setPos(0.0F, 24.0F, 0.0F);
-        Discus.texOffs(12, 9).addBox(-1.5F, -12.0F, -3.0F, 3.0F, 6.0F, 6.0F, 0.0F, false);
-        Discus.texOffs(0, 3).addBox(0.0F, -14.5F, -3.0F, 0.0F, 3.0F, 9.0F, 0.0F, false);
-        Discus.texOffs(0, 0).addBox(0.0F, -6.5F, -3.0F, 0.0F, 3.0F, 9.0F, 0.0F, false);
-        Discus.texOffs(0, 15).addBox(-1.0F, -11.5016F, 3.0F, 2.0F, 5.0F, 1.0F, 0.0F, false);
-        Discus.texOffs(10, 0).addBox(-1.0F, -10.0016F, 4.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-
-        Head_r1_r1 = new ModelRenderer(this, 0, 0);
-        Head_r1_r1.setPos(0.0F, 0.0F, 0.0F);
-        Discus.addChild(Head_r1_r1);
-        setRotateAngle(Head_r1_r1, -0.4363F, 0.0F, 0.0F);
-        Head_r1_r1.addBox(-1.0F, -9.5F, -7.775F, 2.0F, 5.0F, 3.0F, 0.0F, false);
-
-        CaudalFin1_r1_r1 = new ModelRenderer(this, 18, 0);
-        CaudalFin1_r1_r1.setPos(0.0F, 1.333F, 2.7085F);
-        Discus.addChild(CaudalFin1_r1_r1);
-        setRotateAngle(CaudalFin1_r1_r1, 0.2749F, 0.0F, 0.0F);
-        CaudalFin1_r1_r1.addBox(0.0F, -10.7875F, 5.1088F, 0.0F, 2.0F, 2.0F, 0.0F, false);
-
-        PectoralFin_r2_r1 = new ModelRenderer(this, 6, 17);
-        PectoralFin_r2_r1.setPos(-1.1358F, 0.0F, 1.3357F);
-        Discus.addChild(PectoralFin_r2_r1);
-        setRotateAngle(PectoralFin_r2_r1, 0.0F, -0.8727F, 0.0F);
-        PectoralFin_r2_r1.addBox(-2.0F, -8.45F, -1.55F, 0.0F, 2.0F, 2.0F, 0.0F, false);
-
-        PectoralFin_r1_r1 = new ModelRenderer(this, 16, 4);
-        PectoralFin_r1_r1.setPos(1.1358F, 0.0F, 1.3357F);
-        Discus.addChild(PectoralFin_r1_r1);
-        setRotateAngle(PectoralFin_r1_r1, 0.0F, 0.8727F, 0.0F);
-        PectoralFin_r1_r1.addBox(2.0F, -8.45F, -1.55F, 0.0F, 2.0F, 2.0F, 0.0F, false);
-
-        UnderFin_r2_r1 = new ModelRenderer(this, 0, 20);
-        UnderFin_r2_r1.setPos(2.8918F, 0.0361F, 1.8003F);
-        Discus.addChild(UnderFin_r2_r1);
-        setRotateAngle(UnderFin_r2_r1, 0.3247F, 0.0418F, -0.5241F);
-        UnderFin_r2_r1.addBox(2.042F, -7.825F, -2.2464F, 0.0F, 3.0F, 1.0F, 0.0F, false);
-
-        UnderFin_r1_r1 = new ModelRenderer(this, 10, 18);
-        UnderFin_r1_r1.setPos(-2.8918F, 0.0361F, 1.8003F);
-        Discus.addChild(UnderFin_r1_r1);
-        setRotateAngle(UnderFin_r1_r1, 0.3247F, -0.0418F, 0.5241F);
-        UnderFin_r1_r1.addBox(-2.042F, -7.825F, -2.2464F, 0.0F, 3.0F, 1.0F, 0.0F, false);
-
-        CaudalFinStart_r2_r1 = new ModelRenderer(this, 6, 15);
-        CaudalFinStart_r2_r1.setPos(0.0F, -2.4178F, -3.2755F);
-        Discus.addChild(CaudalFinStart_r2_r1);
-        setRotateAngle(CaudalFinStart_r2_r1, -0.3927F, 0.0F, 0.0F);
-        CaudalFinStart_r2_r1.addBox(-0.5F, -10.4424F, 3.4397F, 1.0F, 2.0F, 2.0F, 0.0F, false);
-
-        CaudalFinStart_r1_r1 = new ModelRenderer(this, 10, 4);
-        CaudalFinStart_r1_r1.setPos(0.0F, 1.0745F, 3.6122F);
-        Discus.addChild(CaudalFinStart_r1_r1);
-        setRotateAngle(CaudalFinStart_r1_r1, 0.3927F, 0.0F, 0.0F);
-        CaudalFinStart_r1_r1.addBox(-0.5F, -9.5426F, 3.5071F, 1.0F, 2.0F, 2.0F, 0.0F, false);
-
-        CaudalFin2_r1_r1 = new ModelRenderer(this, 14, 2);
-        CaudalFin2_r1_r1.setPos(0.0F, -1.0451F, -1.316F);
-        Discus.addChild(CaudalFin2_r1_r1);
-        setRotateAngle(CaudalFin2_r1_r1, -0.1527F, 0.0F, 0.0F);
-        CaudalFin2_r1_r1.addBox(0.0F, -9.2376F, 5.1526F, 0.0F, 2.0F, 2.0F, 0.0F, false);
+        this.TailBase = new ModelRenderer(this, 0, 15);
+        this.TailBase.setPos(0.0F, 0.0F, 3.0F);
+        this.TailBase.addBox(-1.0F, -2.5F, 0.0F, 2.0F, 5.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+        this.PectoralFinLeft = new ModelRenderer(this, 14, 2);
+        this.PectoralFinLeft.mirror = true;
+        this.PectoralFinLeft.setPos(1.4F, 1.5F, -1.0F);
+        this.PectoralFinLeft.addBox(0.0F, -1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(PectoralFinLeft, 0.0F, 0.8726646259971648F, 0.0F);
+        this.BackFin = new ModelRenderer(this, 0, 3);
+        this.BackFin.mirror = true;
+        this.BackFin.setPos(0.0F, -1.5F, -2.9F);
+        this.BackFin.addBox(0.0F, -4.0F, 0.0F, 0.0F, 3.0F, 9.0F, 0.0F, 0.0F, 0.0F);
+        this.TailFinBottom = new ModelRenderer(this, 18, 0);
+        this.TailFinBottom.mirror = true;
+        this.TailFinBottom.setPos(0.0F, 0.7F, 1.1F);
+        this.TailFinBottom.addBox(0.0F, -1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(TailFinBottom, -0.15271630954950383F, 0.0F, 0.0F);
+        this.Tail = new ModelRenderer(this, 10, 0);
+        this.Tail.setPos(0.0F, 0.0F, 1.0F);
+        this.Tail.addBox(-1.0F, -0.9F, 0.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+        this.TailJoinLower = new ModelRenderer(this, 10, 5);
+        this.TailJoinLower.setPos(0.0F, 0.9F, -0.4F);
+        this.TailJoinLower.addBox(-0.5F, 0.0F, 0.0F, 1.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(TailJoinLower, 0.39269908169872414F, 0.0F, 0.0F);
+        this.Body = new ModelRenderer(this, 12, 9);
+        this.Body.setPos(0.0F, 17.2F, -1.4F);
+        this.Body.addBox(-1.5F, -3.0F, -3.0F, 3.0F, 6.0F, 6.0F, 0.0F, 0.0F, 0.0F);
+        this.PectoralFinRight = new ModelRenderer(this, 14, 2);
+        this.PectoralFinRight.setPos(-1.4F, 1.5F, -1.0F);
+        this.PectoralFinRight.addBox(0.0F, -1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(PectoralFinRight, 0.0F, -0.8726646259971648F, 0.0F);
+        this.TailJoinUpper = new ModelRenderer(this, 6, 15);
+        this.TailJoinUpper.setPos(0.0F, -0.7F, -0.4F);
+        this.TailJoinUpper.addBox(-0.5F, -1.0F, 0.0F, 1.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(TailJoinUpper, -0.39269908169872414F, 0.0F, 0.0F);
+        this.UnderFinRight = new ModelRenderer(this, 10, 18);
+        this.UnderFinRight.setPos(-1.2F, 2.1F, -2.2F);
+        this.UnderFinRight.addBox(0.0F, 0.0F, -0.5F, 0.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(UnderFinRight, 0.33161255787892263F, 0.0F, 0.5235987755982988F);
+        this.AnalFin = new ModelRenderer(this, 0, 0);
+        this.AnalFin.mirror = true;
+        this.AnalFin.setPos(0.0F, 1.0F, -2.9F);
+        this.AnalFin.addBox(0.0F, 1.0F, 0.0F, 0.0F, 3.0F, 9.0F, 0.0F, 0.0F, 0.0F);
+        this.UnderFinLeft = new ModelRenderer(this, 10, 18);
+        this.UnderFinLeft.mirror = true;
+        this.UnderFinLeft.setPos(1.2F, 2.1F, -2.2F);
+        this.UnderFinLeft.addBox(0.0F, 0.0F, -0.5F, 0.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(UnderFinLeft, 0.33161255787892263F, 0.0F, -0.5235987755982988F);
+        this.Head = new ModelRenderer(this, 0, 0);
+        this.Head.setPos(0.0F, -1.1F, -1.6F);
+        this.Head.addBox(-1.0F, -1.0F, -2.0F, 2.0F, 5.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(Head, -0.4363323129985824F, 0.0F, 0.0F);
+        this.TailFinTop = new ModelRenderer(this, 18, 2);
+        this.TailFinTop.mirror = true;
+        this.TailFinTop.setPos(0.0F, -0.3F, 1.1F);
+        this.TailFinTop.addBox(0.0F, -1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+        this.setRotateAngle(TailFinTop, 0.2748893571891069F, 0.0F, 0.0F);
+        this.Body.addChild(this.TailBase);
+        this.Body.addChild(this.PectoralFinLeft);
+        this.Body.addChild(this.BackFin);
+        this.Tail.addChild(this.TailFinBottom);
+        this.TailBase.addChild(this.Tail);
+        this.Tail.addChild(this.TailJoinLower);
+        this.Body.addChild(this.PectoralFinRight);
+        this.Tail.addChild(this.TailJoinUpper);
+        this.Body.addChild(this.UnderFinRight);
+        this.Body.addChild(this.AnalFin);
+        this.Body.addChild(this.UnderFinLeft);
+        this.Body.addChild(this.Head);
+        this.Tail.addChild(this.TailFinTop);
 
     }
     @Override
