@@ -35,7 +35,7 @@ public class CaimanEntity extends ZawaSemiAquaticEntity implements OviparousEnti
     }
     @Override
     public ItemStack getBreedEggItem() {
-        return WOTWItems.KIWI_EGG.get().getDefaultInstance();
+        return WOTWItems.CAIMAN_EGG.get().getDefaultInstance();
     }
     @Override
     protected void registerGoals() {

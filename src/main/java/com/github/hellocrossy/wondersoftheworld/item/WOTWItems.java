@@ -33,6 +33,7 @@ OSCAR_BUCKET = REGISTRAR.register("bucket_of_oscar", () -> new ZawaFishBucketIte
     public static final RegistryObject<Item> VULTURE_EGG = REGISTRAR.register("vulture_egg", () -> new ZawaEggItem(WOTWEntities.VULTURE, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item> KOOKABURRA_EGG = REGISTRAR.register("kookaburra_egg", () -> new ZawaEggItem(WOTWEntities.KOOKABURRA, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item> HOOPOE_EGG = REGISTRAR.register("hoopoe_egg", () -> new ZawaEggItem(WOTWEntities.HOOPOE, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
+    public static final RegistryObject<Item> CAIMAN_EGG = REGISTRAR.register("caiman_egg", () -> new ZawaEggItem(WOTWEntities.CAIMAN, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
 
 
 }

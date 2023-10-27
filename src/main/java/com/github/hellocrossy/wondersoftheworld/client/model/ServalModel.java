@@ -311,8 +311,8 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
         public ModelRenderer Snout1;
 
         public Child() {
-            texWidth = 96;
-            texHeight = 64;
+            texWidth = 48;
+            texHeight = 32;
             this.BackPoint = new ModelRenderer(this, 0, 0);
             this.BackPoint.setPos(0.0F, -2.0F, 4.0F);
             this.BackPoint.addBox(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F);
