@@ -76,11 +76,11 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
             this.LowerLegLeft.setPos(-0.1F, 3.0F, 2.4F);
             this.LowerLegLeft.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(LowerLegLeft, -0.6646214111173737F, 0.0F, 0.0F);
-            this.SnoutRight = new ModelRenderer(this, 15, 3);
+            this.SnoutRight = new ModelRenderer(this, 0, 4);
             this.SnoutRight.mirror = true;
             this.SnoutRight.setPos(0.0F, 0.0F, 0.0F);
             this.SnoutRight.addBox(-0.7F, 0.0F, -2.0F, 1.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
-            this.Mouth = new ModelRenderer(this, 0, 4);
+            this.Mouth = new ModelRenderer(this, 15, 3);
             this.Mouth.setPos(0.0F, 0.4F, -0.4F);
             this.Mouth.addBox(-0.5F, 0.0F, -1.5F, 1.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Mouth, 0.1563815016444822F, 0.0F, 0.0F);
@@ -107,7 +107,7 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
             this.setRotateAngle(ForearmLeft, -0.16964600795438073F, 0.0F, 0.0F);
             this.Tail3 = new ModelRenderer(this, 29, 20);
             this.Tail3.setPos(0.0F, 0.0F, 2.0F);
-            this.Tail3.addBox(-0.5F, -1.0F, 0.0F, 1.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.Tail3.addBox(-0.5F, -1.0F, 0.0F, 1.0F, 1.0F, 2.0F, -0.02F, 0.0F, 0.0F);
             this.setRotateAngle(Tail3, 0.23457224414434488F, 0.0F, 0.0F);
             this.Tail2 = new ModelRenderer(this, 29, 20);
             this.Tail2.setPos(0.0F, 1.0F, 2.0F);
@@ -160,7 +160,7 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
             this.Head.setPos(0.0F, 0.4F, -3.4F);
             this.Head.addBox(-1.5F, -1.5F, -1.5F, 3.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Head, 0.9299114041572901F, 0.0F, 0.0F);
-            this.SnoutLeft = new ModelRenderer(this, 15, 3);
+            this.SnoutLeft = new ModelRenderer(this, 0, 4);
             this.SnoutLeft.setPos(0.0F, 0.0F, -0.6F);
             this.SnoutLeft.addBox(-0.3F, 0.0F, -2.0F, 1.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
             this.ForearmRight = new ModelRenderer(this, 8, 29);
@@ -173,7 +173,7 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
             this.UpperLegRight.setPos(0.1F, 5.0F, -1.7F);
             this.UpperLegRight.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(UpperLegRight, 0.6646214111173737F, 0.0F, 0.0F);
-            this.TopSnout = new ModelRenderer(this, 0, 4);
+            this.TopSnout = new ModelRenderer(this, 18, 20);
             this.TopSnout.setPos(0.0F, 0.0F, -2.2F);
             this.TopSnout.addBox(-0.5F, 0.0F, 0.0F, 1.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(TopSnout, 0.47752209399829293F, 0.0F, 0.0F);

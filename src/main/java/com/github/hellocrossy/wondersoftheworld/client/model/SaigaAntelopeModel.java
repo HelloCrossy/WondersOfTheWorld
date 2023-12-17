@@ -74,7 +74,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
             this.setRotateAngle(Horn2Right, -0.2617993877991494F, 0.0F, 0.0F);
             this.ArmLeft = new ModelRenderer(this, 38, 22);
             this.ArmLeft.setPos(-0.05F, 2.8F, -2.0F);
-            this.ArmLeft.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 5.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.ArmLeft.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 5.0F, 2.0F, 0.0F, 0.0F, -0.01F);
             this.UpperLegLeft = new ModelRenderer(this, 52, 13);
             this.UpperLegLeft.setPos(0.0F, 6.0F, -1.8F);
             this.UpperLegLeft.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
@@ -104,7 +104,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
             this.ArmRight = new ModelRenderer(this, 38, 22);
             this.ArmRight.mirror = true;
             this.ArmRight.setPos(0.05F, 2.8F, -2.0F);
-            this.ArmRight.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 6.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.ArmRight.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 5.0F, 2.0F, 0.0F, 0.0F, -0.01F);
             this.ArmBaseRight = new ModelRenderer(this, 35, 2);
             this.ArmBaseRight.mirror = true;
             this.ArmBaseRight.setPos(-1.8F, -0.5F, -0.2F);
@@ -112,7 +112,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
             this.setRotateAngle(ArmBaseRight, 0.3490658503988659F, 0.0F, 0.0F);
             this.Horn1Right = new ModelRenderer(this, 0, 56);
             this.Horn1Right.setPos(-1.0F, -2.3F, -1.9F);
-            this.Horn1Right.addBox(-0.5F, -2.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.Horn1Right.addBox(-0.5F, -2.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.01F, 0.0F, 0.0F);
             this.setRotateAngle(Horn1Right, -0.6981317007977318F, 0.03490658503988659F, -0.2617993877991494F);
             this.Chest = new ModelRenderer(this, 14, 52);
             this.Chest.setPos(0.0F, 10.8F, -6.0F);
@@ -182,7 +182,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
             this.HandLeft.addBox(-1.0F, -0.0F, -1.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
             this.Horn1Left = new ModelRenderer(this, 0, 56);
             this.Horn1Left.setPos(1.0F, -2.3F, -1.9F);
-            this.Horn1Left.addBox(-0.5F, -2.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.Horn1Left.addBox(-0.5F, -2.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.01F, 0.0F, 0.0F);
             this.setRotateAngle(Horn1Left, -0.6981317007977318F, -0.03490658503988659F, 0.2617993877991494F);
             this.Tail = new ModelRenderer(this, 11, 44);
             this.Tail.setPos(0.0F, 0.0F, 5.0F);
@@ -190,7 +190,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
             this.setRotateAngle(Tail, 0.3490658503988659F, 0.0F, 0.0F);
             this.Mouth = new ModelRenderer(this, 0, 38);
             this.Mouth.setPos(0.0F, 2.7F, -0.9F);
-            this.Mouth.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.Mouth.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 1.0F, 1.0F, -0.02F, 0.0F, 0.0F);
             this.setRotateAngle(Mouth, -0.500909508638178F, 0.0F, 0.0F);
             this.UpperLegRight = new ModelRenderer(this, 52, 13);
             this.UpperLegRight.mirror = true;

@@ -84,8 +84,8 @@ public abstract class FennecFoxModel extends ZawaBaseModel<FennecFoxEntity> {
             this.ThighLeft.addBox(-1.0F, 0.0F, -1.3F, 2.0F, 4.0F, 3.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(ThighLeft, 0.32602750959886295F, 0.0F, 0.0F);
             this.Tail3 = new ModelRenderer(this, 25, 24);
-            this.Tail3.setPos(0.0F, 1.0F, 4.0F);
-            this.Tail3.addBox(-1.0F, -2.0F, 0.0F, 2.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.Tail3.setPos(0.0F, 0.9F, 4.0F);
+            this.Tail3.addBox(-1.0F, -2.0F, 0.0F, 2.0F, 2.0F, 2.0F, 0.02F, 0.0F, 0.0F);
             this.setRotateAngle(Tail3, 0.27366763203903305F, 0.0F, 0.0F);
             this.Tail1 = new ModelRenderer(this, 0, 26);
             this.Tail1.setPos(0.0F, 0.0F, 2.0F);
