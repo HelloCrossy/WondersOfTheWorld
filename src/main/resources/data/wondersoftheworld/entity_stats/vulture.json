@@ -13,11 +13,10 @@
   "enrichment": {
     "zawa:blocks": [
       "zawa:perching_stand",
-      "zawa:hay_browse",
-      "zawa:sprinkler"
-    ],
-    "zawa:entities": [
-      "zawa:scented_ball"
+      "zawa:puzzle_feeder",
+      "zawa:rope",
+      "zawa:tire_swing",
+      "zawa:branch"
     ]
   },
   "variant_count": 5

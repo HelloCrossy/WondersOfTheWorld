@@ -12,6 +12,8 @@
   "speed": "slow",
   "enrichment": {
     "zawa:blocks": [
+      "zawa:heat_lamp",
+      "zawa:heat_rock",
       "zawa:sprinkler",
       "zawa:beef_ice_treat"
     ]

@@ -12,11 +12,12 @@
   "speed": "fast",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:puzzle_feeder",
-      "zawa:hay_browse",
-      "zawa:sprinkler",
-      "zawa:rope",
-      "zawa:beef_ice_treat"
+      "zawa:heat_rock",
+      "zawa:scratching_post",
+      "zawa:salt_lick",
+      "zawa:tire_swing",
+      "zawa:beef_ice_treat",
+      "zawa:climbing_vine"
     ],
     "zawa:entities": [
       "zawa:scented_ball"

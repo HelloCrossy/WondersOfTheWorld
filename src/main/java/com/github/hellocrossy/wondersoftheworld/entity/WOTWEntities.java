@@ -22,7 +22,7 @@ public class WOTWEntities {
                     .attributes(ServalEntity::registerAttributes)
                     .renderer(() -> ServalRenderer::new)
                     .spawns(10, 1, 1, ZawaSpawnCategory.DRY_SAVANNA, ZawaSpawnCategory.WET_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(0.6F, 0.9F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.9F, 1.2F).clientTrackingRange(10))
                     .build("serval");
 
     public static final RegistryObject<EntityType<EmuEntity>> EMU =
@@ -40,7 +40,7 @@ public class WOTWEntities {
                     .attributes(KiwiEntity::registerAttributes)
                     .renderer(() -> KiwiRenderer::new)
                     .spawn(ZawaSpawnCategory.WET_FOREST, 8, 1, 2)
-                    .data(entityBuilder -> entityBuilder.sized(0.4F, 0.4F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 0.6F).clientTrackingRange(10))
                     .build("kiwi");
 
     public static final RegistryObject<EntityType<SaigaAntelopeEntity>> SAIGA_ANTELOPE =
@@ -138,13 +138,6 @@ public class WOTWEntities {
                     .spawns(8, 1, 2, ZawaSpawnCategory.DEEP_RAINFOREST, ZawaSpawnCategory.DRY_RAINFOREST, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.8F, 0.8F).clientTrackingRange(10))
                     .build("mouse_deer");
-    public static final RegistryObject<EntityType<KookaburraEntity>> KOOKABURRA =
-            REGISTRY.builder(KookaburraEntity::new, EntityClassification.CREATURE)
-                    .attributes(KookaburraEntity::registerAttributes)
-                    .renderer(() -> KookaburraRenderer::new)
-                    .spawns(10, 2, 4, ZawaSpawnCategory.DRY_FOREST, ZawaSpawnCategory.WET_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(0.65F, 0.65F).clientTrackingRange(8))
-                    .build("kookaburra");
     public static final RegistryObject<EntityType<HoopoeEntity>> HOOPOE =
             REGISTRY.builder(HoopoeEntity::new, EntityClassification.CREATURE)
                     .attributes(HoopoeEntity::registerAttributes)
@@ -164,7 +157,7 @@ public class WOTWEntities {
                     .attributes(CaimanEntity::registerAttributes)
                     .renderer(() -> CaimanRenderer::new)
                     .spawns(10, 1, 1, ZawaSpawnCategory.FAST_FRESH_WATER, ZawaSpawnCategory.SLOW_FRESH_WATER, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.8F, 0.8F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.3F, 0.6F).clientTrackingRange(10))
                     .build("caiman");
 
 
@@ -183,7 +176,6 @@ public class WOTWEntities {
         EntitySpawnPlacementRegistry.register(TURACO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(FENNEC_FOX.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(MOUSE_DEER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(KOOKABURRA.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(HOOPOE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(MARGAY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(CAIMAN.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);

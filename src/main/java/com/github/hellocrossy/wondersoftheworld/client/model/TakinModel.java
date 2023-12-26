@@ -104,7 +104,7 @@ public abstract class TakinModel extends ZawaBaseModel<TakinEntity> {
             this.UpperLegRight.setPos(0.0F, 8.0F, -2.0F);
             this.UpperLegRight.addBox(-1.5F, 0.0F, 0.0F, 3.0F, 6.0F, 4.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(UpperLegRight, 0.6558947648574022F, 0.0F, 0.0F);
-            this.BeardGolden = new ModelRenderer(this, 16, 86);
+            this.BeardGolden = new ModelRenderer(this, 21, 97);
             this.BeardGolden.setPos(0.0F, 1.6F, 0.0F);
             this.BeardGolden.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 4.0F, 5.0F, 0.1F, 0.0F, 0.0F);
             this.setRotateAngle(BeardGolden, 0.3490658503988659F, 0.0F, 0.0F);
@@ -133,7 +133,7 @@ public abstract class TakinModel extends ZawaBaseModel<TakinEntity> {
             this.BeardMishmi.setPos(0.0F, 0.8F, 0.7F);
             this.BeardMishmi.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 4.0F, 5.0F, 0.1F, 0.0F, 0.0F);
             this.setRotateAngle(BeardMishmi, 0.12217304763960307F, 0.0F, 0.0F);
-            this.BeardSichuan = new ModelRenderer(this, 21, 97);
+            this.BeardSichuan = new ModelRenderer(this, 21, 86);
             this.BeardSichuan.setPos(0.0F, 1.1F, 0.7F);
             this.BeardSichuan.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 4.0F, 5.0F, 0.1F, 0.0F, 0.0F);
             this.setRotateAngle(BeardSichuan, -0.03490658503988659F, 0.0F, 0.0F);
@@ -235,7 +235,7 @@ public abstract class TakinModel extends ZawaBaseModel<TakinEntity> {
             this.TopSnout1.setPos(0.0F, -2.9F, 1.3F);
             this.TopSnout1.addBox(-1.5F, 0.0F, -3.0F, 3.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(TopSnout1, 0.2792526803190927F, 0.0F, 0.0F);
-            this.BeardBhutan = new ModelRenderer(this, 30, 95);
+            this.BeardBhutan = new ModelRenderer(this, 39, 97);
             this.BeardBhutan.setPos(0.0F, 0.1F, 0.7F);
             this.BeardBhutan.addBox(-1.0F, 0.0F, -2.0F, 2.0F, 4.0F, 5.0F, 0.1F, 0.0F, 0.0F);
             this.setRotateAngle(BeardBhutan, 0.12217304763960307F, 0.0F, 0.0F);

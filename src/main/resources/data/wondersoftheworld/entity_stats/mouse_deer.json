@@ -12,11 +12,9 @@
   "speed": "fast",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:puzzle_feeder",
-      "zawa:hay_browse",
-      "zawa:sprinkler",
-      "zawa:rope",
-      "zawa:beef_ice_treat"
+      "zawa:leaf_browse",
+      "zawa:salt_lick",
+      "zawa:apple_ice_treat"
     ],
     "zawa:entities": [
       "zawa:scented_ball"

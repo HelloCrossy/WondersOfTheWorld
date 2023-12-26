@@ -13,9 +13,8 @@
   "enrichment": {
     "zawa:blocks": [
       "zawa:puzzle_feeder",
-      "zawa:hay_browse",
+      "zawa:leaf_browse",
       "zawa:sprinkler",
-      "zawa:rope",
       "zawa:apple_ice_treat"
     ],
     "zawa:entities": [

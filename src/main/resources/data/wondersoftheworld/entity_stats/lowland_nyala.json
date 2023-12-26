@@ -12,8 +12,15 @@
   "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
+      "zawa:leaf_browse",
+      "zawa:hay_browse",
+      "zawa:puzzle_feeder",
+      "zawa:salt_lick",
       "zawa:scratching_post",
-      "zawa:sprinkler"
+      "zawa:apple_ice_treat"
+    ],
+    "zawa:entities": [
+      "zawa:boomer_ball"
     ]
   },
   "variant_count": 1

@@ -13,13 +13,13 @@
   "enrichment": {
     "zawa:blocks": [
       "zawa:scratching_post",
-      "zawa:sprinkler",
-      "zawa:puzzle_feeder",
+      "zawa:salt_lick",
+      "zawa:leaf_browse",
       "zawa:hay_browse",
       "zawa:apple_ice_treat"
     ],
     "zawa:entities": [
-      "zawa:scented_ball"
+      "zawa:boomer_ball"
     ]
   },
   "variant_count": 5

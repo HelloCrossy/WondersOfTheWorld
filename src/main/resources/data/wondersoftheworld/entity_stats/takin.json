@@ -12,12 +12,15 @@
   "speed": "slow",
   "enrichment": {
     "zawa:blocks": [
+      "zawa:hay_browse",
+      "zawa:leaf_browse",
+      "zawa:salt_lick",
       "zawa:scratching_post",
-      "zawa:sprinkler",
-      "zawa:salt_lick"
+      "zawa:apple_ice_treat"
     ],
     "zawa:entities": [
-      "zawa:boomer_ball"
+      "zawa:boomer_ball",
+      "zawa:scented_ball"
     ]
   },
   "variant_count": 4
