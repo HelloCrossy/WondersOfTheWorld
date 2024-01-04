@@ -3,9 +3,8 @@
   "size": "ambient",
   "breeding_item": "zawa:termites",
   "speed": "fast",
-  "variant_count": 12,
+  "variant_count": 11,
   "captive_variants": [
-    "lemon",
     "black",
     "albino_tiger",
     "albino_red",

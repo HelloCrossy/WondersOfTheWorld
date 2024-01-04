@@ -10,7 +10,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class WOTWSounds {
     public static final DeferredRegister<SoundEvent> REGISTRAR = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, WondersOfTheWorld.MOD_ID);
 
-
+    public static RegistryObject<SoundEvent> KIWI_AMBIENT = registerSound("kiwi_ambient");
     private static RegistryObject<SoundEvent> registerSound(String name) {
         return REGISTRAR.register(name, () -> new SoundEvent(new ResourceLocation(WondersOfTheWorld.MOD_ID, name)));
     }

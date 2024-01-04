@@ -1,0 +1,11 @@
+{
+  "kiwi_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.kiwi_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:kiwi_ambient",
+        "volume": 1.0
+      }
+    ]
+  }
+}
