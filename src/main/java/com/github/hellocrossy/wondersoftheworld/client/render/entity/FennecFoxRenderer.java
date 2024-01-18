@@ -7,7 +7,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class FennecFoxRenderer extends ZawaMobRenderer<FennecFoxEntity, FennecFoxModel> {
     public FennecFoxRenderer(EntityRendererManager manager) {
-        super(manager, new FennecFoxModel.Adult(), new FennecFoxModel.Child(), 0.3F);
+        super(manager, new FennecFoxModel.Adult(), new FennecFoxModel.Child(), 0.35F);
     }
 
     @Override

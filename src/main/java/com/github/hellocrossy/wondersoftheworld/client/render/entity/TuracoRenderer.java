@@ -10,7 +10,7 @@ public class TuracoRenderer extends ZawaMobRenderer<TuracoEntity, TuracoModel> {
         super (manager, new TuracoModel.Adult(), new TuracoModel.Flying(), new TuracoModel.Child(), 0.25F);    }
     @Override
     protected void scale(TuracoEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.8F : 1.2F;
+        float scale = entity.isBaby() ? 0.8F : 1.1F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

@@ -20,6 +20,26 @@
   "entity.wondersoftheworld.discus_fish": "Discus Fish",
   "entity.wondersoftheworld.oscar": "Oscar",
 
+  "__comment": "Sound Subtitles",
+  "subtitle.wondersoftheworld.fennec_ambient": "Fennec Idles",
+  "subtitle.wondersoftheworld.fennec_hurt": "Fenenc Hurts",
+  "subtitle.wondersoftheworld.turaco_ambient": "Turaco Idles",
+  "subtitle.wondersoftheworld.turaco_hurt": "Turaco Hurts",
+  "subtitle.wondersoftheworld.margay_ambient": "Margay Idles",
+  "subtitle.wondersoftheworld.margay_hurt": "Margay Hurts",
+  "subtitle.wondersoftheworld.kiwi_ambient": "Kiwi Idles",
+  "subtitle.wondersoftheworld.kiwi_hurt": "Kiwi Hurts",
+  "subtitle.wondersoftheworld.serval_ambient": "Serval Idles",
+  "subtitle.wondersoftheworld.serval_hurt": "Serval Hurts",
+  "subtitle.wondersoftheworld.serval_attack": "Serval Attacks",
+  "subtitle.wondersoftheworld.vulture_ambient": "Vulture Idles",
+  "subtitle.wondersoftheworld.vulture_hurt": "Vulture Hurts",
+  "subtitle.wondersoftheworld.vulture_attack": "Vulture Attacks",
+  "subtitle.wondersoftheworld.mouse deer_ambient": "Mouse Deer Idles",
+  "subtitle.wondersoftheworld.mouse deer_hurt": "Mouse Deer Hurts",
+  "subtitle.wondersoftheworld.caiman_ambient": "Mouse Deer Hurts",
+
+
   "__comment": "Items",
 
   "item.wondersoftheworld.takin_spawn_egg": "Takin Spawn Egg",
@@ -408,7 +428,7 @@
   "informational_blurb.wondersoftheworld.margay": "Not Ocelots, not Leopards, not Jaguars, these beauties are Margays!  Native to South America (with the same range as 2 of those species, you can see why they're easily mistaken!) , Margay are one of the more arboreal species of small cat. Why do they spend their time in the trees? Well their abilities to turn their ankles 180 degrees and jump 12 feet may be factors, aswell as their advanced eyesight which also helps them to traverse at night, being a nocturnal species! ",
 
   "scientific.wondersoftheworld.caiman": "Caiman crocodilius",
-  "variant.wondersoftheworld.caiman_0": "Sideous",
+  "variant.wondersoftheworld.caiman_0": "Sidious",
   "variant.wondersoftheworld.caiman_1": "Maul",
   "variant.wondersoftheworld.caiman_2": "Vader",
   "taxonomic_class.wondersoftheworld.caiman": "Reptile",
@@ -429,7 +449,7 @@
   "variant.wondersoftheworld.discus_fish_9": "Blue Diamond",
   "variant.wondersoftheworld.discus_fish_10": "Nebula",
   "variant.wondersoftheworld.discus_fish_11": "Golden",
-  "variant.wondersoftheworld.discus_fish_12": "Queen Purple",
+  "variant.wondersoftheworld.discus_fish_12": "Purple",
   "variant.wondersoftheworld.discus_fish_13": "Saffron",
 
 

@@ -10,7 +10,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class DiscusFishRenderer extends ZawaMobRenderer<DiscusFishEntity, DiscusFishModel> {
     public DiscusFishRenderer(EntityRendererManager manager) {
-        super(manager, new DiscusFishModel(), 0.3F);
+        super(manager, new DiscusFishModel(), 0.2F);
     }
 
     @Override

@@ -7,7 +7,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class TakinRenderer extends ZawaMobRenderer<TakinEntity, TakinModel> {
     public TakinRenderer(EntityRendererManager manager) {
-        super (manager, new TakinModel.Adult(), new TakinModel.Child(), 0.7F);
+        super (manager, new TakinModel.Adult(), new TakinModel.Child(), 0.85F);
     }
     @Override
     protected void scale(TakinEntity entity, MatrixStack matrixStack, float partialTickTime) {

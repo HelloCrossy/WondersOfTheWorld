@@ -11,6 +11,22 @@ public class WOTWSounds {
     public static final DeferredRegister<SoundEvent> REGISTRAR = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, WondersOfTheWorld.MOD_ID);
 
     public static RegistryObject<SoundEvent> KIWI_AMBIENT = registerSound("kiwi_ambient");
+    public static RegistryObject<SoundEvent> KIWI_HURT = registerSound("kiwi_hurt");
+    public static RegistryObject<SoundEvent> FENNEC_FOX_AMBIENT = registerSound("fennec_fox_ambient");
+    public static RegistryObject<SoundEvent> FENNEC_FOX_HURT = registerSound("fennec_fox_hurt");
+    public static RegistryObject<SoundEvent> SERVAL_AMBIENT = registerSound("serval_ambient");
+    public static RegistryObject<SoundEvent> SERVAL_ATTACK = registerSound("serval_attack");
+    public static RegistryObject<SoundEvent> SERVAL_HURT = registerSound("serval_hurt");
+    public static RegistryObject<SoundEvent> TURACO_HURT = registerSound("turaco_hurt");
+    public static RegistryObject<SoundEvent> TURACO_AMBIENT = registerSound("turaco_ambient");
+    public static RegistryObject<SoundEvent> MARGAY_AMBIENT = registerSound("margay_ambient");
+    public static RegistryObject<SoundEvent> MARGAY_HURT = registerSound("margay_hurt");
+    public static RegistryObject<SoundEvent> VULTURE_AMBIENT = registerSound("vulture_ambient");
+    public static RegistryObject<SoundEvent> VULTURE_HURT = registerSound("vulture_hurt");
+    public static RegistryObject<SoundEvent> VULTURE_ATTACK = registerSound("vulture_attack");
+    public static RegistryObject<SoundEvent> MOUSE_DEER_AMBIENT = registerSound("mouse_deer_ambient");
+    public static RegistryObject<SoundEvent> CAIMAN_AMBIENT = registerSound("caiman_ambient");
+    public static RegistryObject<SoundEvent> MOUSE_DEER_HURT = registerSound("mouse_deer_hurt");
     private static RegistryObject<SoundEvent> registerSound(String name) {
         return REGISTRAR.register(name, () -> new SoundEvent(new ResourceLocation(WondersOfTheWorld.MOD_ID, name)));
     }

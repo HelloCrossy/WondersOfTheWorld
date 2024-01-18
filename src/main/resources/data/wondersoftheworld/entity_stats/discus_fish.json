@@ -3,7 +3,7 @@
   "size": "ambient",
   "breeding_item": "zawa:earthworm",
   "speed": "fast",
-  "variant_count": 14,
+  "variant_count": 40 ,
   "captive_variants": [
     "pblood",
     "red",
@@ -16,6 +16,24 @@
     "nebula",
     "golden",
     "queen",
-    "saffron"
-    ]
+    "saffron",
+    "blue_white",
+    "golden_white",
+    "kel_white",
+    "queen_white",
+    "red_white",
+    "blue_white_black",
+    "golden_white_black",
+    "kel_white_black",
+    "queen_white_black",
+    "red_white_black",
+    "blue_black",
+    "golden_black",
+    "kel_black",
+    "nebula_black",
+    "queen_black",
+    "red_black",
+    "turquoise_black",
+    "white_black"
+  ]
 }

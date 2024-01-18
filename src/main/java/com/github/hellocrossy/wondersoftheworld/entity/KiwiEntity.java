@@ -35,27 +35,35 @@ public class KiwiEntity extends ZawaLandEntity implements OviparousEntity, Speci
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.KIWI.get().create(world);
     }
+
     @Override
     public ItemStack getBreedEggItem() {
         return WOTWItems.KIWI_EGG.get().getDefaultInstance();
     }
-        @Override
-        public int getVariantByBiome(IWorld iWorld) {
-            return random.nextInt(getWildVariants());
+
+    @Override
+    public int getVariantByBiome(IWorld iWorld) {
+        return random.nextInt(getWildVariants());
     }
+
     @Override
     protected void registerGoals() {
         //super.registerGoals();
-       //this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
+        //this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
         //this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, PlayerEntity.class, 16.0F, 0.8D, 1.33D, (entity) -> AVOID_PLAYERS.test(entity) && !this.isTame()));
     }
+
     @Override
     public float getMaleRatio() {
         return 0.33F;
     }
 
     @Override
+    protected SoundEvent getAmbientSound() {
+            return WOTWSounds.KIWI_AMBIENT.get();
+    }
+    @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return WOTWSounds.KIWI_AMBIENT.get();
+        return WOTWSounds.KIWI_HURT.get();
     }
 }

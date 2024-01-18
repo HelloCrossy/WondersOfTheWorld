@@ -10,7 +10,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class OscarRenderer extends ZawaMobRenderer<OscarEntity, OscarModel> {
     public OscarRenderer(EntityRendererManager manager) {
-        super(manager, new OscarModel(), 0.3F);
+        super(manager, new OscarModel(), 0.2F);
     }
 
     @Override

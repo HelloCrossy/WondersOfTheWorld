@@ -12,7 +12,7 @@ public class BongoRenderer extends ZawaMobRenderer<BongoEntity, BongoModel> {
     }
     @Override
     protected void scale(BongoEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.9F : 1.1F;
+        float scale = entity.isBaby() ? 0.9F : 1.0F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

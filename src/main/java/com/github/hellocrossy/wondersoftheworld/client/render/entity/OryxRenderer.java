@@ -9,13 +9,13 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class OryxRenderer extends ZawaMobRenderer<OryxEntity, OryxModel> {
     public OryxRenderer(EntityRendererManager manager) {
-        super(manager, new OryxModel.Adult(), new OryxModel.Child(), 0.35F);
+        super(manager, new OryxModel.Adult(), new OryxModel.Child(), 0.75F);
 
     }
 
     @Override
     protected void scale(OryxEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.9F : 1.1F;
+        float scale = entity.isBaby() ? 0.9F : 0.9F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

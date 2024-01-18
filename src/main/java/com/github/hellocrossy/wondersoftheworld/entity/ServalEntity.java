@@ -1,12 +1,16 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
+import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
 import net.minecraft.entity.AgeableEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.goal.NonTamedTargetGoal;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
@@ -40,7 +44,23 @@ public class ServalEntity extends ZawaLandEntity {
     public float getMaleRatio() {
         return 0.33F;
     }
-}
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return WOTWSounds.SERVAL_AMBIENT.get();
+    }
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return WOTWSounds.SERVAL_HURT.get();
+    }
+        @Override
+        public boolean doHurtTarget(Entity entity) {
+            boolean didHurtTarget = super.doHurtTarget(entity);
+            if (didHurtTarget) playSound(WOTWSounds.SERVAL_ATTACK.get(), 1.0F, 1.0F);
+            return didHurtTarget;
+        }
+
+    }
+
 
 
 

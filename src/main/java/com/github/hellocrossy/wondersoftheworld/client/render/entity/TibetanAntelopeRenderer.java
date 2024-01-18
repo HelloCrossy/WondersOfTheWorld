@@ -11,7 +11,7 @@ public class TibetanAntelopeRenderer extends ZawaMobRenderer<TibetanAntelopeEnti
         super (manager, new TibetanAntelopeModel.Adult(), new TibetanAntelopeModel.Child(), 0.65F);    }
     @Override
     protected void scale(TibetanAntelopeEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.8F : 1.1F;
+        float scale = entity.isBaby() ? 0.8F : 1.0F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
