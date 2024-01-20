@@ -21,9 +21,6 @@ public class WOTWSounds {
     public static RegistryObject<SoundEvent> TURACO_AMBIENT = registerSound("turaco_ambient");
     public static RegistryObject<SoundEvent> MARGAY_AMBIENT = registerSound("margay_ambient");
     public static RegistryObject<SoundEvent> MARGAY_HURT = registerSound("margay_hurt");
-    public static RegistryObject<SoundEvent> VULTURE_AMBIENT = registerSound("vulture_ambient");
-    public static RegistryObject<SoundEvent> VULTURE_HURT = registerSound("vulture_hurt");
-    public static RegistryObject<SoundEvent> VULTURE_ATTACK = registerSound("vulture_attack");
     public static RegistryObject<SoundEvent> MOUSE_DEER_AMBIENT = registerSound("mouse_deer_ambient");
     public static RegistryObject<SoundEvent> CAIMAN_AMBIENT = registerSound("caiman_ambient");
     public static RegistryObject<SoundEvent> MOUSE_DEER_HURT = registerSound("mouse_deer_hurt");

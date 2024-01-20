@@ -98,42 +98,6 @@
       }
     ]
   },
-  "vulture_ambient": {
-    "subtitle": "subtitle.wondersoftheworld.vulture_ambient",
-    "sounds": [
-      {
-        "name": "wondersoftheworld:vulture_ambient",
-        "volume": 1.0
-      }
-    ]
-  },
-  "vulture_hurt": {
-    "subtitle": "subtitle.wondersoftheworld.vulture_hurt",
-    "sounds": [
-      {
-        "name": "wondersoftheworld:vulture_hurt",
-        "volume": 1.0
-      }
-    ]
-  },
-  "vulture_attack": {
-    "subtitle": "subtitle.wondersoftheworld.vulture_attack",
-    "sounds": [
-      {
-        "name": "wondersoftheworld:vulture_attack",
-        "volume": 1.0
-      }
-    ]
-  },
-  "mouse_deer_ambient": {
-    "subtitle": "subtitle.wondersoftheworld.vulture_attack",
-    "sounds": [
-      {
-        "name": "wondersoftheworld:vulture_attack",
-        "volume": 1.0
-      }
-    ]
-  },
   "mouse_deer_hurt": {
     "subtitle": "subtitle.wondersoftheworld.mouse_deer_hurt",
     "sounds": [

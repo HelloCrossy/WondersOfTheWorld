@@ -114,15 +114,6 @@ public class WOTWEntities {
                     .spawns(10, 2, 4, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.TROPICAL_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(0.6F, 0.8F).clientTrackingRange(10))
                     .build("turaco");
-
-    public static final RegistryObject<EntityType<VultureEntity>> VULTURE =
-            REGISTRY.builder(VultureEntity::new, EntityClassification.CREATURE)
-                    .attributes(VultureEntity::registerAttributes)
-                    .renderer(() -> VultureRenderer::new)
-                    .spawns(15, 2, 4, ZawaSpawnCategory.DEEP_RAINFOREST, ZawaSpawnCategory.DRY_RAINFOREST, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.8F, 0.9F).clientTrackingRange(8))
-                    .build("vulture");
-
     public static final RegistryObject<EntityType<LowlandNyalaEntity>> LOWLAND_NYALA =
             REGISTRY.builder(LowlandNyalaEntity::new, EntityClassification.CREATURE)
                     .attributes(LowlandNyalaEntity::registerAttributes)
@@ -172,7 +163,6 @@ public class WOTWEntities {
         EntitySpawnPlacementRegistry.register(SERVAL.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(EMU.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(KIWI.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(VULTURE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaFlyingEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(TURACO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(FENNEC_FOX.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(MOUSE_DEER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
