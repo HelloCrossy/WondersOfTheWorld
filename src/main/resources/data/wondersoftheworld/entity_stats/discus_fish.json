@@ -34,6 +34,14 @@
     "queen_black",
     "red_black",
     "turquoise_black",
-    "white_black"
+    "white_black",
+    "blue_red",
+    "golden_red",
+    "queen_red",
+    "white_red",
+    "blue_red_black",
+    "golden_red_black",
+    "queen_red_black",
+    "white_red_black"
   ]
 }
