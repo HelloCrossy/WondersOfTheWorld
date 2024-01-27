@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": ":block/kiwi_plush"
+    },
+    "facing=east": {
+      "model": ":block/kiwi_plush", "y": 90
+    },
+    "facing=south": {
+      "model": ":block/kiwi_plush", "y": 180
+    },
+    "facing=west": {
+      "model": ":block/kiwi_plush", "y": 270
+    }
+  }
+}

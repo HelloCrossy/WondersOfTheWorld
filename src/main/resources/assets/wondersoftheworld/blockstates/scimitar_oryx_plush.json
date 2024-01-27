@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": ":block/scimitar_oryx_plush"
+    },
+    "facing=east": {
+      "model": ":block/scimitar_oryx_plush", "y": 90
+    },
+    "facing=south": {
+      "model": ":block/scimitar_oryx_plush", "y": 180
+    },
+    "facing=west": {
+      "model": ":block/scimitar_oryx_plush", "y": 270
+    }
+  }
+}

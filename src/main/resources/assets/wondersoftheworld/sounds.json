@@ -96,6 +96,15 @@
         "name": "wondersoftheworld:margay_hurt",
         "volume": 1.0
       }
+    ],
+  },
+  "mouse_deer_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.mouse_deer_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:mouse_deer_ambient",
+        "volume": 1.0
+      }
     ]
   },
   "mouse_deer_hurt": {
@@ -103,15 +112,6 @@
     "sounds": [
       {
         "name": "wondersoftheworld:mouse_deer_hurt",
-        "volume": 1.0
-      }
-    ]
-  },
-  "caiman_ambient": {
-    "subtitle": "subtitle.wondersoftheworld.caiman_ambient",
-    "sounds": [
-      {
-        "name": "wondersoftheworld:caiman_ambient",
         "volume": 1.0
       }
     ]

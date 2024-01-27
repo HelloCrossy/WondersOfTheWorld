@@ -22,7 +22,6 @@ public class WOTWSounds {
     public static RegistryObject<SoundEvent> MARGAY_AMBIENT = registerSound("margay_ambient");
     public static RegistryObject<SoundEvent> MARGAY_HURT = registerSound("margay_hurt");
     public static RegistryObject<SoundEvent> MOUSE_DEER_AMBIENT = registerSound("mouse_deer_ambient");
-    public static RegistryObject<SoundEvent> CAIMAN_AMBIENT = registerSound("caiman_ambient");
     public static RegistryObject<SoundEvent> MOUSE_DEER_HURT = registerSound("mouse_deer_hurt");
     private static RegistryObject<SoundEvent> registerSound(String name) {
         return REGISTRAR.register(name, () -> new SoundEvent(new ResourceLocation(WondersOfTheWorld.MOD_ID, name)));
