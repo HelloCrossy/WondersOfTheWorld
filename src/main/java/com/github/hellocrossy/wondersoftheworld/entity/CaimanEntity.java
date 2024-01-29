@@ -58,10 +58,5 @@ public class CaimanEntity extends ZawaSemiAquaticEntity implements OviparousEnti
     public float swimSpeedMultiplier() {
         return 2.0F;
     }
-
-    @Override
-    protected SoundEvent getAmbientSound() {
-        return WOTWSounds.CAIMAN_AMBIENT.get();
     }
-}
 
