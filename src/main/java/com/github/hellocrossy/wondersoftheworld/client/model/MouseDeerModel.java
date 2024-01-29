@@ -193,7 +193,7 @@ public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
 
         @Override
         public void setupAnim(MouseDeerEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            super.setupAnim(entity, entity.tickCount, 0.3F, ageInTicks, netHeadYaw, headPitch);
+            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
         //    this.Neck1.yRot = netHeadYaw / (180F / (float) Math.PI) * - 1.451F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
         //    this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 1.055F;
@@ -264,7 +264,7 @@ public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
                 this.ThighRight.z = MathHelper.cos(3.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 3F) * 0.5F + 2.9F;
                 this.LegRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F + 1.094F;
                 this.LowerLegRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 3F) * 0.5F - 1.326F;
-            } 
+            }
         }
     }
 
