@@ -59,4 +59,3 @@ public class CaimanEntity extends ZawaSemiAquaticEntity implements OviparousEnti
         return 2.0F;
     }
     }
-
