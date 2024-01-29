@@ -45,6 +45,6 @@ public class WOTWBlocks {
     @OnlyIn(Dist.CLIENT)
     public static void setRenderLayers() {
         RenderType cutoutMipped = RenderType.cutoutMipped();
-        RenderTypeLookup.setRenderLayer(PLUSHIES.get("moho").get(), cutoutMipped);
+        RenderTypeLookup.setRenderLayer(PLUSHIES.get("emu").get(), cutoutMipped);
     }
 }
