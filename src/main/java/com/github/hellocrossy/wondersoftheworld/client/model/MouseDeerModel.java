@@ -83,7 +83,7 @@ public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
             this.Tail.addBox(-0.5F, 0.0F, 0.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Tail, 0.5497787143782138F, 0.0F, 0.0F);
             this.ThighLeft = new ModelRenderer(this, 21, 0);
-            this.ThighLeft.setPos(1.3F, 2.8F, 2.9F);
+            this.ThighLeft.setPos(1.6F, 2.8F, 2.9F);
             this.ThighLeft.addBox(-1.0F, -1.5F, -4.0F, 2.0F, 3.0F, 4.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(ThighLeft, 0.6429792990978721F, 0.0F, 0.0F);
             this.LowerLegRight = new ModelRenderer(this, 21, 8);
@@ -104,7 +104,7 @@ public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
             this.setRotateAngle(Chest, 0.41887902047863906F, 0.0F, 0.0F);
             this.ThighRight = new ModelRenderer(this, 21, 0);
             this.ThighRight.mirror = true;
-            this.ThighRight.setPos(-1.3F, 2.8F, 2.9F);
+            this.ThighRight.setPos(-1.6F, 2.8F, 2.9F);
             this.ThighRight.addBox(-1.0F, -1.5F, -4.0F, 2.0F, 3.0F, 4.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(ThighRight, 0.6352998743575469F, 0.0F, 0.0F);
             this.Head = new ModelRenderer(this, 23, 19);
@@ -193,7 +193,7 @@ public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
 
         @Override
         public void setupAnim(MouseDeerEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+            super.setupAnim(entity, entity.tickCount, 0.3F, ageInTicks, netHeadYaw, headPitch);
         //    this.Neck1.yRot = netHeadYaw / (180F / (float) Math.PI) * - 1.451F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
         //    this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 1.055F;
@@ -216,12 +216,32 @@ public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
                 limbSwingAmount = 0.3F;
             }
 
-    /*        if (entity.isSprinting()) {
+            if (entity.isSprinting()) {
                 float speed = 1.0f;
                 float degree = 1.0f;
+            this.Head.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.6F) * 0.5F + 1.055F;
+            this.Neck1.xRot = MathHelper.cos(0.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.9F) * 0.5F - 1.451F;
+            this.Body.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.9F) * 0.5F + 0.078F;
+            this.Body.y = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 3F) * 0.5F + 17.0F;
+
+            this.ArmLeft.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 4F) * 0.5F + 0.030F;
+            this.ForearmLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -3F) * 0.5F - 0.469F;
+            this.LowerArmLeft.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 2F) * 0.5F;
+            this.ArmRight.xRot = MathHelper.cos(5.5F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 4F) * 0.5F + 0.030F;
+            this.ForearmRight.xRot = MathHelper.cos(3.5F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -3F) * 0.5F - 0.469F;
+            this.LowerArmRight.xRot = MathHelper.cos(4.5F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 2F) * 0.5F;
+
+            this.ThighLeft.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -3F) * 0.5F + 0.642F;
+            this.ThighLeft.z = MathHelper.cos(6F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -3F) * 0.5F + 2.9F;
+            this.LegLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 3F) * 0.5F + 1.094F;
+            this.LowerLegLeft.xRot = MathHelper.cos(7.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -5F) * 0.5F - 1.326F;
+            this.ThighRight.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -3F) * 0.5F + 0.642F;
+            this.ThighRight.z = MathHelper.cos(5F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -3F) * 0.5F + 2.9F;
+            this.LegRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 3F) * 0.5F + 1.094F;
+            this.LowerLegRight.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -5F) * 0.5F - 1.326F;
 
 
-            } else*/ {
+            } else {
                 float speed = 1.0f;
                 float degree = 1.0f;
                 this.Head.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 1.055F;
@@ -244,7 +264,7 @@ public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
                 this.ThighRight.z = MathHelper.cos(3.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 3F) * 0.5F + 2.9F;
                 this.LegRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F + 1.094F;
                 this.LowerLegRight.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 3F) * 0.5F - 1.326F;
-            }
+            } 
         }
     }
 
