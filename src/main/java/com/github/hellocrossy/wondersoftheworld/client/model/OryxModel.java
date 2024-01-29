@@ -348,7 +348,7 @@ public abstract class OryxModel extends ZawaBaseModel<OryxEntity> {
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             float speed = 1.7f;
             float degree = 0.6f;
-            
+
         }
     }
 
