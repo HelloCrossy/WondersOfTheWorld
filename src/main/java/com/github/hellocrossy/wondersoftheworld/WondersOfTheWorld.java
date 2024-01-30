@@ -14,22 +14,25 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod(WondersOfTheWorld.MOD_ID)
 public class WondersOfTheWorld {
     public static final String MOD_ID = "wondersoftheworld";
-    public static final String[] PLUSHIES_LIST = new String[]{"emu, serval, gemsbok, fennec_fox, turaco, scimitar_oryx, takin, bongo, kiwi"};
+    public static final String[] PLUSHIES_LIST = new String[]{"emu", "serval", "gemsbok", "fennec_fox", "turaco", "scimitar_oryx", "takin", "bongo", "kiwi"};
 
     public WondersOfTheWorld() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         WOTWEntities.REGISTRY.initialize();
         WOTWItems.REGISTRAR.register(bus);
+        WOTWBlocks.REGISTRAR.register(bus);
         WOTWSounds.REGISTRAR.register(bus);
 
         bus.addListener(this::setup);
+        bus.addListener(this::setupClient);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
         WOTWEntities.registerSpawnPlacements();
     }
-private void setupClient(final FMLClientSetupEvent event) {
+
+    private void setupClient(final FMLClientSetupEvent event) {
         WOTWBlocks.setRenderLayers();
-        }
+    }
 }
