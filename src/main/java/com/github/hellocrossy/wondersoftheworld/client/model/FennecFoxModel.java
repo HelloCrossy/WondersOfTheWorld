@@ -214,10 +214,10 @@ public abstract class FennecFoxModel extends ZawaBaseModel<FennecFoxEntity> {
 
         @Override
         public void setupAnim(FennecFoxEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+            super.setupAnim(entity, entity.tickCount, 0.3F, ageInTicks, netHeadYaw, headPitch);
             this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
-            //this.Head.xRot = (headPitch / (180F / (float) Math.PI)) - 0.633F;
+        //    this.Head.xRot = (headPitch / (180F / (float) Math.PI)) - 0.633F;
             this.Head.zRot = headPitch / (180F / (float) Math.PI) * 0.05F;
         }
 
@@ -241,12 +241,16 @@ public abstract class FennecFoxModel extends ZawaBaseModel<FennecFoxEntity> {
                 limbSwingAmount = 0.3F;
             }
 
-            if (entity.isSprinting()) {
+        //    if (entity.isSprinting()) {
                 float speed = 1.0f;
                 float degree = 1.0f;
 
+                this.ArmLeft.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -1F) * 0.5F + 0.374F;
+                this.ForearmLeft.xRot = MathHelper.cos(0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.6F) * 0.5F - 0.122F;
+                this.HandLeft.xRot = MathHelper.cos(5F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -2F) * 0.5F - 0.017F;
 
-            } else {
+
+        /*    } else {
                 float speed = 1.0f;
                 float degree = 1.0f;
                 this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F + 0.933F;
@@ -277,7 +281,7 @@ public abstract class FennecFoxModel extends ZawaBaseModel<FennecFoxEntity> {
                 this.Tail2.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.4F) * 0.5F - 1.447F;
                 this.Tail1.zRot = MathHelper.cos(3.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -0.8F) * 0.5F;
                 this.Tail2.zRot = MathHelper.cos(5.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 0.8F) * 0.5F;
-            }
+            } */
         }
     }
 
