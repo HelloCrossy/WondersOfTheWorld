@@ -7,7 +7,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class HoopoeRenderer extends ZawaMobRenderer<HoopoeEntity, HoopoeModel> {
     public HoopoeRenderer(EntityRendererManager manager) {
-        super (manager, new HoopoeModel.Adult(), new HoopoeModel.Flying(), new HoopoeModel.Child(), 0.25F);
+        super (manager, /*new HoopoeModel.Adult(),*/ new HoopoeModel.Flying(), new HoopoeModel.Child(), 0.25F);
     }
     @Override
     protected void scale(HoopoeEntity entity, MatrixStack matrixStack, float partialTickTime) {
