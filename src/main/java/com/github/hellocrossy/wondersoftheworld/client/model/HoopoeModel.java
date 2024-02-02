@@ -138,7 +138,7 @@ public abstract class HoopoeModel extends ZawaBaseModel<HoopoeEntity> {
             this.FootRight.setPos(0.0F, 0.2F, -1.7F);
             this.FootRight.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(FootRight, 0.4630358625383205F, 0.0F, 0.0F);
-            this.Crest7 = new ModelRenderer(this, 28, 0);
+            this.Crest7 = new ModelRenderer(this, 18, 0);
             this.Crest7.setPos(0.0F, 0.5F, -0.5F);
             this.Crest7.addBox(-0.49F, 0.0F, -1.0F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Crest7, -0.27314402127920984F, 0.0F, 0.0F);
