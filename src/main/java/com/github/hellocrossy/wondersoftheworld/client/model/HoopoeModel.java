@@ -1,6 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
-import com.github.hellocrossy.wondersoftheworld.entity.TuracoEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.HoopoeEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
@@ -8,7 +7,6 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
-import org.zawamod.zawa.client.model.ZawaModelRenderer;
 
 public abstract class HoopoeModel extends ZawaBaseModel<HoopoeEntity> {
     public ModelRenderer Body;
@@ -103,7 +101,7 @@ public abstract class HoopoeModel extends ZawaBaseModel<HoopoeEntity> {
             this.Neck2.setPos(0.0F, 0.0F, 2.0F);
             this.Neck2.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 3.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Neck2, -0.45535640450848164F, 0.0F, 0.0F);
-            this.Crest6 = new ModelRenderer(this, 40, 0);
+            this.Crest6 = new ModelRenderer(this, 18, 0);
             this.Crest6.setPos(0.0F, 0.4F, -1.1F);
             this.Crest6.addBox(-0.49F, 0.0F, -1.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Crest6, -0.6829473549475088F, 0.0F, 0.0F);
@@ -115,7 +113,7 @@ public abstract class HoopoeModel extends ZawaBaseModel<HoopoeEntity> {
             this.UpperBill.setPos(0.0F, -2.8F, 0.7F);
             this.UpperBill.addBox(-0.5F, -2.5F, -0.5F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(UpperBill, 0.15690509575954859F, 0.0F, 0.0F);
-            this.Crest5 = new ModelRenderer(this, 40, 0);
+            this.Crest5 = new ModelRenderer(this, 18, 0);
             this.Crest5.setPos(0.0F, 0.4F, -1.1F);
             this.Crest5.addBox(-0.51F, 0.0F, -1.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Crest5, -0.6829473549475088F, 0.0F, 0.0F);
