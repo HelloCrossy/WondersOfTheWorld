@@ -8,6 +8,7 @@ import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.goal.NonTamedTargetGoal;
+import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundEvent;
@@ -40,8 +41,8 @@ public class HoopoeEntity extends ZawaFlyingEntity implements OviparousEntity{
     }
     @Override
     protected void registerGoals() {
-        // super.registerGoals();
-        // this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
+        super.registerGoals();
+        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
     }
     @Override
     public float getMaleRatio() {
