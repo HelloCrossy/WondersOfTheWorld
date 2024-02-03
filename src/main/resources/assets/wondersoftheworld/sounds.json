@@ -62,24 +62,6 @@
       }
     ]
   },
-  "turaco_ambient": {
-    "subtitle": "subtitle.wondersoftheworld.turaco_ambient",
-    "sounds": [
-      {
-        "name": "wondersoftheworld:turaco_ambient",
-        "volume": 1.0
-      }
-    ]
-  },
-  "turaco_hurt": {
-    "subtitle": "subtitle.wondersoftheworld.turaco_hurt",
-    "sounds": [
-      {
-        "name": "wondersoftheworld:turaco_hurt",
-        "volume": 1.0
-      }
-    ]
-  },
   "margay_ambient": {
     "subtitle": "subtitle.wondersoftheworld.margay_ambient",
     "sounds": [
