@@ -38,7 +38,7 @@ public class ServalEntity extends ZawaLandEntity {
         super.registerGoals();
         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0D, 2.5D, true));
         this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0D));
+        this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> !this.isBaby()));
     }
     @Override
     public float getMaleRatio() {
@@ -52,13 +52,12 @@ public class ServalEntity extends ZawaLandEntity {
     protected SoundEvent getHurtSound(DamageSource source) {
         return WOTWSounds.SERVAL_HURT.get();
     }
-        @Override
-        public boolean doHurtTarget(Entity entity) {
-            boolean didHurtTarget = super.doHurtTarget(entity);
-            if (didHurtTarget) playSound(WOTWSounds.SERVAL_ATTACK.get(), 1.0F, 1.0F);
-            return didHurtTarget;
+    @Override
+    public boolean doHurtTarget(Entity entity) {
+        boolean didHurtTarget = super.doHurtTarget(entity);
+        if (didHurtTarget) playSound(WOTWSounds.SERVAL_ATTACK.get(), 1.0F, 1.0F);
+        return didHurtTarget;
         }
-
     }
 
 
