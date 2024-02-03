@@ -157,7 +157,7 @@ public abstract class OryxModel extends ZawaBaseModel<OryxEntity> {
             this.Snout.setPos(0.0F, 0.0F, -3.9F);
             this.Snout.addBox(-2.0F, 0.0F, -5.5F, 4.0F, 2.0F, 5.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Snout, 0.4494222823885398F, 0.0F, 0.0F);
-            this.Body = new ModelRenderer(this, 3, 19);
+            this.Body = new ModelRenderer(this, 1, 19);
             this.Body.setPos(0.0F, 4.2F, 1.8F);
             this.Body.addBox(-4.5F, -9.0F, 0.0F, 9.0F, 11.0F, 13.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Body, 0.3790855015489435F, 0.0F, 0.0F);
