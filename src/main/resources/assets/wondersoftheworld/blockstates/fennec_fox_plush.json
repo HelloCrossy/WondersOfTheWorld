@@ -1,16 +1,16 @@
 {
   "variants": {
     "facing=north": {
-      "model": ":block/fennec_fox_plush"
+      "model": "wondersoftheworld:block/fennec_fox_plush"
     },
     "facing=east": {
-      "model": ":block/fennec_fox_plush", "y": 90
+      "model": "wondersoftheworld:block/fennec_fox_plush", "y": 90
     },
     "facing=south": {
-      "model": ":block/fennec_fox_plush", "y": 180
+      "model": "wondersoftheworld:block/fennec_fox_plush", "y": 180
     },
     "facing=west": {
-      "model": ":block/fennec_fox_plush", "y": 270
+      "model": "wondersoftheworld:block/fennec_fox_plush", "y": 270
     }
   }
 }

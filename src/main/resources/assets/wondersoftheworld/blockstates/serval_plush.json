@@ -1,16 +1,16 @@
 {
   "variants": {
     "facing=north": {
-      "model": ":block/serval_plush"
+      "model": "wondersoftheworld:block/serval_plush"
     },
     "facing=east": {
-      "model": ":block/serval_plush", "y": 90
+      "model": "wondersoftheworld:block/serval_plush", "y": 90
     },
     "facing=south": {
-      "model": ":block/serval_plush", "y": 180
+      "model": "wondersoftheworld:block/serval_plush", "y": 180
     },
     "facing=west": {
-      "model": ":block/serval_plush", "y": 270
+      "model": "wondersoftheworld:block/serval_plush", "y": 270
     }
   }
 }
