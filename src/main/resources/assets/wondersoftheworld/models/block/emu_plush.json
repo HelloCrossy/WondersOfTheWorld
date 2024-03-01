@@ -1,7 +1,7 @@
 {
 	"parent": "zawa:block/plushies/plush",
 	"textures": {
-		"0": "wondersoftheworld:block/emu_plush"
+		"1": "wondersoftheworld:block/emu_plush"
 	},
 	"elements": [
 		{
