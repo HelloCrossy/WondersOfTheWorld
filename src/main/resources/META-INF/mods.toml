@@ -14,7 +14,7 @@ logoFile="logo.png"
 credits="Devs: HelloCrossy67, chilotic, 808s, SpiggitySpag, Arty, Kelvillar, ClimbableChunky     Other: Shoresy, Fisk, Mnesikos, Platinum"
 authors="HelloCrossy67"
 description='''
-Addon for ZAWA Evolved, with the aim to bring animals from all across the world to YOUR screen!'''
+Wonders of the World is an addon mod for ZAWA Evolved, on MC JAVA version 1.16.5. This mod adds a total of 16 animals, with multiple species of some of these entities AND a total of 5 plushies! The mod is of the ZAWA Style and follows their guidelines relatively closely. A big thanks to our team, the ZAWA Devs: Fisk & Mnesikos, aswell as our amazing sponsor Shoresy! Stay tuned for future updates, along with more plushies!'''
 
 [[dependencies.wondersoftheworld]]
 modId="forge"
