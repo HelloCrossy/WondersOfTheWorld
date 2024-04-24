@@ -353,7 +353,7 @@ public abstract class LowlandNyalaModel extends ZawaBaseModel<LowlandNyalaEntity
 
 
             } else {
-                float speed = 1.0f;
+                float speed = 2.5f;
                 float degree = 1.0f;
 
                 this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.624F;
@@ -614,7 +614,7 @@ public abstract class LowlandNyalaModel extends ZawaBaseModel<LowlandNyalaEntity
                 limbSwing = (float) entity.tickCount;
                 limbSwingAmount = 0.3F;
             } else {
-                float speed = 1.0f;
+                float speed = 0.75f;
                 float degree = 1.0f;
                 this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.756F;
                 this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.1F) * 0.5F + 0.742F;

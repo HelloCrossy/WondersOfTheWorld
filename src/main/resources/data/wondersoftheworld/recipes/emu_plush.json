@@ -8,7 +8,7 @@
   ],
   "key": {
     "P": [
-      { "item": "minecraft:pink_wool" }
+      { "item": "minecraft:light_blue_wool" }
     ],
     "G": [
       { "item": "minecraft:light_gray_wool" }
@@ -17,7 +17,7 @@
       { "item": "minecraft:string" }
     ],
     "W": [
-      { "item": "minecraft:white_wool" }
+      { "item": "minecraft:black_wool" }
     ]
   },
   "result": {

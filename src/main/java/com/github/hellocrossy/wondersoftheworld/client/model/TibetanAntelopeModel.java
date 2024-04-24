@@ -516,8 +516,8 @@ public abstract class TibetanAntelopeModel extends ZawaBaseModel<TibetanAntelope
                     limbSwing = (float) entity.tickCount;
                     limbSwingAmount = 0.3F;
               } else {
-                    float speed = 1.0f;
-                    float degree = 1.0f;
+                    float speed = 0.8f;
+                    float degree = 0.8f;
                     this.Neck.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.15F) * 0.5F - 0.400F;
                     this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.1F) * 0.5F + 0.586F;
                     this.Chest.y = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.7F) * 0.5F + 15.3F;

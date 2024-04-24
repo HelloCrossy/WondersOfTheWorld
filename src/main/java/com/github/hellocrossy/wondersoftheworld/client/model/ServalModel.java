@@ -238,8 +238,8 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
             }
 
             if (entity.isSprinting()) {
-                float speed = 1.0f;
-                float degree = 1.0f;
+                float speed = 0.9f;
+                float degree = 0.6f;
                 this.Neck.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -0.6F) * 0.5F - 0.450F;
                 this.Head.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * 0.3F) * 0.5F + 0.929F;
                 this.Chest.y = MathHelper.cos(2.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -3F) * 0.5F + 13.5F;
@@ -271,8 +271,8 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
                 this.FootRight.xRot = MathHelper.cos(5F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -1.2F) * 0.5F;
 
             } else {
-                float speed = 1.0f;
-                float degree = 1.0f;
+                float speed = 0.9f;
+                float degree = 0.6f;
                 this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.450F;
                 this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.2F) * 0.5F + 0.929F;
 
@@ -527,7 +527,7 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
                 limbSwingAmount = 0.3F;
             } else {
                 float speed = 1.0f;
-                float degree = 1.0f;
+                float degree = 0.75f;
                 this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.779F;
                 this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.2F) * 0.5F + 0.841F;
 

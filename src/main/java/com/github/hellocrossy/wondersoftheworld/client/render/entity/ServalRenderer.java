@@ -1,7 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.ServalModel;
-import com.github.hellocrossy.wondersoftheworld.entity.CaimanEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.ServalEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.entity.EntityRendererManager;

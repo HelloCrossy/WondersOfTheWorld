@@ -17,7 +17,7 @@
       { "item": "minecraft:string" }
     ],
     "W": [
-      { "item": "minecraft:white_wool" }
+      { "item": "minecraft:brown_wool" }
     ]
   },
   "result": {

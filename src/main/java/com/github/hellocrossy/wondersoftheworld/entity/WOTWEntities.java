@@ -63,7 +63,7 @@ public class WOTWEntities {
             REGISTRY.builder(OscarEntity::new, EntityClassification.WATER_AMBIENT)
             .attributes(OscarEntity::registerAttributes)
             .renderer (() -> OscarRenderer::new)
-            .spawns(10, 3, 5, ZawaSpawnCategory.DEEP_RAINFOREST)
+            .spawns(10, 3, 5, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.FAST_FRESH_WATER)
             .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
             .build("oscar");
 
@@ -71,7 +71,7 @@ public class WOTWEntities {
             REGISTRY.builder(DiscusFishEntity::new, EntityClassification.WATER_AMBIENT)
                     .attributes(DiscusFishEntity::registerAttributes)
                     .renderer (() -> DiscusFishRenderer::new)
-                    .spawns(10, 3, 5, ZawaSpawnCategory.DEEP_RAINFOREST)
+                    .spawns(10, 3, 5, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.FAST_FRESH_WATER)
                     .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
                     .build("discus_fish");
 
@@ -99,13 +99,6 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(0.9F, 1.2F).clientTrackingRange(10))
                     .build("tibetan_antelope");
 
-    public static final RegistryObject<EntityType<OryxEntity>> ORYX =
-            REGISTRY.builder(OryxEntity::new, EntityClassification.CREATURE)
-                    .attributes(OryxEntity::registerAttributes)
-                    .renderer(() -> OryxRenderer::new)
-                    .spawns(8, 1, 4, ZawaSpawnCategory.HOT_DESERT, ZawaSpawnCategory.DRY_SAVANNA, ZawaSpawnCategory.DRY_GRASSLAND)
-                    .data(entityBuilder -> entityBuilder.sized(1.6F, 1.5F).clientTrackingRange(10))
-                    .build("oryx");
 
     public static final RegistryObject<EntityType<LowlandNyalaEntity>> LOWLAND_NYALA =
             REGISTRY.builder(LowlandNyalaEntity::new, EntityClassification.CREATURE)
@@ -136,20 +129,12 @@ public class WOTWEntities {
                     .spawns(8, 1, 1, ZawaSpawnCategory.DEEP_RAINFOREST, ZawaSpawnCategory.DRY_RAINFOREST, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.6F, 0.6F).clientTrackingRange(10))
                     .build("margay");
-    public static final RegistryObject<EntityType<CaimanEntity>> CAIMAN =
-            REGISTRY.builder(CaimanEntity::new, EntityClassification.CREATURE)
-                    .attributes(CaimanEntity::registerAttributes)
-                    .renderer(() -> CaimanRenderer::new)
-                    .spawns(10, 1, 1, ZawaSpawnCategory.FAST_FRESH_WATER, ZawaSpawnCategory.SLOW_FRESH_WATER, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.8F, 0.4F).clientTrackingRange(10))
-                    .build("caiman");
 
 
 
     public static void registerSpawnPlacements() {
         EntitySpawnPlacementRegistry.register(TAKIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(BONGO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(ORYX.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(LOWLAND_NYALA.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(TIBETAN_ANTELOPE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(SAIGA_ANTELOPE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
@@ -160,9 +145,8 @@ public class WOTWEntities {
         EntitySpawnPlacementRegistry.register(MOUSE_DEER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(HOOPOE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(MARGAY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(CAIMAN.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(DISCUS_FISH.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(OSCAR.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkLandSpawnRulesWithLeaves);
+        EntitySpawnPlacementRegistry.register(DISCUS_FISH.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
+        EntitySpawnPlacementRegistry.register(OSCAR.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
 
 
     }

@@ -285,7 +285,7 @@ public abstract class MargayModel extends ZawaBaseModel<MargayEntity> {
 
 
             } else {
-                float speed = 1.0f;
+                float speed = 0.9f;
                 float degree = 1.0f;
                 this.Chest.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.1F) * 0.5F - 0.170F;
                 this.Chest.y = MathHelper.cos(1.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 1.1F) * 0.5F + 17.9F;
@@ -537,7 +537,7 @@ public abstract class MargayModel extends ZawaBaseModel<MargayEntity> {
                 limbSwing = (float) entity.tickCount;
                 limbSwingAmount = 0.3F;
             } else {
-                float speed = 1.0f;
+                float speed = 0.6f;
                 float degree = 1.0f;
                 this.Chest.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.1F) * 0.5F + 0.020F;
                 this.Chest.y = MathHelper.cos(1.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.8F) * 0.5F + 18.7F;
