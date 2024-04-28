@@ -33,8 +33,6 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.4F, 1.4F).clientTrackingRange(10))
                     .build("emu");
 
-
-
     public static final RegistryObject<EntityType<KiwiEntity>> KIWI =
             REGISTRY.builder(KiwiEntity::new, EntityClassification.CREATURE)
                     .attributes(KiwiEntity::registerAttributes)
