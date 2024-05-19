@@ -1,5 +1,5 @@
 {
-  "temperament": "territorial",
+  "temperament": "defensive",
   "kibble": "zawa:herbivore_kibble",
   "size": "large",
   "fertility": "medium",
@@ -8,19 +8,13 @@
     "min": 1,
     "max": 1
   },
-  "diet": "zawa:ruminant",
-  "speed": "slow",
+  "diet": "zawa:herbivore",
+  "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:hay_browse",
-      "zawa:leaf_browse",
-      "zawa:salt_lick",
       "zawa:scratching_post",
+      "zawa:salt_lick",
       "zawa:apple_ice_treat"
-    ],
-    "zawa:entities": [
-      "zawa:boomer_ball",
-      "zawa:scented_ball"
     ]
   },
   "variant_count": 4

@@ -23,7 +23,7 @@ public class EmuEntity extends ZawaLandEntity implements OviparousEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 21.0).add(Attributes.ATTACK_DAMAGE, 2.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 14.0).add(Attributes.ATTACK_DAMAGE, 2.5);
     }
 
     @Nullable
@@ -37,10 +37,6 @@ public class EmuEntity extends ZawaLandEntity implements OviparousEntity {
         return WOTWItems.EMU_EGG.get().getDefaultInstance();
     }
 
-    @Override
-    public float getMaleRatio() {
-        return 0.5F;
-    }
 
     @Override
     protected void registerGoals() {

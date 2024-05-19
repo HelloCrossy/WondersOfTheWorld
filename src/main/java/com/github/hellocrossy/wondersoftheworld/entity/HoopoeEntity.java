@@ -28,7 +28,7 @@ public class HoopoeEntity extends ZawaFlyingEntity implements OviparousEntity{
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.FLYING_SPEED, 1.2F).add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 5.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.FLYING_SPEED, 0.6F).add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 3.0).add(Attributes.ATTACK_DAMAGE, 0.0);
     }
 
     @Nullable
@@ -45,10 +45,6 @@ public class HoopoeEntity extends ZawaFlyingEntity implements OviparousEntity{
         super.registerGoals();
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
         this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, PlayerEntity.class, 16.0F, 0.8D, 1.33D, (entity) -> AVOID_PLAYERS.test(entity) && !this.isTame()));
-    }
-    @Override
-    public float getMaleRatio() {
-        return 0.5F;
     }
 
 }

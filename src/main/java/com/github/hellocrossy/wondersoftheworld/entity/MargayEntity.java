@@ -27,7 +27,7 @@ public class MargayEntity extends ZawaLandEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 5.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 5.0).add(Attributes.ATTACK_DAMAGE, 1.0);
     }
 
     @Nullable
@@ -46,7 +46,7 @@ public class MargayEntity extends ZawaLandEntity {
 
     @Override
     public float getMaleRatio() {
-        return 0.66F;
+        return 0.33F;
     }
 
     @Override

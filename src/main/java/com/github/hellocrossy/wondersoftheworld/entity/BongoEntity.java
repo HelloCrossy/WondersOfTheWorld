@@ -21,7 +21,7 @@ public class BongoEntity extends ZawaLandEntity implements SpeciesVariantsEntity
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 21.0).add(Attributes.ATTACK_DAMAGE, 3.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 16.0).add(Attributes.ATTACK_DAMAGE, 2.0);
     }
 
     @Nullable
@@ -42,6 +42,6 @@ public class BongoEntity extends ZawaLandEntity implements SpeciesVariantsEntity
     }
     @Override
     public float getMaleRatio() {
-        return 0.14F;
+        return 0.25F;
     }
 }

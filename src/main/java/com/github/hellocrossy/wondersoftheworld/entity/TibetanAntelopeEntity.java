@@ -21,7 +21,7 @@ public class TibetanAntelopeEntity extends ZawaLandEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 21.0).add(Attributes.ATTACK_DAMAGE, 3.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 12.0).add(Attributes.ATTACK_DAMAGE, 1.5);
     }
 
     @Nullable
@@ -38,7 +38,7 @@ public class TibetanAntelopeEntity extends ZawaLandEntity {
     }
     @Override
     public float getMaleRatio() {
-        return 0.20F;
+        return 0.25F;
     }
 }
 

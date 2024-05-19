@@ -2,24 +2,22 @@
   "temperament": "timid",
   "kibble": "zawa:insectivore_kibble",
   "size": "small",
-  "fertility": "medium",
-  "breeding_item": "zawa:earthworm",
+  "fertility": "low",
+  "breeding_item": "zawa:mealworms",
   "litter_size": {
     "min": 1,
-    "max": 2
+    "max": 3
   },
   "diet": "zawa:insectivore",
-  "speed": "fast",
+  "speed": "slow",
   "enrichment": {
     "zawa:blocks": [
       "zawa:puzzle_feeder",
-      "zawa:leaf_browse",
-      "zawa:sprinkler",
-      "zawa:apple_ice_treat"
-    ],
-    "zawa:entities": [
-      "zawa:scented_ball"
-    ]
+      "zawa:sprinkler"
+      ]
   },
-    "variant_count": 5
+    "variant_count": 6,
+  "captive_variants": [
+    "albino"
+  ]
   }

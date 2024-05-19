@@ -1,21 +1,19 @@
 {
-  "temperament": "neutral",
+  "temperament": "timid",
   "kibble": "zawa:insectivore_kibble",
   "size": "small",
   "fertility": "medium",
-  "breeding_item": "minecraft:oxeye_daisy",
+  "breeding_item": "zawa:termites",
   "litter_size": {
-    "min": 1,
-    "max": 5
+    "min": 4,
+    "max": 6
   },
-  "diet": "zawa:omnivore",
-  "speed": "fast",
+  "diet": "zawa:insectivore",
+  "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
       "zawa:perching_stand",
-      "zawa:puzzle_feeder",
-      "zawa:rope",
-      "zawa:tire_swing",
+      "zawa:sprinkler",
       "zawa:branch"
     ]
   },

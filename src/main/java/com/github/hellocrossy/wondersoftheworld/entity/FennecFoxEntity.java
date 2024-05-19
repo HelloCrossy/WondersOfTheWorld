@@ -22,7 +22,7 @@ public class FennecFoxEntity extends ZawaLandEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 5.0).add(Attributes.ATTACK_DAMAGE, 1.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 4.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Nullable
@@ -34,11 +34,7 @@ public class FennecFoxEntity extends ZawaLandEntity {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
-    }
-    @Override
-    public float getMaleRatio() {
-        return 0.33F;
+       // this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
     }
     @Override
     protected SoundEvent getAmbientSound() {

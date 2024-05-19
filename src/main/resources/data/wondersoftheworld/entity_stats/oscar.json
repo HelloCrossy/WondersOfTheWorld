@@ -1,8 +1,8 @@
 {
-  "temperament": "neutral",
+  "temperament": "timid",
   "size": "ambient",
-  "breeding_item": "zawa:termites",
-  "speed": "fast",
+  "breeding_item": "zawa:earthworm",
+  "speed": "medium",
   "variant_count": 9,
   "captive_variants": [
     "albino_tiger",

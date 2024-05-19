@@ -24,7 +24,7 @@ public class MouseDeerEntity extends ZawaLandEntity implements SpeciesVariantsEn
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 5.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 4.0).add(Attributes.ATTACK_DAMAGE, 0.0);
     }
 
     @Nullable
@@ -47,7 +47,7 @@ public class MouseDeerEntity extends ZawaLandEntity implements SpeciesVariantsEn
 
     @Override
     public float getMaleRatio() {
-        return 0.5F;
+        return 0.33F;
     }
 
     @Override
