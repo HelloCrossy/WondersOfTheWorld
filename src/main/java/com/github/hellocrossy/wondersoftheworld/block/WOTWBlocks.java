@@ -28,11 +28,13 @@ import static com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld.PLUSHIE
 public class WOTWBlocks {
     public static final DeferredRegister<Block> REGISTRAR = DeferredRegister.create(ForgeRegistries.BLOCKS, WondersOfTheWorld.MOD_ID);
 
+    public static final RegistryObject<Block> CRACKED_STONE = registerWithItem("cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.DECORATION).noCollission().noOcclusion().lightLevel(light -> 15).sound(SoundType.STONE)));
     public static final Map<String, RegistryObject<Block>> PLUSHIES = Util.make(new HashMap<>(), map -> {
         for (String plush : PLUSHIES_LIST)
             map.put(plush, REGISTRAR.register(plush + "_plush", () -> new PlushBlock(AbstractBlock.Properties.of(Material.WOOL).sound(SoundType.WOOL).noOcclusion())));
-    });
 
+
+    });
     private static <T extends Block> RegistryObject<T> registerWithItem(String name, Supplier<T> block) {
         RegistryObject<T> registryObject = REGISTRAR.register(name, block);
         WOTWItems.REGISTRAR.register(name, () -> new BlockItem(registryObject.get(), new Item.Properties().tab(Zawa.DECORATIONS_GROUP)));
