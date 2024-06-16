@@ -1,27 +1,6 @@
 {
-  "parent": "minecraft:block/block",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "0": "wondersoftheworld:block/cracked_stone"
-  },
-  "elements": [
-    {   "__comment": "part1",
-      "from": [ -8, 0, -8 ],
-      "to": [ 8, 16, 8 ],
-      "rotation": {
-        "origin": [ 0, 8, 0 ],
-        "axis": "z",
-        "angle": 0.0,
-        "rescale": false
-      },
-      "shade": true,
-      "faces": {
-        "down":  { "uv": [ 50.0, 2.0, 34.0, 18.0 ], "texture": "#0"},
-        "up":  { "uv": [ 34.0, 18.0, 18.0, 2.0 ], "texture": "#0"},
-        "north":  { "uv": [ 18.0, 18.0, 34.0, 34.0 ], "texture": "#0"},
-        "south":  { "uv": [ 50.0, 18.0, 66.0, 34.0 ], "texture": "#0"},
-        "west":  { "uv": [ 34.0, 18.0, 50.0, 34.0 ], "texture": "#0"},
-        "east":  { "uv": [ 2.0, 18.0, 18.0, 34.0 ], "texture": "#0"}
-      }
-    }
-  ]
+    "all": "wondersoftheworld:block/cracked_stone"
+  }
 }
