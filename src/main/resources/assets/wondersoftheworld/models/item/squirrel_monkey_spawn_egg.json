@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "wondersoftheworld:item/squirrel_monkey_spawn_egg"
+  }
+}

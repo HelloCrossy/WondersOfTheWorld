@@ -3,7 +3,7 @@
   "kibble": "zawa:herbivore_kibble",
   "size": "large",
   "fertility": "medium",
-  "breeding_item": "zawa:tall_grass",
+  "breeding_item": "minecraft:tall_grass",
   "litter_size": {
     "min": 1,
     "max": 1

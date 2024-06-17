@@ -1,0 +1,25 @@
+{
+  "temperament": "aggressive",
+  "kibble": "zawa:insectivore_kibble",
+  "size": "medium",
+  "fertility": "low",
+  "breeding_item": "zawa:termites",
+  "litter_size": {
+    "min": 1,
+    "max": 2
+  },
+  "diet": "zawa:insectivore",
+  "speed": "medium",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:puzzle_feeder",
+      "zawa:scratching_post",
+      "zawa:sprinkler",
+      "zawa:beef_ice_treat"
+    ],
+    "zawa:entities": [
+      "zawa:boomer_ball"
+    ]
+  },
+  "variant_count": 3
+}

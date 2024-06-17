@@ -1,0 +1,29 @@
+{
+  "temperament": "timid",
+  "kibble": "zawa:omnivore_kibble",
+  "size": "tiny",
+  "fertility": "high",
+  "breeding_item": "minecraft:melon_seeds",
+  "litter_size": {
+    "min": 1,
+    "max": 6
+  },
+  "diet": "zawa:omnivore",
+  "speed": "slow",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:heat_lamp",
+      "zawa:apple_ice_treat"
+    ]
+  },
+  "variant_count": 8,
+  "captive_variants": [
+    "crushed",
+    "electrocuted",
+    "exploded",
+    "flattened",
+    "squashed",
+    "toasted",
+    "vaccumed"
+  ]
+}

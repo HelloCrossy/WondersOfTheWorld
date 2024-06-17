@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "wondersoftheworld:item/sloth_bear_spawn_egg"
+  }
+}

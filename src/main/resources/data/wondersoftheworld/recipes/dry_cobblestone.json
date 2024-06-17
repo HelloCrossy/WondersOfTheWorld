@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wondersoftheworldgroup",
+  "pattern": [
+    "PGP",
+    "GPG",
+    "PGP"
+  ],
+  "key": {
+    "P": [
+      { "item": "minecraft:cobblestone" }
+    ],
+    "G": [
+      { "item": "minecraft:sand" }
+    ]
+  },
+  "result": {
+    "item": "wondersoftheworld:dry_cobblestone",
+    "count": 8
+  }
+}

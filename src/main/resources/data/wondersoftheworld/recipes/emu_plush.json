@@ -2,22 +2,25 @@
   "type": "minecraft:crafting_shaped",
   "group": "wondersoftheworldgroup",
   "pattern": [
-    "PGG",
-    "GSG",
-    "WWW"
+    "ZWW",
+    "ZSP",
+    "GWG"
   ],
   "key": {
     "P": [
       { "item": "minecraft:light_blue_wool" }
     ],
     "G": [
-      { "item": "minecraft:light_gray_wool" }
+      { "item": "minecraft:gray_wool" }
     ],
     "S": [
-      { "item": "minecraft:string" }
+      { "item": "minecraft:bamboo" }
     ],
     "W": [
       { "item": "minecraft:black_wool" }
+    ],
+    "Z": [
+      { "item": "minecraft:brown_wool" }
     ]
   },
   "result": {

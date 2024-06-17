@@ -1,0 +1,22 @@
+{
+  "temperament": "timid",
+  "kibble": "zawa:omnivore_kibble",
+  "size": "tiny",
+  "fertility": "high",
+  "breeding_item": "minecraft:apple",
+  "litter_size": {
+    "min": 2,
+    "max": 3
+  },
+  "diet": "zawa:frugivore",
+  "speed": "medium",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:perching_stand",
+      "zawa:branch",
+      "zawa:sprinkler",
+      "zawa:pineapple_pinata"
+    ]
+  },
+  "variant_count": 9
+}

@@ -1,0 +1,21 @@
+{
+  "temperament": "neutral",
+  "kibble": "zawa:omnivore_kibble",
+  "size": "small",
+  "fertility": "high",
+  "breeding_item": "zawa:termites",
+  "litter_size": {
+    "min": 1,
+    "max": 4
+  },
+  "diet": "zawa:omnivore",
+  "speed": "medium",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:perching_stand",
+      "zawa:puzzle_feeder",
+      "zawa:branch"
+    ]
+  },
+  "variant_count": 2
+}

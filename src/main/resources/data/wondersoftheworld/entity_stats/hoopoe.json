@@ -14,8 +14,9 @@
     "zawa:blocks": [
       "zawa:perching_stand",
       "zawa:sprinkler",
-      "zawa:branch"
+      "zawa:branch",
+      "zawa:pineapple_pinata"
     ]
   },
-  "variant_count": 1
+  "variant_count": 3
 }
