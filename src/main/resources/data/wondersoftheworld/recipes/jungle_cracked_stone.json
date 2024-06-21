@@ -3,19 +3,22 @@
   "group": "wondersoftheworldgroup",
   "pattern": [
     "PGP",
-    "GPG",
+    "GSG",
     "PGP"
   ],
   "key": {
     "P": [
-      { "item": "minecraft:stone" }
+      { "item": "minecraft:cobblestone" }
     ],
     "G": [
       { "item": "minecraft:gravel" }
+    ],
+    "S": [
+      { "item": "minecraft:vines" }
     ]
   },
   "result": {
-    "item": "wondersoftheworld:cracked_stone",
+    "item": "wondersoftheworld:jungle_cracked_stone",
     "count": 8
   }
 }

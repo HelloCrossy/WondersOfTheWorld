@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class PallasCatRenderer extends ZawaMobRenderer<PallasCatEntity, PallasCatModel> {
     public PallasCatRenderer(EntityRendererManager manager) {
-        super(manager, new PallasCatModel.Adult(), new PallasCatModel.Child(), 0.35F);
+        super(manager, new PallasCatModel.Adult(), new PallasCatModel.Child(), 0.375F);
     }
 
     @Override

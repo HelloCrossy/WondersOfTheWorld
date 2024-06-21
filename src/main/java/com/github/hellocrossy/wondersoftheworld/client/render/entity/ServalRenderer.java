@@ -10,7 +10,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class ServalRenderer extends ZawaMobRenderer<ServalEntity, ServalModel> {
     public ServalRenderer(EntityRendererManager manager) {
-        super(manager, new ServalModel.Adult(), new ServalModel.Child(), 0.5F);
+        super(manager, new ServalModel.Adult(), new ServalModel.Child(), 0.6F);
     }
 
     @Override

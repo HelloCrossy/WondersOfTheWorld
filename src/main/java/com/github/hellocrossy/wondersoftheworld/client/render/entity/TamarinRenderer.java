@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class TamarinRenderer extends ZawaMobRenderer<TamarinEntity, TamarinModel> {
     public TamarinRenderer(EntityRendererManager manager) {
-        super(manager, new TamarinModel.Adult(), new TamarinModel.Child(), 0.7F);
+        super(manager, new TamarinModel.Adult(), new TamarinModel.Child(), 0.25F);
 
     }
 

@@ -8,14 +8,14 @@
   ],
   "key": {
     "P": [
-      { "item": "minecraft:stone" }
+      { "item": "minecraft:cobblestone" }
     ],
     "G": [
       { "item": "minecraft:gravel" }
     ]
   },
   "result": {
-    "item": "wondersoftheworld:cracked_stone",
+    "item": "wondersoftheworld:light_cracked_stone",
     "count": 8
   }
 }

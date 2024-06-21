@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "group": "wondersoftheworldgroup",
   "pattern": [
-    "PGP",
     "GPG",
-    "PGP"
+    "PGP",
+    "GPG"
   ],
   "key": {
     "P": [
-      { "item": "minecraft:stone" }
+      { "item": "minecraft:dirt" }
     ],
     "G": [
-      { "item": "minecraft:gravel" }
+      { "item": "minecraft:sand" }
     ]
   },
   "result": {
-    "item": "wondersoftheworld:cracked_stone",
+    "item": "wondersoftheworld:fine_sand",
     "count": 8
   }
 }

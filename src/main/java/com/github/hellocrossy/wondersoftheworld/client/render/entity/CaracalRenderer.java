@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class CaracalRenderer extends ZawaMobRenderer<CaracalEntity, CaracalModel> {
     public CaracalRenderer(EntityRendererManager manager) {
-        super(manager, new CaracalModel.Adult(), new CaracalModel.Child(), 0.35F);
+        super(manager, new CaracalModel.Adult(), new CaracalModel.Child(), 0.475F);
     }
 
     @Override
