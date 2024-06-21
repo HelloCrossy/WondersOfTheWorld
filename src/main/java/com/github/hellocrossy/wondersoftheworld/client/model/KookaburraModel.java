@@ -180,7 +180,7 @@ public abstract class KookaburraModel extends ZawaBaseModel<KookaburraEntity> {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck1.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
-            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) +0.584F;
+            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.584F;
             this.Head.zRot = headPitch / (180F / (float) Math.PI) * 0.05F;
         }
 
@@ -189,7 +189,7 @@ public abstract class KookaburraModel extends ZawaBaseModel<KookaburraEntity> {
             float speed = 1.0f;
             float degree = 1.0f;
             this.Neck1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.859F;
-            this.Neck2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.15F) * 0.5F -0.739F;
+            this.Neck2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.15F) * 0.5F - 0.739F;
             this.Head.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.15F) * 0.5F + 0.584F;
 
             this.TailBase.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.15F) * 0.5F + 0.182F;
@@ -200,7 +200,7 @@ public abstract class KookaburraModel extends ZawaBaseModel<KookaburraEntity> {
             float speed = 1.0f;
             float degree = 1.0f;
             this.Neck1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 1F) * 0.5F + 0.859F;
-            this.Neck2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -1F) * 0.5F -0.739F;
+            this.Neck2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -1F) * 0.5F - 0.739F;
             this.Head.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.584F;
             this.Body.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.5F) * 0.5F + 0.885F;
             this.Body.y = MathHelper.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 3F) * 0.5F + 20.3F;
@@ -558,7 +558,6 @@ public abstract class KookaburraModel extends ZawaBaseModel<KookaburraEntity> {
         public Child() {
             texWidth = 64;
             texHeight = 32;
-
             this.LeftFootLeftToe = new ModelRenderer(this, 26, 20);
             this.LeftFootLeftToe.setPos(0.0F, 0.2F, -0.01F);
             this.LeftFootLeftToe.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
@@ -687,5 +686,8 @@ public abstract class KookaburraModel extends ZawaBaseModel<KookaburraEntity> {
         }
     }
 }
+
+
+
 
 

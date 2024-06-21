@@ -311,7 +311,7 @@ public abstract class CaimanModel extends ZawaBaseModel<CaimanEntity> {
             this.loadBase();
             float speed = 1.0F;
             float degree = 1.0F;
-            this.Neck.xRot = MathHelper.cos((limbSwing * speed * 0.1F) + (float) Math.PI) * (degree * 0.08F) * limbSwingAmount * 0.5F + 0.07F;
+            this.Neck.xRot = MathHelper.cos((limbSwing * speed * 0.1F) + (float) Math.PI) * (degree * 0.08F) * limbSwingAmount * 0.5F;
             this.Tail1.yRot = MathHelper.cos((limbSwing * speed * 0.1F) + (float) Math.PI) * (degree * 0.1F) * limbSwingAmount * 0.5F;
             this.Tail3.yRot = MathHelper.cos((limbSwing * speed * 0.1F) + (float) Math.PI) * (degree * 0.1F) * limbSwingAmount * 0.5F;
         }
