@@ -14,9 +14,6 @@ public class WOTWSounds {
     public static RegistryObject<SoundEvent> KIWI_HURT = registerSound("kiwi_hurt");
     public static RegistryObject<SoundEvent> FENNEC_FOX_AMBIENT = registerSound("fennec_fox_ambient");
     public static RegistryObject<SoundEvent> FENNEC_FOX_HURT = registerSound("fennec_fox_hurt");
-    public static RegistryObject<SoundEvent> SERVAL_AMBIENT = registerSound("serval_ambient");
-    public static RegistryObject<SoundEvent> SERVAL_ATTACK = registerSound("serval_attack");
-    public static RegistryObject<SoundEvent> SERVAL_HURT = registerSound("serval_hurt");
     public static RegistryObject<SoundEvent> MARGAY_AMBIENT = registerSound("margay_ambient");
     public static RegistryObject<SoundEvent> MARGAY_HURT = registerSound("margay_hurt");
     public static RegistryObject<SoundEvent> MOUSE_DEER_AMBIENT = registerSound("mouse_deer_ambient");

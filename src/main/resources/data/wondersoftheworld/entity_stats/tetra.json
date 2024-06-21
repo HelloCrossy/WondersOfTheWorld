@@ -1,0 +1,10 @@
+{
+  "temperament": "timid",
+  "size": "ambient",
+  "breeding_item": "zawa:mealworms",
+  "speed": "medium",
+  "variant_count": 8,
+  "captive_variants": [
+    "albino"
+  ]
+}

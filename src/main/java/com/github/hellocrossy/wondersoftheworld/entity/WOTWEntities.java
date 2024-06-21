@@ -206,6 +206,14 @@ public class WOTWEntities {
                     .spawns(10, 2, 5, ZawaSpawnCategory.DEEP_RAINFOREST, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(1.0F, 1.6F).clientTrackingRange(10))
                     .build("squirrel_monkey");
+
+    public static final RegistryObject<EntityType<TetraEntity>> TETRA =
+            REGISTRY.builder(TetraEntity::new, EntityClassification.WATER_AMBIENT)
+                    .attributes(TetraEntity::registerAttributes)
+                    .renderer (() -> TetraRenderer::new)
+                    .spawns(10, 2, 3, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.DEEP_RAINFOREST)
+                    .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
+                    .build("tetra");
     
 
 

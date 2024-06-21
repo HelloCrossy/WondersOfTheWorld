@@ -1,3 +1,7 @@
 {
-  "parent": "wondersoftheworld:block/defined_breeze_block"
+  "variants": {
+    "": {
+      "model": "wondersoftheworld:block/defined_breeze_block"
+    }
+  }
 }

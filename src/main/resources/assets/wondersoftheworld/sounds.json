@@ -35,33 +35,6 @@
       }
     ]
   },
-  "serval_attack": {
-    "subtitle": "subtitle.wondersoftheworld.serval_attack",
-    "sounds": [
-      {
-        "name": "wondersoftheworld:serval_attack",
-        "volume": 1.0
-      }
-    ]
-  },
-  "serval_hurt": {
-    "subtitle": "subtitle.wondersoftheworld.serval_hurt",
-    "sounds": [
-      {
-        "name": "wondersoftheworld:serval_hurt",
-        "volume": 1.0
-      }
-    ]
-  },
-  "serval_ambient": {
-    "subtitle": "subtitle.wondersoftheworld.serval_ambient",
-    "sounds": [
-      {
-        "name": "wondersoftheworld:serval_ambient",
-        "volume": 0.7
-      }
-    ]
-  },
   "margay_ambient": {
     "subtitle": "subtitle.wondersoftheworld.margay_ambient",
     "sounds": [

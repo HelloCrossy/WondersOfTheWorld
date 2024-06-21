@@ -16,7 +16,7 @@
     "hidden": true
   },
   "criteria": {
-    "killed_by_orca": {
+    "killed_by_caiman": {
       "trigger": "minecraft:entity_killed_player",
       "conditions": {
         "entity": {

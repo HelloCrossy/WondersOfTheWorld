@@ -44,20 +44,6 @@ public class ServalEntity extends ZawaLandEntity {
     public float getMaleRatio() {
         return 0.33F;
     }
-    @Override
-    protected SoundEvent getAmbientSound() {
-        return WOTWSounds.SERVAL_AMBIENT.get();
-    }
-    @Override
-    protected SoundEvent getHurtSound(DamageSource source) {
-        return WOTWSounds.SERVAL_HURT.get();
-    }
-    @Override
-    public boolean doHurtTarget(Entity entity) {
-        boolean didHurtTarget = super.doHurtTarget(entity);
-        if (didHurtTarget) playSound(WOTWSounds.SERVAL_ATTACK.get(), 1.0F, 1.0F);
-        return didHurtTarget;
-        }
     }
 
 
