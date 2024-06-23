@@ -248,7 +248,7 @@ public abstract class PallasCatModel extends ZawaBaseModel<PallasCatEntity> {
 
             if (entity.isSprinting()) {
                 float speed = 1.0f;
-                float degree = 1.0f;
+                float degree = 0.6f;
                 this.Chest.xRot = MathHelper.cos(6.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.8F) * 0.5F - 0.096F;
                 this.Chest.y = MathHelper.cos(1.5F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 5F) * 0.5F + 17.9F;
                 this.Body.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.097F;

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wondersoftheworldgroup",
+  "pattern": [
+    "PGP",
+    "GPG",
+    "PGP"
+  ],
+  "key": {
+    "P": [
+      { "item": "wondersoftheworld:breeze_block" }
+    ],
+    "G": [
+      { "item": "minecraft:black_dye" }
+    ]
+  },
+  "result": {
+    "item": "wondersoftheworld:defined_breeze_block",
+    "count": 16
+  }
+}
