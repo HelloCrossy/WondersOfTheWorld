@@ -128,19 +128,12 @@ public class WOTWEntities {
                     .spawns(2, 1, 1, ZawaSpawnCategory.DEEP_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.6F, 0.6F).clientTrackingRange(10))
                     .build("margay");
-    public static final RegistryObject<EntityType<KookaburraEntity>> KOOKABURRA =
-            REGISTRY.builder(KookaburraEntity::new, EntityClassification.CREATURE)
-                    .attributes(KookaburraEntity::registerAttributes)
-                    .renderer(() -> KookaburraRenderer::new)
-                    .spawns(10, 1, 3, ZawaSpawnCategory.WET_SAVANNA, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.4F, 0.5F).clientTrackingRange(10))
-                    .build("kookaburra");
     public static final RegistryObject<EntityType<CaimanEntity>> CAIMAN =
             REGISTRY.builder(CaimanEntity::new, EntityClassification.CREATURE)
                     .attributes(CaimanEntity::registerAttributes)
                     .renderer(() -> CaimanRenderer::new)
                     .spawns(10, 1, 2, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.2F, 0.6F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.4F, 0.4F).clientTrackingRange(10))
                     .build("caiman");
 
     public static final RegistryObject<EntityType<HamsterEntity>> HAMSTER =
@@ -156,7 +149,7 @@ public class WOTWEntities {
                     .attributes(GuanacoEntity::registerAttributes)
                     .renderer(() -> GuanacoRenderer::new)
                     .spawns(8, 2, 4, ZawaSpawnCategory.COLD_GRASSLAND, ZawaSpawnCategory.DRY_ALPINE)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.6F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.5F, 1.8F).clientTrackingRange(10))
                     .build("guanaco");
 
     public static final RegistryObject<EntityType<CaracalEntity>> CARACAL =
@@ -164,7 +157,7 @@ public class WOTWEntities {
                     .attributes(CaracalEntity::registerAttributes)
                     .renderer(() -> CaracalRenderer::new)
                     .spawns(10, 1, 1, ZawaSpawnCategory.DRY_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.6F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.85F, 1.0F).clientTrackingRange(10))
                     .build("caracal");
 
     public static final RegistryObject<EntityType<SlothBearEntity>> SLOTH_BEAR =
@@ -172,7 +165,7 @@ public class WOTWEntities {
                     .attributes(SlothBearEntity::registerAttributes)
                     .renderer(() -> SlothBearRenderer::new)
                     .spawns(2, 1, 1, ZawaSpawnCategory.DRY_FOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.6F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.3F, 1.2F).clientTrackingRange(10))
                     .build("sloth_bear");
 
     public static final RegistryObject<EntityType<PallasCatEntity>> PALLAS_CAT =
@@ -180,7 +173,7 @@ public class WOTWEntities {
                     .attributes(PallasCatEntity::registerAttributes)
                     .renderer(() -> PallasCatRenderer::new)
                     .spawns(2, 1, 1, ZawaSpawnCategory.TUNDRA_ALPINE)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.6F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.7F, 0.5F).clientTrackingRange(10))
                     .build("pallas_cat");
 
     public static final RegistryObject<EntityType<ManakinEntity>> MANAKIN =
@@ -188,7 +181,7 @@ public class WOTWEntities {
                     .attributes(ManakinEntity::registerAttributes)
                     .renderer(() -> ManakinRenderer::new)
                     .spawns(10, 2, 5, ZawaSpawnCategory.DEEP_RAINFOREST, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.6F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.4F, 0.4F).clientTrackingRange(10))
                     .build("manakin");
 
     public static final RegistryObject<EntityType<TamarinEntity>> TAMARIN =
@@ -196,7 +189,7 @@ public class WOTWEntities {
                     .attributes(TamarinEntity::registerAttributes)
                     .renderer(() -> TamarinRenderer::new)
                     .spawns(10, 2, 5, ZawaSpawnCategory.DEEP_RAINFOREST, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.6F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.3F, 0.4F).clientTrackingRange(10))
                     .build("tamarin");
 
     public static final RegistryObject<EntityType<SquirrelMonkeyEntity>> SQUIRREL_MONKEY =
@@ -204,7 +197,7 @@ public class WOTWEntities {
                     .attributes(SquirrelMonkeyEntity::registerAttributes)
                     .renderer(() -> SquirrelMonkeyRenderer::new)
                     .spawns(10, 2, 5, ZawaSpawnCategory.DEEP_RAINFOREST, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.6F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.75F, 0.7F).clientTrackingRange(10))
                     .build("squirrel_monkey");
 
     public static final RegistryObject<EntityType<TetraEntity>> TETRA =
@@ -234,7 +227,6 @@ public class WOTWEntities {
         EntitySpawnPlacementRegistry.register(DISCUS_FISH.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
         EntitySpawnPlacementRegistry.register(OSCAR.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
 
-        EntitySpawnPlacementRegistry.register(KOOKABURRA.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(CAIMAN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaSemiAquaticEntity::checkSemiAquaticSpawnRules);
         EntitySpawnPlacementRegistry.register(HAMSTER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(GUANACO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
@@ -244,6 +236,7 @@ public class WOTWEntities {
         EntitySpawnPlacementRegistry.register(MANAKIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(TAMARIN.get(), EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(SQUIRREL_MONKEY.get(), EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
+        EntitySpawnPlacementRegistry.register(TETRA.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
     }
 }
 

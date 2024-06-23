@@ -5,10 +5,10 @@
       "item": "wondersoftheworld:caiman_spawn_egg"
     },
     "title": {
-      "translate": "advancements.wondersoftheworld.my_leg.title"
+      "translate": "advancements.zawa.my_leg.title"
     },
     "description": {
-      "translate": "advancements.wondersoftheworld.my_leg.description"
+      "translate": "advancements.zawa.my_leg.description"
     },
     "frame": "task",
     "show_toast": true,

@@ -9,7 +9,7 @@
     "max": 2
   },
   "diet": "zawa:insectivore",
-  "speed": "slow",
+  "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
       "zawa:puzzle_feeder",

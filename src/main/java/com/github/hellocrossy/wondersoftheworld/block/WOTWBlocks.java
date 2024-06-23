@@ -29,7 +29,7 @@ public class WOTWBlocks {
     public static final DeferredRegister<Block> REGISTRAR = DeferredRegister.create(ForgeRegistries.BLOCKS, WondersOfTheWorld.MOD_ID);
 
     public static final RegistryObject<Block> CRACKED_STONE = registerWithItem("cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> MOSSY_CRACKED_STONE = registerWithItem("mossy_cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> JUNGLE_CRACKED_STONE = registerWithItem("jungle_cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> LIGHT_CRACKED_STONE = registerWithItem("light_cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> DESERT_CRACKED_STONE = registerWithItem("desert_cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> MESA_CRACKED_STONE = registerWithItem("mesa_cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
@@ -40,7 +40,6 @@ public class WOTWBlocks {
     public static final RegistryObject<Block> FINE_SAND = registerWithItem("fine_sand", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND)));
     public static final RegistryObject<Block> DRY_COBBLESTONE = registerWithItem("dry_cobblestone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> RED_BRICK = registerWithItem("red_brick", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> WATER_FOUNTAIN = registerWithItem("water_fountain", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
     public static final Map<String, RegistryObject<Block>> PLUSHIES = Util.make(new HashMap<>(), map -> {
         for (String plush : PLUSHIES_LIST)
             map.put(plush, REGISTRAR.register(plush + "_plush", () -> new PlushBlock(AbstractBlock.Properties.of(Material.WOOL).sound(SoundType.WOOL).noOcclusion())));

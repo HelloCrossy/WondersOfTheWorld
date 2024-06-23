@@ -1,0 +1,28 @@
+{
+  "parent": "wondersoftheworld",
+  "display": {
+    "icon": {
+      "item": "wondersoftheworld:kiwi_egg"
+    },
+    "title": {
+      "translate": "wondersoftheworld.unripe.title"
+    },
+    "description": {
+      "translate": "wondersoftheworld.unripe.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kiwi": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "wondersoftheworld:kiwi"
+        }
+      }
+    }
+  }
+}

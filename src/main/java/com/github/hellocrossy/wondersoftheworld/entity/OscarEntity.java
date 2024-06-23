@@ -2,9 +2,7 @@ package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.AgeableEntity;
-import net.minecraft.entity.CreatureAttribute;
-import net.minecraft.entity.EntityType;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.PanicGoal;
@@ -22,6 +20,8 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import org.zawamod.zawa.world.entity.ai.goal.FollowGroupGoal;
+import org.zawamod.zawa.world.entity.ai.goal.GroupPanicGoal;
 import org.zawamod.zawa.world.entity.ambient.ZawaAmbientFishEntity;
 
 import javax.annotation.Nullable;
@@ -44,6 +44,9 @@ public class OscarEntity extends ZawaAmbientFishEntity {
         return SoundEvents.COD_FLOP;
     }
 
+    protected float getStandingEyeHeight(Pose pose, EntitySize size) {
+        return size.height * 0.85F;
+    }
 
     @Nullable
     @Override
@@ -51,8 +54,8 @@ public class OscarEntity extends ZawaAmbientFishEntity {
         return WOTWEntities.OSCAR.get().create(world);
     }
     @Override
-    protected void registerGoals () {
-       super.registerGoals();
-        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33D));
-    }
+        protected void registerGoals() {
+            super.registerGoals();
+            this.goalSelector.addGoal(1, new GroupPanicGoal(this, 1.33));
+            this.goalSelector.addGoal(6, new FollowGroupGoal(this));  }
 }
