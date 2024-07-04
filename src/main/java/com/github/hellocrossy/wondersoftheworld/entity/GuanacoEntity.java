@@ -44,10 +44,10 @@ public class GuanacoEntity extends ZawaLandEntity {
 
     @Override
     protected void registerGoals() {
-            super.registerGoals();
-            this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0, 1.33, true));
-            this.targetSelector.addGoal(2, new HurtByTargetGoal(this, new Class[0]));
-            this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0));
+          super.registerGoals();
+         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0, 1.33, true));
+         this.targetSelector.addGoal(2, new HurtByTargetGoal(this, new Class[0]));
+         this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0));
         }
 
     @Override

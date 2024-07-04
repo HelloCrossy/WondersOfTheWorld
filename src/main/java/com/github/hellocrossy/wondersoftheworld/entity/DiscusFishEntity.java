@@ -51,6 +51,6 @@ public class DiscusFishEntity extends ZawaAmbientFishEntity {
         protected void registerGoals() {
             super.registerGoals();
             this.goalSelector.addGoal(1, new GroupPanicGoal(this, 1.33));
-            this.goalSelector.addGoal(6, new FollowGroupGoal(this));      }
+    }
     }
 

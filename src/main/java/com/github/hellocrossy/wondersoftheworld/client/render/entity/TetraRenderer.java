@@ -16,7 +16,7 @@ public class TetraRenderer extends ZawaMobRenderer<TetraEntity, TetraModel> {
 
     @Override
     protected void scale(TetraEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        matrixStack.scale(0.6F, 0.6F, 0.6F);
+        matrixStack.scale(0.3F, 0.3F, 0.3F);
         super.scale(entity, matrixStack, partialTickTime);
     }
 

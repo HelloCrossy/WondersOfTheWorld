@@ -268,7 +268,7 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
             if (entity.isSprinting()) {
                 float speed = 1.0f;
-                float degree = 1.0f;
+                float degree = 0.5f;
 
 
             } else {

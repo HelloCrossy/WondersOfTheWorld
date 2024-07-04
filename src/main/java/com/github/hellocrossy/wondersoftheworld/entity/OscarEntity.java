@@ -34,6 +34,7 @@ public class OscarEntity extends ZawaAmbientFishEntity {
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
         return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.255F).add(Attributes.MAX_HEALTH, 3.0);
     }
+
     @Override
     protected ItemStack getBucketItemStack() {
         return new ItemStack(WOTWItems.OSCAR_BUCKET.get());
@@ -53,9 +54,10 @@ public class OscarEntity extends ZawaAmbientFishEntity {
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.OSCAR.get().create(world);
     }
+
     @Override
-        protected void registerGoals() {
-            super.registerGoals();
-            this.goalSelector.addGoal(1, new GroupPanicGoal(this, 1.33));
-            this.goalSelector.addGoal(6, new FollowGroupGoal(this));  }
+    protected void registerGoals() {
+        super.registerGoals();
+        this.goalSelector.addGoal(1, new GroupPanicGoal(this, 1.33));
+    }
 }

@@ -29,7 +29,7 @@ public class WOTWBlocks {
     public static final DeferredRegister<Block> REGISTRAR = DeferredRegister.create(ForgeRegistries.BLOCKS, WondersOfTheWorld.MOD_ID);
 
     public static final RegistryObject<Block> CRACKED_STONE = registerWithItem("cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> JUNGLE_CRACKED_STONE = registerWithItem("jungle_cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> MOSSY_CRACKED_STONE = registerWithItem("mossy_cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> LIGHT_CRACKED_STONE = registerWithItem("light_cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> DESERT_CRACKED_STONE = registerWithItem("desert_cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> MESA_CRACKED_STONE = registerWithItem("mesa_cracked_stone", () -> new RotationalBlock(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE)));

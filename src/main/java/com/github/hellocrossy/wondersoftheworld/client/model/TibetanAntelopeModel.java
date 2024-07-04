@@ -277,7 +277,7 @@ public abstract class TibetanAntelopeModel extends ZawaBaseModel<TibetanAntelope
 
             if (entity.isSprinting()) {
                 float speed = 1.0f;
-                float degree = 1.0f;
+                float degree = 0.5f;
 
 
             } else {

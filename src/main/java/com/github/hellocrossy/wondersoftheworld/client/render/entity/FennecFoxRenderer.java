@@ -12,7 +12,7 @@ public class FennecFoxRenderer extends ZawaMobRenderer<FennecFoxEntity, FennecFo
 
     @Override
     protected void scale(FennecFoxEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.6F : 0.85F;
+        float scale = entity.isBaby() ? 0.4F : 0.85F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
 

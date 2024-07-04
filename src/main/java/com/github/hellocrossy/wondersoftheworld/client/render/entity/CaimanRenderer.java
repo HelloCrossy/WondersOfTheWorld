@@ -15,7 +15,7 @@ public class CaimanRenderer extends ZawaMobRenderer<CaimanEntity, CaimanModel> {
 
     @Override
     protected void scale(CaimanEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.9F : 1.1F;
+        float scale = entity.isBaby() ? 0.5F : 1.1F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

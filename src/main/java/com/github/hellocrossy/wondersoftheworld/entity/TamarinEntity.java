@@ -36,9 +36,9 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
     }
     @Override
     protected void registerGoals() {
-        super.registerGoals();
-        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
-        this.goalSelector.addGoal(7, new SittingEntity.SitGoal(this));
+         super.registerGoals();
+         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
+         this.goalSelector.addGoal(7, new SittingEntity.SitGoal(this));
     }
     @Override
     protected void customServerAiStep() {

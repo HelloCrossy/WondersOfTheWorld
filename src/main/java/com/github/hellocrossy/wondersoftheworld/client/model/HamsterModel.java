@@ -246,7 +246,7 @@ public abstract class HamsterModel extends ZawaBaseModel<HamsterEntity> {
 
 
         public Child() {
-            texWidth = 64;
+            texWidth = 32;
             texHeight = 32;
             this.RightCheek = new ModelRenderer(this, 10, 27);
             this.RightCheek.mirror = true;

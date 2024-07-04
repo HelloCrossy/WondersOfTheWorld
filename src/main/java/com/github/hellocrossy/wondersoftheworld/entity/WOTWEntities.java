@@ -207,6 +207,14 @@ public class WOTWEntities {
                     .spawns(10, 2, 3, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.DEEP_RAINFOREST)
                     .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
                     .build("tetra");
+
+    public static final RegistryObject<EntityType<FlowerhornCichlidEntity>> FLOWERHORN_CICHILID =
+            REGISTRY.builder(FlowerhornCichlidEntity::new, EntityClassification.WATER_AMBIENT)
+                    .attributes(FlowerhornCichlidEntity::registerAttributes)
+                    .renderer (() -> FlowerhornCichlidRenderer::new)
+                    .spawns(10, 2, 3, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.DEEP_RAINFOREST)
+                    .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
+                    .build("flowerhorn_cichlid");
     
 
 
@@ -237,6 +245,7 @@ public class WOTWEntities {
         EntitySpawnPlacementRegistry.register(TAMARIN.get(), EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(SQUIRREL_MONKEY.get(), EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(TETRA.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
+        EntitySpawnPlacementRegistry.register(FLOWERHORN_CICHILID.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
     }
 }
 
