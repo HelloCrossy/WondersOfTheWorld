@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
+import com.github.hellocrossy.wondersoftheworld.client.model.HoopoeModel;
 import com.github.hellocrossy.wondersoftheworld.client.model.ManakinModel;
 import com.github.hellocrossy.wondersoftheworld.entity.BongoEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.ManakinEntity;
@@ -9,7 +10,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class ManakinRenderer extends ZawaMobRenderer<ManakinEntity, ManakinModel> {
     public ManakinRenderer(EntityRendererManager manager) {
-        super(manager, new ManakinModel.Adult(), new ManakinModel.Child(), 0.2F);
+        super(manager, new ManakinModel.Adult(), new ManakinModel.Flying(), new ManakinModel.Child(), 0.2F);
     }
 
     @Override

@@ -55,7 +55,7 @@ public abstract class ManakinModel extends ZawaBaseModel<ManakinEntity> {
             this.RightFootRightToe.setPos(0.0F, 0.2F, -0.01F);
             this.RightFootRightToe.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(RightFootRightToe, 0.004537855888737689F, 0.0F, -0.591841146688116F);
-            this.Crest = new ModelRenderer(this, 11, 12);
+            this.Crest = new ModelRenderer(this, 12, 12);
             this.Crest.setPos(0.0F, -0.8F, 1.9F);
             this.Crest.addBox(-1.0F, -3.0F, -1.0F, 2.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
             this.Neck1 = new ModelRenderer(this, 0, 18);
@@ -284,7 +284,7 @@ public abstract class ManakinModel extends ZawaBaseModel<ManakinEntity> {
             this.RightWing1.setPos(-1.1F, 0.1F, 1.39F);
             this.RightWing1.addBox(0.0F, -2.0F, -0.1F, 3.0F, 4.0F, 1.0F, 0.0F, 0.0F, 0.02F);
             this.setRotateAngle(RightWing1, 0.0F, 3.141592653589793F, -0.05934119623228288F);
-            this.Crest = new ModelRenderer(this, 11, 12);
+            this.Crest = new ModelRenderer(this, 12, 12);
             this.Crest.setPos(0.0F, -0.8F, 1.9F);
             this.Crest.addBox(-1.0F, -3.0F, -1.0F, 2.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
             this.LeftWingFeather2 = new ModelRenderer(this, 26, 12);
