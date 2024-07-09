@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wondersoftheworldgroup",
+  "pattern": [
+    "",
+    "GGG",
+    "GGG"
+  ],
+  "key": {
+    "G": [
+      { "item": "wondersoftheworld:breeze_block" }
+    ]
+  },
+  "result": {
+    "item": "wondersoftheworld:breeze_block_wall",
+    "count": 6
+  }
+}

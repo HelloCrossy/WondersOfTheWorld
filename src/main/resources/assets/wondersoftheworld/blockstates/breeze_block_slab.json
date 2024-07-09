@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wondersoftheworld:block/breeze_block_slab"
+    },
+    "type=double": {
+      "model": "wondersoftheworld:block/breeze_block"
+    },
+    "type=top": {
+      "model": "wondersoftheworld:block/breeze_block_slab_top"
+    }
+  }
+}

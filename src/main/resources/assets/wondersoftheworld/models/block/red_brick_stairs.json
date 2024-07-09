@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "wondersoftheworld:block/red_brick",
+    "top": "wondersoftheworld:block/red_brick",
+    "side": "wondersoftheworld:block/red_brick"
+  }
+}

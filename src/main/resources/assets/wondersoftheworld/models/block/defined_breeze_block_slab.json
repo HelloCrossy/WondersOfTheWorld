@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "wondersoftheworld:block/defined_breeze_block",
+    "top": "wondersoftheworld:block/defined_breeze_block",
+    "side": "wondersoftheworld:block/defined_breeze_block"
+  }
+}
