@@ -154,7 +154,7 @@ public abstract class ManakinModel extends ZawaBaseModel<ManakinEntity> {
 
         @Override
         public void setupAnim(ManakinEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+            super.setupAnim(entity, entity.tickCount, 0.3F, ageInTicks, netHeadYaw, headPitch);
             this.Neck1.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.455F;
@@ -396,7 +396,7 @@ public abstract class ManakinModel extends ZawaBaseModel<ManakinEntity> {
 
         @Override
         public void setupAnim(ManakinEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            super.setupAnim(entity, entity.tickCount, 0.3F, ageInTicks, netHeadYaw, headPitch);
+            super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck1.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.455F;

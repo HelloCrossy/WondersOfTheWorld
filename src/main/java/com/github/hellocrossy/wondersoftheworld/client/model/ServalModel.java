@@ -240,7 +240,7 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             this.loadBase();
-            float speed = 1.6F;
+            float speed = 1.0F;
             float degree = 0.2F;
             if (isSwimming) {
                 limbSwing = (float) entity.tickCount;

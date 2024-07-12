@@ -259,7 +259,7 @@ public abstract class EmuModel extends ZawaBaseModel<EmuEntity> {
 
 
             } else {
-                float speed = 2.75f;
+                float speed = 1.5f;
                 float degree = 1.0f;
                 this.NeckBase.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.703F;
                 this.Head.xRot = MathHelper.cos(2.2F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.5F) * 0.5F + 0.117F;

@@ -195,7 +195,8 @@ public abstract class HamsterModel extends ZawaBaseModel<HamsterEntity> {
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             this.loadBase();
-            float speed = 4.0f, degree = 0.8f;
+            float speed = 2.0f;
+            float degree = 0.6f;
 
             if (isSwimming) {
                 limbSwing = (float) entity.tickCount;
