@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_wall_post",
   "textures": {
-    "wall": "wondersoftheworld:block/defined_breeze_block"
+    "wall": "wondersoftheworld:block/breeze_block"
   }
 }
