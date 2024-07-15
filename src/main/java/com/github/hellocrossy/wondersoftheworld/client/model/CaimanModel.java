@@ -324,8 +324,6 @@ public abstract class CaimanModel extends ZawaBaseModel<CaimanEntity> {
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             this.loadBase();
-            limbSwing *= 2.0F;
-            limbSwingAmount = 0.15F;
             float speed = 1.2F;
             float degree = 1.0F;
             if (this.isSwimming) {

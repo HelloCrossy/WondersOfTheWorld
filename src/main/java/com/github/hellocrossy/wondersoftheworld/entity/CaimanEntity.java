@@ -54,6 +54,13 @@ public class CaimanEntity extends ZawaSemiAquaticEntity implements OviparousEnti
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
+    protected void customServerAiStep() {
+        if (this.getMoveControl().hasWanted()) {
+            this.setSprinting(this.getMoveControl().getSpeedModifier() >= 1.33);
+        }
+
+        super.customServerAiStep();
+    }
     @Override
     public float getMaleRatio() {
         return 0.25F;
