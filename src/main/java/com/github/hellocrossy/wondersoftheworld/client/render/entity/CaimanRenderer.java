@@ -1,8 +1,7 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
+
 import com.github.hellocrossy.wondersoftheworld.client.model.CaimanModel;
-import com.github.hellocrossy.wondersoftheworld.client.model.MargayModel;
 import com.github.hellocrossy.wondersoftheworld.entity.CaimanEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.MargayEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
