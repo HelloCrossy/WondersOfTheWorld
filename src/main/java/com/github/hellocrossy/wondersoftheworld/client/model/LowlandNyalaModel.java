@@ -1,6 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
-import com.github.hellocrossy.wondersoftheworld.entity.BongoEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.KiwiEntity;
+
 import com.github.hellocrossy.wondersoftheworld.entity.LowlandNyalaEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
@@ -324,7 +323,7 @@ public abstract class LowlandNyalaModel extends ZawaBaseModel<LowlandNyalaEntity
                 this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * 0.3F) * 0.5F - 0.698F;
                 this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.610F;
                 this.Tail1.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -1F) * 0.5F - 1.134F;
-                this.Tail2.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * 1F) * 0.5F - 0.191F;
+                this.Tail2.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree) * 0.5F - 0.191F;
                 this.Tail1.zRot = MathHelper.cos(1.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * 0.3F) * 0.5F;
                 this.Tail2.zRot = MathHelper.cos(2.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * 0.6F) * 0.5F;
 

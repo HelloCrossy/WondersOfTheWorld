@@ -8,10 +8,14 @@
   ],
   "key": {
     "P": [
-      { "item": "minecraft:brick" }
+      {
+        "item": "minecraft:brick"
+      }
     ],
     "G": [
-      { "item": "minecraft:gray_dye" }
+      {
+        "item": "minecraft:gray_dye"
+      }
     ]
   },
   "result": {

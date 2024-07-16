@@ -7,13 +7,11 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
-import org.zawamod.zawa.world.entity.ai.goal.FollowGroupGoal;
 import org.zawamod.zawa.world.entity.ai.goal.GroupPanicGoal;
 import org.zawamod.zawa.world.entity.ambient.ZawaAmbientFishEntity;
 
@@ -44,13 +42,15 @@ public class DiscusFishEntity extends ZawaAmbientFishEntity {
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.DISCUS_FISH.get().create(world);
     }
+
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
-        @Override
-        protected void registerGoals() {
-                super.registerGoals();
-            this.goalSelector.addGoal(1, new GroupPanicGoal(this, 1.33));
+
+    @Override
+    protected void registerGoals() {
+        super.registerGoals();
+        this.goalSelector.addGoal(1, new GroupPanicGoal(this, 1.33));
     }
-    }
+}
 

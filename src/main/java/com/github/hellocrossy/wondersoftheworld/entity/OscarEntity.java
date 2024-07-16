@@ -1,26 +1,17 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.*;
+import net.minecraft.entity.AgeableEntity;
+import net.minecraft.entity.EntitySize;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.datasync.DataParameter;
-import net.minecraft.network.datasync.DataSerializers;
-import net.minecraft.network.datasync.EntityDataManager;
-import net.minecraft.pathfinding.ClimberPathNavigator;
-import net.minecraft.pathfinding.PathNavigator;
-import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
-import org.zawamod.zawa.world.entity.ai.goal.FollowGroupGoal;
 import org.zawamod.zawa.world.entity.ai.goal.GroupPanicGoal;
 import org.zawamod.zawa.world.entity.ambient.ZawaAmbientFishEntity;
 
@@ -57,7 +48,7 @@ public class OscarEntity extends ZawaAmbientFishEntity {
 
     @Override
     protected void registerGoals() {
-           super.registerGoals();
+        super.registerGoals();
         this.goalSelector.addGoal(1, new GroupPanicGoal(this, 1.33));
     }
 }

@@ -1,7 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
 import com.github.hellocrossy.wondersoftheworld.entity.DiscusFishEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.OscarEntity;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -32,6 +31,7 @@ public class DiscusFishModel extends SegmentedModel<DiscusFishEntity> {
 
         return this.parts;
     }
+
     public DiscusFishModel() {
         this.texWidth = 32;
         this.texHeight = 32;
@@ -107,6 +107,7 @@ public class DiscusFishModel extends SegmentedModel<DiscusFishEntity> {
         this.Tail.addChild(this.TailFinTop);
 
     }
+
     @Override
     public void setupAnim(DiscusFishEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
     }

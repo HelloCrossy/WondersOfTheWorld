@@ -8,7 +8,9 @@
   ],
   "key": {
     "G": [
-      { "item": "wondersoftheworld:defined_breeze_block" }
+      {
+        "item": "wondersoftheworld:defined_breeze_block"
+      }
     ]
   },
   "result": {

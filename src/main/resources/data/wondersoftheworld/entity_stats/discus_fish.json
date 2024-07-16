@@ -3,7 +3,7 @@
   "size": "ambient",
   "breeding_item": "zawa:leafcutter_ant",
   "speed": "medium",
-  "variant_count": 40 ,
+  "variant_count": 40,
   "captive_variants": [
     "pblood",
     "red",

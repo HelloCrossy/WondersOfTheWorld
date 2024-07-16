@@ -31,6 +31,7 @@ public class TetraModel extends SegmentedModel<TetraEntity> {
 
         return this.parts;
     }
+
     public TetraModel() {
         this.texWidth = 64;
         this.texHeight = 32;
@@ -103,6 +104,7 @@ public class TetraModel extends SegmentedModel<TetraEntity> {
         this.Tail.addChild(this.CaudalFinBottom);
 
     }
+
     @Override
     public void setupAnim(TetraEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
     }

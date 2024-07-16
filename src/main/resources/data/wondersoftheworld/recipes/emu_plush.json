@@ -8,19 +8,29 @@
   ],
   "key": {
     "P": [
-      { "item": "minecraft:light_blue_wool" }
+      {
+        "item": "minecraft:light_blue_wool"
+      }
     ],
     "G": [
-      { "item": "minecraft:gray_wool" }
+      {
+        "item": "minecraft:gray_wool"
+      }
     ],
     "S": [
-      { "item": "minecraft:bamboo" }
+      {
+        "item": "minecraft:bamboo"
+      }
     ],
     "W": [
-      { "item": "minecraft:black_wool" }
+      {
+        "item": "minecraft:black_wool"
+      }
     ],
     "Z": [
-      { "item": "minecraft:brown_wool" }
+      {
+        "item": "minecraft:brown_wool"
+      }
     ]
   },
   "result": {

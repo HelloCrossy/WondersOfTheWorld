@@ -1,4 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
+
 import com.github.hellocrossy.wondersoftheworld.client.model.FennecFoxModel;
 import com.github.hellocrossy.wondersoftheworld.entity.FennecFoxEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;

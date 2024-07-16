@@ -19,7 +19,7 @@ public class WOTWEntities {
     public static final ZawaEntityRegistry REGISTRY = new ZawaEntityRegistry(WondersOfTheWorld.MOD_ID, Zawa.ENTITIES_GROUP);
 
     public static final RegistryObject<EntityType<ServalEntity>> SERVAL =
-            REGISTRY.builder (ServalEntity::new, EntityClassification.CREATURE)
+            REGISTRY.builder(ServalEntity::new, EntityClassification.CREATURE)
                     .attributes(ServalEntity::registerAttributes)
                     .renderer(() -> ServalRenderer::new)
                     .spawns(10, 1, 3, ZawaSpawnCategory.DRY_SAVANNA)
@@ -27,7 +27,7 @@ public class WOTWEntities {
                     .build("serval");
 
     public static final RegistryObject<EntityType<EmuEntity>> EMU =
-            REGISTRY.builder (EmuEntity::new, EntityClassification.CREATURE)
+            REGISTRY.builder(EmuEntity::new, EntityClassification.CREATURE)
                     .attributes(EmuEntity::registerAttributes)
                     .renderer(() -> EmuRenderer::new)
                     .spawns(10, 3, 5, ZawaSpawnCategory.DRY_SAVANNA)
@@ -60,16 +60,16 @@ public class WOTWEntities {
 
     public static final RegistryObject<EntityType<OscarEntity>> OSCAR =
             REGISTRY.builder(OscarEntity::new, EntityClassification.WATER_AMBIENT)
-            .attributes(OscarEntity::registerAttributes)
-            .renderer (() -> OscarRenderer::new)
-            .spawns(10, 1, 2, ZawaSpawnCategory.WET_RAINFOREST)
-            .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
-            .build("oscar");
+                    .attributes(OscarEntity::registerAttributes)
+                    .renderer(() -> OscarRenderer::new)
+                    .spawns(10, 1, 2, ZawaSpawnCategory.WET_RAINFOREST)
+                    .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
+                    .build("oscar");
 
     public static final RegistryObject<EntityType<DiscusFishEntity>> DISCUS_FISH =
             REGISTRY.builder(DiscusFishEntity::new, EntityClassification.WATER_AMBIENT)
                     .attributes(DiscusFishEntity::registerAttributes)
-                    .renderer (() -> DiscusFishRenderer::new)
+                    .renderer(() -> DiscusFishRenderer::new)
                     .spawns(10, 4, 5, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
                     .build("discus_fish");
@@ -203,7 +203,7 @@ public class WOTWEntities {
     public static final RegistryObject<EntityType<TetraEntity>> TETRA =
             REGISTRY.builder(TetraEntity::new, EntityClassification.WATER_AMBIENT)
                     .attributes(TetraEntity::registerAttributes)
-                    .renderer (() -> TetraRenderer::new)
+                    .renderer(() -> TetraRenderer::new)
                     .spawns(10, 2, 3, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.DEEP_RAINFOREST)
                     .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
                     .build("tetra");
@@ -211,12 +211,10 @@ public class WOTWEntities {
     public static final RegistryObject<EntityType<FlowerhornCichlidEntity>> FLOWERHORN_CICHILID =
             REGISTRY.builder(FlowerhornCichlidEntity::new, EntityClassification.WATER_AMBIENT)
                     .attributes(FlowerhornCichlidEntity::registerAttributes)
-                    .renderer (() -> FlowerhornCichlidRenderer::new)
+                    .renderer(() -> FlowerhornCichlidRenderer::new)
                     .spawns(10, 2, 3, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.DEEP_RAINFOREST)
                     .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
                     .build("flowerhorn_cichlid");
-    
-
 
 
     public static void registerSpawnPlacements() {

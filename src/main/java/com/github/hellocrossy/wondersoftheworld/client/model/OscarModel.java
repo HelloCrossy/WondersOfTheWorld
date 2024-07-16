@@ -27,6 +27,7 @@ public class OscarModel extends SegmentedModel<OscarEntity> {
 
         return this.parts;
     }
+
     public OscarModel() {
         this.texWidth = 32;
         this.texHeight = 32;
@@ -88,6 +89,7 @@ public class OscarModel extends SegmentedModel<OscarEntity> {
         this.Tail.addChild(this.TailFinTop);
         this.Head.addChild(this.Face);
     }
+
     @Override
     public void setupAnim(OscarEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
     }

@@ -42,12 +42,14 @@ public class FlowerhornCichlidEntity extends ZawaAmbientFishEntity {
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.FLOWERHORN_CICHILID.get().create(world);
     }
+
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
+
     @Override
     protected void registerGoals() {
-          super.registerGoals();
+        super.registerGoals();
         this.goalSelector.addGoal(1, new GroupPanicGoal(this, 1.33));
     }
 }

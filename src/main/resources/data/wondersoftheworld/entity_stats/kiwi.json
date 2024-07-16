@@ -14,10 +14,10 @@
     "zawa:blocks": [
       "zawa:puzzle_feeder",
       "zawa:sprinkler"
-      ]
+    ]
   },
-    "variant_count": 6,
+  "variant_count": 6,
   "captive_variants": [
     "albino"
   ]
-  }
+}

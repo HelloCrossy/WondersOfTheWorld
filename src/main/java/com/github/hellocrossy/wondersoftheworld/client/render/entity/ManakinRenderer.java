@@ -1,8 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
-import com.github.hellocrossy.wondersoftheworld.client.model.HoopoeModel;
 import com.github.hellocrossy.wondersoftheworld.client.model.ManakinModel;
-import com.github.hellocrossy.wondersoftheworld.entity.BongoEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.ManakinEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
@@ -29,4 +27,4 @@ public class ManakinRenderer extends ZawaMobRenderer<ManakinEntity, ManakinModel
     protected boolean hasBabyVariants(ManakinEntity entity) {
         return false;
     }
-    }
+}

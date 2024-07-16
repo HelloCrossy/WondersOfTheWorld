@@ -300,8 +300,8 @@ public abstract class CaimanModel extends ZawaBaseModel<CaimanEntity> {
         @Override
         public void setupAnim(CaimanEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-            this.Neck.yRot = (float) Math.toRadians((double) netHeadYaw) * 0.5F;
-            this.Head.yRot = (float) Math.toRadians((double) netHeadYaw) * 0.5F;
+            this.Neck.yRot = (float) Math.toRadians(netHeadYaw) * 0.5F;
+            this.Head.yRot = (float) Math.toRadians(netHeadYaw) * 0.5F;
 
         }
 
@@ -677,8 +677,8 @@ public abstract class CaimanModel extends ZawaBaseModel<CaimanEntity> {
         @Override
         public void setupAnim(CaimanEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-            this.Neck.yRot = (float) Math.toRadians((double) netHeadYaw) * 0.5F;
-            this.Head.yRot = (float) Math.toRadians((double) netHeadYaw) * 0.5F;
+            this.Neck.yRot = (float) Math.toRadians(netHeadYaw) * 0.5F;
+            this.Head.yRot = (float) Math.toRadians(netHeadYaw) * 0.5F;
 
         }
 

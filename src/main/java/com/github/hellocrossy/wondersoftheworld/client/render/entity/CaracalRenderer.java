@@ -1,7 +1,7 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
-import com.github.hellocrossy.wondersoftheworld.entity.CaracalEntity;
 import com.github.hellocrossy.wondersoftheworld.client.model.CaracalModel;
+import com.github.hellocrossy.wondersoftheworld.entity.CaracalEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;

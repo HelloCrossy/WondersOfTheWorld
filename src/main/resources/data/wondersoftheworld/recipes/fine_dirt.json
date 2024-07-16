@@ -8,10 +8,14 @@
   ],
   "key": {
     "P": [
-      { "item": "minecraft:dirt" }
+      {
+        "item": "minecraft:dirt"
+      }
     ],
     "G": [
-      { "item": "minecraft:sand" }
+      {
+        "item": "minecraft:sand"
+      }
     ]
   },
   "result": {

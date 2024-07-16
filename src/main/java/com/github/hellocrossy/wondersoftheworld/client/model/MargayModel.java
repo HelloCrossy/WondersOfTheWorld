@@ -54,6 +54,7 @@ public abstract class MargayModel extends ZawaBaseModel<MargayEntity> {
         public ModelRenderer EarRight;
         public ModelRenderer TopSnout;
         public ModelRenderer Mouth;
+
         public Adult() {
             this.texWidth = 128;
             this.texHeight = 64;
@@ -350,6 +351,7 @@ public abstract class MargayModel extends ZawaBaseModel<MargayEntity> {
         public ModelRenderer EarLeft;
         public ModelRenderer TopSnout;
         public ModelRenderer Mouth;
+
         public Child() {
             this.texWidth = 48;
             this.texHeight = 32;
@@ -529,7 +531,8 @@ public abstract class MargayModel extends ZawaBaseModel<MargayEntity> {
             this.Head.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.2F) * 0.5F + 0.841F;
             this.Tail1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.34F) * 0.5F + 0.462F;
             this.Tail1.zRot = MathHelper.cos(3.0F + limbSwing * speed * 0.05F) * limbSwingAmount * (degree * 0.6F) * 0.5F;
-            this.Tail2.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.5F) * 0.5F + 0.392F;        }
+            this.Tail2.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.5F) * 0.5F + 0.392F;
+        }
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {

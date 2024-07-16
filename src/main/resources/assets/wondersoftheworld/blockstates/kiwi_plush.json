@@ -4,13 +4,16 @@
       "model": "wondersoftheworld:block/kiwi_plush"
     },
     "facing=east": {
-      "model": "wondersoftheworld:block/kiwi_plush", "y": 90
+      "model": "wondersoftheworld:block/kiwi_plush",
+      "y": 90
     },
     "facing=south": {
-      "model": "wondersoftheworld:block/kiwi_plush", "y": 180
+      "model": "wondersoftheworld:block/kiwi_plush",
+      "y": 180
     },
     "facing=west": {
-      "model": "wondersoftheworld:block/kiwi_plush", "y": 270
+      "model": "wondersoftheworld:block/kiwi_plush",
+      "y": 270
     }
   }
 }

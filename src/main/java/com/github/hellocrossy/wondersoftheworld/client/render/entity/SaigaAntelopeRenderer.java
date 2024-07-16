@@ -1,4 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
+
 import com.github.hellocrossy.wondersoftheworld.client.model.SaigaAntelopeModel;
 import com.github.hellocrossy.wondersoftheworld.entity.SaigaAntelopeEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
@@ -9,6 +10,7 @@ public class SaigaAntelopeRenderer extends ZawaMobRenderer<SaigaAntelopeEntity, 
     public SaigaAntelopeRenderer(EntityRendererManager manager) {
         super(manager, new SaigaAntelopeModel.Adult(), new SaigaAntelopeModel.Child(), 0.5F);
     }
+
     @Override
     protected void scale(SaigaAntelopeEntity entity, MatrixStack matrixStack, float partialTickTime) {
         float scale = entity.isBaby() ? 0.7F : 0.9F;

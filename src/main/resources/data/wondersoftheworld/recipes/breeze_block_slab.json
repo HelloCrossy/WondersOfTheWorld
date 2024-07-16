@@ -8,7 +8,9 @@
   ],
   "key": {
     "G": [
-      { "item": "wondersoftheworld:breeze_block" }
+      {
+        "item": "wondersoftheworld:breeze_block"
+      }
     ]
   },
   "result": {

@@ -8,13 +8,19 @@
   ],
   "key": {
     "P": [
-      { "item": "minecraft:cobblestone" }
+      {
+        "item": "minecraft:cobblestone"
+      }
     ],
     "G": [
-      { "item": "minecraft:gravel" }
+      {
+        "item": "minecraft:gravel"
+      }
     ],
     "S": [
-      { "item": "minecraft:vine" }
+      {
+        "item": "minecraft:vine"
+      }
     ]
   },
   "result": {

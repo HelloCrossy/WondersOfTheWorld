@@ -1,4 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
+
 import com.github.hellocrossy.wondersoftheworld.client.model.MargayModel;
 import com.github.hellocrossy.wondersoftheworld.entity.MargayEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
@@ -13,7 +14,7 @@ public class MargayRenderer extends ZawaMobRenderer<MargayEntity, MargayModel> {
 
     @Override
     protected void scale(MargayEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.9F : 0.9F;
+        float scale = 0.9F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

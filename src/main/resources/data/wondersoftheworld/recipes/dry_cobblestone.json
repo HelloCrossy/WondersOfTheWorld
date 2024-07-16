@@ -8,10 +8,14 @@
   ],
   "key": {
     "P": [
-      { "item": "minecraft:cobblestone" }
+      {
+        "item": "minecraft:cobblestone"
+      }
     ],
     "G": [
-      { "item": "minecraft:sand" }
+      {
+        "item": "minecraft:sand"
+      }
     ]
   },
   "result": {

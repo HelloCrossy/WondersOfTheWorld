@@ -30,6 +30,7 @@ public class FlowerhornCichlidModel extends SegmentedModel<FlowerhornCichlidEnti
 
         return this.parts;
     }
+
     public FlowerhornCichlidModel() {
         this.texWidth = 64;
         this.texHeight = 32;
@@ -97,6 +98,7 @@ public class FlowerhornCichlidModel extends SegmentedModel<FlowerhornCichlidEnti
         this.Head.addChild(this.Horn);
 
     }
+
     @Override
     public void setupAnim(FlowerhornCichlidEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
     }

@@ -8,7 +8,9 @@
   ],
   "key": {
     "G": [
-      { "item": "wondersoftheworld:red_brick" }
+      {
+        "item": "wondersoftheworld:red_brick"
+      }
     ]
   },
   "result": {

@@ -1,4 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
+
 import com.github.hellocrossy.wondersoftheworld.entity.MouseDeerEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
@@ -247,7 +248,7 @@ public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
                 this.Head.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 1.055F;
                 this.Neck1.xRot = MathHelper.cos(0.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.5F) * 0.5F - 1.451F;
                 this.Body.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.078F;
-                this.Body.y = MathHelper.cos(1.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 1F) * 0.5F + 17.0F;
+                this.Body.y = MathHelper.cos(1.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree) * 0.5F + 17.0F;
 
                 this.ArmLeft.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 3F) * 0.5F + 0.030F;
                 this.ForearmLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F - 0.469F;
@@ -494,7 +495,7 @@ public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
                 this.Head.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 1.055F;
                 this.Neck1.xRot = MathHelper.cos(0.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.5F) * 0.5F - 1.451F;
                 this.Body.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.078F;
-                this.Body.y = MathHelper.cos(1.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 1F) * 0.5F + 17.0F;
+                this.Body.y = MathHelper.cos(1.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree) * 0.5F + 17.0F;
 
                 this.ArmLeft.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 3F) * 0.5F + 0.030F;
                 this.ForearmLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F - 0.469F;

@@ -1,4 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
+
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.DiscusFishModel;
 import com.github.hellocrossy.wondersoftheworld.entity.DiscusFishEntity;

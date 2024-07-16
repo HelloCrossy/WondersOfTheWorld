@@ -1,4 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
+
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.OscarModel;
 import com.github.hellocrossy.wondersoftheworld.entity.OscarEntity;
@@ -18,6 +19,7 @@ public class OscarRenderer extends ZawaMobRenderer<OscarEntity, OscarModel> {
         matrixStack.scale(0.5F, 0.5F, 0.5F);
         super.scale(entity, matrixStack, partialTickTime);
     }
+
     @Override
     public ResourceLocation getBabyTexture(OscarEntity entity, int variant) {
         if (variant >= entity.getWildVariants()) {

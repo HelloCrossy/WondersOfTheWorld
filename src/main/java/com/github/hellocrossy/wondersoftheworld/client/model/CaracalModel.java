@@ -227,7 +227,7 @@ public abstract class CaracalModel extends ZawaBaseModel<CaracalEntity> {
             this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.5F;
             this.Neck.xRot = headPitch / (180F / (float) Math.PI) * 0.5F + 1.203F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.5F;
-            this.Head.xRot = headPitch / (180F / (float) Math.PI) * 0.5F -1.008F;
+            this.Head.xRot = headPitch / (180F / (float) Math.PI) * 0.5F - 1.008F;
         }
 
         @Override
@@ -259,11 +259,11 @@ public abstract class CaracalModel extends ZawaBaseModel<CaracalEntity> {
                 this.Body.xRot = MathHelper.cos(0.0F + limbSwing * speed * 0.6F) * degree * -1.8F * limbSwingAmount + 0.18F;
                 this.Hips.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -1.8F) - 0.27F;
                 this.Neck.xRot = MathHelper.cos(-1.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -1.0F) + 1.204F;
-                this.Head.xRot = MathHelper.cos(-2.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * 1.0F) + 0.4F;
+                this.Head.xRot = MathHelper.cos(-2.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree) + 0.4F;
                 this.Chest.y = MathHelper.cos(5.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -4.0F) + 10.4F;
 
                 this.Tail1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * 2.0F) - 0.2F;
-                this.Tail2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * 1.0F) + 0.18F;
+                this.Tail2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree) + 0.18F;
 
                 this.ArmBaseLeft.xRot = MathHelper.cos(limbSwing * speed * 0.6F) * limbSwingAmount * (degree * 6.0F) + 0.0F;
                 this.UpperArmLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -4.0F) - 0.2F;
@@ -554,7 +554,7 @@ public abstract class CaracalModel extends ZawaBaseModel<CaracalEntity> {
                 this.ForearmLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.3F) * 0.5F;
                 this.HandLeft.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.3F) * 0.5F - 0.02F;
                 this.ArmBaseRight.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.17F;
-                this.ArmRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.3F) * 0.5F- 0.17F;
+                this.ArmRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.3F) * 0.5F - 0.17F;
                 this.ForearmRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * 1.3F) * 0.5F;
                 this.HandRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1.3F) * 0.5F - 0.02F;
 
