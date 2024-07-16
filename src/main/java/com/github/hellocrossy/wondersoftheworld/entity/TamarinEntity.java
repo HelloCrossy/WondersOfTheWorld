@@ -13,6 +13,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.pathfinding.ClimberPathNavigator;
+import net.minecraft.pathfinding.PathNavigator;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
@@ -26,7 +28,8 @@ import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEntity{
+public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEntity, ClimbingEntity {
+    public static final DataParameter<Boolean> CLIMBING;
     public TamarinEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
@@ -45,6 +48,28 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
         if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
         super.customServerAiStep();
     }
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(CLIMBING, false);
+    }
+    protected PathNavigator createNavigation(World world) {
+        return new ClimberPathNavigator(this, world);
+    }
+
+    public void tick() {
+        super.tick();
+        if (!this.level.isClientSide && this.horizontalCollision) {
+            this.setClimbing(this.isClimbableBlock(this.level, this.blockPosition().relative(this.getDirection())));
+        }
+
+    }
+    public boolean onClimbable() {
+        return this.isClimbing();
+    }
+
+    public boolean causeFallDamage(float distance, float damageMultiplier) {
+        return false;
+    }
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
@@ -56,6 +81,17 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.TAMARIN.get().create(world);
+    }
+    public boolean isClimbing() {
+        return (Boolean)this.entityData.get(CLIMBING);
+    }
+
+    public void setClimbing(boolean climbing) {
+        this.entityData.set(CLIMBING, climbing);
+    }
+
+    static {
+        CLIMBING = EntityDataManager.defineId(SpiderMonkey.class, DataSerializers.BOOLEAN);
     }
 }
 
