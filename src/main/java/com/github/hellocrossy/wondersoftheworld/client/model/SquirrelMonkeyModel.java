@@ -235,10 +235,6 @@ public abstract class SquirrelMonkeyModel extends ZawaBaseModel<SquirrelMonkeyEn
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             float speed = 1.0f;
             float degree = 1.0f;
-            if (this.isHeld) {
-                this.Tail3.xRot = 0.0F;
-            }
-
             this.Tail1.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.1F + 3.1415927F) * degree * 0.3F * limbSwingAmount * 0.5F + (this.isHeld ? -1.2F : -1.011F);
             this.Tail2.xRot = MathHelper.cos(1.0F + limbSwing * speed * 0.1F + 3.1415927F) * degree * 0.1F * limbSwingAmount * 0.5F + (this.isHeld ? 0.0F : 0.151F);
             this.Neck.xRot = MathHelper.cos(limbSwing * speed * 0.1F + 3.1415927F) * degree * 0.2F * limbSwingAmount * 0.5F - 0.47F;
@@ -246,10 +242,6 @@ public abstract class SquirrelMonkeyModel extends ZawaBaseModel<SquirrelMonkeyEn
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            }
 
             if (entity.isSprinting()) {
                 float speed = 1.5f;

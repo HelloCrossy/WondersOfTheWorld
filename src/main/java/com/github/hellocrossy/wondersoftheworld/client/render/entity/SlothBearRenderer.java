@@ -16,6 +16,5 @@ public class SlothBearRenderer extends ZawaMobRenderer<SlothBearEntity, SlothBea
         float scale = entity.isBaby() ? 0.6F : 1.30F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
-
     }
 }

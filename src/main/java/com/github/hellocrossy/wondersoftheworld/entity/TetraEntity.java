@@ -51,7 +51,7 @@ public class TetraEntity extends ZawaAmbientFishEntity {
     }
     @Override
     protected void registerGoals() {
-        super.registerGoals();
+         super.registerGoals();
         this.goalSelector.addGoal(1, new GroupPanicGoal(this, 1.33));
     }
 }

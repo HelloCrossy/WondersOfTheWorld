@@ -28,8 +28,7 @@ public class SaigaAntelopeEntity extends ZawaLandEntity  {
     @Override
     protected void registerGoals() {
          super.registerGoals();
-          this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
-         this.goalSelector.addGoal(7, new SittingEntity.SitGoal(this));
+        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
     }
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;

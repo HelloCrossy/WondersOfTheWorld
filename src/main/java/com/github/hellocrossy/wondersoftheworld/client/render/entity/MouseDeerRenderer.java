@@ -4,6 +4,7 @@ import com.github.hellocrossy.wondersoftheworld.entity.MouseDeerEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
+import org.zawamod.zawa.world.entity.animal.Macaw;
 
 public class MouseDeerRenderer extends ZawaMobRenderer<MouseDeerEntity, MouseDeerModel> {
     public MouseDeerRenderer(EntityRendererManager manager) {
@@ -13,8 +14,9 @@ public class MouseDeerRenderer extends ZawaMobRenderer<MouseDeerEntity, MouseDee
 
     @Override
     protected void scale(MouseDeerEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.6F : 0.9F;
-        matrixStack.scale(scale, scale, scale);
-        super.scale(entity, matrixStack, partialTickTime);
+        if (entity.isBaby() || entity.getVariant() > 0) {
+            matrixStack.scale(0.9F, 0.9F, 0.9F);
+        }
+            super.scale(entity, matrixStack, partialTickTime);
+        }
     }
-}

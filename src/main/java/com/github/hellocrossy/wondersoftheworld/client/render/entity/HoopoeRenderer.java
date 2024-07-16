@@ -11,7 +11,7 @@ public class HoopoeRenderer extends ZawaMobRenderer<HoopoeEntity, HoopoeModel> {
     }
     @Override
     protected void scale(HoopoeEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.4F : 1.0F;
+        float scale = entity.isBaby() ? 0.4F : 0.9F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

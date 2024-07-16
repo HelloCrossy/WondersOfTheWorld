@@ -16,7 +16,7 @@ public class FlowerhornCichlidRenderer extends ZawaMobRenderer<FlowerhornCichlid
 
     @Override
     protected void scale(FlowerhornCichlidEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        matrixStack.scale(0.6F, 0.6F, 0.6F);
+        matrixStack.scale(0.45F, 0.45F, 0.45F);
         super.scale(entity, matrixStack, partialTickTime);
     }
 
