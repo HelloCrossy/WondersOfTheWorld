@@ -3,13 +3,16 @@
   "size": "ambient",
   "breeding_item": "zawa:earthworm",
   "speed": "medium",
-  "variant_count": 9,
+  "variant_count": 11,
   "captive_variants": [
-    "albino_tiger",
+    "red",
+    "black-tiger",
+    "albino",
+    "lemon",
     "albino_red",
+    "black_red",
+    "golden",
     "bumblebee",
-    "blue",
-    "green",
-    "golden"
+    "white"
   ]
 }
