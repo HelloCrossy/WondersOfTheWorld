@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
+import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
@@ -9,6 +10,7 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.goal.NonTamedTargetGoal;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
@@ -47,5 +49,9 @@ public class PallasCatEntity extends ZawaLandEntity {
         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 1.5, 1.33, true));
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
         this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0));
+    }
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return WOTWSounds.PALLAS_CAT_AMBIENT.get();
     }
 }

@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
+import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
@@ -9,6 +10,7 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.goal.NonTamedTargetGoal;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
@@ -52,5 +54,9 @@ public class GuanacoEntity extends ZawaLandEntity {
     @Override
     public float getMaleRatio() {
         return 0.66F;
+    }
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return WOTWSounds.GUANACO_AMBIENT.get();
     }
 }

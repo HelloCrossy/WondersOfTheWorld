@@ -1,6 +1,7 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
+import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
@@ -11,6 +12,8 @@ import net.minecraft.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import org.zawamod.zawa.world.entity.OviparousEntity;
@@ -48,5 +51,15 @@ public class HoopoeEntity extends ZawaFlyingEntity implements OviparousEntity {
     public ItemStack getBreedEggItem() {
         return WOTWItems.HOOPOE_EGG.get().getDefaultInstance();
     }
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return WOTWSounds.HOOPOE_AMBIENT.get();
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return WOTWSounds.HOOPOE_HURT.get();
+    }
 }
+
 

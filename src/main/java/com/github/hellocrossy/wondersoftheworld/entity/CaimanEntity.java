@@ -1,18 +1,19 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
-import net.minecraft.entity.AgeableEntity;
-import net.minecraft.entity.EntitySize;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.Pose;
+import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.goal.NonTamedTargetGoal;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import org.zawamod.zawa.sounds.ZawaSounds;
 import org.zawamod.zawa.world.entity.OviparousEntity;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
 import org.zawamod.zawa.world.entity.animal.ZawaSemiAquaticEntity;
@@ -72,5 +73,20 @@ public class CaimanEntity extends ZawaSemiAquaticEntity implements OviparousEnti
     @Override
     public float swimSpeedMultiplier() {
         return 1.0F;
+    }
+    @Override
+    public boolean doHurtTarget(Entity entity) {
+        boolean didHurtTarget = super.doHurtTarget(entity);
+        if (didHurtTarget) playSound(WOTWSounds.CAIMAN_ATTACK.get(), 1.0F, 1.0F);
+        return didHurtTarget;
+    }
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return WOTWSounds.CAIMAN_AMBIENT.get();
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return WOTWSounds.CAIMAN_HURT.get();
     }
 }

@@ -1,10 +1,7 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
-import net.minecraft.entity.AgeableEntity;
-import net.minecraft.entity.EntitySize;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.Pose;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
@@ -55,6 +52,12 @@ public class MargayEntity extends ZawaLandEntity {
     @Override
     public float getMaleRatio() {
         return 0.33F;
+    }
+    @Override
+    public boolean doHurtTarget(Entity entity) {
+        boolean didHurtTarget = super.doHurtTarget(entity);
+        if (didHurtTarget) playSound(WOTWSounds.MARGAY_ATTACK.get(), 1.0F, 1.0F);
+        return didHurtTarget;
     }
 
     @Override

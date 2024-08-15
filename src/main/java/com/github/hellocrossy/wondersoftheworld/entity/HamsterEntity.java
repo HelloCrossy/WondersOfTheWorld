@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
+import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
@@ -9,6 +10,8 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
@@ -40,4 +43,13 @@ public class HamsterEntity extends ZawaLandEntity {
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.HAMSTER.get().create(world);
     }
-}
+        @Override
+        protected SoundEvent getAmbientSound() {
+            return WOTWSounds.HAMSTER_AMBIENT.get();
+        }
+
+        @Override
+        protected SoundEvent getHurtSound(DamageSource source) {
+            return WOTWSounds.HAMSTER_HURT.get();
+        }
+    }

@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
+import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
@@ -12,6 +13,8 @@ import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.pathfinding.ClimberPathNavigator;
 import net.minecraft.pathfinding.PathNavigator;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
@@ -97,6 +100,15 @@ public class SquirrelMonkeyEntity extends ZawaLandEntity implements SpeciesVaria
 
     static {
         CLIMBING = EntityDataManager.defineId(SpiderMonkey.class, DataSerializers.BOOLEAN);
+    }
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return WOTWSounds.SQUIRREL_MONKEY_AMBIENT.get();
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return WOTWSounds.SQUIRREL_MONKEY_HURT.get();
     }
 }
 

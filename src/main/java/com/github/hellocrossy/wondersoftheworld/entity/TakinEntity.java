@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
+import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
@@ -7,6 +8,8 @@ import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
@@ -58,6 +61,10 @@ public class TakinEntity extends ZawaLandEntity implements SpeciesVariantsEntity
     @Override
     public float getMaleRatio() {
         return 0.33F;
+    }
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return WOTWSounds.TAKIN_AMBIENT.get();
     }
 }
 

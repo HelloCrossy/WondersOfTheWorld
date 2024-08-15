@@ -1,4 +1,85 @@
 {
+  "takin_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.takin_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:takin_ambient",
+        "volume": 1.25
+      }
+    ]
+  },
+  "serval_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.serval_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:serval_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "serval_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.serval_hurt",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:serval_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "serval_attack": {
+    "subtitle": "subtitle.wondersoftheworld.serval_attack",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:serval_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "fennec_fox_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.fennec_fox_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:fennec_fox_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "fennec_fox_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.fennec_fox_hurt",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:fennec_fox_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "emu_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.emu_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:emu_ambient",
+        "volume": 1.25
+      }
+    ]
+  },
+  "emu_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.emu_hurt",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:emu_hurt",
+        "volume": 1.25
+      }
+    ]
+  },
+  "emu_attack": {
+    "subtitle": "subtitle.wondersoftheworld.emu_attack",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:emu_attack",
+        "volume": 1.25
+      }
+    ]
+  },
   "kiwi_ambient": {
     "subtitle": "subtitle.wondersoftheworld.kiwi_ambient",
     "sounds": [
@@ -17,30 +98,12 @@
       }
     ]
   },
-  "fennec_fox_ambient": {
-    "subtitle": "subtitle.wondersoftheworld.fennec_ambient",
-    "sounds": [
-      {
-        "name": "wondersoftheworld:fennec_fox_ambient",
-        "volume": 1.0
-      }
-    ]
-  },
-  "fennec_fox_hurt": {
-    "subtitle": "subtitle.wondersoftheworld.fennec_hurt",
-    "sounds": [
-      {
-        "name": "wondersoftheworld:fennec_fox_hurt",
-        "volume": 1.0
-      }
-    ]
-  },
   "margay_ambient": {
     "subtitle": "subtitle.wondersoftheworld.margay_ambient",
     "sounds": [
       {
         "name": "wondersoftheworld:margay_ambient",
-        "volume": 1.0
+        "volume": 1.25
       }
     ]
   },
@@ -49,6 +112,204 @@
     "sounds": [
       {
         "name": "wondersoftheworld:margay_hurt",
+        "volume": 1.25
+      }
+    ]
+  },
+  "margay_attack": {
+    "subtitle": "subtitle.wondersoftheworld.margay_attack",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:margay_attack",
+        "volume": 1.25
+      }
+    ]
+  },
+  "hoopoe_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.hoopoe_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:hoopoe_ambient",
+        "volume": 1.25
+      }
+    ]
+  },
+  "hoopoe_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.hoopoe_hurt",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:hoopoe_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "sloth_bear_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.sloth_bear_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:sloth_bear_ambient",
+        "volume": 1.0
+      }
+    ]
+  },
+  "sloth_bear_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.sloth_bear_hurt",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:sloth_bear_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "sloth_bear_attack": {
+    "subtitle": "subtitle.wondersoftheworld.sloth_bear_attack",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:sloth_bear_attack",
+        "volume": 1.0
+      }
+    ]
+  },
+  "hamster_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.hamster_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:hamster_ambient",
+        "volume": 1.0
+      }
+    ]
+  },
+  "hamster_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.hamster_hurt",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:hamster_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "pallas_cat_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.pallas_cat_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:pallas_cat_ambient",
+        "volume": 1.25
+      }
+    ]
+  },
+  "tamarin_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.tamarin_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:tamarin_ambient",
+        "volume": 1.0
+      }
+    ]
+  },
+  "tamarin_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.tamarin_hurt",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:tamarin_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "caracal_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.caracal_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:caracal_ambient",
+        "volume": 1.0
+      }
+    ]
+  },
+  "caracal_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.caracal_hurt",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:caracal_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "caracal_attack": {
+    "subtitle": "subtitle.wondersoftheworld.caracal_attack",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:caracal_attack",
+        "volume": 1.0
+      }
+    ]
+  },
+  "manakin_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.manakin_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:manakin_ambient",
+        "volume": 1.0
+      }
+    ]
+  },
+  "manakin_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.manakin_hurt",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:manakin_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "caiman_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.caiman_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:caiman_ambient",
+        "volume": 1.0
+      }
+    ]
+  },
+  "caiman_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.caiman_hurt",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:caiman_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "caiman_attack": {
+    "subtitle": "subtitle.wondersoftheworld.caiman_attack",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:caiman_attack",
+        "volume": 1.0
+      }
+    ]
+  },
+  "squirrel_monkey_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.squirrel_monkey_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:squirrel_monkey_ambient",
+        "volume": 1.0
+      }
+    ]
+  },
+  "squirrel_monkey_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.squirrel_monkey_hurt",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:squirrel_monkey_hurt",
+        "volume": 1.0
+      }
+    ]
+  },
+  "guanaco_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.guanaco_ambient",
+    "sounds": [
+      {
+        "name": "wondersoftheworld:guanaco_ambient",
         "volume": 1.0
       }
     ]
