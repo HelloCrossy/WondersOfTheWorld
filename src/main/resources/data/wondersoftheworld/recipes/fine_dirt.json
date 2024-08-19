@@ -2,20 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "group": "wondersoftheworldgroup",
   "pattern": [
-    "PGP",
-    "GPG",
-    "PGP"
+    "GP",
+    "PG"
   ],
   "key": {
     "P": [
-      {
-        "item": "minecraft:dirt"
-      }
+      { "item": "minecraft:dirt" }
     ],
     "G": [
-      {
-        "item": "minecraft:sand"
-      }
+      { "item": "minecraft:sand" }
     ]
   },
   "result": {

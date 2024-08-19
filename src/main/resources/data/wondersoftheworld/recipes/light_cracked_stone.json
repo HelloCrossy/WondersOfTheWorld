@@ -2,20 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "group": "wondersoftheworldgroup",
   "pattern": [
+    "PPP",
     "PGP",
-    "GPG",
-    "PGP"
+    "PPP"
   ],
   "key": {
     "P": [
-      {
-        "item": "minecraft:cobblestone"
-      }
+      { "item": "wondersoftheworld:cracked_stone" }
     ],
     "G": [
-      {
-        "item": "minecraft:gravel"
-      }
+      { "item": "minecraft:light_gray_dye" }
     ]
   },
   "result": {
