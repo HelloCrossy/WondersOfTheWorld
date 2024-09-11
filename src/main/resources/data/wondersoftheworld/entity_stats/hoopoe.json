@@ -3,10 +3,10 @@
   "kibble": "zawa:insectivore_kibble",
   "size": "small",
   "fertility": "medium",
-  "breeding_item": "zawa:termites",
+  "breeding_item": "zawa:earthworm",
   "litter_size": {
-    "min": 4,
-    "max": 6
+    "min": 1,
+    "max": 4
   },
   "diet": "zawa:insectivore",
   "speed": "medium",

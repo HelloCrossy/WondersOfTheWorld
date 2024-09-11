@@ -34,7 +34,7 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 5.0).add(Attributes.ATTACK_DAMAGE, 1.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 4.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Override
@@ -99,7 +99,7 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
     }
 
     static {
-        CLIMBING = EntityDataManager.defineId(SpiderMonkey.class, DataSerializers.BOOLEAN);
+        CLIMBING = EntityDataManager.defineId(TamarinEntity.class, DataSerializers.BOOLEAN);
     }
 
     @Override

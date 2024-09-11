@@ -1,15 +1,15 @@
 {
   "temperament": "aggressive",
-  "kibble": "zawa:insectivore_kibble",
-  "size": "medium",
+  "kibble": "zawa:omnivore_kibble",
+  "size": "large",
   "fertility": "low",
   "breeding_item": "zawa:termites",
   "litter_size": {
     "min": 1,
     "max": 2
   },
-  "diet": "zawa:insectivore",
-  "speed": "medium",
+  "diet": "zawa:omnivore",
+  "speed": "slow",
   "enrichment": {
     "zawa:blocks": [
       "zawa:puzzle_feeder",

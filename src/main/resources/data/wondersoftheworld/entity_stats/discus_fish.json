@@ -1,8 +1,8 @@
 {
   "temperament": "timid",
   "size": "ambient",
-  "breeding_item": "zawa:leafcutter_ant",
-  "speed": "medium",
+  "breeding_item": "zawa:earthworm",
+  "speed": "fast",
   "variant_count": 20,
   "captive_variants": [
     "blue",

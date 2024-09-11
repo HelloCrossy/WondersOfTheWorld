@@ -13,7 +13,7 @@ public class SquirrelMonkeyRenderer extends ZawaMobRenderer<SquirrelMonkeyEntity
 
     @Override
     protected void scale(SquirrelMonkeyEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.55F : 0.75F;
+        float scale = entity.isBaby() ? 0.45F : 0.65F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

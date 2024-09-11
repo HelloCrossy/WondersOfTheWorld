@@ -34,7 +34,7 @@ public class SquirrelMonkeyEntity extends ZawaLandEntity implements SpeciesVaria
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 5.0).add(Attributes.ATTACK_DAMAGE, 1.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 4.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Override
@@ -99,7 +99,7 @@ public class SquirrelMonkeyEntity extends ZawaLandEntity implements SpeciesVaria
     }
 
     static {
-        CLIMBING = EntityDataManager.defineId(SpiderMonkey.class, DataSerializers.BOOLEAN);
+        CLIMBING = EntityDataManager.defineId(SquirrelMonkeyEntity.class, DataSerializers.BOOLEAN);
     }
     @Override
     protected SoundEvent getAmbientSound() {
