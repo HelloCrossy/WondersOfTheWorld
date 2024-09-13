@@ -7,36 +7,28 @@ import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
-import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
-import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
 import org.zawamod.zawa.world.entity.ai.goal.BreachGoal;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class BongoEntity extends ZawaLandEntity implements SpeciesVariantsEntity {
-    public BongoEntity(EntityType<? extends ZawaLandEntity> type, World world) {
+public class WesternLowlandBongoEntity extends ZawaLandEntity {
+    public WesternLowlandBongoEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 16.0).add(Attributes.ATTACK_DAMAGE, 2.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 16.0).add(Attributes.ATTACK_DAMAGE, 2.0);
     }
 
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
-        return WOTWEntities.BONGO.get().create(world);
+        return WOTWEntities.WESTERN_LOWLAND_BONGO.get().create(world);
     }
-
-    @Override
-    public int getVariantByBiome(IWorld iWorld) {
-        return random.nextInt(getWildVariants());
-    }
-
     @Override
     protected void registerGoals() {
         super.registerGoals();
