@@ -214,14 +214,6 @@ public class WOTWEntities {
                     .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
                     .build("flowerhorn_cichlid");
 
-  //  public static final RegistryObject<EntityType<RingTailedCoatiEntity>> RING_TAILED_COATI =
-    //        REGISTRY.builder(RingTailedCoatiEntity::new, EntityClassification.CREATURE)
-      //              .attributes(RingTailedCoatiEntity::registerAttributes)
-       //             .renderer(() -> RingTailedCoatiRenderer::new)
-        //            .spawns(8, 4, 5, ZawaSpawnCategory.DRY_RAINFOREST)
-          //          .data(entityBuilder -> entityBuilder.sized(0.75F, 0.7F).clientTrackingRange(10))
-          //          .build("ring_tailed_coati");
-
     public static final RegistryObject<EntityType<WarthogEntity>> WARTHOG =
             REGISTRY.builder(WarthogEntity::new, EntityClassification.CREATURE)
                     .attributes(WarthogEntity::registerAttributes)
@@ -237,14 +229,6 @@ public class WOTWEntities {
                     .spawns(8, 1, 1, ZawaSpawnCategory.DEEP_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.75F, 0.7F).clientTrackingRange(10))
                     .build("pygmy_hippo");
-
-    public static final RegistryObject<EntityType<AsianWaterMonitorEntity>> ASIAN_WATER_MONITOR =
-            REGISTRY.builder(AsianWaterMonitorEntity::new, EntityClassification.CREATURE)
-                    .attributes(AsianWaterMonitorEntity::registerAttributes)
-                    .renderer(() -> AsianWaterMonitorRenderer::new)
-                    .spawns(5, 1, 1, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.75F, 0.7F).clientTrackingRange(10))
-                    .build("asian_water_monitor");
 
 
     public static void registerSpawnPlacements() {
@@ -277,7 +261,6 @@ public class WOTWEntities {
 
         EntitySpawnPlacementRegistry.register(PYGMY_HIPPO.get(), EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkSemiAquaticSpawnRules);
         EntitySpawnPlacementRegistry.register(WARTHOG.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(ASIAN_WATER_MONITOR.get(), EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkSemiAquaticSpawnRules);
     }
 }
 

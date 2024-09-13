@@ -5,7 +5,7 @@
     "wondersoftheworld:emu",
     "wondersoftheworld:kiwi",
     "wondersoftheworld:saiga_antelope",
-    "wondersoftheworld:bongo",
+    "wondersoftheworld:western_lowland_bongo",
     "wondersoftheworld:takin",
     "wondersoftheworld:fennec_fox",
     "wondersoftheworld:tibetan_antelope",
@@ -21,6 +21,8 @@
     "wondersoftheworld:tamarin",
     "wondersoftheworld:sloth_bear",
     "wondersoftheworld:pallas_cat",
-    "wondersoftheworld:squirrel_monkey"
+    "wondersoftheworld:squirrel_monkey",
+    "wondersoftheworld:warthog",
+    "wondersoftheworld:pygmy_hippo"
   ]
 }

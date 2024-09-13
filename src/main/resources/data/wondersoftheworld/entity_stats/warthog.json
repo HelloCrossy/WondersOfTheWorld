@@ -1,0 +1,26 @@
+{
+  "temperament": "territorial",
+  "kibble": "zawa:omnivore_kibble",
+  "size": "medium",
+  "fertility": "medium",
+  "breeding_item": "zawa:earthworm",
+  "litter_size": {
+    "min": 2,
+    "max": 4
+  },
+  "diet": "zawa:omnivore",
+  "speed": "fast",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:hay_browse",
+      "zawa:leaf_browse",
+      "zawa:sprinkler",
+      "zawa:puzzle_feeder"
+    ],
+    "zawa:entities": [
+      "zawa:scented_ball",
+      "zawa:apple_ice_treat"
+    ]
+  },
+  "variant_count": 3
+}
