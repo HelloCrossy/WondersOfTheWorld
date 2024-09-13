@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "wondersoftheworld:block/light_cracked_stone",
+    "top": "wondersoftheworld:block/light_cracked_stone",
+    "side": "wondersoftheworld:block/light_cracked_stone"
+  }
+}

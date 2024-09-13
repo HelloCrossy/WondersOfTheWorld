@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wondersoftheworld:block/cracked_stone_slab"
+    },
+    "type=double": {
+      "model": "wondersoftheworld:block/cracked_stone"
+    },
+    "type=top": {
+      "model": "wondersoftheworld:block/cracked_stone_slab_top"
+    }
+  }
+}

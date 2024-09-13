@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wondersoftheworld:block/limestone_slab"
+    },
+    "type=double": {
+      "model": "wondersoftheworld:block/limestone_tiles"
+    },
+    "type=top": {
+      "model": "wondersoftheworld:block/limestone_slab_top"
+    }
+  }
+}

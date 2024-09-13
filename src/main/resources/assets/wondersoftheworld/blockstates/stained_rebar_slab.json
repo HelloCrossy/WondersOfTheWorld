@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wondersoftheworld:block/stained_rebar_slab"
+    },
+    "type=double": {
+      "model": "wondersoftheworld:block/stained_rebar"
+    },
+    "type=top": {
+      "model": "wondersoftheworld:block/stained_rebar_top"
+    }
+  }
+}

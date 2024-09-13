@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "wondersoftheworld:block/stained_rebar",
+    "top": "wondersoftheworld:block/stained_rebar",
+    "side": "wondersoftheworld:block/stained_rebar"
+  }
+}

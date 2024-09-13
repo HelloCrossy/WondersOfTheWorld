@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wondersoftheworld:block/black_brick_slab"
+    },
+    "type=double": {
+      "model": "wondersoftheworld:block/black_brick"
+    },
+    "type=top": {
+      "model": "wondersoftheworld:block/black_brick_slab_top"
+    }
+  }
+}
+}

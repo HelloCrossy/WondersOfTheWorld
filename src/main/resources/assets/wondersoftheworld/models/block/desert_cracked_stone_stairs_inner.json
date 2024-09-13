@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "wondersoftheworld:block/desert_cracked_stone",
+    "top": "wondersoftheworld:block/desert_cracked_stone",
+    "side": "wondersoftheworld:block/desert_cracked_stone"
+  }
+}
