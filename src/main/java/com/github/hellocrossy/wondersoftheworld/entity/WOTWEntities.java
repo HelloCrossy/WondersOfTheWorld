@@ -230,37 +230,63 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(0.75F, 0.7F).clientTrackingRange(10))
                     .build("pygmy_hippo");
 
+    public static final RegistryObject<EntityType<AmericanMinkEntity>> AMERICAN_MINK =
+            REGISTRY.builder(AmericanMinkEntity::new, EntityClassification.CREATURE)
+                    .attributes(AmericanMinkEntity::registerAttributes)
+                    .renderer(() -> AmericanMinkRenderer::new)
+                    .spawns(15, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
+                    .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
+                    .build("american_mink");
+
+    public static final RegistryObject<EntityType<HammerkopEntity>> HAMMERKOP =
+            REGISTRY.builder(HammerkopEntity::new, EntityClassification.CREATURE)
+                    .attributes(HammerkopEntity::registerAttributes)
+                    .renderer(() -> HammerkopRenderer::new)
+                    .spawns(15, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
+                    .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
+                    .build("hammerkop");
+
+    public static final RegistryObject<EntityType<QuetzalEntity>> QUETZAL =
+            REGISTRY.builder(QuetzalEntity::new, EntityClassification.CREATURE)
+                    .attributes(QuetzalEntity::registerAttributes)
+                    .renderer(() -> QuetzalRenderer::new)
+                    .spawns(15, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
+                    .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
+                    .build("quetzal");
 
     public static void registerSpawnPlacements() {
-        EntitySpawnPlacementRegistry.register(TAKIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(WESTERN_LOWLAND_BONGO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(LOWLAND_NYALA.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(TIBETAN_ANTELOPE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(SAIGA_ANTELOPE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(SERVAL.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(EMU.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(KIWI.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(FENNEC_FOX.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(MOUSE_DEER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(HOOPOE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(MARGAY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
+        EntitySpawnPlacementRegistry.register(TAKIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(WESTERN_LOWLAND_BONGO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(LOWLAND_NYALA.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(TIBETAN_ANTELOPE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(SAIGA_ANTELOPE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(SERVAL.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(EMU.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(KIWI.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(FENNEC_FOX.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(MOUSE_DEER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(HOOPOE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
+        EntitySpawnPlacementRegistry.register(MARGAY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(DISCUS_FISH.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
         EntitySpawnPlacementRegistry.register(OSCAR.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
 
         EntitySpawnPlacementRegistry.register(CAIMAN.get(), EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkSemiAquaticSpawnRules);
-        EntitySpawnPlacementRegistry.register(HAMSTER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(GUANACO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(CARACAL.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(PALLAS_CAT.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(SLOTH_BEAR.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
-        EntitySpawnPlacementRegistry.register(MANAKIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkLandSpawnRulesWithLeaves);
+        EntitySpawnPlacementRegistry.register(HAMSTER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(GUANACO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(CARACAL.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(PALLAS_CAT.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(SLOTH_BEAR.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(MANAKIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
         EntitySpawnPlacementRegistry.register(TAMARIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(SQUIRREL_MONKEY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
         EntitySpawnPlacementRegistry.register(TETRA.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
         EntitySpawnPlacementRegistry.register(FLOWERHORN_CICHILID.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
 
         EntitySpawnPlacementRegistry.register(PYGMY_HIPPO.get(), EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkSemiAquaticSpawnRules);
-        EntitySpawnPlacementRegistry.register(WARTHOG.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRulesWithLeaves);
+        EntitySpawnPlacementRegistry.register(WARTHOG.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(QUETZAL.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
+        EntitySpawnPlacementRegistry.register(HAMMERKOP.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
+        EntitySpawnPlacementRegistry.register(AMERICAN_MINK.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
     }
 }
 
