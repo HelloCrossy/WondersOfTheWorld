@@ -5,11 +5,15 @@ import com.github.hellocrossy.wondersoftheworld.entity.LowlandNyalaEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
+import org.zawamod.zawa.world.entity.animal.ZawaBaseEntity;
 
 public class LowlandNyalaRenderer extends ZawaMobRenderer<LowlandNyalaEntity, LowlandNyalaModel> {
-    public LowlandNyalaRenderer(EntityRendererManager manager) {
-        super(manager, new LowlandNyalaModel.Adult(), new LowlandNyalaModel.Child(), 0.95F);
 
+    public LowlandNyalaRenderer(EntityRendererManager manager) {
+        super(manager, new LowlandNyalaModel.AdultMale(), new LowlandNyalaModel.Child(), 0.5F);
+        baseAdultModel = adultModel;
+        adultFemaleModel = new LowlandNyalaModel.AdultFemale();
+        baseFemaleAdultModel = adultFemaleModel;
     }
 
     @Override
