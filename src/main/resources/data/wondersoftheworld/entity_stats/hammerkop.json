@@ -1,0 +1,22 @@
+{
+  "temperament": "timid",
+  "kibble": "zawa:insectivore_kibble",
+  "size": "small",
+  "fertility": "medium",
+  "breeding_item": "zawa:earthworm",
+  "litter_size": {
+    "min": 1,
+    "max": 4
+  },
+  "diet": "zawa:insectivore",
+  "speed": "medium",
+  "enrichment": {
+    "zawa:blocks": [
+      "zawa:perching_stand",
+      "zawa:sprinkler",
+      "zawa:branch",
+      "zawa:pineapple_pinata"
+    ]
+  },
+  "variant_count": 3
+}

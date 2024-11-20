@@ -13,7 +13,7 @@ public class PygmyHippoRenderer extends ZawaMobRenderer<PygmyHippoEntity, PygmyH
 
     @Override
     protected void scale(PygmyHippoEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.7F : 0.9F;
+        float scale = entity.isBaby() ? 0.85F : 1.3F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
 
