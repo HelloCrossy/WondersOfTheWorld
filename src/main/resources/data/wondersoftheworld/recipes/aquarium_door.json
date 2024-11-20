@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wondersoftheworldgroup",
+  "pattern": [
+    "PP",
+    "PG",
+    "PP"
+  ],
+  "key": {
+    "P": [
+      { "item": "zawa:exhibit_glass" }
+    ],
+    "G": [
+      { "item": "minecraft:iron_nugget" }
+    ]
+  },
+  "result": {
+    "item": "wondersoftheworld:aquarium_door",
+    "count": 3
+  }
+}

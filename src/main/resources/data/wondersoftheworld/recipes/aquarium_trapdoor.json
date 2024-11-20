@@ -3,19 +3,18 @@
   "group": "wondersoftheworldgroup",
   "pattern": [
     "PPP",
-    "PGP",
-    "PPP"
+    "PGP"
   ],
   "key": {
     "P": [
-      { "item": "wondersoftheworld:breeze_block" }
+      { "item": "zawa:exhibit_glass" }
     ],
     "G": [
-      { "item": "minecraft:gray_dye" }
+      { "item": "minecraft:iron_nugget" }
     ]
   },
   "result": {
-    "item": "wondersoftheworld:defined_breeze_block",
-    "count": 8
+    "item": "wondersoftheworld:aquarium_trapdoor",
+    "count": 2
   }
 }

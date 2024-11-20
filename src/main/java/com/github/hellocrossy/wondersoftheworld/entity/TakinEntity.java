@@ -33,12 +33,7 @@ public class TakinEntity extends ZawaLandEntity implements SpeciesVariantsEntity
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.TAKIN.get().create(world);
-    }
 
-    @Override
-    protected void customServerAiStep() {
-        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
-        super.customServerAiStep();
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wondersoftheworldgroup",
+  "pattern": [
+    "G  ",
+    "GG ",
+    "GGG"
+  ],
+  "key": {
+    "G": [
+      {
+        "item": "wondersoftheworld:mossy_cracked_stone"
+      }
+    ]
+  },
+  "result": {
+    "item": "wondersoftheworld:mossy_cracked_stone_stairs",
+    "count": 6
+  }
+}

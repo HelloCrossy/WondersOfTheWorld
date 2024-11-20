@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wondersoftheworldgroup",
+  "pattern": [
+    "PP",
+    "GG",
+    "PP"
+  ],
+  "key": {
+    "P": [
+      { "item": "minecraft:iron_ingot" }
+    ],
+    "G": [
+      { "item": "zawa:wire_fence" }
+    ]
+  },
+  "result": {
+    "item": "wondersoftheworld:keeper_door",
+    "count": 3
+  }
+}

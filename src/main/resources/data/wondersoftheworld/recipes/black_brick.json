@@ -11,11 +11,11 @@
       { "item": "wondersoftheworld:breeze_block" }
     ],
     "G": [
-      { "item": "minecraft:gray_dye" }
+      { "item": "minecraft:black_dye" }
     ]
   },
   "result": {
-    "item": "wondersoftheworld:defined_breeze_block",
+    "item": "wondersoftheworld:black_brick",
     "count": 8
   }
 }
