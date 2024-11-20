@@ -13,7 +13,7 @@ public class CaracalRenderer extends ZawaMobRenderer<CaracalEntity, CaracalModel
 
     @Override
     protected void scale(CaracalEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.6F : 0.8F;
+        float scale = entity.isBaby() ? 0.75F : 0.8F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
 

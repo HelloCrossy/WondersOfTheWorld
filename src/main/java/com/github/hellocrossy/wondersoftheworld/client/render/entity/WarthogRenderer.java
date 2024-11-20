@@ -13,7 +13,7 @@ public class WarthogRenderer extends ZawaMobRenderer<WarthogEntity, WarthogModel
 
     @Override
     protected void scale(WarthogEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.7F : 0.9F;
+        float scale = entity.isBaby() ? 0.7F : 1.0F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
 

@@ -14,7 +14,7 @@ public class WesternLowlandBongoRenderer extends ZawaMobRenderer<WesternLowlandB
 
     @Override
     protected void scale(WesternLowlandBongoEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.9F : 1.0F;
+        float scale = entity.isBaby() ? 0.95F : 1.0F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

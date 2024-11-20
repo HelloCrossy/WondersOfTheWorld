@@ -240,8 +240,8 @@ public abstract class FennecFoxModel extends ZawaBaseModel<FennecFoxEntity> {
             }
 
             if (entity.isSprinting()) {
-                float speed = 0.75f;
-                float degree = 0.5f;
+                float speed = 0.85f;
+                float degree = 0.85f;
                 this.Neck.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -0.6F) * 0.5F - 0.665F;
                 this.Head.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * 0.3F) * 0.5F + 0.899F;
                 this.Chest.y = MathHelper.cos(2.0F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -3F) * 0.5F + 15.3F;
@@ -273,8 +273,8 @@ public abstract class FennecFoxModel extends ZawaBaseModel<FennecFoxEntity> {
                 this.FootRight.xRot = MathHelper.cos(5F + limbSwing * speed * 0.6F) * limbSwingAmount * (degree * -1.0F) * 0.5F;
 
             } else {
-                float speed = 0.9f;
-                float degree = 0.8f;
+                float speed = 0.75f;
+                float degree = 0.75f;
                 this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.665F;
                 this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.2F) * 0.5F + 0.899F;
 

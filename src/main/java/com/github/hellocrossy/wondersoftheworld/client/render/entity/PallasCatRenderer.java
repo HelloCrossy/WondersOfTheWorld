@@ -13,7 +13,7 @@ public class PallasCatRenderer extends ZawaMobRenderer<PallasCatEntity, PallasCa
 
     @Override
     protected void scale(PallasCatEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.6F : 0.85F;
+        float scale = entity.isBaby() ? 0.65F : 0.85F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
 

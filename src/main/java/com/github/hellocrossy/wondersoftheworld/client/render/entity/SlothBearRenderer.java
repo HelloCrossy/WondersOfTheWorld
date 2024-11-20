@@ -13,7 +13,7 @@ public class SlothBearRenderer extends ZawaMobRenderer<SlothBearEntity, SlothBea
 
     @Override
     protected void scale(SlothBearEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.6F : 1.30F;
+        float scale = entity.isBaby() ? 1.0F : 1.30F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
