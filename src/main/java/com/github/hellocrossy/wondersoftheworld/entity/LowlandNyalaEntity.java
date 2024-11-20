@@ -41,13 +41,6 @@ public class LowlandNyalaEntity extends ZawaLandEntity {
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
-
-    @Override
-    protected void customServerAiStep() {
-        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
-        super.customServerAiStep();
-    }
-
     @Override
     public float getMaleRatio() {
         return 0.20F;

@@ -68,8 +68,8 @@ public abstract class LowlandNyalaModel extends ZawaBaseModel<LowlandNyalaEntity
         public ModelRenderer HandLeft;
 
         public AdultMale() {
-            this.texWidth = 256;
-            this.texHeight = 256;
+            this.texWidth = 128;
+            this.texHeight = 128;
             this.Fluff1 = new ModelRenderer(this, 102, 0);
             this.Fluff1.setPos(0.0F, 4.5F, 0.0F);
             this.Fluff1.addBox(-0.5F, 0.0F, -0.5F, 1.0F, 6.0F, 12.0F, 0.0F, 0.0F, 0.0F);
