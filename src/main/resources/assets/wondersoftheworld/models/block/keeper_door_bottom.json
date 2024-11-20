@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "top": "wondersoftheworld:block/keeper_door_top",
+    "bottom": "wondersoftheworld:block/keeper_door_bottom"
+  }
+}

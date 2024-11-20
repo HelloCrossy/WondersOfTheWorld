@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_rh",
+  "textures": {
+    "top": "wondersoftheworld:block/aquarium_door_top",
+    "bottom": "wondersoftheworld:block/aquarium_door_bottom"
+  }
+}
