@@ -190,6 +190,11 @@ public class WOTWBlocks {
     @OnlyIn(Dist.CLIENT)
     public static void setRenderLayers() {
         RenderType cutoutMipped = RenderType.cutoutMipped();
+        RenderType cutout = RenderType.cutout();
+        RenderTypeLookup.setRenderLayer(KEEPER_DOOR.get(), cutout);
+        RenderTypeLookup.setRenderLayer(KEEPER_TRAPDOOR.get(), cutout);
+        RenderTypeLookup.setRenderLayer(AQUARIUM_DOOR.get(), cutout);
+        RenderTypeLookup.setRenderLayer(AQUARIUM_TRAPDOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(PLUSHIES.get("emu").get(), cutoutMipped);
     }
 }

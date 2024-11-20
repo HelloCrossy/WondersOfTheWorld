@@ -230,14 +230,6 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(0.75F, 0.7F).clientTrackingRange(10))
                     .build("pygmy_hippo");
 
-    public static final RegistryObject<EntityType<AmericanMinkEntity>> AMERICAN_MINK =
-            REGISTRY.builder(AmericanMinkEntity::new, EntityClassification.CREATURE)
-                    .attributes(AmericanMinkEntity::registerAttributes)
-                    .renderer(() -> AmericanMinkRenderer::new)
-                    .spawns(15, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
-                    .build("american_mink");
-
     public static final RegistryObject<EntityType<HammerkopEntity>> HAMMERKOP =
             REGISTRY.builder(HammerkopEntity::new, EntityClassification.CREATURE)
                     .attributes(HammerkopEntity::registerAttributes)
@@ -286,7 +278,6 @@ public class WOTWEntities {
         EntitySpawnPlacementRegistry.register(WARTHOG.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(QUETZAL.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
         EntitySpawnPlacementRegistry.register(HAMMERKOP.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
-        EntitySpawnPlacementRegistry.register(AMERICAN_MINK.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
     }
 }
 
