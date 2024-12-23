@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wondersoftheworld:vertical_planks"
+          "name": "wondersoftheworld:vertical_planks_slab"
         }
       ],
       "conditions": [

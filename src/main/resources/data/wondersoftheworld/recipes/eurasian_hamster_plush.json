@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wondersoftheworldgroup",
+  "pattern": [
+    "WWW",
+    "OSO",
+    "BBB"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:brown_wool"
+    },
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "O": {
+      "item": "minecraft:white_wool"
+    },
+    "S": [
+      {
+        "item": "minecraft:bamboo"
+      },
+      {
+        "item": "zawa:black_bamboo"
+      },
+      {
+        "item": "zawa:yellow_bamboo"
+      }
+    ]
+  },
+  "result": {
+    "item": "wondersoftheworld:eurasian_hamster_plush"
+  }
+}

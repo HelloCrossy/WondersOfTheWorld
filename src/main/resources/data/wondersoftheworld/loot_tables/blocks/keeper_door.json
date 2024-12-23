@@ -6,7 +6,16 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wondersoftheworld:keeper_door"
+          "name": "wondersoftheworld:keeper_door",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "wondersoftheworld:keeper_door",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
         }
       ],
       "conditions": [

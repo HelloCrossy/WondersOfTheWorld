@@ -6,7 +6,16 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wondersoftheworld:aquarium_door"
+          "name": "wondersoftheworld:aquarium_door",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "wondersoftheworld:aquarium_door",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
         }
       ],
       "conditions": [
