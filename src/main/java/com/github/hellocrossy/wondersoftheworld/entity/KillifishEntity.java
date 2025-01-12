@@ -17,8 +17,8 @@ import org.zawamod.zawa.world.entity.ambient.ZawaAmbientFishEntity;
 
 import javax.annotation.Nullable;
 
-public class OscarEntity extends ZawaAmbientFishEntity {
-    public OscarEntity(EntityType<? extends ZawaAmbientFishEntity> type, World world) {
+public class KillifishEntity extends ZawaAmbientFishEntity {
+    public KillifishEntity(EntityType<? extends ZawaAmbientFishEntity> type, World world) {
         super(type, world);
     }
 
@@ -28,7 +28,7 @@ public class OscarEntity extends ZawaAmbientFishEntity {
 
     @Override
     protected ItemStack getBucketItemStack() {
-        return new ItemStack(WOTWItems.OSCAR_BUCKET.get());
+        return new ItemStack(WOTWItems.KILLIFISH_BUCKET.get());
     }
 
     @Override
@@ -36,14 +36,15 @@ public class OscarEntity extends ZawaAmbientFishEntity {
         return SoundEvents.COD_FLOP;
     }
 
-    protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 0.85F;
-    }
 
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
-        return WOTWEntities.OSCAR.get().create(world);
+        return WOTWEntities.KILLIFISH.get().create(world);
+    }
+
+    protected float getStandingEyeHeight(Pose pose, EntitySize size) {
+        return size.height * 0.85F;
     }
 
     @Override

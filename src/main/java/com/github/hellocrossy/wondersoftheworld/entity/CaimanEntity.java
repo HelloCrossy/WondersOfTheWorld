@@ -26,7 +26,7 @@ public class CaimanEntity extends ZawaSemiAquaticEntity implements OviparousEnti
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.15F).add(Attributes.MAX_HEALTH, 11.0).add(Attributes.ATTACK_DAMAGE, 3.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.15F).add(Attributes.MAX_HEALTH, 22.0).add(Attributes.ATTACK_DAMAGE, 6.0);
     }
 
     @Nullable
