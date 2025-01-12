@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
+import com.github.hellocrossy.wondersoftheworld.entity.ManakinEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.QuetzalEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
@@ -657,16 +658,7 @@ public abstract class QuetzalModel extends ZawaBaseModel<QuetzalEntity> {
             this.TailBase.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.7F) * 0.5F - 0.437F;
             this.LegLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.5F) * 0.5F - 0.819F;
             this.LegRight.xRot = MathHelper.cos(6F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.5F) * 0.5F - 0.819F;
-
-            this.Wing1Left.zRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.5F) * 0.5F + 0.182F;
-            this.Wing1Left.yRot = MathHelper.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -7F) * 0.5F - 0.500F;
-            this.Wing2Left.zRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.5F) * 0.5F - 0.409F;
-            this.Wing2Left.yRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.182F;
-            this.Wing1Right.zRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.5F) * 0.5F - 0.182F;
-            this.Wing1Right.yRot = MathHelper.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 7F) * 0.5F + 0.500F;
-            this.Wing2Right.zRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.5F) * 0.5F + 0.409F;
-            this.Wing2Right.yRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.182F;
-        }
+          }
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -679,15 +671,6 @@ public abstract class QuetzalModel extends ZawaBaseModel<QuetzalEntity> {
             this.TailBase.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.7F) * 0.5F - 0.437F;
             this.LegLeft.xRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.5F) * 0.5F - 0.819F;
             this.LegRight.xRot = MathHelper.cos(6F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.5F) * 0.5F - 0.819F;
-
-            this.Wing1Left.zRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.5F) * 0.5F + 0.182F;
-            this.Wing1Left.yRot = MathHelper.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -7F) * 0.5F - 0.500F;
-            this.Wing2Left.zRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.5F) * 0.5F - 0.409F;
-            this.Wing2Left.yRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.182F;
-            this.Wing1Right.zRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.5F) * 0.5F - 0.182F;
-            this.Wing1Right.yRot = MathHelper.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 7F) * 0.5F + 0.500F;
-            this.Wing2Right.zRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.5F) * 0.5F + 0.409F;
-            this.Wing2Right.yRot = MathHelper.cos(5.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.182F;
         }
     }
 
@@ -707,95 +690,89 @@ public abstract class QuetzalModel extends ZawaBaseModel<QuetzalEntity> {
         public ModelRenderer Head;
         public ModelRenderer UpperBill;
         public ModelRenderer LowerBill;
-        public ModelRenderer Crest;
 
         public Child() {
             texWidth = 64;
             texHeight = 32;
-            this.Crest = new ModelRenderer(this, 0, -4);
-            this.Crest.setPos(0.0F, -0.7F, 2.5F);
-            this.Crest.addBox(0.0F, -0.5F, -1.5F, 0.0F, 4.0F, 4.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(Crest, 0.13665927909957545F, 0.0F, 0.0F);
-            this.LegRight = new ModelRenderer(this, 20, 0);
-            this.LegRight.setPos(-1.3F, 0.9F, -1.4F);
-            this.LegRight.addBox(-0.5F, 0.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(LegRight, -0.2275909337942703F, 0.0911061832922575F, -0.18203784630933073F);
-            this.WingRight = new ModelRenderer(this, 38, 0);
-            this.WingRight.setPos(-1.9F, -1.9F, 1.1F);
-            this.WingRight.addBox(-0.8F, 0.0F, -2.0F, 1.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(WingRight, -0.2275909337942703F, 0.0911061832922575F, -0.13665927909957545F);
+            this.TailBase = new ModelRenderer(this, 17, 28);
+            this.TailBase.setPos(0.0F, 2.0F, -1.0F);
+            this.TailBase.addBox(-1.5F, 0.0F, 0.0F, 3.0F, 1.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(TailBase, 0.0911061832922575F, 0.0F, 0.0F);
+            this.Body = new ModelRenderer(this, 0, 24);
+            this.Body.setPos(0.0F, 20.9F, 0.0F);
+            this.Body.addBox(-2.0F, -2.0F, -2.0F, 4.0F, 4.0F, 4.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Body, 1.411447814024714F, 0.0F, 0.0F);
+            this.LowerBill = new ModelRenderer(this, 5, 1);
+            this.LowerBill.setPos(0.0F, -0.6F, 0.3F);
+            this.LowerBill.addBox(-0.5F, -1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LowerBill, -0.489739378788545F, 0.0F, 0.0F);
+            this.Neck1 = new ModelRenderer(this, 0, 18);
+            this.Neck1.setPos(0.0F, -2.0F, -1.5F);
+            this.Neck1.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Neck1, 0.7285004590772052F, 0.0F, 0.0F);
             this.FootLeft = new ModelRenderer(this, 13, 4);
             this.FootLeft.setPos(0.0F, 0.0F, -0.9F);
             this.FootLeft.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(FootLeft, 0.6829473549475088F, 0.0F, 0.0F);
-            this.Toe1Left = new ModelRenderer(this, 13, 8);
-            this.Toe1Left.setPos(0.0F, 0.2F, -0.01F);
-            this.Toe1Left.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(Toe1Left, 0.0F, 0.0F, 0.591841146688116F);
-            this.UpperBill = new ModelRenderer(this, 13, 12);
-            this.UpperBill.setPos(0.0F, -0.7F, 1.7F);
-            this.UpperBill.addBox(-0.5F, -2.0F, -0.5F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(UpperBill, 0.15690509575954859F, 0.0F, 0.0F);
-            this.LegLeft = new ModelRenderer(this, 13, 0);
-            this.LegLeft.setPos(1.3F, 0.9F, -1.4F);
-            this.LegLeft.addBox(-0.5F, 0.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(LegLeft, -0.2275909337942703F, -0.0911061832922575F, 0.18203784630933073F);
-            this.TailBase = new ModelRenderer(this, 17, 28);
-            this.TailBase.setPos(0.0F, 2.0F, 2.0F);
-            this.TailBase.addBox(-1.5F, 0.0F, -3.0F, 3.0F, 1.0F, 3.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(TailBase, -0.18203784630933073F, 0.0F, 0.0F);
-            this.Neck1 = new ModelRenderer(this, 0, 18);
-            this.Neck1.setPos(0.0F, -2.0F, -1.8F);
-            this.Neck1.addBox(-1.0F, 0.0F, 0.0F, 2.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(Neck1, 0.6373942508178124F, 0.0F, 0.0F);
-            this.Toe2Right = new ModelRenderer(this, 20, 8);
-            this.Toe2Right.setPos(0.0F, 0.2F, -0.01F);
-            this.Toe2Right.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(Toe2Right, 0.0F, 0.0F, 0.591841146688116F);
-            this.Toe1Right = new ModelRenderer(this, 20, 8);
-            this.Toe1Right.setPos(0.0F, 0.2F, -0.01F);
-            this.Toe1Right.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(Toe1Right, 0.004537855888737689F, 0.0F, -0.591841146688116F);
-            this.Head = new ModelRenderer(this, 0, 5);
-            this.Head.setPos(0.0F, 0.0F, 2.0F);
-            this.Head.addBox(-1.5F, -0.7F, 0.0F, 3.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(Head, -0.18203784630933073F, 0.0F, 0.0F);
-            this.Toe2Left = new ModelRenderer(this, 13, 8);
-            this.Toe2Left.setPos(0.0F, 0.2F, -0.01F);
-            this.Toe2Left.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(Toe2Left, 0.0F, 0.0F, -0.591841146688116F);
-            this.Body = new ModelRenderer(this, 0, 24);
-            this.Body.setPos(0.0F, 20.9F, 0.0F);
-            this.Body.addBox(-2.0F, -2.0F, -2.0F, 4.0F, 4.0F, 4.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(Body, 1.0471975511965976F, 0.0F, 0.0F);
-            this.FootRight = new ModelRenderer(this, 20, 4);
-            this.FootRight.setPos(0.0F, 0.0F, -0.9F);
-            this.FootRight.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(FootRight, 0.6829473549475088F, 0.0F, 0.0F);
-            this.LowerBill = new ModelRenderer(this, 13, 17);
-            this.LowerBill.setPos(0.0F, -0.5F, 1.3F);
-            this.LowerBill.addBox(-0.5F, -2.2F, -0.5F, 1.0F, 3.0F, 1.0F, 0.0F, 0.0F, 0.0F);
-            this.setRotateAngle(LowerBill, 0.009424778335276407F, 0.0F, 0.0F);
             this.WingLeft = new ModelRenderer(this, 29, 0);
             this.WingLeft.setPos(1.9F, -1.9F, 1.1F);
             this.WingLeft.addBox(-0.2F, 0.0F, -2.0F, 1.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(WingLeft, -0.2275909337942703F, -0.0911061832922575F, 0.13665927909957545F);
-            this.Head.addChild(this.Crest);
-            this.Body.addChild(this.LegRight);
-            this.Body.addChild(this.WingRight);
-            this.LegLeft.addChild(this.FootLeft);
-            this.FootLeft.addChild(this.Toe1Left);
-            this.Head.addChild(this.UpperBill);
-            this.Body.addChild(this.LegLeft);
+            this.UpperBill = new ModelRenderer(this, 0, 1);
+            this.UpperBill.setPos(0.0F, -0.5F, 2.0F);
+            this.UpperBill.addBox(-0.5F, -1.5F, -0.5F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(UpperBill, 0.5855579507282921F, 0.0F, 0.0F);
+            this.Toe1Left = new ModelRenderer(this, 13, 8);
+            this.Toe1Left.setPos(0.0F, 0.2F, -0.01F);
+            this.Toe1Left.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Toe1Left, 0.0F, 0.0F, 0.591841146688116F);
+            this.LegLeft = new ModelRenderer(this, 13, 0);
+            this.LegLeft.setPos(1.3F, 0.9F, -1.4F);
+            this.LegLeft.addBox(-0.5F, 0.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LegLeft, -0.500909508638178F, -0.04555309164612875F, 0.4098033003787853F);
+            this.FootRight = new ModelRenderer(this, 20, 4);
+            this.FootRight.setPos(0.0F, 0.0F, -0.9F);
+            this.FootRight.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 2.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(FootRight, 0.6829473549475088F, 0.0F, 0.0F);
+            this.WingRight = new ModelRenderer(this, 38, 0);
+            this.WingRight.setPos(-1.9F, -1.9F, 1.1F);
+            this.WingRight.addBox(-0.8F, 0.0F, -2.0F, 1.0F, 3.0F, 2.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(WingRight, -0.2275909337942703F, 0.0911061832922575F, -0.13665927909957545F);
+            this.Toe2Right = new ModelRenderer(this, 20, 8);
+            this.Toe2Right.setPos(0.0F, 0.2F, -0.01F);
+            this.Toe2Right.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Toe2Right, 0.0F, 0.0F, 0.591841146688116F);
+            this.Toe2Left = new ModelRenderer(this, 13, 8);
+            this.Toe2Left.setPos(0.0F, 0.2F, -0.01F);
+            this.Toe2Left.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Toe2Left, 0.0F, 0.0F, -0.591841146688116F);
+            this.Head = new ModelRenderer(this, 0, 5);
+            this.Head.setPos(0.0F, 0.0F, 2.0F);
+            this.Head.addBox(-1.5F, -0.7F, 0.0F, 3.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Head, -0.6373942508178124F, 0.0F, 0.0F);
+            this.Toe1Right = new ModelRenderer(this, 20, 8);
+            this.Toe1Right.setPos(0.0F, 0.2F, -0.01F);
+            this.Toe1Right.addBox(-0.5F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(Toe1Right, 0.004537855888737689F, 0.0F, -0.591841146688116F);
+            this.LegRight = new ModelRenderer(this, 20, 0);
+            this.LegRight.setPos(-1.3F, 0.9F, -1.4F);
+            this.LegRight.addBox(-0.5F, 0.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+            this.setRotateAngle(LegRight, -0.500909508638178F, 0.04555309164612875F, -0.4098033003787853F);
             this.Body.addChild(this.TailBase);
-            this.Body.addChild(this.Neck1);
-            this.FootRight.addChild(this.Toe2Right);
-            this.FootRight.addChild(this.Toe1Right);
-            this.Neck1.addChild(this.Head);
-            this.FootLeft.addChild(this.Toe2Left);
-            this.LegRight.addChild(this.FootRight);
             this.Head.addChild(this.LowerBill);
+            this.Body.addChild(this.Neck1);
+            this.LegLeft.addChild(this.FootLeft);
             this.Body.addChild(this.WingLeft);
+            this.Head.addChild(this.UpperBill);
+            this.FootLeft.addChild(this.Toe1Left);
+            this.Body.addChild(this.LegLeft);
+            this.LegRight.addChild(this.FootRight);
+            this.Body.addChild(this.WingRight);
+            this.FootRight.addChild(this.Toe2Right);
+            this.FootLeft.addChild(this.Toe2Left);
+            this.Neck1.addChild(this.Head);
+            this.FootRight.addChild(this.Toe1Right);
+            this.Body.addChild(this.LegRight);
             this.saveBase();
         }
 
@@ -804,7 +781,7 @@ public abstract class QuetzalModel extends ZawaBaseModel<QuetzalEntity> {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck1.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
-            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) - 0.182F;
+            this.Head.xRot = (headPitch / (180F / (float) Math.PI)) - 0.637F;
             this.Head.zRot = headPitch / (180F / (float) Math.PI) * 0.05F;
         }
 
@@ -812,8 +789,8 @@ public abstract class QuetzalModel extends ZawaBaseModel<QuetzalEntity> {
         public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             float degree = 1.0F;
             float speed = 1.0F;
-            this.Neck1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.637F;
-            this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.3F) * 0.5F - 0.182F;
+            this.Neck1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.728F;
+            this.Head.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.3F) * 0.5F - 0.637F;
         }
 
         @Override
@@ -821,4 +798,5 @@ public abstract class QuetzalModel extends ZawaBaseModel<QuetzalEntity> {
         }
     }
 }
+
 
