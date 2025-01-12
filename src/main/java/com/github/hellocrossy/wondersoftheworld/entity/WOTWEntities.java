@@ -219,7 +219,7 @@ public class WOTWEntities {
                     .attributes(WarthogEntity::registerAttributes)
                     .renderer(() -> WarthogRenderer::new)
                     .spawns(10, 1, 2, ZawaSpawnCategory.WET_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(0.75F, 0.7F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.8F, 0.7F).clientTrackingRange(10))
                     .build("warthog");
 
     public static final RegistryObject<EntityType<PygmyHippoEntity>> PYGMY_HIPPO =
@@ -227,7 +227,7 @@ public class WOTWEntities {
                     .attributes(PygmyHippoEntity::registerAttributes)
                     .renderer(() -> PygmyHippoRenderer::new)
                     .spawns(8, 1, 1, ZawaSpawnCategory.DEEP_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.75F, 0.7F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 0.9F).clientTrackingRange(10))
                     .build("pygmy_hippo");
 
     public static final RegistryObject<EntityType<HammerkopEntity>> HAMMERKOP =
@@ -245,6 +245,13 @@ public class WOTWEntities {
                     .spawns(15, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
                     .build("quetzal");
+    public static final RegistryObject<EntityType<KillifishEntity>> KILLIFISH =
+            REGISTRY.builder(KillifishEntity::new, EntityClassification.WATER_AMBIENT)
+                    .attributes(KillifishEntity::registerAttributes)
+                    .renderer(() -> KillifishRenderer::new)
+                    .spawns(10, 2, 3, ZawaSpawnCategory.WET_RAINFOREST)
+                    .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
+                    .build("killifish");
 
     public static void registerSpawnPlacements() {
         EntitySpawnPlacementRegistry.register(TAKIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
@@ -278,6 +285,7 @@ public class WOTWEntities {
         EntitySpawnPlacementRegistry.register(WARTHOG.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(QUETZAL.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
         EntitySpawnPlacementRegistry.register(HAMMERKOP.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
+        EntitySpawnPlacementRegistry.register(KILLIFISH.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
     }
 }
 

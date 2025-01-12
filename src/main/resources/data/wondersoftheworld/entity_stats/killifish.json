@@ -1,0 +1,10 @@
+{
+  "temperament": "timid",
+  "size": "ambient",
+  "breeding_item": "zawa:earthworm",
+  "speed": "medium",
+  "variant_count": 8,
+  "captive_variants": [
+    "golden_wonder"
+  ]
+}
