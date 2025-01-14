@@ -4,7 +4,7 @@
       "model": "wondersoftheworld:block/limestone_slab"
     },
     "type=double": {
-      "model": "wondersoftheworld:block/limestone_tiles"
+      "model": "wondersoftheworld:block/limestone"
     },
     "type=top": {
       "model": "wondersoftheworld:block/limestone_slab_top"

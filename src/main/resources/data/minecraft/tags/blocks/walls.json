@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "wondersoftheworld:stained_rebar_wall",
+    "wondersoftheworld:black_brick_wall",
+    "wondersoftheworld:red_brick_wall",
+    "wondersoftheworld:defined_breeze_block_wall",
+    "wondersoftheworld:breeze_block_wall"
+  ]
+}

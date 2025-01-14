@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "zawa",
+  "pattern": [
+    "BWB",
+    "WSW",
+    "WOW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:brown_wool"
+    },
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "O": {
+      "item": "minecraft:pink_wool"
+    },
+    "S": [
+      {
+        "item": "minecraft:bamboo"
+      },
+      {
+        "item": "zawa:black_bamboo"
+      },
+      {
+        "item": "zawa:yellow_bamboo"
+      }
+    ]
+  },
+  "result": {
+    "item": "wondersoftheworld:caracal_plush"
+  }
+}

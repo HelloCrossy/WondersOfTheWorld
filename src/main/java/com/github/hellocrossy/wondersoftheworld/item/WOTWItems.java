@@ -54,7 +54,7 @@ public class WOTWItems {
     public static final RegistryObject<Item>
             KILLIFISH = REGISTRAR.register("killifish", () -> new Item(new Item.Properties().tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item>
-            KILLIFISH_BUCKET = REGISTRAR.register("bucket_of_killifish", () -> new ZawaFishBucketItem(WOTWEntities.OSCAR, () -> Fluids.WATER,
+            KILLIFISH_BUCKET = REGISTRAR.register("bucket_of_killifish", () -> new ZawaFishBucketItem(WOTWEntities.KILLIFISH, () -> Fluids.WATER,
             new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
 
     public static final RegistryObject<Item> EMU_EGG = REGISTRAR.register("emu_egg", () -> new ZawaEggItem(WOTWEntities.EMU, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));

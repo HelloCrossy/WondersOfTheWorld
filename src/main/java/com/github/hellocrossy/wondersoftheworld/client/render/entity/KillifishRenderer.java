@@ -16,7 +16,7 @@ public class KillifishRenderer extends ZawaMobRenderer<KillifishEntity, Killifis
 
     @Override
     protected void scale(KillifishEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        matrixStack.scale(0.6F, 0.6F, 0.6F);
+        matrixStack.scale(0.4F, 0.4F, 0.4F);
         super.scale(entity, matrixStack, partialTickTime);
     }
 
