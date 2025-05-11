@@ -2,19 +2,18 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.client.model.MargayModel;
 import com.github.hellocrossy.wondersoftheworld.entity.MargayEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.WesternLowlandBongoEntity;
-import com.mojang.blaze3d.matrix.MatrixStack;
-import net.minecraft.client.renderer.entity.EntityRendererManager;
+import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class MargayRenderer extends ZawaMobRenderer<MargayEntity, MargayModel> {
-    public MargayRenderer(EntityRendererManager manager) {
-        super(manager, new MargayModel.Adult(), new MargayModel.Child(), 0.4F);
+    public MargayRenderer(EntityRendererProvider.Context context) {
+        super(context, new MargayModel.Adult(), new MargayModel.Child(), 0.4F);
 
     }
 
     @Override
-    protected void scale(MargayEntity entity, MatrixStack matrixStack, float partialTickTime) {
+    protected void scale(MargayEntity entity, PoseStack matrixStack, float partialTickTime) {
         float scale = entity.isBaby() ? 0.8F : 0.9F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);

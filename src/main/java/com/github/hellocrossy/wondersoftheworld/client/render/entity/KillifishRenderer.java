@@ -3,19 +3,19 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.KillifishModel;
 import com.github.hellocrossy.wondersoftheworld.entity.KillifishEntity;
-import com.mojang.blaze3d.matrix.MatrixStack;
-import net.minecraft.client.renderer.entity.EntityRendererManager;
-import net.minecraft.util.ResourceLocation;
+import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.resources.ResourceLocation;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class KillifishRenderer extends ZawaMobRenderer<KillifishEntity, KillifishModel> {
-    public KillifishRenderer(EntityRendererManager manager) {
-        super(manager, new KillifishModel(), 0.2F);
+    public KillifishRenderer(EntityRendererProvider.Context context) {
+        super(context, new KillifishModel(), 0.2F);
     }
 
     @Override
-    protected void scale(KillifishEntity entity, MatrixStack matrixStack, float partialTickTime) {
+    protected void scale(KillifishEntity entity, PoseStack matrixStack, float partialTickTime) {
         matrixStack.scale(0.4F, 0.4F, 0.4F);
         super.scale(entity, matrixStack, partialTickTime);
     }

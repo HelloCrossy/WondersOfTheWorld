@@ -3,16 +3,17 @@ package com.github.hellocrossy.wondersoftheworld.item;
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.block.WOTWBlocks;
 import com.github.hellocrossy.wondersoftheworld.entity.WOTWEntities;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.Item;
-import net.minecraft.util.Util;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.Util;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.MobBucketItem;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import org.zawamod.zawa.Zawa;
 import org.zawamod.zawa.world.item.PlushBlockItem;
 import org.zawamod.zawa.world.item.ZawaEggItem;
-import org.zawamod.zawa.world.item.ZawaFishBucketItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,7 @@ public class WOTWItems {
     public static final RegistryObject<Item>
             OSCAR = REGISTRAR.register("oscar", () -> new Item(new Item.Properties().tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item>
-            OSCAR_BUCKET = REGISTRAR.register("bucket_of_oscar", () -> new ZawaFishBucketItem(WOTWEntities.OSCAR, () -> Fluids.WATER,
+            OSCAR_BUCKET = REGISTRAR.register("bucket_of_oscar", () -> new MobBucketItem(WOTWEntities.OSCAR, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH,
             new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
 
     public static final RegistryObject<Item>
@@ -41,20 +42,20 @@ public class WOTWItems {
     public static final RegistryObject<Item>
             FLOWERHORN_CICHILID = REGISTRAR.register("flowerhorn_cichlid", () -> new Item(new Item.Properties().tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item>
-            DISCUS_FISH_BUCKET = REGISTRAR.register("bucket_of_discus", () -> new ZawaFishBucketItem(WOTWEntities.DISCUS_FISH, () -> Fluids.WATER,
+            DISCUS_FISH_BUCKET = REGISTRAR.register("bucket_of_discus", () -> new MobBucketItem(WOTWEntities.DISCUS_FISH, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH,
             new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
 
     public static final RegistryObject<Item>
-            TETRA_BUCKET = REGISTRAR.register("bucket_of_tetra", () -> new ZawaFishBucketItem(WOTWEntities.TETRA, () -> Fluids.WATER,
+            TETRA_BUCKET = REGISTRAR.register("bucket_of_tetra", () -> new MobBucketItem(WOTWEntities.TETRA, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH,
             new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
 
     public static final RegistryObject<Item>
-            FLOWERHORN_CICHILID_BUCKET = REGISTRAR.register("bucket_of_flowerhorn_cichlid", () -> new ZawaFishBucketItem(WOTWEntities.FLOWERHORN_CICHILID, () -> Fluids.WATER,
+            FLOWERHORN_CICHILID_BUCKET = REGISTRAR.register("bucket_of_flowerhorn_cichlid", () -> new MobBucketItem(WOTWEntities.FLOWERHORN_CICHILID, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH,
             new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item>
             KILLIFISH = REGISTRAR.register("killifish", () -> new Item(new Item.Properties().tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item>
-            KILLIFISH_BUCKET = REGISTRAR.register("bucket_of_killifish", () -> new ZawaFishBucketItem(WOTWEntities.KILLIFISH, () -> Fluids.WATER,
+            KILLIFISH_BUCKET = REGISTRAR.register("bucket_of_killifish", () -> new MobBucketItem(WOTWEntities.KILLIFISH, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH,
             new Item.Properties().stacksTo(1).tab(Zawa.ITEMS_GROUP)));
 
     public static final RegistryObject<Item> EMU_EGG = REGISTRAR.register("emu_egg", () -> new ZawaEggItem(WOTWEntities.EMU, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));

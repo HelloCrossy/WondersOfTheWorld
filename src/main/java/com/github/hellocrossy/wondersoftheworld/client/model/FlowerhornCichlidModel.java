@@ -4,8 +4,9 @@ import com.github.hellocrossy.wondersoftheworld.entity.FlowerhornCichlidEntity;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import org.zawamod.zawa.client.model.ZawaBaseAmbientModel;
 
-public class FlowerhornCichlidModel extends SegmentedModel<FlowerhornCichlidEntity> {
+public class FlowerhornCichlidModel extends ZawaBaseAmbientModel<FlowerhornCichlidEntity> {
 
     public ModelRenderer Body;
     public ModelRenderer Tail;

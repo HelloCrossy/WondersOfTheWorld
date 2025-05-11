@@ -4,8 +4,9 @@ import com.github.hellocrossy.wondersoftheworld.entity.KillifishEntity;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import org.zawamod.zawa.client.model.ZawaBaseAmbientModel;
 
-public class KillifishModel extends SegmentedModel<KillifishEntity> {
+public class KillifishModel extends ZawaBaseAmbientModel<KillifishEntity> {
 
     public ModelRenderer Body;
     public ModelRenderer Tail;

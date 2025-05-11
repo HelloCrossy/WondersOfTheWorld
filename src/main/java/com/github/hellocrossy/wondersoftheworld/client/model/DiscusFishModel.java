@@ -4,8 +4,9 @@ import com.github.hellocrossy.wondersoftheworld.entity.DiscusFishEntity;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import org.zawamod.zawa.client.model.ZawaBaseAmbientModel;
 
-public class DiscusFishModel extends SegmentedModel<DiscusFishEntity> {
+public class DiscusFishModel extends ZawaBaseAmbientModel<DiscusFishEntity> {
 
     public ModelRenderer Body;
     public ModelRenderer Tail;

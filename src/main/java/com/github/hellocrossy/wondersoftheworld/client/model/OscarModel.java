@@ -4,8 +4,9 @@ import com.github.hellocrossy.wondersoftheworld.entity.OscarEntity;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import org.zawamod.zawa.client.model.ZawaBaseAmbientModel;
 
-public class OscarModel extends SegmentedModel<OscarEntity> {
+public class OscarModel extends ZawaBaseAmbientModel<OscarEntity> {
     public ModelRenderer Body;
     public ModelRenderer Tail;
     public ModelRenderer DorsalFin;

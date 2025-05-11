@@ -4,8 +4,9 @@ import com.github.hellocrossy.wondersoftheworld.entity.TetraEntity;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import org.zawamod.zawa.client.model.ZawaBaseAmbientModel;
 
-public class TetraModel extends SegmentedModel<TetraEntity> {
+public class TetraModel extends ZawaBaseAmbientModel<TetraEntity> {
 
     public ModelRenderer Body;
     public ModelRenderer Tail;
