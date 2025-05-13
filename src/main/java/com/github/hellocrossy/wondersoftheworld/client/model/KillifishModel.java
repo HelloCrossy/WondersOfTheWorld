@@ -2,6 +2,8 @@ package com.github.hellocrossy.wondersoftheworld.client.model;
 
 import com.github.hellocrossy.wondersoftheworld.entity.KillifishEntity;
 import com.google.common.collect.ImmutableList;
+import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.client.model.geom.builders.CubeListBuilder;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
@@ -35,22 +37,7 @@ public class KillifishModel extends ZawaBaseAmbientModel<KillifishEntity> {
     }
 
     public KillifishModel(ModelPart root) {
-        this.Chest = root.getChild("Chest");
-        this.texWidth = 32;
-        this.texHeight = 32;
-        partDefinition.addOrReplaceChild("Neck", CubeListBuilder.create().texOffs(6, 19).addBox(-0.5F, 0.0F, -2.0F, 1.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F), PartPose.offsetAndRotation(0.0F, 2.8F, -0.6F, -0.4098033003787853F, 0.0F, 0.0F));
-        partDefinition.addOrReplaceChild("RightPelvicFin", CubeListBuilder.create().texOffs(0, 0).addBox(0.0F, 0.0F, 0.0F, 0.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F), PartPose.offsetAndRotation(-0.7F, 2.0F, -2.7F, 0.40229837926888745F, -0.2275909337942703F, 0.0F));
-        partDefinition.addOrReplaceChild("CaudalFinBottom", CubeListBuilder.create().texOffs(0, 16).addBox(0.0F, -1.5F, -2.1F, 0.0F, 5.0F, 3.0F, 0.0F, 0.0F, 0.0F), PartPose.offsetAndRotation(0.0F, 0.4F, 3.8F, 1.4172072993561737F, 0.0F, 0.0F));
-        partDefinition.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(13, 0).addBox(-1.0F, 0.0F, -3.0F, 2.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F), PartPose.offsetAndRotation(0.0F, -1.9F, -3.3F, 0.2275909337942703F, 0.0F, 0.0F));
-        partDefinition.addOrReplaceChild("Face", CubeListBuilder.create().texOffs(18, 18).addBox(-0.5F, 0.0F, -2.0F, 1.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F), PartPose.offsetAndRotation(0.0F, 0.1F, -3.0F, 0.8196066007575706F, 0.0F, 0.0F));
-        partDefinition.addOrReplaceChild("LeftPectoralFin", CubeListBuilder.create().texOffs(20, 4).addBox(0.0F, -1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F), PartPose.offsetAndRotation(1.4F, 0.8F, -2.7F, -0.12967796042712246F, 0.4098033003787853F, 0.0F));
-        partDefinition.addOrReplaceChild("Tail", CubeListBuilder.create().texOffs(12, 11).addBox(-1.0F, -1.5F, 0.0F, 2.0F, 3.0F, 4.0F, 0.0F, 0.0F, 0.0F), PartPose.offset(0.0F, -0.2F, 3.3F));
-        partDefinition.addOrReplaceChild("AnalFin", CubeListBuilder.create().texOffs(0, 9).addBox(0.0F, 0.0F, -2.0F, 0.0F, 4.0F, 6.0F, 0.0F, 0.0F, 0.0F), PartPose.offsetAndRotation(0.0F, 1.0F, 1.7F, 0.18762289458939044F, 0.0F, 0.0F));
-        partDefinition.addOrReplaceChild("RightPectoralFin", CubeListBuilder.create().texOffs(20, 4).addBox(0.0F, -1.0F, 0.0F, 0.0F, 2.0F, 2.0F, 0.0F, 0.0F, 0.0F), PartPose.offsetAndRotation(-1.4F, 0.8F, -2.7F, -0.12967796042712246F, -0.4098033003787853F, 0.0F));
-        partDefinition.addOrReplaceChild("Body", CubeListBuilder.create().texOffs(0, 0).addBox(-1.5F, -2.0F, -3.5F, 3.0F, 4.0F, 7.0F, 0.0F, 0.0F, 0.0F), PartPose.offset(0.0F, 19.6F, 0.0F));
-        partDefinition.addOrReplaceChild("CaudalFin", CubeListBuilder.create().texOffs(12, 15).addBox(0.0F, -1.5F, -1.0F, 0.0F, 5.0F, 3.0F, 0.0F, 0.0F, 0.0F), PartPose.offsetAndRotation(0.0F, -0.4F, 3.8F, 1.7243853542336192F, 0.0F, 0.0F));
-        partDefinition.addOrReplaceChild("LeftPelvicFin", CubeListBuilder.create().texOffs(0, 0).addBox(0.0F, 0.0F, 0.0F, 0.0F, 4.0F, 2.0F, 0.0F, 0.0F, 0.0F), PartPose.offsetAndRotation(0.7F, 2.0F, -2.7F, 0.40229837926888745F, 0.2275909337942703F, 0.0F));
-        partDefinition.addOrReplaceChild("DorsalFin", CubeListBuilder.create().texOffs(0, 4).addBox(0.0F, -4.0F, 0.0F, 0.0F, 4.0F, 7.0F, 0.0F, 0.0F, 0.0F), PartPose.offsetAndRotation(0.0F, -1.4F, -1.1F, -0.0781907508222411F, 0.0F, 0.0F));
+        this.Body = root.getChild("Body");
         this.Neck = this.Head.getChild("Neck");
         this.RightPelvicFin = this.Body.getChild("RightPelvicFin");
         this.CaudalFinBottom = this.Tail.getChild("CaudalFinBottom");
@@ -69,9 +56,21 @@ public class KillifishModel extends ZawaBaseAmbientModel<KillifishEntity> {
         MeshDefinition meshDefinition = new MeshDefinition();
         PartDefinition partDefinition = meshDefinition.getRoot();
 
-// paste partDefinition.addOrReplaceChild lines here
+        partDefinition.addOrReplaceChild("Neck", CubeListBuilder.create().texOffs(6, 19).addBox(-0.5F, 0.0F, -2.0F, 1.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, 2.8F, -0.6F, -0.4098033003787853F, 0.0F, 0.0F));
+        partDefinition.addOrReplaceChild("RightPelvicFin", CubeListBuilder.create().texOffs(0, 0).addBox(0.0F, 0.0F, 0.0F, 0.0F, 4.0F, 2.0F), PartPose.offsetAndRotation(-0.7F, 2.0F, -2.7F, 0.40229837926888745F, -0.2275909337942703F, 0.0F));
+        partDefinition.addOrReplaceChild("CaudalFinBottom", CubeListBuilder.create().texOffs(0, 16).addBox(0.0F, -1.5F, -2.1F, 0.0F, 5.0F, 3.0F), PartPose.offsetAndRotation(0.0F, 0.4F, 3.8F, 1.4172072993561737F, 0.0F, 0.0F));
+        partDefinition.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(13, 0).addBox(-1.0F, 0.0F, -3.0F, 2.0F, 3.0F, 3.0F), PartPose.offsetAndRotation(0.0F, -1.9F, -3.3F, 0.2275909337942703F, 0.0F, 0.0F));
+        partDefinition.addOrReplaceChild("Face", CubeListBuilder.create().texOffs(18, 18).addBox(-0.5F, 0.0F, -2.0F, 1.0F, 2.0F, 2.0F), PartPose.offsetAndRotation(0.0F, 0.1F, -3.0F, 0.8196066007575706F, 0.0F, 0.0F));
+        partDefinition.addOrReplaceChild("LeftPectoralFin", CubeListBuilder.create().texOffs(20, 4).addBox(0.0F, -1.0F, 0.0F, 0.0F, 2.0F, 2.0F), PartPose.offsetAndRotation(1.4F, 0.8F, -2.7F, -0.12967796042712246F, 0.4098033003787853F, 0.0F));
+        partDefinition.addOrReplaceChild("Tail", CubeListBuilder.create().texOffs(12, 11).addBox(-1.0F, -1.5F, 0.0F, 2.0F, 3.0F, 4.0F), PartPose.offset(0.0F, -0.2F, 3.3F));
+        partDefinition.addOrReplaceChild("AnalFin", CubeListBuilder.create().texOffs(0, 9).addBox(0.0F, 0.0F, -2.0F, 0.0F, 4.0F, 6.0F), PartPose.offsetAndRotation(0.0F, 1.0F, 1.7F, 0.18762289458939044F, 0.0F, 0.0F));
+        partDefinition.addOrReplaceChild("RightPectoralFin", CubeListBuilder.create().texOffs(20, 4).addBox(0.0F, -1.0F, 0.0F, 0.0F, 2.0F, 2.0F), PartPose.offsetAndRotation(-1.4F, 0.8F, -2.7F, -0.12967796042712246F, -0.4098033003787853F, 0.0F));
+        partDefinition.addOrReplaceChild("Body", CubeListBuilder.create().texOffs(0, 0).addBox(-1.5F, -2.0F, -3.5F, 3.0F, 4.0F, 7.0F), PartPose.offset(0.0F, 19.6F, 0.0F));
+        partDefinition.addOrReplaceChild("CaudalFin", CubeListBuilder.create().texOffs(12, 15).addBox(0.0F, -1.5F, -1.0F, 0.0F, 5.0F, 3.0F), PartPose.offsetAndRotation(0.0F, -0.4F, 3.8F, 1.7243853542336192F, 0.0F, 0.0F));
+        partDefinition.addOrReplaceChild("LeftPelvicFin", CubeListBuilder.create().texOffs(0, 0).addBox(0.0F, 0.0F, 0.0F, 0.0F, 4.0F, 2.0F), PartPose.offsetAndRotation(0.7F, 2.0F, -2.7F, 0.40229837926888745F, 0.2275909337942703F, 0.0F));
+        partDefinition.addOrReplaceChild("DorsalFin", CubeListBuilder.create().texOffs(0, 4).addBox(0.0F, -4.0F, 0.0F, 0.0F, 4.0F, 7.0F), PartPose.offsetAndRotation(0.0F, -1.4F, -1.1F, -0.0781907508222411F, 0.0F, 0.0F));
 
-        return LayerDefinition.create(meshDefinition, texWidth, texHeight);
+        return LayerDefinition.create(meshDefinition, 32, 32);
     }
 
     @Override
