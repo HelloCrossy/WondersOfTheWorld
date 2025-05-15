@@ -52,64 +52,87 @@ public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
 
         public Adult(ModelPart root) {
             this.Body = root.getChild("Body");
-            this.LegLeft = this.ThighLeft.getChild("LegLeft");
-            this.ForearmRight = this.ArmRight.getChild("ForearmRight");
-            this.ArmLeft = this.Chest.getChild("ArmLeft");
-            this.LegRight = this.ThighRight.getChild("LegRight");
-            this.Mouth = this.Snout.getChild("Mouth");
-            this.ToothLeft = this.Snout.getChild("ToothLeft");
-            this.Tail = this.Hips.getChild("Tail");
-            this.ThighLeft = this.Hips.getChild("ThighLeft");
-            this.LowerLegRight = this.LegRight.getChild("LowerLegRight");
-            this.LowerArmLeft = this.ForearmLeft.getChild("LowerArmLeft");
-            this.Nose = this.Snout.getChild("Nose");
             this.Chest = this.Body.getChild("Chest");
-            this.ThighRight = this.Hips.getChild("ThighRight");
-            this.Head = this.Neck1.getChild("Head");
-            this.LowerLegLeft = this.LegLeft.getChild("LowerLegLeft");
+            this.ArmLeft = this.Chest.getChild("ArmLeft");
             this.ForearmLeft = this.ArmLeft.getChild("ForearmLeft");
-            this.Hips = this.Body.getChild("Hips");
-            this.Snout = this.Head.getChild("Snout");
-            this.LowerArmRight = this.ForearmRight.getChild("LowerArmRight");
-            this.ToothRight = this.Snout.getChild("ToothRight");
-            this.EarLeft = this.Head.getChild("EarLeft");
-            this.Neck2 = this.Neck1.getChild("Neck2");
-            this.EarRight = this.Head.getChild("EarRight");
-            this.ArmRight = this.Chest.getChild("ArmRight");
-            this.Neck1 = this.Chest.getChild("Neck1");
+            this.LowerArmLeft = this.ForearmLeft.getChild("LowerArmLeft");
 
+            this.ArmRight = this.Chest.getChild("ArmRight");
+            this.ForearmRight = this.ArmRight.getChild("ForearmRight");
+            this.LowerArmRight = this.ForearmRight.getChild("LowerArmRight");
+
+            this.Neck1 = this.Chest.getChild("Neck1");
+            this.Head = this.Neck1.getChild("Head");
+            this.Snout = this.Head.getChild("Snout");
+            this.Mouth = this.Snout.getChild("Mouth");
+
+            this.ToothLeft = this.Snout.getChild("ToothLeft");
+
+            this.Nose = this.Snout.getChild("Nose");
+
+            this.ToothRight = this.Snout.getChild("ToothRight");
+
+            this.EarLeft = this.Head.getChild("EarLeft");
+
+            this.EarRight = this.Head.getChild("EarRight");
+
+            this.Neck2 = this.Neck1.getChild("Neck2");
+
+            this.Hips = this.Body.getChild("Hips");
+            this.Tail = this.Hips.getChild("Tail");
+
+            this.ThighLeft = this.Hips.getChild("ThighLeft");
+            this.LegLeft = this.ThighLeft.getChild("LegLeft");
+
+            this.ThighRight = this.Hips.getChild("ThighRight");
+            this.LegRight = this.ThighRight.getChild("LegRight");
+
+            this.LowerLegRight = this.LegRight.getChild("LowerLegRight");
+            this.LowerLegLeft = this.LegLeft.getChild("LowerLegLeft");
         }
 
         public static LayerDefinition createBodyLayer() {
             MeshDefinition meshDefinition = new MeshDefinition();
             PartDefinition partDefinition = meshDefinition.getRoot();
 
-            partDefinition.addOrReplaceChild("LegLeft", CubeListBuilder.create().texOffs(28, 9).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 3.0F, 1.0F), PartPose.offsetAndRotation(0.2F, 1.0F, -3.7F, 1.0946705281561322F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("ForearmRight", CubeListBuilder.create().texOffs(35, 6).mirror(true).addBox(-0.5F, 0.0F, -2.0F, 1.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(-0.3F, 2.7F, 1.0F, -0.46914448828868976F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("ArmLeft", CubeListBuilder.create().texOffs(34, 0).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(1.5F, -0.1F, 0.0F, 0.03071779466865263F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("LegRight", CubeListBuilder.create().texOffs(28, 9).mirror(true).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 3.0F, 1.0F), PartPose.offsetAndRotation(0.2F, 1.0F, -3.7F, 1.0946705281561322F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Mouth", CubeListBuilder.create().texOffs(34, 28).addBox(-0.5F, -0.5F, -2.0F, 1.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, 0.6F, 0.1F, -0.012566371113701878F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("ToothLeft", CubeListBuilder.create().texOffs(37, 24).addBox(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F), PartPose.offsetAndRotation(-0.2F, -0.1F, -1.4F, 0.1563815016444822F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Tail", CubeListBuilder.create().texOffs(0, 0).addBox(-0.5F, 0.0F, 0.0F, 1.0F, 3.0F, 1.0F), PartPose.offsetAndRotation(0.0F, 0.8F, 2.1F, 0.5497787143782138F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("ThighLeft", CubeListBuilder.create().texOffs(21, 0).addBox(-1.0F, -1.5F, -4.0F, 2.0F, 3.0F, 4.0F), PartPose.offsetAndRotation(1.6F, 2.8F, 2.9F, 0.6429792990978721F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("LowerLegRight", CubeListBuilder.create().texOffs(21, 8).mirror(true).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 4.0F, 1.0F), PartPose.offsetAndRotation(0.1F, 2.5F, 0.3F, -1.3267992387765453F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("LowerArmLeft", CubeListBuilder.create().texOffs(36, 12).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(-0.1F, 0.0F, 0.0F)), PartPose.offset(0.0F, 2.8F, -1.2F));
-            partDefinition.addOrReplaceChild("Nose", CubeListBuilder.create().texOffs(19, 27).addBox(-0.5F, -0.5F, -2.0F, 1.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, -1.0F, 0.4F, 0.5082398928281348F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Chest", CubeListBuilder.create().texOffs(0, 20).addBox(-1.5F, -2.2F, -1.2F, 3.0F, 4.0F, 3.0F), PartPose.offsetAndRotation(0.0F, 0.3F, -3.0F, 0.41887902047863906F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("ThighRight", CubeListBuilder.create().texOffs(21, 0).mirror(true).addBox(-1.0F, -1.5F, -4.0F, 2.0F, 3.0F, 4.0F), PartPose.offsetAndRotation(-1.6F, 2.8F, 2.9F, 0.6352998743575469F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(23, 19).addBox(-1.5F, -1.5F, -1.5F, 3.0F, 3.0F, 3.0F), PartPose.offsetAndRotation(0.0F, -0.1F, -4.4F, 1.0555751236166873F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("LowerLegLeft", CubeListBuilder.create().texOffs(21, 8).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 4.0F, 1.0F), PartPose.offsetAndRotation(-0.1F, 2.5F, 0.3F, -1.3267992387765453F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("ForearmLeft", CubeListBuilder.create().texOffs(35, 6).addBox(-0.5F, 0.0F, -2.0F, 1.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(0.3F, 2.7F, 1.0F, -0.46914448828868976F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Hips", CubeListBuilder.create().texOffs(0, 12).addBox(-1.5F, 0.0F, 0.0F, 3.0F, 4.0F, 3.0F), PartPose.offsetAndRotation(0.0F, -2.4F, 2.9F, -0.47944193353861736F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Snout", CubeListBuilder.create().texOffs(27, 26).addBox(-1.0F, -0.5F, -2.0F, 2.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, 0.3F, -1.4F, 0.07679448875222618F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("LowerArmRight", CubeListBuilder.create().texOffs(36, 12).mirror(true).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(-0.1F, 0.0F, 0.0F)), PartPose.offset(0.0F, 2.8F, -1.2F));
-            partDefinition.addOrReplaceChild("ToothRight", CubeListBuilder.create().texOffs(37, 24).mirror(true).addBox(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F), PartPose.offsetAndRotation(-0.8F, -0.1F, -1.4F, 0.1563815016444822F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("EarLeft", CubeListBuilder.create().texOffs(37, 18).addBox(-0.5F, -2.0F, -0.5F, 1.0F, 2.0F, 1.0F), PartPose.offsetAndRotation(1.0F, -0.8F, 0.9F, -1.0164797856562695F, -0.7031931716074818F, 1.5247196451948906F));
-            partDefinition.addOrReplaceChild("Neck2", CubeListBuilder.create().texOffs(16, 22).addBox(-0.5F, -4.0F, -0.5F, 1.0F, 4.0F, 1.0F), PartPose.offsetAndRotation(0.0F, 0.5F, -0.4F, 1.5313518484155695F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("EarRight", CubeListBuilder.create().texOffs(37, 18).mirror(true).addBox(-0.5F, -2.0F, -0.5F, 1.0F, 2.0F, 1.0F), PartPose.offsetAndRotation(-1.0F, -0.8F, 0.9F, -1.0164797856562695F, 0.7031931716074818F, -1.5247196451948906F));
-            partDefinition.addOrReplaceChild("ArmRight", CubeListBuilder.create().texOffs(34, 0).mirror(true).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(-1.5F, -0.1F, 0.0F, 0.03071779466865263F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Body", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -2.5F, -3.0F, 4.0F, 5.0F, 6.0F), PartPose.offsetAndRotation(0.0F, 17.0F, -0.5F, 0.07853981633974483F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Neck1", CubeListBuilder.create().texOffs(13, 14).addBox(-1.0F, -1.5F, -4.0F, 2.0F, 2.0F, 4.0F), PartPose.offsetAndRotation(0.0F, 0.2F, -0.2F, -1.4510667294554411F, 0.0F, 0.0F));
+            PartDefinition Body = partDefinition.addOrReplaceChild("Body", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -2.5F, -3.0F, 4.0F, 5.0F, 6.0F), PartPose.offsetAndRotation(0.0F, 17.0F, -0.5F, 0.07853981633974483F, 0.0F, 0.0F));
+            PartDefinition Chest = Body.addOrReplaceChild("Chest", CubeListBuilder.create().texOffs(0, 20).addBox(-1.5F, -2.2F, -1.2F, 3.0F, 4.0F, 3.0F), PartPose.offsetAndRotation(0.0F, 0.3F, -3.0F, 0.41887902047863906F, 0.0F, 0.0F));
+            PartDefinition ArmLeft = Chest.addOrReplaceChild("ArmLeft", CubeListBuilder.create().texOffs(34, 0).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(1.5F, -0.1F, 0.0F, 0.03071779466865263F, 0.0F, 0.0F));
+            PartDefinition ForearmLeft = ArmLeft.addOrReplaceChild("ForearmLeft", CubeListBuilder.create().texOffs(35, 6).addBox(-0.5F, 0.0F, -2.0F, 1.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(0.3F, 2.7F, 1.0F, -0.46914448828868976F, 0.0F, 0.0F));
+            PartDefinition LowerArmLeft = ForearmLeft.addOrReplaceChild("LowerArmLeft", CubeListBuilder.create().texOffs(36, 12).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(-0.1F, 0.0F, 0.0F)), PartPose.offset(0.0F, 2.8F, -1.2F));
+
+            PartDefinition ArmRight = Chest.addOrReplaceChild("ArmRight", CubeListBuilder.create().texOffs(34, 0).mirror(true).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(-1.5F, -0.1F, 0.0F, 0.03071779466865263F, 0.0F, 0.0F));
+            PartDefinition ForearmRight = ArmRight.addOrReplaceChild("ForearmRight", CubeListBuilder.create().texOffs(35, 6).mirror(true).addBox(-0.5F, 0.0F, -2.0F, 1.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(-0.3F, 2.7F, 1.0F, -0.46914448828868976F, 0.0F, 0.0F));
+            PartDefinition LowerArmRight = ForearmRight.addOrReplaceChild("LowerArmRight", CubeListBuilder.create().texOffs(36, 12).mirror(true).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(-0.1F, 0.0F, 0.0F)), PartPose.offset(0.0F, 2.8F, -1.2F));
+
+            PartDefinition Neck1 = Chest.addOrReplaceChild("Neck1", CubeListBuilder.create().texOffs(13, 14).addBox(-1.0F, -1.5F, -4.0F, 2.0F, 2.0F, 4.0F), PartPose.offsetAndRotation(0.0F, 0.2F, -0.2F, -1.4510667294554411F, 0.0F, 0.0F));
+            PartDefinition Head = Neck1.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(23, 19).addBox(-1.5F, -1.5F, -1.5F, 3.0F, 3.0F, 3.0F), PartPose.offsetAndRotation(0.0F, -0.1F, -4.4F, 1.0555751236166873F, 0.0F, 0.0F));
+            PartDefinition Snout = Head.addOrReplaceChild("Snout", CubeListBuilder.create().texOffs(27, 26).addBox(-1.0F, -0.5F, -2.0F, 2.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, 0.3F, -1.4F, 0.07679448875222618F, 0.0F, 0.0F));
+            PartDefinition Mouth = Snout.addOrReplaceChild("Mouth", CubeListBuilder.create().texOffs(34, 28).addBox(-0.5F, -0.5F, -2.0F, 1.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, 0.6F, 0.1F, -0.012566371113701878F, 0.0F, 0.0F));
+
+            PartDefinition ToothLeft = Snout.addOrReplaceChild("ToothLeft", CubeListBuilder.create().texOffs(37, 24).addBox(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F), PartPose.offsetAndRotation(-0.2F, -0.1F, -1.4F, 0.1563815016444822F, 0.0F, 0.0F));
+
+            PartDefinition Nose = Snout.addOrReplaceChild("Nose", CubeListBuilder.create().texOffs(19, 27).addBox(-0.5F, -0.5F, -2.0F, 1.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, -1.0F, 0.4F, 0.5082398928281348F, 0.0F, 0.0F));
+
+            PartDefinition ToothRight = Snout.addOrReplaceChild("ToothRight", CubeListBuilder.create().texOffs(37, 24).mirror(true).addBox(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F), PartPose.offsetAndRotation(-0.8F, -0.1F, -1.4F, 0.1563815016444822F, 0.0F, 0.0F));
+
+            PartDefinition EarLeft = Head.addOrReplaceChild("EarLeft", CubeListBuilder.create().texOffs(37, 18).addBox(-0.5F, -2.0F, -0.5F, 1.0F, 2.0F, 1.0F), PartPose.offsetAndRotation(1.0F, -0.8F, 0.9F, -1.0164797856562695F, -0.7031931716074818F, 1.5247196451948906F));
+
+            PartDefinition EarRight = Head.addOrReplaceChild("EarRight", CubeListBuilder.create().texOffs(37, 18).mirror(true).addBox(-0.5F, -2.0F, -0.5F, 1.0F, 2.0F, 1.0F), PartPose.offsetAndRotation(-1.0F, -0.8F, 0.9F, -1.0164797856562695F, 0.7031931716074818F, -1.5247196451948906F));
+
+            PartDefinition Neck2 = Neck1.addOrReplaceChild("Neck2", CubeListBuilder.create().texOffs(16, 22).addBox(-0.5F, -4.0F, -0.5F, 1.0F, 4.0F, 1.0F), PartPose.offsetAndRotation(0.0F, 0.5F, -0.4F, 1.5313518484155695F, 0.0F, 0.0F));
+
+            PartDefinition Hips = Body.addOrReplaceChild("Hips", CubeListBuilder.create().texOffs(0, 12).addBox(-1.5F, 0.0F, 0.0F, 3.0F, 4.0F, 3.0F), PartPose.offsetAndRotation(0.0F, -2.4F, 2.9F, -0.47944193353861736F, 0.0F, 0.0F));
+            PartDefinition Tail = Hips.addOrReplaceChild("Tail", CubeListBuilder.create().texOffs(0, 0).addBox(-0.5F, 0.0F, 0.0F, 1.0F, 3.0F, 1.0F), PartPose.offsetAndRotation(0.0F, 0.8F, 2.1F, 0.5497787143782138F, 0.0F, 0.0F));
+
+            PartDefinition ThighLeft = Hips.addOrReplaceChild("ThighLeft", CubeListBuilder.create().texOffs(21, 0).addBox(-1.0F, -1.5F, -4.0F, 2.0F, 3.0F, 4.0F), PartPose.offsetAndRotation(1.6F, 2.8F, 2.9F, 0.6429792990978721F, 0.0F, 0.0F));
+            PartDefinition LegLeft = ThighLeft.addOrReplaceChild("LegLeft", CubeListBuilder.create().texOffs(28, 9).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 3.0F, 1.0F), PartPose.offsetAndRotation(0.2F, 1.0F, -3.7F, 1.0946705281561322F, 0.0F, 0.0F));
+
+            PartDefinition ThighRight = Hips.addOrReplaceChild("ThighRight", CubeListBuilder.create().texOffs(21, 0).mirror(true).addBox(-1.0F, -1.5F, -4.0F, 2.0F, 3.0F, 4.0F), PartPose.offsetAndRotation(-1.6F, 2.8F, 2.9F, 0.6352998743575469F, 0.0F, 0.0F));
+            PartDefinition LegRight = ThighRight.addOrReplaceChild("LegRight", CubeListBuilder.create().texOffs(28, 9).mirror(true).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 3.0F, 1.0F), PartPose.offsetAndRotation(0.2F, 1.0F, -3.7F, 1.0946705281561322F, 0.0F, 0.0F));
+
+            PartDefinition LowerLegRight = LegRight.addOrReplaceChild("LowerLegRight", CubeListBuilder.create().texOffs(21, 8).mirror(true).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 4.0F, 1.0F), PartPose.offsetAndRotation(0.1F, 2.5F, 0.3F, -1.3267992387765453F, 0.0F, 0.0F));
+            PartDefinition LowerLegLeft = LegLeft.addOrReplaceChild("LowerLegLeft", CubeListBuilder.create().texOffs(21, 8).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 4.0F, 1.0F), PartPose.offsetAndRotation(-0.1F, 2.5F, 0.3F, -1.3267992387765453F, 0.0F, 0.0F));
 
             return LayerDefinition.create(meshDefinition, 64, 32);
         }
@@ -221,64 +244,87 @@ public abstract class MouseDeerModel extends ZawaBaseModel<MouseDeerEntity> {
 
         public Child(ModelPart root) {
             this.Body = root.getChild("Body");
-            this.LegLeft = this.ThighLeft.getChild("LegLeft");
-            this.ForearmRight = this.ArmRight.getChild("ForearmRight");
-            this.ArmLeft = this.Chest.getChild("ArmLeft");
-            this.LegRight = this.ThighRight.getChild("LegRight");
-            this.Mouth = this.Snout.getChild("Mouth");
-            this.ToothLeft = this.Snout.getChild("ToothLeft");
-            this.Tail = this.Hips.getChild("Tail");
-            this.ThighLeft = this.Hips.getChild("ThighLeft");
-            this.LowerLegRight = this.LegRight.getChild("LowerLegRight");
-            this.LowerArmLeft = this.ForearmLeft.getChild("LowerArmLeft");
-            this.Nose = this.Snout.getChild("Nose");
             this.Chest = this.Body.getChild("Chest");
-            this.ThighRight = this.Hips.getChild("ThighRight");
-            this.Head = this.Neck1.getChild("Head");
-            this.LowerLegLeft = this.LegLeft.getChild("LowerLegLeft");
+            this.ArmLeft = this.Chest.getChild("ArmLeft");
             this.ForearmLeft = this.ArmLeft.getChild("ForearmLeft");
-            this.Hips = this.Body.getChild("Hips");
-            this.Snout = this.Head.getChild("Snout");
-            this.LowerArmRight = this.ForearmRight.getChild("LowerArmRight");
-            this.ToothRight = this.Snout.getChild("ToothRight");
-            this.EarLeft = this.Head.getChild("EarLeft");
-            this.Neck2 = this.Neck1.getChild("Neck2");
-            this.EarRight = this.Head.getChild("EarRight");
-            this.ArmRight = this.Chest.getChild("ArmRight");
-            this.Neck1 = this.Chest.getChild("Neck1");
+            this.LowerArmLeft = this.ForearmLeft.getChild("LowerArmLeft");
 
+            this.ArmRight = this.Chest.getChild("ArmRight");
+            this.ForearmRight = this.ArmRight.getChild("ForearmRight");
+            this.LowerArmRight = this.ForearmRight.getChild("LowerArmRight");
+
+            this.Neck1 = this.Chest.getChild("Neck1");
+            this.Head = this.Neck1.getChild("Head");
+            this.Snout = this.Head.getChild("Snout");
+            this.Mouth = this.Snout.getChild("Mouth");
+
+            this.ToothLeft = this.Snout.getChild("ToothLeft");
+
+            this.Nose = this.Snout.getChild("Nose");
+
+            this.ToothRight = this.Snout.getChild("ToothRight");
+
+            this.EarLeft = this.Head.getChild("EarLeft");
+
+            this.EarRight = this.Head.getChild("EarRight");
+
+            this.Neck2 = this.Neck1.getChild("Neck2");
+
+            this.Hips = this.Body.getChild("Hips");
+            this.Tail = this.Hips.getChild("Tail");
+
+            this.ThighLeft = this.Hips.getChild("ThighLeft");
+            this.LegLeft = this.ThighLeft.getChild("LegLeft");
+
+            this.ThighRight = this.Hips.getChild("ThighRight");
+            this.LegRight = this.ThighRight.getChild("LegRight");
+
+            this.LowerLegRight = this.LegRight.getChild("LowerLegRight");
+            this.LowerLegLeft = this.LegLeft.getChild("LowerLegLeft");
         }
 
         public static LayerDefinition createBodyLayer() {
             MeshDefinition meshDefinition = new MeshDefinition();
             PartDefinition partDefinition = meshDefinition.getRoot();
 
-            partDefinition.addOrReplaceChild("LegLeft", CubeListBuilder.create().texOffs(28, 9).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 3.0F, 1.0F), PartPose.offsetAndRotation(0.2F, 1.0F, -3.7F, 1.0946705281561322F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("ForearmRight", CubeListBuilder.create().texOffs(35, 6).mirror(true).addBox(-0.5F, 0.0F, -2.0F, 1.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(-0.3F, 2.7F, 1.0F, -0.46914448828868976F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("ArmLeft", CubeListBuilder.create().texOffs(34, 0).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(1.5F, -0.1F, 0.0F, 0.03071779466865263F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("LegRight", CubeListBuilder.create().texOffs(28, 9).mirror(true).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 3.0F, 1.0F), PartPose.offsetAndRotation(0.2F, 1.0F, -3.7F, 1.0946705281561322F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Mouth", CubeListBuilder.create().texOffs(34, 28).addBox(-0.5F, -0.5F, -2.0F, 1.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, 0.6F, 0.1F, -0.012566371113701878F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("ToothLeft", CubeListBuilder.create().texOffs(37, 24).addBox(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F), PartPose.offsetAndRotation(-0.2F, -0.1F, -1.4F, 0.1563815016444822F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Tail", CubeListBuilder.create().texOffs(0, 0).addBox(-0.5F, 0.0F, 0.0F, 1.0F, 3.0F, 1.0F), PartPose.offsetAndRotation(0.0F, 0.8F, 2.1F, 0.5497787143782138F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("ThighLeft", CubeListBuilder.create().texOffs(21, 0).addBox(-1.0F, -1.5F, -4.0F, 2.0F, 3.0F, 4.0F), PartPose.offsetAndRotation(1.6F, 2.8F, 2.9F, 0.6429792990978721F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("LowerLegRight", CubeListBuilder.create().texOffs(21, 8).mirror(true).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 4.0F, 1.0F), PartPose.offsetAndRotation(0.1F, 2.5F, 0.3F, -1.3267992387765453F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("LowerArmLeft", CubeListBuilder.create().texOffs(36, 12).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(-0.1F, 0.0F, 0.0F)), PartPose.offset(0.0F, 2.8F, -1.2F));
-            partDefinition.addOrReplaceChild("Nose", CubeListBuilder.create().texOffs(19, 27).addBox(-0.5F, -0.5F, -2.0F, 1.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, -1.0F, 0.4F, 0.5082398928281348F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Chest", CubeListBuilder.create().texOffs(0, 20).addBox(-1.5F, -2.2F, -1.2F, 3.0F, 4.0F, 3.0F), PartPose.offsetAndRotation(0.0F, 0.3F, -3.0F, 0.41887902047863906F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("ThighRight", CubeListBuilder.create().texOffs(21, 0).mirror(true).addBox(-1.0F, -1.5F, -4.0F, 2.0F, 3.0F, 4.0F), PartPose.offsetAndRotation(-1.6F, 2.8F, 2.9F, 0.6352998743575469F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(23, 19).addBox(-1.5F, -1.5F, -1.5F, 3.0F, 3.0F, 3.0F), PartPose.offsetAndRotation(0.0F, -0.1F, -4.4F, 1.0555751236166873F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("LowerLegLeft", CubeListBuilder.create().texOffs(21, 8).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 4.0F, 1.0F), PartPose.offsetAndRotation(-0.1F, 2.5F, 0.3F, -1.3267992387765453F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("ForearmLeft", CubeListBuilder.create().texOffs(35, 6).addBox(-0.5F, 0.0F, -2.0F, 1.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(0.3F, 2.7F, 1.0F, -0.46914448828868976F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Hips", CubeListBuilder.create().texOffs(0, 12).addBox(-1.5F, 0.0F, 0.0F, 3.0F, 4.0F, 3.0F), PartPose.offsetAndRotation(0.0F, -2.4F, 2.9F, -0.47944193353861736F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Snout", CubeListBuilder.create().texOffs(27, 26).addBox(-1.0F, -0.5F, -2.0F, 2.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, 0.3F, -1.4F, 0.07679448875222618F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("LowerArmRight", CubeListBuilder.create().texOffs(36, 12).mirror(true).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(-0.1F, 0.0F, 0.0F)), PartPose.offset(0.0F, 2.8F, -1.2F));
-            partDefinition.addOrReplaceChild("ToothRight", CubeListBuilder.create().texOffs(37, 24).mirror(true).addBox(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F), PartPose.offsetAndRotation(-0.8F, -0.1F, -1.4F, 0.1563815016444822F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("EarLeft", CubeListBuilder.create().texOffs(37, 18).addBox(-0.5F, -2.0F, -0.5F, 1.0F, 2.0F, 1.0F), PartPose.offsetAndRotation(1.0F, -0.8F, 0.9F, -1.0164797856562695F, -0.7031931716074818F, 1.5247196451948906F));
-            partDefinition.addOrReplaceChild("Neck2", CubeListBuilder.create().texOffs(16, 22).addBox(-0.5F, -4.0F, -0.5F, 1.0F, 4.0F, 1.0F), PartPose.offsetAndRotation(0.0F, 0.5F, -0.4F, 1.5313518484155695F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("EarRight", CubeListBuilder.create().texOffs(37, 18).mirror(true).addBox(-0.5F, -2.0F, -0.5F, 1.0F, 2.0F, 1.0F), PartPose.offsetAndRotation(-1.0F, -0.8F, 0.9F, -1.0164797856562695F, 0.7031931716074818F, -1.5247196451948906F));
-            partDefinition.addOrReplaceChild("ArmRight", CubeListBuilder.create().texOffs(34, 0).mirror(true).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(-1.5F, -0.1F, 0.0F, 0.03071779466865263F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Body", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -2.5F, -3.0F, 4.0F, 5.0F, 6.0F), PartPose.offsetAndRotation(0.0F, 17.0F, -0.5F, 0.07853981633974483F, 0.0F, 0.0F));
-            partDefinition.addOrReplaceChild("Neck1", CubeListBuilder.create().texOffs(13, 14).addBox(-1.0F, -1.5F, -4.0F, 2.0F, 2.0F, 4.0F), PartPose.offsetAndRotation(0.0F, 0.2F, -0.2F, -1.4510667294554411F, 0.0F, 0.0F));
+            PartDefinition Body = partDefinition.addOrReplaceChild("Body", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -2.5F, -3.0F, 4.0F, 5.0F, 6.0F), PartPose.offsetAndRotation(0.0F, 17.0F, -0.5F, 0.07853981633974483F, 0.0F, 0.0F));
+            PartDefinition Chest = Body.addOrReplaceChild("Chest", CubeListBuilder.create().texOffs(0, 20).addBox(-1.5F, -2.2F, -1.2F, 3.0F, 4.0F, 3.0F), PartPose.offsetAndRotation(0.0F, 0.3F, -3.0F, 0.41887902047863906F, 0.0F, 0.0F));
+            PartDefinition ArmLeft = Chest.addOrReplaceChild("ArmLeft", CubeListBuilder.create().texOffs(34, 0).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(1.5F, -0.1F, 0.0F, 0.03071779466865263F, 0.0F, 0.0F));
+            PartDefinition ForearmLeft = ArmLeft.addOrReplaceChild("ForearmLeft", CubeListBuilder.create().texOffs(35, 6).addBox(-0.5F, 0.0F, -2.0F, 1.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(0.3F, 2.7F, 1.0F, -0.46914448828868976F, 0.0F, 0.0F));
+            PartDefinition LowerArmLeft = ForearmLeft.addOrReplaceChild("LowerArmLeft", CubeListBuilder.create().texOffs(36, 12).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(-0.1F, 0.0F, 0.0F)), PartPose.offset(0.0F, 2.8F, -1.2F));
+
+            PartDefinition ArmRight = Chest.addOrReplaceChild("ArmRight", CubeListBuilder.create().texOffs(34, 0).mirror(true).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(-1.5F, -0.1F, 0.0F, 0.03071779466865263F, 0.0F, 0.0F));
+            PartDefinition ForearmRight = ArmRight.addOrReplaceChild("ForearmRight", CubeListBuilder.create().texOffs(35, 6).mirror(true).addBox(-0.5F, 0.0F, -2.0F, 1.0F, 3.0F, 2.0F), PartPose.offsetAndRotation(-0.3F, 2.7F, 1.0F, -0.46914448828868976F, 0.0F, 0.0F));
+            PartDefinition LowerArmRight = ForearmRight.addOrReplaceChild("LowerArmRight", CubeListBuilder.create().texOffs(36, 12).mirror(true).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(-0.1F, 0.0F, 0.0F)), PartPose.offset(0.0F, 2.8F, -1.2F));
+
+            PartDefinition Neck1 = Chest.addOrReplaceChild("Neck1", CubeListBuilder.create().texOffs(13, 14).addBox(-1.0F, -1.5F, -4.0F, 2.0F, 2.0F, 4.0F), PartPose.offsetAndRotation(0.0F, 0.2F, -0.2F, -1.4510667294554411F, 0.0F, 0.0F));
+            PartDefinition Head = Neck1.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(23, 19).addBox(-1.5F, -1.5F, -1.5F, 3.0F, 3.0F, 3.0F), PartPose.offsetAndRotation(0.0F, -0.1F, -4.4F, 1.0555751236166873F, 0.0F, 0.0F));
+            PartDefinition Snout = Head.addOrReplaceChild("Snout", CubeListBuilder.create().texOffs(27, 26).addBox(-1.0F, -0.5F, -2.0F, 2.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, 0.3F, -1.4F, 0.07679448875222618F, 0.0F, 0.0F));
+            PartDefinition Mouth = Snout.addOrReplaceChild("Mouth", CubeListBuilder.create().texOffs(34, 28).addBox(-0.5F, -0.5F, -2.0F, 1.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, 0.6F, 0.1F, -0.012566371113701878F, 0.0F, 0.0F));
+
+            PartDefinition ToothLeft = Snout.addOrReplaceChild("ToothLeft", CubeListBuilder.create().texOffs(37, 24).addBox(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F), PartPose.offsetAndRotation(-0.2F, -0.1F, -1.4F, 0.1563815016444822F, 0.0F, 0.0F));
+
+            PartDefinition Nose = Snout.addOrReplaceChild("Nose", CubeListBuilder.create().texOffs(19, 27).addBox(-0.5F, -0.5F, -2.0F, 1.0F, 1.0F, 2.0F), PartPose.offsetAndRotation(0.0F, -1.0F, 0.4F, 0.5082398928281348F, 0.0F, 0.0F));
+
+            PartDefinition ToothRight = Snout.addOrReplaceChild("ToothRight", CubeListBuilder.create().texOffs(37, 24).mirror(true).addBox(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F), PartPose.offsetAndRotation(-0.8F, -0.1F, -1.4F, 0.1563815016444822F, 0.0F, 0.0F));
+
+            PartDefinition EarLeft = Head.addOrReplaceChild("EarLeft", CubeListBuilder.create().texOffs(37, 18).addBox(-0.5F, -2.0F, -0.5F, 1.0F, 2.0F, 1.0F), PartPose.offsetAndRotation(1.0F, -0.8F, 0.9F, -1.0164797856562695F, -0.7031931716074818F, 1.5247196451948906F));
+
+            PartDefinition EarRight = Head.addOrReplaceChild("EarRight", CubeListBuilder.create().texOffs(37, 18).mirror(true).addBox(-0.5F, -2.0F, -0.5F, 1.0F, 2.0F, 1.0F), PartPose.offsetAndRotation(-1.0F, -0.8F, 0.9F, -1.0164797856562695F, 0.7031931716074818F, -1.5247196451948906F));
+
+            PartDefinition Neck2 = Neck1.addOrReplaceChild("Neck2", CubeListBuilder.create().texOffs(16, 22).addBox(-0.5F, -4.0F, -0.5F, 1.0F, 4.0F, 1.0F), PartPose.offsetAndRotation(0.0F, 0.5F, -0.4F, 1.5313518484155695F, 0.0F, 0.0F));
+
+            PartDefinition Hips = Body.addOrReplaceChild("Hips", CubeListBuilder.create().texOffs(0, 12).addBox(-1.5F, 0.0F, 0.0F, 3.0F, 4.0F, 3.0F), PartPose.offsetAndRotation(0.0F, -2.4F, 2.9F, -0.47944193353861736F, 0.0F, 0.0F));
+            PartDefinition Tail = Hips.addOrReplaceChild("Tail", CubeListBuilder.create().texOffs(0, 0).addBox(-0.5F, 0.0F, 0.0F, 1.0F, 3.0F, 1.0F), PartPose.offsetAndRotation(0.0F, 0.8F, 2.1F, 0.5497787143782138F, 0.0F, 0.0F));
+
+            PartDefinition ThighLeft = Hips.addOrReplaceChild("ThighLeft", CubeListBuilder.create().texOffs(21, 0).addBox(-1.0F, -1.5F, -4.0F, 2.0F, 3.0F, 4.0F), PartPose.offsetAndRotation(1.6F, 2.8F, 2.9F, 0.6429792990978721F, 0.0F, 0.0F));
+            PartDefinition LegLeft = ThighLeft.addOrReplaceChild("LegLeft", CubeListBuilder.create().texOffs(28, 9).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 3.0F, 1.0F), PartPose.offsetAndRotation(0.2F, 1.0F, -3.7F, 1.0946705281561322F, 0.0F, 0.0F));
+
+            PartDefinition ThighRight = Hips.addOrReplaceChild("ThighRight", CubeListBuilder.create().texOffs(21, 0).mirror(true).addBox(-1.0F, -1.5F, -4.0F, 2.0F, 3.0F, 4.0F), PartPose.offsetAndRotation(-1.6F, 2.8F, 2.9F, 0.6352998743575469F, 0.0F, 0.0F));
+            PartDefinition LegRight = ThighRight.addOrReplaceChild("LegRight", CubeListBuilder.create().texOffs(28, 9).mirror(true).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 3.0F, 1.0F), PartPose.offsetAndRotation(0.2F, 1.0F, -3.7F, 1.0946705281561322F, 0.0F, 0.0F));
+
+            PartDefinition LowerLegRight = LegRight.addOrReplaceChild("LowerLegRight", CubeListBuilder.create().texOffs(21, 8).mirror(true).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 4.0F, 1.0F), PartPose.offsetAndRotation(0.1F, 2.5F, 0.3F, -1.3267992387765453F, 0.0F, 0.0F));
+            PartDefinition LowerLegLeft = LegLeft.addOrReplaceChild("LowerLegLeft", CubeListBuilder.create().texOffs(21, 8).addBox(-0.5F, 0.0F, -0.5F, 1.0F, 4.0F, 1.0F), PartPose.offsetAndRotation(-0.1F, 2.5F, 0.3F, -1.3267992387765453F, 0.0F, 0.0F));
 
             return LayerDefinition.create(meshDefinition, 64, 32);
         }
