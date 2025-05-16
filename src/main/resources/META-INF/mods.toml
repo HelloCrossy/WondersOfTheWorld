@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[43,)"
+loaderVersion = "[47,)"
 license = "GNU GPLv3"
 issueTrackerURL = "https://github.com/HelloCrossy/WondersOfTheWorld/issues"
 
@@ -18,20 +18,20 @@ Wonders of the World is an addon mod for ZAWA Evolved, on MC JAVA version 1.16.5
 [[dependencies.wondersoftheworld]]
 modId = "forge"
 mandatory = true
-versionRange = "[43,)"
+versionRange = "[47,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.wondersoftheworld]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.2,1.19.3)"
+versionRange = "[1.20.1,1.20.2)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.wondersoftheworld]]
 modId = "zawa"
 mandatory = true
-versionRange = "[1.19.2-1.0.2-BeefBeta-TropicalExpedition3,)"
+versionRange = "[1.20.1-1.0.2-BeefBeta-TropicalExpedition3,)"
 ordering = "AFTER"
 side = "BOTH"
