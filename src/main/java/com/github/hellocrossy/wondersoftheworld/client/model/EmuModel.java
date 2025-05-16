@@ -245,8 +245,8 @@ public abstract class EmuModel extends ZawaBaseModel<EmuEntity> {
 
             this.ThighRight = this.Body.getChild("ThighRight");
             this.LegTopRight = this.ThighRight.getChild("LegTopRight");
-            this.FootRight = this.LegBottomRight.getChild("FootRight");
             this.LegBottomRight = this.LegTopRight.getChild("LegBottomRight");
+            this.FootRight = this.LegBottomRight.getChild("FootRight");
 
             this.Tail = this.Body.getChild("Tail");
 

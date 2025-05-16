@@ -12,7 +12,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class DiscusFishRenderer extends ZawaMobRenderer<DiscusFishEntity, DiscusFishModel> {
     public DiscusFishRenderer(EntityRendererProvider.Context context) {
-        super(context, new DiscusFishModel(context.bakeLayer(WOTWModelLayers.DISCUS_FISH_ADULT)), 0.2F);
+        super(context, new DiscusFishModel(context.bakeLayer(WOTWModelLayers.DISCUS_FISH)), 0.2F);
     }
 
     @Override

@@ -77,8 +77,8 @@ public abstract class SaigaAntelopeModel extends ZawaBaseModel<SaigaAntelopeEnti
 
             this.ArmBaseLeft = this.Chest.getChild("ArmBaseLeft");
             this.UpperArmLeft = this.ArmBaseLeft.getChild("UpperArmLeft");
-            this.HandLeft = this.ArmLeft.getChild("HandLeft");
             this.ArmLeft = this.UpperArmLeft.getChild("ArmLeft");
+            this.HandLeft = this.ArmLeft.getChild("HandLeft");
 
             this.ArmBaseRight = this.Chest.getChild("ArmBaseRight");
             this.UpperArmRight = this.ArmBaseRight.getChild("UpperArmRight");

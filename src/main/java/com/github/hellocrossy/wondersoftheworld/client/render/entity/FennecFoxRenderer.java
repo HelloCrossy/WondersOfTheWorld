@@ -9,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class FennecFoxRenderer extends ZawaMobRenderer<FennecFoxEntity, FennecFoxModel> {
     public FennecFoxRenderer(EntityRendererProvider.Context context) {
-        super(context, new FennecFoxModel.Adult(context.bakeLayer(WOTWModelLayers.FENNEC_FOX_ADULT)), new FennecFoxModel.Child(context.bakeLayer(WOTWModelLayers.FENNEC_FOX_ADULT)), 0.375F);
+        super(context, new FennecFoxModel.Adult(context.bakeLayer(WOTWModelLayers.FENNEC_FOX_ADULT)), new FennecFoxModel.Child(context.bakeLayer(WOTWModelLayers.FENNEC_FOX_CHILD)), 0.375F);
     }
 
     @Override

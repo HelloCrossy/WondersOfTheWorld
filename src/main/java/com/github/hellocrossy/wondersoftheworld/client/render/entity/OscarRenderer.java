@@ -12,7 +12,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class OscarRenderer extends ZawaMobRenderer<OscarEntity, OscarModel> {
     public OscarRenderer(EntityRendererProvider.Context context) {
-        super(context, new OscarModel(context.bakeLayer(WOTWModelLayers.OSCAR_ADULT)), 0.2F);
+        super(context, new OscarModel(context.bakeLayer(WOTWModelLayers.OSCAR)), 0.2F);
     }
 
     @Override

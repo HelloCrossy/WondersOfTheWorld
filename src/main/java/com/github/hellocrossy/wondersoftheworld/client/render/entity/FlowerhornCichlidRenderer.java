@@ -12,7 +12,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class FlowerhornCichlidRenderer extends ZawaMobRenderer<FlowerhornCichlidEntity, FlowerhornCichlidModel> {
     public FlowerhornCichlidRenderer(EntityRendererProvider.Context context) {
-        super(context, new FlowerhornCichlidModel(context.bakeLayer(WOTWModelLayers.FLOWERHORN_CICHILID_ADULT)), 0.2F);
+        super(context, new FlowerhornCichlidModel(context.bakeLayer(WOTWModelLayers.FLOWERHORN_CICHILID)), 0.2F);
     }
 
     @Override

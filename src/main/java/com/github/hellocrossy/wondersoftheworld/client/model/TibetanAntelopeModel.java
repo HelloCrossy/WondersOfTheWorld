@@ -299,8 +299,8 @@ public abstract class TibetanAntelopeModel extends ZawaBaseModel<TibetanAntelope
             this.ThighLeft = this.Body.getChild("ThighLeft");
             this.UpperLegLeft = this.ThighLeft.getChild("UpperLegLeft");
 
-            this.FootLeft = this.LowerLegLeft.getChild("FootLeft");
             this.LowerLegLeft = this.UpperLegLeft.getChild("LowerLegLeft");
+            this.FootLeft = this.LowerLegLeft.getChild("FootLeft");
 
             this.ThighRight = this.Body.getChild("ThighRight");
 

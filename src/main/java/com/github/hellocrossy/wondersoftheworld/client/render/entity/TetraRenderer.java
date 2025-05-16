@@ -12,7 +12,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class TetraRenderer extends ZawaMobRenderer<TetraEntity, TetraModel> {
     public TetraRenderer(EntityRendererProvider.Context context) {
-        super(context, new TetraModel(context.bakeLayer(WOTWModelLayers.TETRA_ADULT)), 0.2F);
+        super(context, new TetraModel(context.bakeLayer(WOTWModelLayers.TETRA)), 0.2F);
     }
 
     @Override

@@ -40,7 +40,7 @@ public class WOTWModelLayers {
     public static final ModelLayerLocation MOUSE_DEER_ADULT = register("mouse_deer", "adult", MouseDeerModel.Adult::createBodyLayer);
     public static final ModelLayerLocation MOUSE_DEER_CHILD = register("mouse_deer", "child", MouseDeerModel.Child::createBodyLayer);
     public static final ModelLayerLocation HOOPOE_ADULT = register("hoopoe", "adult", HoopoeModel.Adult::createBodyLayer);
-    public static final ModelLayerLocation HOOPOE_FLYING = register("hoopoe", "flying", HoopoeModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation HOOPOE_FLYING = register("hoopoe", "flying", HoopoeModel.Flying::createBodyLayer);
     public static final ModelLayerLocation HOOPOE_CHILD = register("hoopoe", "child", HoopoeModel.Child::createBodyLayer);
     public static final ModelLayerLocation MARGAY_ADULT = register("margay", "adult", MargayModel.Adult::createBodyLayer);
     public static final ModelLayerLocation MARGAY_CHILD = register("margay", "child", MargayModel.Child::createBodyLayer);
@@ -57,7 +57,7 @@ public class WOTWModelLayers {
     public static final ModelLayerLocation PALLAS_CAT_ADULT = register("pallas_cat", "adult", PallasCatModel.Adult::createBodyLayer);
     public static final ModelLayerLocation PALLAS_CAT_CHILD = register("pallas_cat", "child", PallasCatModel.Child::createBodyLayer);
     public static final ModelLayerLocation MANAKIN_ADULT = register("manakin", "adult", ManakinModel.Adult::createBodyLayer);
-    public static final ModelLayerLocation MANAKIN_FLYING = register("manakin", "flying", ManakinModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation MANAKIN_FLYING = register("manakin", "flying", ManakinModel.Flying::createBodyLayer);
     public static final ModelLayerLocation MANAKIN_CHILD = register("manakin", "child", ManakinModel.Child::createBodyLayer);
     public static final ModelLayerLocation TAMARIN_ADULT = register("tamarin", "adult", TamarinModel.Adult::createBodyLayer);
     public static final ModelLayerLocation TAMARIN_CHILD = register("tamarin", "child", TamarinModel.Child::createBodyLayer);
@@ -71,14 +71,14 @@ public class WOTWModelLayers {
     public static final ModelLayerLocation HAMMERKOP_FLYING = register("hammerkop", "flying", HammerkopModel.Flying::createBodyLayer);
     public static final ModelLayerLocation HAMMERKOP_CHILD = register("hammerkop", "child", HammerkopModel.Child::createBodyLayer);
     public static final ModelLayerLocation QUETZAL_ADULT = register("quetzal", "adult", QuetzalModel.Adult::createBodyLayer);
-    public static final ModelLayerLocation QUETZAL_FLYING = register("quetzal", "flying", QuetzalModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation QUETZAL_FLYING = register("quetzal", "flying", QuetzalModel.Flying::createBodyLayer);
     public static final ModelLayerLocation QUETZAL_CHILD = register("quetzal", "child", QuetzalModel.Child::createBodyLayer);
 
-    public static final ModelLayerLocation OSCAR_ADULT = register("oscar", OscarModel::createBodyLayer);
-    public static final ModelLayerLocation DISCUS_FISH_ADULT = register("discus_fish", DiscusFishModel::createBodyLayer);
-    public static final ModelLayerLocation TETRA_ADULT = register("tetra", TetraModel::createBodyLayer);
-    public static final ModelLayerLocation FLOWERHORN_CICHILID_ADULT = register("flowerhorn_cichilid", FlowerhornCichlidModel::createBodyLayer);
-    public static final ModelLayerLocation KILLIFISH_ADULT = register("killifish", KillifishModel::createBodyLayer);
+    public static final ModelLayerLocation OSCAR = register("oscar", OscarModel::createBodyLayer);
+    public static final ModelLayerLocation DISCUS_FISH = register("discus_fish", DiscusFishModel::createBodyLayer);
+    public static final ModelLayerLocation TETRA = register("tetra", TetraModel::createBodyLayer);
+    public static final ModelLayerLocation FLOWERHORN_CICHILID = register("flowerhorn_cichilid", FlowerhornCichlidModel::createBodyLayer);
+    public static final ModelLayerLocation KILLIFISH = register("killifish", KillifishModel::createBodyLayer);
 
     public WOTWModelLayers() {
     }

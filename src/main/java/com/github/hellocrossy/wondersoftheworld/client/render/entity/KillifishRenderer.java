@@ -12,7 +12,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class KillifishRenderer extends ZawaMobRenderer<KillifishEntity, KillifishModel> {
     public KillifishRenderer(EntityRendererProvider.Context context) {
-        super(context, new KillifishModel(context.bakeLayer(WOTWModelLayers.KILLIFISH_ADULT)), 0.2F);
+        super(context, new KillifishModel(context.bakeLayer(WOTWModelLayers.KILLIFISH)), 0.2F);
     }
 
     @Override
