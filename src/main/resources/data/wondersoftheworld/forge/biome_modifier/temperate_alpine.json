@@ -11,5 +11,18 @@
       {"type": "forge:not", "value": "#minecraft:is_badlands"}
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "wondersoftheworld:saiga_antelope",
+      "weight": 8,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "wondersoftheworld:takin",
+      "weight": 8,
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ]
 }

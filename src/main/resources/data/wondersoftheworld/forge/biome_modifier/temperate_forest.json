@@ -28,5 +28,18 @@
       }
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "wondersoftheworld:kiwi",
+      "weight": 5,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "wondersoftheworld:manakin",
+      "weight": 10,
+      "minCount": 2,
+      "maxCount": 5
+    }
+  ]
 }

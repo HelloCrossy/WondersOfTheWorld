@@ -22,5 +22,24 @@
       }
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "wondersoftheworld:serval",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "wondersoftheworld:guanaco",
+      "weight": 8,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "wondersoftheworld:caracal",
+      "weight": 8,
+      "minCount": 1,
+      "maxCount": 1
+    }
+  ]
 }

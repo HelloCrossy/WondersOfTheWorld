@@ -15,5 +15,12 @@
       }
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "wondersoftheworld:caiman",
+      "weight": 8,
+      "minCount": 1,
+      "maxCount": 2
+    }
+  ]
 }

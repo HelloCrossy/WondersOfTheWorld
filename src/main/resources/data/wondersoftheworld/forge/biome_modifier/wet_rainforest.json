@@ -21,5 +21,72 @@
       }
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "wondersoftheworld:oscar",
+      "weight": 10,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "wondersoftheworld:discus_fish",
+      "weight": 15,
+      "minCount": 3,
+      "maxCount": 5
+    },
+    {
+      "type": "wondersoftheworld:hoopoe",
+      "weight": 15,
+      "minCount": 3,
+      "maxCount": 5
+    },
+    {
+      "type": "wondersoftheworld:margay",
+      "weight": 8,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "wondersoftheworld:tamarin",
+      "weight": 10,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "wondersoftheworld:squirrel_monkey",
+      "weight": 10,
+      "minCount": 4,
+      "maxCount": 5
+    },
+    {
+      "type": "wondersoftheworld:tetra",
+      "weight": 15,
+      "minCount": 4,
+      "maxCount": 7
+    },
+    {
+      "type": "wondersoftheworld:flowerhorn_cichlid",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 5
+    },
+    {
+      "type": "wondersoftheworld:hammerkop",
+      "weight": 15,
+      "minCount": 3,
+      "maxCount": 2
+    },
+    {
+      "type": "wondersoftheworld:quetzal",
+      "weight": 15,
+      "minCount": 3,
+      "maxCount": 5
+    },
+    {
+      "type": "wondersoftheworld:killifish",
+      "weight": 10,
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ]
 }

@@ -20,5 +20,18 @@
       }
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "wondersoftheworld:sloth_bear",
+      "weight": 5,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "wondersoftheworld:manakin",
+      "weight": 10,
+      "minCount": 2,
+      "maxCount": 5
+    }
+  ]
 }

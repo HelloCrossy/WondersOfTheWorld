@@ -8,5 +8,18 @@
       {"type": "forge:not", "value": "#forge:is_hot"}
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "wondersoftheworld:saiga_antelope",
+      "weight": 8,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "wondersoftheworld:tibetan_antelope",
+      "weight": 5,
+      "minCount": 3,
+      "maxCount": 4
+    }
+  ]
 }

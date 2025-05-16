@@ -23,5 +23,12 @@
       }
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "wondersoftheworld:margay",
+      "weight": 8,
+      "minCount": 1,
+      "maxCount": 1
+    }
+  ]
 }

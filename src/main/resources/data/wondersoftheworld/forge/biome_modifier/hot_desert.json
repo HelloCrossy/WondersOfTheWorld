@@ -7,5 +7,12 @@
       "#forge:is_sandy"
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "wondersoftheworld:fennec_fox",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 2
+    }
+  ]
 }

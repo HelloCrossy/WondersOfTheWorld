@@ -30,5 +30,12 @@
       }
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "wondersoftheworld:mouse_deer",
+      "weight": 5,
+      "minCount": 1,
+      "maxCount": 2
+    }
+  ]
 }

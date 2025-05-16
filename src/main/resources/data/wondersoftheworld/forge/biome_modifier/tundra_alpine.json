@@ -21,5 +21,12 @@
       }
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "wondersoftheworld:pallas_cat",
+      "weight": 8,
+      "minCount": 1,
+      "maxCount": 1
+    }
+  ]
 }

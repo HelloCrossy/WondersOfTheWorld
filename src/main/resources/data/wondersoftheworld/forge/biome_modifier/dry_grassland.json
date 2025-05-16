@@ -22,5 +22,30 @@
       }
     ]
   },
-  "spawners": []
+  "spawners": [
+    {
+      "type": "wondersoftheworld:hoopoe",
+      "weight": 15,
+      "minCount": 3,
+      "maxCount": 5
+    },
+    {
+      "type": "wondersoftheworld:hamster",
+      "weight": 15,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "wondersoftheworld:hammerkop",
+      "weight": 15,
+      "minCount": 3,
+      "maxCount": 5
+    },
+    {
+      "type": "wondersoftheworld:quetzal",
+      "weight": 15,
+      "minCount": 3,
+      "maxCount": 5
+    }
+  ]
 }
