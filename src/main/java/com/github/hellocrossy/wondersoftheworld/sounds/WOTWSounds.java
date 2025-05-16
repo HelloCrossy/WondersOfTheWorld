@@ -53,6 +53,6 @@ public class WOTWSounds {
 
 
     private static RegistryObject<SoundEvent> registerSound(String name) {
-        return REGISTRAR.register(name, () -> new SoundEvent(new ResourceLocation(WondersOfTheWorld.MOD_ID, name)));
+        return REGISTRAR.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(WondersOfTheWorld.MOD_ID, name)));
     }
 }

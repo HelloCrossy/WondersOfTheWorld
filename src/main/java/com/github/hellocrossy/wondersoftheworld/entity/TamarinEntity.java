@@ -60,8 +60,8 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
 
     public void tick() {
         super.tick();
-        if (!this.level.isClientSide && this.horizontalCollision) {
-            this.setClimbing(this.isClimbableBlock(this.level, this.blockPosition().relative(this.getDirection())));
+        if (!this.level().isClientSide && this.horizontalCollision) {
+            this.setClimbing(this.isClimbableBlock(this.level(), this.blockPosition().relative(this.getDirection())));
         }
 
     }

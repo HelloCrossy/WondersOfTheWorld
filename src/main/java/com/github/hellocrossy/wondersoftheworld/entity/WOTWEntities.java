@@ -17,7 +17,7 @@ import org.zawamod.zawa.world.entity.animal.ZawaFlyingEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaSemiAquaticEntity;
 
 public class WOTWEntities {
-    public static final ZawaEntityRegistry REGISTRY = new ZawaEntityRegistry(WondersOfTheWorld.MOD_ID, Zawa.ENTITIES_GROUP);
+    public static final ZawaEntityRegistry REGISTRY = new ZawaEntityRegistry(WondersOfTheWorld.MOD_ID);
 
     public static final RegistryObject<EntityType<ServalEntity>> SERVAL =
             REGISTRY.builder(ServalEntity::new, MobCategory.CREATURE)
