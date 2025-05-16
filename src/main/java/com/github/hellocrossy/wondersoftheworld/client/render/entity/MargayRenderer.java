@@ -1,6 +1,7 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.client.model.MargayModel;
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.MargayEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -8,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class MargayRenderer extends ZawaMobRenderer<MargayEntity, MargayModel> {
     public MargayRenderer(EntityRendererProvider.Context context) {
-        super(context, new MargayModel.Adult(), new MargayModel.Child(), 0.4F);
+        super(context, new MargayModel.Adult(context.bakeLayer(WOTWModelLayers.MARGAY_ADULT)), new MargayModel.Child(context.bakeLayer(WOTWModelLayers.MARGAY_CHILD)), 0.4F);
 
     }
 

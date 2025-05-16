@@ -2,6 +2,7 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.TetraModel;
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.TetraEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -11,7 +12,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class TetraRenderer extends ZawaMobRenderer<TetraEntity, TetraModel> {
     public TetraRenderer(EntityRendererProvider.Context context) {
-        super(context, new TetraModel(), 0.2F);
+        super(context, new TetraModel(context.bakeLayer(WOTWModelLayers.TETRA_ADULT)), 0.2F);
     }
 
     @Override

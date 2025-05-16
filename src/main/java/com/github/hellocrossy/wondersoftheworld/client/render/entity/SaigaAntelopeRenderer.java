@@ -1,6 +1,7 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.client.model.SaigaAntelopeModel;
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.SaigaAntelopeEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -8,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class SaigaAntelopeRenderer extends ZawaMobRenderer<SaigaAntelopeEntity, SaigaAntelopeModel> {
     public SaigaAntelopeRenderer(EntityRendererProvider.Context context) {
-        super(context, new SaigaAntelopeModel.Adult(), new SaigaAntelopeModel.Child(), 0.5F);
+        super(context, new SaigaAntelopeModel.Adult(context.bakeLayer(WOTWModelLayers.SAIGA_ANTELOPE_ADULT)), new SaigaAntelopeModel.Child(context.bakeLayer(WOTWModelLayers.SAIGA_ANTELOPE_CHILD)), 0.5F);
     }
 
     @Override

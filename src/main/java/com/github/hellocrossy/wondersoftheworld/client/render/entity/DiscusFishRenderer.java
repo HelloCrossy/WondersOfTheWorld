@@ -2,6 +2,7 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.DiscusFishModel;
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.DiscusFishEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -11,7 +12,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class DiscusFishRenderer extends ZawaMobRenderer<DiscusFishEntity, DiscusFishModel> {
     public DiscusFishRenderer(EntityRendererProvider.Context context) {
-        super(context, new DiscusFishModel(), 0.2F);
+        super(context, new DiscusFishModel(context.bakeLayer(WOTWModelLayers.DISCUS_FISH_ADULT)), 0.2F);
     }
 
     @Override

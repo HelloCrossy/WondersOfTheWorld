@@ -1,6 +1,7 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.client.model.HamsterModel;
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.HamsterEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -8,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class HamsterRenderer extends ZawaMobRenderer<HamsterEntity, HamsterModel> {
     public HamsterRenderer(EntityRendererProvider.Context context) {
-        super(context, new HamsterModel.Adult(), new HamsterModel.Child(), 0.175F);
+        super(context, new HamsterModel.Adult(context.bakeLayer(WOTWModelLayers.HAMSTER_ADULT)), new HamsterModel.Child(context.bakeLayer(WOTWModelLayers.HAMSTER_CHILD)), 0.175F);
 
     }
 

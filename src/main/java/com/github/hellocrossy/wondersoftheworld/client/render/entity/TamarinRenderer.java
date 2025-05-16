@@ -1,6 +1,7 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.client.model.TamarinModel;
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.TamarinEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -8,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class TamarinRenderer extends ZawaMobRenderer<TamarinEntity, TamarinModel> {
     public TamarinRenderer(EntityRendererProvider.Context context) {
-        super(context, new TamarinModel.Adult(), new TamarinModel.Child(), 0.25F);
+        super(context, new TamarinModel.Adult(context.bakeLayer(WOTWModelLayers.TAMARIN_ADULT)), new TamarinModel.Child(context.bakeLayer(WOTWModelLayers.TAMARIN_CHILD)), 0.25F);
 
     }
 

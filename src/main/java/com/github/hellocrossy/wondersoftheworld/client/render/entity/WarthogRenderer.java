@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.client.model.WarthogModel;
 import com.github.hellocrossy.wondersoftheworld.entity.WarthogEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -8,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class WarthogRenderer extends ZawaMobRenderer<WarthogEntity, WarthogModel> {
     public WarthogRenderer(EntityRendererProvider.Context context) {
-        super(context, new WarthogModel.Adult(), new WarthogModel.Child(), 0.6F);
+        super(context, new WarthogModel.Adult(context.bakeLayer(WOTWModelLayers.WARTHOG_ADULT)), new WarthogModel.Child(context.bakeLayer(WOTWModelLayers.WARTHOG_CHILD)), 0.6F);
     }
 
     @Override

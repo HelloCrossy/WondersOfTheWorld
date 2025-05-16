@@ -2,6 +2,7 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.FlowerhornCichlidModel;
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.FlowerhornCichlidEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -11,7 +12,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class FlowerhornCichlidRenderer extends ZawaMobRenderer<FlowerhornCichlidEntity, FlowerhornCichlidModel> {
     public FlowerhornCichlidRenderer(EntityRendererProvider.Context context) {
-        super(context, new FlowerhornCichlidModel(), 0.2F);
+        super(context, new FlowerhornCichlidModel(context.bakeLayer(WOTWModelLayers.FLOWERHORN_CICHILID_ADULT)), 0.2F);
     }
 
     @Override

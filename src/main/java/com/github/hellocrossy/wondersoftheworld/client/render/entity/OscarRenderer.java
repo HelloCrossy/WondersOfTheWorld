@@ -2,6 +2,7 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.OscarModel;
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.OscarEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -11,7 +12,7 @@ import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class OscarRenderer extends ZawaMobRenderer<OscarEntity, OscarModel> {
     public OscarRenderer(EntityRendererProvider.Context context) {
-        super(context, new OscarModel(), 0.2F);
+        super(context, new OscarModel(context.bakeLayer(WOTWModelLayers.OSCAR_ADULT)), 0.2F);
     }
 
     @Override

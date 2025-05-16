@@ -1,6 +1,7 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.client.model.SlothBearModel;
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.SlothBearEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -8,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class SlothBearRenderer extends ZawaMobRenderer<SlothBearEntity, SlothBearModel> {
     public SlothBearRenderer(EntityRendererProvider.Context context) {
-        super(context, new SlothBearModel.Adult(), new SlothBearModel.Child(), 0.75F);
+        super(context, new SlothBearModel.Adult(context.bakeLayer(WOTWModelLayers.SLOTH_BEAR_ADULT)), new SlothBearModel.Child(context.bakeLayer(WOTWModelLayers.SLOTH_BEAR_CHILD)), 0.75F);
     }
 
     @Override

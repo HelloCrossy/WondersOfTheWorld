@@ -1,5 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.client.model.WesternLowlandBongoModel;
 import com.github.hellocrossy.wondersoftheworld.entity.WesternLowlandBongoEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -8,7 +9,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class WesternLowlandBongoRenderer extends ZawaMobRenderer<WesternLowlandBongoEntity, WesternLowlandBongoModel> {
     public WesternLowlandBongoRenderer(EntityRendererProvider.Context context) {
-        super(context, new WesternLowlandBongoModel.Adult(), new WesternLowlandBongoModel.Child(), 0.7F);
+        super(context, new WesternLowlandBongoModel.Adult(context.bakeLayer(WOTWModelLayers.WESTERN_LOWLAND_BONGO_ADULT)), new WesternLowlandBongoModel.Child(context.bakeLayer(WOTWModelLayers.WESTERN_LOWLAND_BONGO_CHILD)), 0.7F);
 
     }
 

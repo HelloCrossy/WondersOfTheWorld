@@ -1,6 +1,7 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.client.model.LowlandNyalaModel;
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.LowlandNyalaEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -8,8 +9,8 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class LowlandNyalaRenderer extends ZawaMobRenderer<LowlandNyalaEntity, LowlandNyalaModel> {
     public LowlandNyalaRenderer(EntityRendererProvider.Context context) {
-        super(context, new LowlandNyalaModel.AdultMale(), new LowlandNyalaModel.Child(), 0.5F);
-        adultFemaleModel = new LowlandNyalaModel.AdultFemale();
+        super(context, new LowlandNyalaModel.AdultMale(context.bakeLayer(WOTWModelLayers.LOWLAND_NYALA_ADULT_MALE)), new LowlandNyalaModel.Child(context.bakeLayer(WOTWModelLayers.LOWLAND_NYALA_CHILD)), 0.5F);
+        adultFemaleModel = new LowlandNyalaModel.AdultFemale(context.bakeLayer(WOTWModelLayers.LOWLAND_NYALA_ADULT_FEMALE));
     }
 
     @Override
