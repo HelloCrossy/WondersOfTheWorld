@@ -1,14 +1,14 @@
 {
   "temperament": "timid",
-  "kibble": "zawa:insectivore_kibble",
+  "kibble": "zawa:herbivore_kibble",
   "size": "small",
-  "fertility": "medium",
-  "breeding_item": "zawa:earthworm",
+  "fertility": "low",
+  "breeding_item": "minecraft:melon_slice",
   "litter_size": {
-    "min": 1,
-    "max": 4
+    "min": 2,
+    "max": 2
   },
-  "diet": "zawa:insectivore",
+  "diet": "zawa:frugivore",
   "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
