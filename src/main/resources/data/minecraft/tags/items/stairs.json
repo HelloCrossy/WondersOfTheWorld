@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "wondersoftheworld:stained_rebar_stairs",
+    "wondersoftheworld:breeze_block_stairs",
+    "wondersoftheworld:defined_breeze_block_stairs",
+    "wondersoftheworld:red_brick_stairs",
+    "wondersoftheworld:black_brick_stairs",
+    "wondersoftheworld:limestone_stairs",
+    "wondersoftheworld:cracked_stone_stairs",
+    "wondersoftheworld:desert_cracked_stone_stairs",
+    "wondersoftheworld:mossy_cracked_stone_stairs",
+    "wondersoftheworld:arctic_cracked_stone_stairs",
+    "wondersoftheworld:light_cracked_stone_stairs",
+    "wondersoftheworld:mesa_cracked_stone_stairs"
+  ]
+}

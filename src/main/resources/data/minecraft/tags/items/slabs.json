@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "wondersoftheworld:stained_rebar_slab",
+    "wondersoftheworld:breeze_block_slab",
+    "wondersoftheworld:defined_breeze_block_slab",
+    "wondersoftheworld:red_brick_slab",
+    "wondersoftheworld:black_brick_slab",
+    "wondersoftheworld:limestone_slab",
+    "wondersoftheworld:cracked_stone_slab",
+    "wondersoftheworld:desert_cracked_stone_slab",
+    "wondersoftheworld:mossy_cracked_stone_slab",
+    "wondersoftheworld:arctic_cracked_stone_slab",
+    "wondersoftheworld:light_cracked_stone_slab",
+    "wondersoftheworld:mesa_cracked_stone_slab"
+  ]
+}
