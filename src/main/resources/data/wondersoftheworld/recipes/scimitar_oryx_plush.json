@@ -20,6 +20,12 @@
     "S": [
       {
         "item": "minecraft:bamboo"
+      },
+      {
+        "item": "zawa:black_bamboo"
+      },
+      {
+        "item": "zawa:yellow_bamboo"
       }
     ],
     "W": [
