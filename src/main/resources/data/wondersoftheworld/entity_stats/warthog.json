@@ -22,5 +22,8 @@
       "zawa:apple_ice_treat"
     ]
   },
-  "variant_count": 3
+  "variant_count": 5,
+  "captive_variants": [
+    "light"
+  ]
 }
