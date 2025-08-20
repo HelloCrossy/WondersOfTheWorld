@@ -175,6 +175,56 @@ public class WOTWBlocks {
         return new TrapDoorBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL).strength(3.0F).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL).noOcclusion());
 
     });
+    public static final RegistryObject<Block> LIGHT_GRAY_ASPHALT = registerWithItem("light_gray_asphalt", () -> new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIGHT_GRAY_ASPHALT_SLAB = registerWithItem("light_gray_asphalt_slab", () -> {
+        return new SlabBlock(AbstractBlock.Properties.copy((AbstractBlock) LIGHT_GRAY_ASPHALT.get()));
+    });
+    public static final RegistryObject<Block> LIGHT_GRAY_ASPHALT_STAIRS = registerWithItem("light_gray_asphalt_stairs", () -> {
+        return new StairsBlock(() -> {
+            return ((Block) LIGHT_GRAY_ASPHALT.get()).defaultBlockState();
+        }, AbstractBlock.Properties.copy((AbstractBlock) LIGHT_GRAY_ASPHALT.get()));
+    });
+    public static final RegistryObject<Block> LIGHT_GRAY_ASPHALT_WALL = registerWithItem("light_gray_asphalt_wall", () -> {
+        return new WallBlock(AbstractBlock.Properties.copy((AbstractBlock) LIGHT_GRAY_ASPHALT.get()));
+    });
+    public static final RegistryObject<Block> GRAY_ASPHALT = registerWithItem("gray_asphalt", () -> new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GRAY_ASPHALT_SLAB = registerWithItem("gray_asphalt_slab", () -> {
+        return new SlabBlock(AbstractBlock.Properties.copy((AbstractBlock) GRAY_ASPHALT.get()));
+    });
+    public static final RegistryObject<Block> GRAY_ASPHALT_STAIRS = registerWithItem("gray_asphalt_stairs", () -> {
+        return new StairsBlock(() -> {
+            return ((Block) GRAY_ASPHALT.get()).defaultBlockState();
+        }, AbstractBlock.Properties.copy((AbstractBlock) GRAY_ASPHALT.get()));
+    });
+    public static final RegistryObject<Block> GRAY_ASPHALT_WALL = registerWithItem("gray_asphalt_wall", () -> {
+        return new WallBlock(AbstractBlock.Properties.copy((AbstractBlock) GRAY_ASPHALT.get()));
+    });
+    public static final RegistryObject<Block> WHITE_ASPHALT = registerWithItem("white_asphalt", () -> new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> WHITE_ASPHALT_SLAB = registerWithItem("white_asphalt_slab", () -> {
+        return new SlabBlock(AbstractBlock.Properties.copy((AbstractBlock) WHITE_ASPHALT.get()));
+    });
+    public static final RegistryObject<Block> WHITE_ASPHALT_STAIRS = registerWithItem("white_asphalt_stairs", () -> {
+        return new StairsBlock(() -> {
+            return ((Block) WHITE_ASPHALT.get()).defaultBlockState();
+        }, AbstractBlock.Properties.copy((AbstractBlock) WHITE_ASPHALT.get()));
+    });
+    public static final RegistryObject<Block> WHITE_ASPHALT_WALL = registerWithItem("white_asphalt_wall", () -> {
+        return new WallBlock(AbstractBlock.Properties.copy((AbstractBlock) WHITE_ASPHALT.get()));
+    });
+    public static final RegistryObject<Block> ASPHALT = registerWithItem("asphalt", () -> new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ASPHALT_SLAB = registerWithItem("asphalt_slab", () -> {
+        return new SlabBlock(AbstractBlock.Properties.copy((AbstractBlock) ASPHALT.get()));
+    });
+    public static final RegistryObject<Block> ASPHALT_STAIRS = registerWithItem("asphalt_stairs", () -> {
+        return new StairsBlock(() -> {
+            return ((Block) ASPHALT.get()).defaultBlockState();
+        }, AbstractBlock.Properties.copy((AbstractBlock) ASPHALT.get()));
+    });
+    public static final RegistryObject<Block> ASPHALT_WALL = registerWithItem("asphalt_wall", () -> {
+        return new WallBlock(AbstractBlock.Properties.copy((AbstractBlock) ASPHALT.get()));
+    });
+    public static final RegistryObject<Block> TEXTURED_DIRT = registerWithItem("textured_dirt", () -> new Block(AbstractBlock.Properties.of(Material.DIRT).sound(SoundType.GRASS).strength(0.5F).harvestTool(ToolType.SHOVEL)));
+
     public static final Map<String, RegistryObject<Block>> PLUSHIES = Util.make(new HashMap<>(), map -> {
         for (String plush : PLUSHIES_LIST)
             map.put(plush, REGISTRAR.register(plush + "_plush", () -> new PlushBlock(AbstractBlock.Properties.of(Material.WOOL).sound(SoundType.WOOL).noOcclusion())));

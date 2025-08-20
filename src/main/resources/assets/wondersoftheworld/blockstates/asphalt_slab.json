@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wondersoftheworld:block/asphalt_slab"
+    },
+    "type=double": {
+      "model": "wondersoftheworld:block/asphalt_stone"
+    },
+    "type=top": {
+      "model": "wondersoftheworld:block/asphalt_slab_top"
+    }
+  }
+}

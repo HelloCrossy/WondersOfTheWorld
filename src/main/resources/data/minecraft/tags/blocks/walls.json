@@ -5,6 +5,10 @@
     "wondersoftheworld:black_brick_wall",
     "wondersoftheworld:red_brick_wall",
     "wondersoftheworld:defined_breeze_block_wall",
-    "wondersoftheworld:breeze_block_wall"
+    "wondersoftheworld:breeze_block_wall",
+    "wondersoftheworld:asphalt_wall",
+    "wondersoftheworld:white_asphalt_wall",
+    "wondersoftheworld:gray_asphalt_wall",
+    "wondersoftheworld:light_gray_asphalt_wall"
   ]
 }
