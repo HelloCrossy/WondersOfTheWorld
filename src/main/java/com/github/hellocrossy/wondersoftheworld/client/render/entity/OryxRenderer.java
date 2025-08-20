@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class OryxRenderer extends ZawaMobRenderer<OryxEntity, OryxModel> {
     public OryxRenderer(EntityRendererManager manager) {
-        super(manager, new OryxModel.Adult(), new OryxModel.Child(), 0.6F);
+        super(manager, new OryxModel.Adult(), new OryxModel.Child(), 0.7F);
     }
 
     @Override

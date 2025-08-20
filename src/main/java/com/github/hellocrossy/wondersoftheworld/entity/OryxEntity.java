@@ -13,6 +13,7 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
+import org.zawamod.zawa.world.entity.ai.goal.BreachGoal;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
@@ -50,13 +51,13 @@ public class OryxEntity extends ZawaLandEntity implements SpeciesVariantsEntity 
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0, 1.33, true));
-        this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0));
+        this.goalSelector.addGoal(4, new BreachGoal(this, 5));
+        this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 4.0, 1.33, true));
+        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
     }
 
     @Override
     public float getMaleRatio() {
-        return 0.66F;
+        return 0.25F;
     }
 }
