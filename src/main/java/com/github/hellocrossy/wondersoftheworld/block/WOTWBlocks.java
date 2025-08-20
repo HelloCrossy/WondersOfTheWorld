@@ -16,6 +16,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.zawamod.zawa.Zawa;
+import org.zawamod.zawa.world.block.PlantBlock;
 import org.zawamod.zawa.world.block.PlushBlock;
 import java.util.HashMap;
 import java.util.Map;
@@ -223,7 +224,15 @@ public class WOTWBlocks {
     public static final RegistryObject<Block> ASPHALT_WALL = registerWithItem("asphalt_wall", () -> {
         return new WallBlock(AbstractBlock.Properties.copy((AbstractBlock) ASPHALT.get()));
     });
-    public static final RegistryObject<Block> TEXTURED_DIRT = registerWithItem("textured_dirt", () -> new Block(AbstractBlock.Properties.of(Material.DIRT).sound(SoundType.GRASS).strength(0.5F).harvestTool(ToolType.SHOVEL)));
+    public static final RegistryObject<Block> TEXTURED_DIRT = registerWithItem("textured_dirt", () -> new Block(AbstractBlock.Properties.of(Material.DIRT).sound(SoundType.GRAVEL).strength(0.5F).harvestTool(ToolType.SHOVEL)));
+    public static final RegistryObject<Block> WEEDS = registerWithItem("weeds", () -> new PlantBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+
+    public static final RegistryObject<Block> SMALL_JOHNSON_GRASS = registerWithItem("small_johnson_grass", () -> new PlantBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+
+    public static final RegistryObject<Block> SAVANNA_BUSH = registerWithItem("savanna_bush", () -> new PlantBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+
+    public static final RegistryObject<Block> SAVANNA_GRASS = registerWithItem("savanna_grass", () -> new PlantBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+
 
     public static final Map<String, RegistryObject<Block>> PLUSHIES = Util.make(new HashMap<>(), map -> {
         for (String plush : PLUSHIES_LIST)
@@ -236,7 +245,6 @@ public class WOTWBlocks {
         WOTWItems.REGISTRAR.register(name, () -> new BlockItem(registryObject.get(), new Item.Properties().tab(Zawa.DECORATIONS_GROUP)));
         return registryObject;
     }
-
     @OnlyIn(Dist.CLIENT)
     public static void setRenderLayers() {
         RenderType cutoutMipped = RenderType.cutoutMipped();
@@ -245,6 +253,10 @@ public class WOTWBlocks {
         RenderTypeLookup.setRenderLayer(KEEPER_TRAPDOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(AQUARIUM_DOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(AQUARIUM_TRAPDOOR.get(), cutout);
+        RenderTypeLookup.setRenderLayer(WEEDS.get(), cutout);
+        RenderTypeLookup.setRenderLayer(SMALL_JOHNSON_GRASS.get(), cutout);
+        RenderTypeLookup.setRenderLayer(SAVANNA_BUSH.get(), cutout);
+        RenderTypeLookup.setRenderLayer(SAVANNA_GRASS.get(), cutout);
         RenderTypeLookup.setRenderLayer(PLUSHIES.get("emu").get(), cutoutMipped);
     }
 }

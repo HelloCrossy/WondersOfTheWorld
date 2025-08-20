@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "wondersoftheworld:block/small_johnson_grass"
+  }
+}
