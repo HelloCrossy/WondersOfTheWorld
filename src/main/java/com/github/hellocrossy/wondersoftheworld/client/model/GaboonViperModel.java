@@ -163,8 +163,20 @@ public abstract class GaboonViperModel extends ZawaBaseModel<GaboonViperEntity> 
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             this.loadBase();
             if (entity.isSprinting()) {
-                float speed = 1.0F;
-                float degree = 0.1F;
+                float speed = 2.0F;
+                float degree = 0.5F;
+                this.Base.z = MathHelper.cos(1F + limbSwing * speed * 0.3F) * degree * 8.0F * limbSwingAmount - 10.5F;
+                this.Base.yRot = MathHelper.cos(3F + limbSwing * speed * 0.3F) * degree * -2.0F * limbSwingAmount;
+                this.Head.yRot = MathHelper.cos(3F + limbSwing * speed * 0.3F) * degree * 2.0F * limbSwingAmount;
+                this.Neck.yRot = MathHelper.cos(4.0F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Chest.yRot = MathHelper.cos(3.5F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Body.yRot = MathHelper.cos(3.0F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.TailBase.yRot = MathHelper.cos(2.5F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Tail1.yRot = MathHelper.cos(2.0F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Tail2.yRot = MathHelper.cos(1.5F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Tail3.yRot = MathHelper.cos(1.0F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Tail4.yRot = MathHelper.cos(0.5F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Tail5.yRot = MathHelper.cos(0.0F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
 
             } else {
                 float speed = 2.0f;
@@ -325,8 +337,20 @@ public abstract class GaboonViperModel extends ZawaBaseModel<GaboonViperEntity> 
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             this.loadBase();
             if (entity.isSprinting()) {
-                float speed = 1.0F;
-                float degree = 0.1F;
+                float speed = 2.0F;
+                float degree = 0.5F;
+                this.Base.z = MathHelper.cos(1F + limbSwing * speed * 0.3F) * degree * 8.0F * limbSwingAmount - 10.5F;
+                this.Base.yRot = MathHelper.cos(3F + limbSwing * speed * 0.3F) * degree * -2.0F * limbSwingAmount;
+                this.Head.yRot = MathHelper.cos(3F + limbSwing * speed * 0.3F) * degree * 2.0F * limbSwingAmount;
+                this.Neck.yRot = MathHelper.cos(4.0F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Chest.yRot = MathHelper.cos(3.5F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Body.yRot = MathHelper.cos(3.0F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.TailBase.yRot = MathHelper.cos(2.5F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Tail1.yRot = MathHelper.cos(2.0F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Tail2.yRot = MathHelper.cos(1.5F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Tail3.yRot = MathHelper.cos(1.0F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Tail4.yRot = MathHelper.cos(0.5F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
+                this.Tail5.yRot = MathHelper.cos(0.0F + limbSwing * speed * 0.3F) * degree * 1.0F * limbSwingAmount;
 
             } else {
                 float speed = 2.0f;
