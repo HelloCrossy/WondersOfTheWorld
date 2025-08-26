@@ -4,7 +4,7 @@
       "model": "wondersoftheworld:block/asphalt_slab"
     },
     "type=double": {
-      "model": "wondersoftheworld:block/asphalt_stone"
+      "model": "wondersoftheworld:block/asphalt"
     },
     "type=top": {
       "model": "wondersoftheworld:block/asphalt_slab_top"

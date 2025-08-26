@@ -4,6 +4,7 @@ import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.BlockItem;
@@ -18,6 +19,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.zawamod.zawa.Zawa;
 import org.zawamod.zawa.world.block.PlantBlock;
 import org.zawamod.zawa.world.block.PlushBlock;
+import org.zawamod.zawa.world.block.ZawaBlocks;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
@@ -232,8 +235,37 @@ public class WOTWBlocks {
     public static final RegistryObject<Block> SAVANNA_BUSH = registerWithItem("savanna_bush", () -> new PlantBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> SAVANNA_GRASS = registerWithItem("savanna_grass", () -> new PlantBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> GLASS_KEEPER_DOOR = registerWithItem("glass_keeper_door", () -> {
+        return new DoorBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL).strength(3.0F).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL).noOcclusion());
 
+    });
+    public static final RegistryObject<Block> GLASS_KEEPER_TRAPDOOR = registerWithItem("glass_keeper_trapdoor", () -> {
+        return new TrapDoorBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL).strength(3.0F).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL).noOcclusion());
 
+    });
+    public static final RegistryObject<Block> VERTICAL_PLANK_DOOR = registerWithItem("vertical_plank_door", () -> {
+        return new DoorBlock(AbstractBlock.Properties.of(Material.WOOD).strength(3.0F).harvestTool(ToolType.AXE).sound(SoundType.WOOD).noOcclusion());
+
+    });
+    public static final RegistryObject<Block> VERTICAL_PLANK_TRAPDOOR = registerWithItem("vertical_plank_trapdoor", () -> {
+        return new TrapDoorBlock(AbstractBlock.Properties.of(Material.WOOD).strength(3.0F).harvestTool(ToolType.AXE).sound(SoundType.WOOD).noOcclusion());
+
+    });
+    public static final RegistryObject<Block> BLACK_WIRE_FENCE = registerWithItem("black_wire_fence", () -> {
+        return new PaneBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL, MaterialColor.NONE).strength(2.0F, 3.0F).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL).noOcclusion());
+    });
+
+    public static final RegistryObject<Block> FRAMED_BLACK_WIRE_FENCE = registerWithItem("framed_black_wire_fence", () -> {
+        return new PaneBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL, MaterialColor.NONE).strength(2.0F, 3.0F).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL).noOcclusion());
+    });
+
+    public static final RegistryObject<Block> SUPPORTED_BLACK_WIRE_FENCE = registerWithItem("supported_black_wire_fence", () -> {
+        return new PaneBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL, MaterialColor.NONE).strength(2.0F, 3.0F).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL).noOcclusion());
+    });
+
+    public static final RegistryObject<Block> STRAIGHT_BLACK_WIRE_FENCE = registerWithItem("straight_black_wire_fence", () -> {
+        return new PaneBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL, MaterialColor.NONE).strength(2.0F, 3.0F).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL).noOcclusion());
+    });
     public static final Map<String, RegistryObject<Block>> PLUSHIES = Util.make(new HashMap<>(), map -> {
         for (String plush : PLUSHIES_LIST)
             map.put(plush, REGISTRAR.register(plush + "_plush", () -> new PlushBlock(AbstractBlock.Properties.of(Material.WOOL).sound(SoundType.WOOL).noOcclusion())));
@@ -251,12 +283,20 @@ public class WOTWBlocks {
         RenderType cutout = RenderType.cutout();
         RenderTypeLookup.setRenderLayer(KEEPER_DOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(KEEPER_TRAPDOOR.get(), cutout);
+        RenderTypeLookup.setRenderLayer(GLASS_KEEPER_DOOR.get(), cutout);
+        RenderTypeLookup.setRenderLayer(GLASS_KEEPER_TRAPDOOR.get(), cutout);
+        RenderTypeLookup.setRenderLayer(VERTICAL_PLANK_DOOR.get(), cutout);
+        RenderTypeLookup.setRenderLayer(VERTICAL_PLANK_TRAPDOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(AQUARIUM_DOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(AQUARIUM_TRAPDOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(WEEDS.get(), cutout);
         RenderTypeLookup.setRenderLayer(SMALL_JOHNSON_GRASS.get(), cutout);
         RenderTypeLookup.setRenderLayer(SAVANNA_BUSH.get(), cutout);
         RenderTypeLookup.setRenderLayer(SAVANNA_GRASS.get(), cutout);
+        RenderTypeLookup.setRenderLayer(BLACK_WIRE_FENCE.get(), cutout);
+        RenderTypeLookup.setRenderLayer(FRAMED_BLACK_WIRE_FENCE.get(), cutout);
+        RenderTypeLookup.setRenderLayer(SUPPORTED_BLACK_WIRE_FENCE.get(), cutout);
+        RenderTypeLookup.setRenderLayer(STRAIGHT_BLACK_WIRE_FENCE.get(), cutout);
         RenderTypeLookup.setRenderLayer(PLUSHIES.get("emu").get(), cutoutMipped);
     }
 }

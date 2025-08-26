@@ -1,0 +1,24 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "wondersoftheworld:block/framed_black_wire_fence",
+    "1": "wondersoftheworld:block/framed_black_wire_fence",
+    "2": "wondersoftheworld:block/framed_black_wire_fence"
+  },
+  "elements": [
+    {   "from": [ 8, 0, 8 ],
+      "to": [ 8, 16, 9 ],
+      "faces": {
+        "west": { "uv": [ 8, 0, 7, 16 ], "texture": "#1" },
+        "east": { "uv": [ 7, 0, 8, 16 ], "texture": "#1" }
+      }
+    },
+    {   "from": [ 7, 0, 9 ],
+      "to": [ 9, 16, 9 ],
+      "faces": {
+        "north": { "uv": [ 9, 0, 7, 16 ], "texture": "#1" },
+        "south": { "uv": [ 7, 0, 9, 16 ], "texture": "#1" }
+      }
+    }
+  ]
+}
