@@ -301,6 +301,14 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.4F, 1.4F).clientTrackingRange(10))
                     .build("sable_antelope");
 
+    public static final RegistryObject<EntityType<SouthernCaracaraEntity>> SOUTHERN_CARACARA =
+            REGISTRY.builder(SouthernCaracaraEntity::new, EntityClassification.CREATURE)
+                    .attributes(SouthernCaracaraEntity::registerAttributes)
+                    .renderer(() -> SouthernCaracaraRenderer::new)
+                    .spawns(8, 1, 2, ZawaSpawnCategory.DRY_RAINFOREST)
+                    .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
+                    .build("southern_caracara");
+
     public static void registerSpawnPlacements() {
         EntitySpawnPlacementRegistry.register(TAKIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(WESTERN_LOWLAND_BONGO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
@@ -341,7 +349,9 @@ public class WOTWEntities {
         EntitySpawnPlacementRegistry.register(DIK_DIK.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(GABOON_VIPER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(ORYX.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
-      }
+        EntitySpawnPlacementRegistry.register(SOUTHERN_CARACARA.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaBaseEntity::checkLandSpawnRules);
+
+    }
 }
 
 
