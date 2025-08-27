@@ -17,9 +17,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.zawamod.zawa.Zawa;
-import org.zawamod.zawa.world.block.PlantBlock;
-import org.zawamod.zawa.world.block.PlushBlock;
-import org.zawamod.zawa.world.block.ZawaBlocks;
+import org.zawamod.zawa.world.block.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -237,18 +235,9 @@ public class WOTWBlocks {
     public static final RegistryObject<Block> SAVANNA_GRASS = registerWithItem("savanna_grass", () -> new PlantBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
     public static final RegistryObject<Block> GLASS_KEEPER_DOOR = registerWithItem("glass_keeper_door", () -> {
         return new DoorBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL).strength(3.0F).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL).noOcclusion());
-
-    });
-    public static final RegistryObject<Block> GLASS_KEEPER_TRAPDOOR = registerWithItem("glass_keeper_trapdoor", () -> {
-        return new TrapDoorBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL).strength(3.0F).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL).noOcclusion());
-
     });
     public static final RegistryObject<Block> VERTICAL_PLANK_DOOR = registerWithItem("vertical_plank_door", () -> {
         return new DoorBlock(AbstractBlock.Properties.of(Material.WOOD).strength(3.0F).harvestTool(ToolType.AXE).sound(SoundType.WOOD).noOcclusion());
-
-    });
-    public static final RegistryObject<Block> VERTICAL_PLANK_TRAPDOOR = registerWithItem("vertical_plank_trapdoor", () -> {
-        return new TrapDoorBlock(AbstractBlock.Properties.of(Material.WOOD).strength(3.0F).harvestTool(ToolType.AXE).sound(SoundType.WOOD).noOcclusion());
 
     });
     public static final RegistryObject<Block> BLACK_WIRE_FENCE = registerWithItem("black_wire_fence", () -> {
@@ -265,6 +254,12 @@ public class WOTWBlocks {
 
     public static final RegistryObject<Block> STRAIGHT_BLACK_WIRE_FENCE = registerWithItem("straight_black_wire_fence", () -> {
         return new PaneBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL, MaterialColor.NONE).strength(2.0F, 3.0F).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL).noOcclusion());
+    });
+    public static final RegistryObject<Block> DRIED_BAMBOO_FENCE = registerWithItem("dried_bamboo_fence", () -> {
+        return new ZawaFenceBlock(AbstractBlock.Properties.of(Material.BAMBOO, MaterialColor.PLANT).strength(0.5F).harvestTool(ToolType.AXE).sound(SoundType.BAMBOO));
+    });
+    public static final RegistryObject<Block> DRIED_BAMBOO_FENCE_GATE = registerWithItem("dried_bamboo_fence_gate", () -> {
+        return new ZawaFenceGateBlock(AbstractBlock.Properties.of(Material.BAMBOO, MaterialColor.PLANT).strength(0.5F).harvestTool(ToolType.AXE).sound(SoundType.BAMBOO));
     });
     public static final Map<String, RegistryObject<Block>> PLUSHIES = Util.make(new HashMap<>(), map -> {
         for (String plush : PLUSHIES_LIST)
@@ -284,9 +279,7 @@ public class WOTWBlocks {
         RenderTypeLookup.setRenderLayer(KEEPER_DOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(KEEPER_TRAPDOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(GLASS_KEEPER_DOOR.get(), cutout);
-        RenderTypeLookup.setRenderLayer(GLASS_KEEPER_TRAPDOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(VERTICAL_PLANK_DOOR.get(), cutout);
-        RenderTypeLookup.setRenderLayer(VERTICAL_PLANK_TRAPDOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(AQUARIUM_DOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(AQUARIUM_TRAPDOOR.get(), cutout);
         RenderTypeLookup.setRenderLayer(WEEDS.get(), cutout);
