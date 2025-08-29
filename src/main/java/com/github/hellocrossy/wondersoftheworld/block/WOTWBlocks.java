@@ -232,6 +232,8 @@ public class WOTWBlocks {
 
     public static final RegistryObject<Block> SAVANNA_BUSH = registerWithItem("savanna_bush", () -> new PlantBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
 
+    public static final RegistryObject<Block> BRUSH_GRASS = registerWithItem("brush_grass", () -> new PlantBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+
     public static final RegistryObject<Block> SAVANNA_GRASS = registerWithItem("savanna_grass", () -> new PlantBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
     public static final RegistryObject<Block> GLASS_KEEPER_DOOR = registerWithItem("glass_keeper_door", () -> {
         return new DoorBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL).strength(3.0F).harvestTool(ToolType.PICKAXE).sound(SoundType.METAL).noOcclusion());
@@ -286,6 +288,7 @@ public class WOTWBlocks {
         RenderTypeLookup.setRenderLayer(SMALL_JOHNSON_GRASS.get(), cutout);
         RenderTypeLookup.setRenderLayer(SAVANNA_BUSH.get(), cutout);
         RenderTypeLookup.setRenderLayer(SAVANNA_GRASS.get(), cutout);
+        RenderTypeLookup.setRenderLayer(BRUSH_GRASS.get(), cutout);
         RenderTypeLookup.setRenderLayer(BLACK_WIRE_FENCE.get(), cutout);
         RenderTypeLookup.setRenderLayer(FRAMED_BLACK_WIRE_FENCE.get(), cutout);
         RenderTypeLookup.setRenderLayer(SUPPORTED_BLACK_WIRE_FENCE.get(), cutout);
