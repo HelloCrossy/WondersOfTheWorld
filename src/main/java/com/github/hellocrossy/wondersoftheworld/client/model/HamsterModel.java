@@ -246,8 +246,8 @@ public abstract class HamsterModel extends ZawaBaseModel<HamsterEntity> {
 
 
         public Child() {
-            texWidth = 64;
-            texHeight = 64;
+            texWidth = 32;
+            texHeight = 32;
             this.Hips = new ModelRenderer(this, 2, 1);
             this.Hips.setPos(0.0F, 21.8F, 0.0F);
             this.Hips.addBox(-2.0F, -2.0F, -1.5F, 4.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);

@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "wondersoftheworldgroup",
   "pattern": [
-    "PG",
-    "GP"
+    "GP",
+    "PG"
   ],
   "key": {
     "P": [
-      { "item": "minecraft:bricks" }
+      { "item": "minecraft:acacia_leaves" }
     ],
     "G": [
-      { "item": "minecraft:sand" }
+      { "item": "minecraft:grass" }
     ]
   },
   "result": {
-    "item": "wondersoftheworld:dry_cobblestone",
+    "item": "wondersoftheworld:brush_grass",
     "count": 4
   }
 }

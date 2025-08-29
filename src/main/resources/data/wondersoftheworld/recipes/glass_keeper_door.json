@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wondersoftheworldgroup",
+  "pattern": [
+    "PD",
+    "GG",
+    "PP"
+  ],
+  "key": {
+    "P": [
+      { "item": "minecraft:iron_ingot" }
+    ],
+    "G": [
+      { "item": "zawa:wire_fence" }
+    ],
+    "D": [
+      { "item": "minecraft:glass_pane" }
+    ]
+  },
+  "result": {
+    "item": "wondersoftheworld:glass_keeper_door",
+    "count": 3
+  }
+}
