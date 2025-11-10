@@ -8,8 +8,8 @@ import net.minecraft.client.model.geom.builders.CubeListBuilder;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
 public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
@@ -62,7 +62,6 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
             this.ArmLeft = this.ArmBaseLeft.getChild("ArmLeft");
             this.ForearmLeft = this.ArmLeft.getChild("ForearmLeft");
             this.HandLeft = this.ForearmLeft.getChild("HandLeft");
-
 
 
             this.ArmBaseRight = this.Chest.getChild("ArmBaseRight");

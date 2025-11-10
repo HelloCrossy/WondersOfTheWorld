@@ -5,8 +5,8 @@ import com.google.common.collect.ImmutableList;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
 public abstract class TakinModel extends ZawaBaseModel<TakinEntity> {
@@ -370,7 +370,7 @@ public abstract class TakinModel extends ZawaBaseModel<TakinEntity> {
                 float speed = 1.0f;
                 float degree = 1.0f;
                 this.Neck.xRot = Mth.cos(3.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.4F) * 0.5F - 0.118F;
-                this.Chest.xRot = Mth.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.1F) * 0.5F -0.276F;
+                this.Chest.xRot = Mth.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.1F) * 0.5F - 0.276F;
                 this.Chest.y = Mth.cos(3.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -1F) * 0.5F + 13.1F;
                 this.Hips.xRot = Mth.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.355F;
                 this.Head.xRot = Mth.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.3F) * 0.5F + 0.591F;
