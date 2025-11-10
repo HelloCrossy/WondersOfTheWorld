@@ -40,6 +40,12 @@
       "weight": 8,
       "minCount": 1,
       "maxCount": 1
+    },
+    {
+      "type": "wondersoftheworld:honey_badger",
+      "weight": 8,
+      "minCount": 1,
+      "maxCount": 1
     }
   ]
 }
