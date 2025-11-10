@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "wondersoftheworld:block/vertical_plank_door_bottom",
+    "top": "wondersoftheworld:block/vertical_plank_door_top"
+  }
+}
