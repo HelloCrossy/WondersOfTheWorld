@@ -1,37 +1,36 @@
-modLoader = "javafml"
-loaderVersion = "[47,)"
-license = "GNU GPLv3"
-issueTrackerURL = "https://github.com/HelloCrossy/WondersOfTheWorld/issues"
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+issueTrackerURL="https://github.com/HelloCrossy/WondersOfTheWorld/issues"
 
 [[mods]]
-modId = "wondersoftheworld"
-version = "${file.jarVersion}"
-displayName = "ZAWA: Wonders Of The World"
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
 #updateJSONURL=""
-displayURL = "https://www.curseforge.com/minecraft/mc-mods/wonders-of-the-world"
-logoFile = "logo.png"
-credits = "Devs: HelloCrossy67, heavy808s, SpiggitySpag, Arty, chilotic, PumpkinedPatch     Other: Shoresy, Fisk, Mnesikos"
-authors = "HelloCrossy67"
-description = '''
-Wonders of the World is an addon mod for ZAWA Evolved, on MC JAVA version 1.16.5. This mod adds a total of 31 animals, with multiple species of some of these entities AND a total of 9 plushies! The mod is of the ZAWA Style and follows their guidelines relatively closely. A big thanks to our team, the ZAWA Devs: Fisk & Mnesikos, aswell as our amazing sponsor Shoresy! Stay tuned for future updates, along with more plushies!'''
+displayURL="https://www.curseforge.com/minecraft/mc-mods/wonders-of-the-world"
+logoFile="logo.png"
+credits="${mod_credits}"
+authors="${mod_authors}"
+description='''${mod_description}'''
 
-[[dependencies.wondersoftheworld]]
-modId = "forge"
-mandatory = true
-versionRange = "[47,)"
-ordering = "NONE"
-side = "BOTH"
+[[dependencies.${mod_id}]]
+modId="forge"
+mandatory=true
+versionRange="${forge_version_range}"
+ordering="NONE"
+side="BOTH"
 
-[[dependencies.wondersoftheworld]]
-modId = "minecraft"
-mandatory = true
-versionRange = "[1.20.1,1.20.2)"
-ordering = "NONE"
-side = "BOTH"
+[[dependencies.${mod_id}]]
+modId="minecraft"
+mandatory=true
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
 
-[[dependencies.wondersoftheworld]]
-modId = "zawa"
-mandatory = true
-versionRange = "[1.20.1-1.0.2-BeefBeta-TropicalExpedition3,)"
-ordering = "AFTER"
-side = "BOTH"
+[[dependencies.${mod_id}]]
+modId="zawa"
+mandatory=true
+versionRange="${zawa_version_range}"
+ordering="AFTER"
+side="BOTH"
