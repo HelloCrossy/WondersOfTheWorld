@@ -17,14 +17,21 @@
       "zawa:ball_pit"
     ]
   },
-  "variant_count": 8,
+  "variant_count": 17,
   "captive_variants": [
-    "electrocuted",
-    "crushed",
-    "exploded",
-    "flattened",
-    "squashed",
-    "toasted",
-    "vacuumed"
+    "cream",
+    "black_spots",
+    "white",
+    "ginger_toast",
+    "black_toast",
+    "black_striped",
+    "gray_headed",
+    "black",
+    "blue",
+    "brown_toast",
+    "brown",
+    "gray",
+    "gray_toast",
+    "gray_banded"
   ]
 }

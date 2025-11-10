@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "wondersoftheworld:block/framed_black_wire_fence"
+  }
+}

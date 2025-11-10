@@ -4,22 +4,23 @@
   "pattern": [
     "WWW",
     "PSW",
-    "GWG"
+    "PWP"
   ],
   "key": {
     "P": [
       {
-        "item": "minecraft:gray_wool"
-      }
-    ],
-    "G": [
-      {
-        "item": "minecraft:light_gray_wool"
+        "item": "minecraft:pink_wool"
       }
     ],
     "S": [
       {
         "item": "minecraft:bamboo"
+      },
+      {
+        "item": "zawa:black_bamboo"
+      },
+      {
+        "item": "zawa:yellow_bamboo"
       }
     ],
     "W": [

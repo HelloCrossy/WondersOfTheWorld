@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wondersoftheworld",
+  "pattern": [
+    "SBS",
+    "SBS"
+  ],
+  "key": {
+    "B": {
+      "item": "zawa:bamboo_block"
+    },
+    "S": {
+      "item": "zawa:yellow_bamboo"
+    }
+  },
+  "result": {
+    "item": "wondersoftheworld:dried_bamboo_fence_gate"
+  }
+}

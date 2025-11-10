@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "wondersoftheworld:block/savanna_bush"
+  }
+}

@@ -1,14 +1,14 @@
 {
-  "temperament": "timid",
-  "kibble": "zawa:insectivore_kibble",
+  "temperament": "neutral",
+  "kibble": "zawa:piscivore_kibble",
   "size": "small",
   "fertility": "medium",
-  "breeding_item": "zawa:earthworm",
+  "breeding_item": "zawa:african_lake_cichlid",
   "litter_size": {
-    "min": 1,
+    "min": 3,
     "max": 4
   },
-  "diet": "zawa:insectivore",
+  "diet": "zawa:piscivore",
   "speed": "medium",
   "enrichment": {
     "zawa:blocks": [

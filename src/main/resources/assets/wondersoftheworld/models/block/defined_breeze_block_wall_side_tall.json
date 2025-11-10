@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_wall_side_tall",
   "textures": {
-    "wall": "wondersoftheworld:block/breeze_block"
+    "wall": "wondersoftheworld:block/defined_breeze_block"
   }
 }

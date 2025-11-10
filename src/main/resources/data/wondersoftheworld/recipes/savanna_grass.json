@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wondersoftheworldgroup",
+  "pattern": [
+    "G ",
+    "P ",
+    "   "
+  ],
+  "key": {
+    "P": [
+      { "item": "minecraft:sand" }
+    ],
+    "G": [
+      { "item": "minecraft:grass" }
+    ]
+  },
+  "result": {
+    "item": "wondersoftheworld:savanna_grass",
+    "count": 2
+  }
+}

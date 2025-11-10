@@ -8,7 +8,6 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.registries.RegistryObject;
-import org.zawamod.zawa.Zawa;
 import org.zawamod.zawa.config.ZawaSpawnCategory;
 import org.zawamod.zawa.world.entity.ZawaEntityRegistry;
 import org.zawamod.zawa.world.entity.ambient.ZawaAmbientFishEntity;
@@ -225,6 +224,55 @@ public class WOTWEntities {
                     .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
                     .build("killifish");
 
+    public static final RegistryObject<EntityType<HoneyBadgerEntity>> HONEY_BADGER =
+            REGISTRY.builder(HoneyBadgerEntity::new, MobCategory.CREATURE)
+                    .attributes(HoneyBadgerEntity::registerAttributes)
+                    .spawns(8, 1, 1, ZawaSpawnCategory.DRY_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(0.8F, 0.7F).clientTrackingRange(10))
+                    .build("honey_badger");
+
+    public static final RegistryObject<EntityType<GaboonViperEntity>> GABOON_VIPER =
+            REGISTRY.builder(GaboonViperEntity::new, MobCategory.CREATURE)
+                    .attributes(GaboonViperEntity::registerAttributes)
+                    .spawns(8, 1, 1, ZawaSpawnCategory.WET_FOREST)
+                    .data(entityBuilder -> entityBuilder.sized(1.6F, 0.3F).clientTrackingRange(10))
+                    .build("gaboon_viper");
+
+    public static final RegistryObject<EntityType<DikDikEntity>> DIK_DIK =
+            REGISTRY.builder(DikDikEntity::new, MobCategory.CREATURE)
+                    .attributes(DikDikEntity::registerAttributes)
+                    .spawns(10, 1, 2, ZawaSpawnCategory.DRY_GRASSLAND)
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 0.6F).clientTrackingRange(10))
+                    .build("dik_dik");
+
+    public static final RegistryObject<EntityType<CapeBuffaloEntity>> CAPE_BUFFALO =
+            REGISTRY.builder(CapeBuffaloEntity::new, MobCategory.CREATURE)
+                    .attributes(CapeBuffaloEntity::registerAttributes)
+                    .spawns(10, 3, 5, ZawaSpawnCategory.WET_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(1.4F, 1.4F).clientTrackingRange(10))
+                    .build("cape_buffalo");
+
+    public static final RegistryObject<EntityType<OryxEntity>> ORYX =
+            REGISTRY.builder(OryxEntity::new, MobCategory.CREATURE)
+                    .attributes(OryxEntity::registerAttributes)
+                    .spawns(2, 3, 4, ZawaSpawnCategory.WET_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(1.4F, 1.4F).clientTrackingRange(10))
+                    .build("oryx");
+
+    public static final RegistryObject<EntityType<SableAntelopeEntity>> SABLE_ANTELOPE =
+            REGISTRY.builder(SableAntelopeEntity::new, MobCategory.CREATURE)
+                    .attributes(SableAntelopeEntity::registerAttributes)
+                    .spawns(8, 2, 4, ZawaSpawnCategory.WET_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(1.4F, 1.4F).clientTrackingRange(10))
+                    .build("sable_antelope");
+
+    public static final RegistryObject<EntityType<SouthernCaracaraEntity>> SOUTHERN_CARACARA =
+            REGISTRY.builder(SouthernCaracaraEntity::new, MobCategory.CREATURE)
+                    .attributes(SouthernCaracaraEntity::registerAttributes)
+                    .spawns(8, 1, 2, ZawaSpawnCategory.DRY_RAINFOREST)
+                    .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
+                    .build("southern_caracara");
+
     public static void registerSpawnPlacements() {
         SpawnPlacements.register(TAKIN.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(WESTERN_LOWLAND_BONGO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
@@ -258,6 +306,13 @@ public class WOTWEntities {
         SpawnPlacements.register(QUETZAL.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
         SpawnPlacements.register(HAMMERKOP.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
         SpawnPlacements.register(KILLIFISH.get(), SpawnPlacements.Type.IN_WATER, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
+        SpawnPlacements.register(HONEY_BADGER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        SpawnPlacements.register(CAPE_BUFFALO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        SpawnPlacements.register(SABLE_ANTELOPE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        SpawnPlacements.register(DIK_DIK.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        SpawnPlacements.register(GABOON_VIPER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        SpawnPlacements.register(ORYX.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        SpawnPlacements.register(SOUTHERN_CARACARA.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING, ZawaBaseEntity::checkLandSpawnRules);
     }
 
     public static void registerRenderers() {
@@ -291,6 +346,13 @@ public class WOTWEntities {
         EntityRenderers.register(HAMMERKOP.get(), HammerkopRenderer::new);
         EntityRenderers.register(QUETZAL.get(), QuetzalRenderer::new);
         EntityRenderers.register(KILLIFISH.get(), KillifishRenderer::new);
+        EntityRenderers.register(HONEY_BADGER.get(), HoneyBadgerRenderer::new);
+        EntityRenderers.register(GABOON_VIPER.get(), GaboonViperRenderer::new);
+        EntityRenderers.register(DIK_DIK.get(), DikDikRenderer::new);
+        EntityRenderers.register(CAPE_BUFFALO.get(), CapeBuffaloRenderer::new);
+        EntityRenderers.register(ORYX.get(), OryxRenderer::new);
+        EntityRenderers.register(SABLE_ANTELOPE.get(), SableAntelopeRenderer::new);
+        EntityRenderers.register(SOUTHERN_CARACARA.get(), SouthernCaracaraRenderer::new);
     }
 }
 

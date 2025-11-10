@@ -17,8 +17,9 @@
       "zawa:sprinkler"
     ]
   },
-  "variant_count": 3,
+  "variant_count": 5,
   "captive_variants": [
-    "albino"
+    "albino",
+    "melanistic"
   ]
 }
