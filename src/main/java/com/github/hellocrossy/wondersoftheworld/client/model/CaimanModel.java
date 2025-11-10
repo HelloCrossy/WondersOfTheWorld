@@ -92,72 +92,113 @@ public abstract class CaimanModel extends ZawaBaseModel<CaimanEntity> {
 
         public Adult(ModelPart root) {
             this.Chest = root.getChild("Chest");
-            this.part26_4 = this.Body.getChild("part26_4");
-            this.Tail3 = this.Tail2.getChild("Tail3");
-            this.Throat3 = this.Throat2.getChild("Throat3");
-            this.TailTop4 = this.Tail4.getChild("TailTop4");
-            this.Tail4 = this.Tail3.getChild("Tail4");
-            this.Throat2 = this.Neck.getChild("Throat2");
-            this.part26_21 = this.TailTop3.getChild("part26_21");
             this.part26_3 = this.Chest.getChild("part26_3");
+
             this.Neck = this.Chest.getChild("Neck");
+            this.Throat2 = this.Neck.getChild("Throat2");
+            this.Throat3 = this.Throat2.getChild("Throat3");
+
             this.part26_25 = this.Neck.getChild("part26_25");
-            this.HandRight = this.ArmRight.getChild("HandRight");
-            this.part26_15 = this.Tail1.getChild("part26_15");
-            this.part26_18 = this.TailTop4.getChild("part26_18");
+
             this.part26_28 = this.Neck.getChild("part26_28");
-            this.Mouth = this.Jaw.getChild("Mouth");
-            this.part26_9 = this.Hips.getChild("part26_9");
-            this.part26_1 = this.Chest.getChild("part26_1");
-            this.ThighRight = this.Hips.getChild("ThighRight");
-            this.EyeLeft = this.ForeHead.getChild("EyeLeft");
-            this.LowerTeethRight = this.Mouth.getChild("LowerTeethRight");
-            this.part26_10 = this.Hips.getChild("part26_10");
-            this.part26_2 = this.Chest.getChild("part26_2");
-            this.Body = this.Chest.getChild("Body");
-            this.Throat = this.Mouth.getChild("Throat");
-            this.TailTop2 = this.Tail2.getChild("TailTop2");
-            this.Hips = this.Body.getChild("Hips");
-            this.Nose = this.Snout.getChild("Nose");
-            this.ArmRight = this.UpperArmRight.getChild("ArmRight");
-            this.part26_23 = this.TailTop2.getChild("part26_23");
+
             this.part26_26 = this.Neck.getChild("part26_26");
-            this.Jaw = this.Head.getChild("Jaw");
-            this.part26_14 = this.Tail1.getChild("part26_14");
-            this.part26_16 = this.Tail1.getChild("part26_16");
-            this.TopTeethLeft = this.Snout.getChild("TopTeethLeft");
-            this.part26_24 = this.TailTop2.getChild("part26_24");
-            this.LowerTeethLeft = this.Mouth.getChild("LowerTeethLeft");
+
             this.part26_27 = this.Neck.getChild("part26_27");
-            this.LegLeft = this.ThighLeft.getChild("LegLeft");
-            this.ArmLeft = this.UpperArmLeft.getChild("ArmLeft");
-            this.part26_17 = this.Tail1.getChild("part26_17");
-            this.Tail2 = this.Tail1.getChild("Tail2");
-            this.FootRight = this.LegRight.getChild("FootRight");
-            this.part26_8 = this.Body.getChild("part26_8");
-            this.ThighLeft = this.Hips.getChild("ThighLeft");
-            this.LegRight = this.ThighRight.getChild("LegRight");
-            this.part26_7 = this.Body.getChild("part26_7");
-            this.part26_19 = this.TailTop3.getChild("part26_19");
-            this.Tail1 = this.Hips.getChild("Tail1");
-            this.ForeHead = this.Head.getChild("ForeHead");
-            this.part26_5 = this.Body.getChild("part26_5");
-            this.TopTeethRight = this.Snout.getChild("TopTeethRight");
-            this.part26_6 = this.Body.getChild("part26_6");
-            this.Snout = this.Head.getChild("Snout");
-            this.part26_12 = this.Hips.getChild("part26_12");
-            this.part26_20 = this.TailTop3.getChild("part26_20");
-            this.TailTop3 = this.Tail3.getChild("TailTop3");
-            this.FootLeft = this.LegLeft.getChild("FootLeft");
-            this.part26 = this.Chest.getChild("part26");
-            this.UpperArmRight = this.Chest.getChild("UpperArmRight");
-            this.HandLeft = this.ArmLeft.getChild("HandLeft");
-            this.UpperArmLeft = this.Chest.getChild("UpperArmLeft");
-            this.part26_13 = this.Tail1.getChild("part26_13");
-            this.part26_22 = this.TailTop2.getChild("part26_22");
+
             this.Head = this.Neck.getChild("Head");
-            this.part26_11 = this.Hips.getChild("part26_11");
+            this.Jaw = this.Head.getChild("Jaw");
+            this.Mouth = this.Jaw.getChild("Mouth");
+            this.LowerTeethRight = this.Mouth.getChild("LowerTeethRight");
+
+            this.Throat = this.Mouth.getChild("Throat");
+
+            this.LowerTeethLeft = this.Mouth.getChild("LowerTeethLeft");
+
+            this.ForeHead = this.Head.getChild("ForeHead");
+            this.EyeLeft = this.ForeHead.getChild("EyeLeft");
+
             this.EyeRight = this.ForeHead.getChild("EyeRight");
+
+            this.Snout = this.Head.getChild("Snout");
+            this.Nose = this.Snout.getChild("Nose");
+
+            this.TopTeethLeft = this.Snout.getChild("TopTeethLeft");
+
+            this.TopTeethRight = this.Snout.getChild("TopTeethRight");
+
+            this.part26_1 = this.Chest.getChild("part26_1");
+
+            this.part26_2 = this.Chest.getChild("part26_2");
+
+            this.Body = this.Chest.getChild("Body");
+            this.part26_4 = this.Body.getChild("part26_4");
+
+            this.Hips = this.Body.getChild("Hips");
+            this.part26_9 = this.Hips.getChild("part26_9");
+
+            this.ThighRight = this.Hips.getChild("ThighRight");
+            this.LegRight = this.ThighRight.getChild("LegRight");
+            this.FootRight = this.LegRight.getChild("FootRight");
+
+            this.part26_10 = this.Hips.getChild("part26_10");
+
+            this.ThighLeft = this.Hips.getChild("ThighLeft");
+            this.LegLeft = this.ThighLeft.getChild("LegLeft");
+            this.FootLeft = this.LegLeft.getChild("FootLeft");
+
+            this.Tail1 = this.Hips.getChild("Tail1");
+            this.part26_15 = this.Tail1.getChild("part26_15");
+
+            this.part26_14 = this.Tail1.getChild("part26_14");
+
+            this.part26_16 = this.Tail1.getChild("part26_16");
+
+            this.part26_17 = this.Tail1.getChild("part26_17");
+
+            this.Tail2 = this.Tail1.getChild("Tail2");
+            this.Tail3 = this.Tail2.getChild("Tail3");
+            this.Tail4 = this.Tail3.getChild("Tail4");
+            this.TailTop4 = this.Tail4.getChild("TailTop4");
+            this.part26_18 = this.TailTop4.getChild("part26_18");
+
+            this.TailTop3 = this.Tail3.getChild("TailTop3");
+            this.part26_21 = this.TailTop3.getChild("part26_21");
+
+            this.part26_19 = this.TailTop3.getChild("part26_19");
+
+            this.part26_20 = this.TailTop3.getChild("part26_20");
+
+            this.TailTop2 = this.Tail2.getChild("TailTop2");
+            this.part26_23 = this.TailTop2.getChild("part26_23");
+
+            this.part26_24 = this.TailTop2.getChild("part26_24");
+
+            this.part26_22 = this.TailTop2.getChild("part26_22");
+
+            this.part26_13 = this.Tail1.getChild("part26_13");
+
+            this.part26_12 = this.Hips.getChild("part26_12");
+
+            this.part26_11 = this.Hips.getChild("part26_11");
+
+            this.part26_8 = this.Body.getChild("part26_8");
+
+            this.part26_7 = this.Body.getChild("part26_7");
+
+            this.part26_5 = this.Body.getChild("part26_5");
+
+            this.part26_6 = this.Body.getChild("part26_6");
+
+            this.part26 = this.Chest.getChild("part26");
+
+            this.UpperArmRight = this.Chest.getChild("UpperArmRight");
+            this.ArmRight = this.UpperArmRight.getChild("ArmRight");
+            this.HandRight = this.ArmRight.getChild("HandRight");
+
+            this.UpperArmLeft = this.Chest.getChild("UpperArmLeft");
+            this.ArmLeft = this.UpperArmLeft.getChild("ArmLeft");
+            this.HandLeft = this.ArmLeft.getChild("HandLeft");
         }
 
         public static LayerDefinition createBodyLayer() {
