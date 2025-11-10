@@ -6,12 +6,12 @@ import com.github.hellocrossy.wondersoftheworld.entity.WOTWEntities;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.MobBucketItem;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.zawamod.zawa.world.item.PlushBlockItem;
+import org.zawamod.zawa.world.item.ZawaBucketItem;
 import org.zawamod.zawa.world.item.ZawaEggItem;
 
 import java.util.ArrayList;
@@ -29,19 +29,19 @@ public class WOTWItems {
     });
 
     public static final RegistryObject<Item> OSCAR = ITEMS_REGISTRAR.register("oscar", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> OSCAR_BUCKET = ITEMS_REGISTRAR.register("bucket_of_oscar", () -> new MobBucketItem(WOTWEntities.OSCAR, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> OSCAR_BUCKET = ITEMS_REGISTRAR.register("bucket_of_oscar", () -> new ZawaBucketItem(WOTWEntities.OSCAR, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> DISCUS_FISH = ITEMS_REGISTRAR.register("discus_fish", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TETRA = ITEMS_REGISTRAR.register("tetra", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> FLOWERHORN_CICHILID = ITEMS_REGISTRAR.register("flowerhorn_cichlid", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> DISCUS_FISH_BUCKET = ITEMS_REGISTRAR.register("bucket_of_discus", () -> new MobBucketItem(WOTWEntities.DISCUS_FISH, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> DISCUS_FISH_BUCKET = ITEMS_REGISTRAR.register("bucket_of_discus", () -> new ZawaBucketItem(WOTWEntities.DISCUS_FISH, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
 
-    public static final RegistryObject<Item> TETRA_BUCKET = ITEMS_REGISTRAR.register("bucket_of_tetra", () -> new MobBucketItem(WOTWEntities.TETRA, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TETRA_BUCKET = ITEMS_REGISTRAR.register("bucket_of_tetra", () -> new ZawaBucketItem(WOTWEntities.TETRA, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
 
-    public static final RegistryObject<Item> FLOWERHORN_CICHILID_BUCKET = ITEMS_REGISTRAR.register("bucket_of_flowerhorn_cichlid", () -> new MobBucketItem(WOTWEntities.FLOWERHORN_CICHILID, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> FLOWERHORN_CICHILID_BUCKET = ITEMS_REGISTRAR.register("bucket_of_flowerhorn_cichlid", () -> new ZawaBucketItem(WOTWEntities.FLOWERHORN_CICHILID, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> KILLIFISH = ITEMS_REGISTRAR.register("killifish", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> KILLIFISH_BUCKET = ITEMS_REGISTRAR.register("bucket_of_killifish", () -> new MobBucketItem(WOTWEntities.KILLIFISH, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> KILLIFISH_BUCKET = ITEMS_REGISTRAR.register("bucket_of_killifish", () -> new ZawaBucketItem(WOTWEntities.KILLIFISH, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> EMU_EGG = ITEMS_REGISTRAR.register("emu_egg", () -> new ZawaEggItem(WOTWEntities.EMU, new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> KIWI_EGG = ITEMS_REGISTRAR.register("kiwi_egg", () -> new ZawaEggItem(WOTWEntities.KIWI, new Item.Properties().stacksTo(16)));
