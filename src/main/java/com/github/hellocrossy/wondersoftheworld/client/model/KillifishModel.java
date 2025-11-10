@@ -28,14 +28,6 @@ public class KillifishModel extends ZawaBaseAmbientModel<KillifishEntity> {
 
     private Iterable<ModelPart> parts;
 
-    public Iterable<ModelPart> parts() {
-        if (this.parts == null) {
-            this.parts = ImmutableList.of(this.Body);
-        }
-
-        return this.parts;
-    }
-
     public KillifishModel(ModelPart root) {
         this.Body = root.getChild("Body");
         this.RightPelvicFin = this.Body.getChild("RightPelvicFin");
@@ -75,6 +67,14 @@ public class KillifishModel extends ZawaBaseAmbientModel<KillifishEntity> {
         PartDefinition DorsalFin = Body.addOrReplaceChild("DorsalFin", CubeListBuilder.create().texOffs(0, 4).addBox(0.0F, -4.0F, 0.0F, 0.0F, 4.0F, 7.0F), PartPose.offsetAndRotation(0.0F, -1.4F, -1.1F, -0.0781907508222411F, 0.0F, 0.0F));
 
         return LayerDefinition.create(meshDefinition, 32, 32);
+    }
+
+    public Iterable<ModelPart> parts() {
+        if (this.parts == null) {
+            this.parts = ImmutableList.of(this.Body);
+        }
+
+        return this.parts;
     }
 
     @Override

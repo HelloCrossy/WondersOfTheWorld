@@ -28,14 +28,6 @@ public class TetraModel extends ZawaBaseAmbientModel<TetraEntity> {
 
     private Iterable<ModelPart> parts;
 
-    public Iterable<ModelPart> parts() {
-        if (this.parts == null) {
-            this.parts = ImmutableList.of(this.Body);
-        }
-
-        return this.parts;
-    }
-
     public TetraModel(ModelPart root) {
         this.Body = root.getChild("Body");
         this.Tail = this.Body.getChild("Tail");
@@ -79,6 +71,14 @@ public class TetraModel extends ZawaBaseAmbientModel<TetraEntity> {
         PartDefinition RightPelvicFin = Body.addOrReplaceChild("RightPelvicFin", CubeListBuilder.create().texOffs(30, 3).addBox(0.0F, 0.0F, 0.0F, 0.0F, 2.0F, 1.0F), PartPose.offsetAndRotation(-0.7F, 2.0F, -0.8F, 0.9105382388075086F, -0.2275909337942703F, 0.0F));
 
         return LayerDefinition.create(meshDefinition, 64, 32);
+    }
+
+    public Iterable<ModelPart> parts() {
+        if (this.parts == null) {
+            this.parts = ImmutableList.of(this.Body);
+        }
+
+        return this.parts;
     }
 
     @Override

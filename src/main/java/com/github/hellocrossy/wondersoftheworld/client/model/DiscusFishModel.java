@@ -27,14 +27,6 @@ public class DiscusFishModel extends ZawaBaseAmbientModel<DiscusFishEntity> {
 
     private Iterable<ModelPart> parts;
 
-    public Iterable<ModelPart> parts() {
-        if (this.parts == null) {
-            this.parts = ImmutableList.of(this.Body);
-        }
-
-        return this.parts;
-    }
-
     public DiscusFishModel(ModelPart root) {
         this.Body = root.getChild("Body");
         this.AnalFin = this.Body.getChild("AnalFin");
@@ -71,6 +63,14 @@ public class DiscusFishModel extends ZawaBaseAmbientModel<DiscusFishEntity> {
         PartDefinition TailFin = Tail.addOrReplaceChild("TailFin", CubeListBuilder.create().texOffs(21, 17).addBox(0.0F, -0.4F, -2.0F, 0.0F, 3.0F, 4.0F), PartPose.offsetAndRotation(0.0F, 0.0F, 2.0F, 1.5707963267948966F, 0.0F, 0.0F));
 
         return LayerDefinition.create(meshDefinition, 64, 32);
+    }
+
+    public Iterable<ModelPart> parts() {
+        if (this.parts == null) {
+            this.parts = ImmutableList.of(this.Body);
+        }
+
+        return this.parts;
     }
 
     @Override

@@ -26,14 +26,6 @@ public class OscarModel extends ZawaBaseAmbientModel<OscarEntity> {
     public ModelPart Forehead;
     private Iterable<ModelPart> parts;
 
-    public Iterable<ModelPart> parts() {
-        if (this.parts == null) {
-            this.parts = ImmutableList.of(this.Body);
-        }
-
-        return this.parts;
-    }
-
     public OscarModel(ModelPart root) {
         this.Body = root.getChild("Body");
         this.LeftPelvicFin = this.Body.getChild("LeftPelvicFin");
@@ -73,6 +65,14 @@ public class OscarModel extends ZawaBaseAmbientModel<OscarEntity> {
         PartDefinition RightPelvicFin = Body.addOrReplaceChild("RightPelvicFin", CubeListBuilder.create().texOffs(4, 0).addBox(0.0F, 0.0F, -2.0F, 0.0F, 2.0F, 1.0F), PartPose.offsetAndRotation(-0.7F, 1.4F, -0.8F, 0.7285004590772052F, 0.0F, 0.0F));
 
         return LayerDefinition.create(meshDefinition, 32, 32);
+    }
+
+    public Iterable<ModelPart> parts() {
+        if (this.parts == null) {
+            this.parts = ImmutableList.of(this.Body);
+        }
+
+        return this.parts;
     }
 
     @Override

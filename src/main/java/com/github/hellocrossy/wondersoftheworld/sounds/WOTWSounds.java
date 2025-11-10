@@ -1,11 +1,11 @@
 package com.github.hellocrossy.wondersoftheworld.sounds;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class WOTWSounds {
     public static final DeferredRegister<SoundEvent> REGISTRAR = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, WondersOfTheWorld.MOD_ID);
@@ -49,7 +49,6 @@ public class WOTWSounds {
     public static RegistryObject<SoundEvent> SQUIRREL_MONKEY_AMBIENT = registerSound("squirrel_monkey_ambient");
     public static RegistryObject<SoundEvent> SQUIRREL_MONKEY_HURT = registerSound("squirrel_monkey_hurt");
     public static RegistryObject<SoundEvent> GUANACO_AMBIENT = registerSound("guanaco_ambient");
-
 
 
     private static RegistryObject<SoundEvent> registerSound(String name) {

@@ -7,10 +7,9 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.NonTamedTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
 import org.zawamod.zawa.world.entity.ai.goal.BreachGoal;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
@@ -32,6 +31,7 @@ public class OryxEntity extends ZawaLandEntity implements SpeciesVariantsEntity 
     public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {
         return WOTWEntities.ORYX.get().create(world);
     }
+
     @Override
     public int getVariantByBiome(LevelAccessor iWorld) {
         return random.nextInt(getWildVariants());

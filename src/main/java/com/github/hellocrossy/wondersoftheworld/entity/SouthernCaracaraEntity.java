@@ -18,7 +18,8 @@ import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 import javax.annotation.Nullable;
 
 public class SouthernCaracaraEntity extends ZawaLandEntity implements OviparousEntity {
-    public SouthernCaracaraEntity(EntityType<? extends ZawaLandEntity> type, Level world) { super(type, world);
+    public SouthernCaracaraEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
+        super(type, world);
     }
 
     public static AttributeSupplier.Builder registerAttributes() {

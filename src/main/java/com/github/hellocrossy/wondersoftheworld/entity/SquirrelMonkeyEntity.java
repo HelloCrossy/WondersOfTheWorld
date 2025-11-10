@@ -28,6 +28,10 @@ import javax.annotation.Nullable;
 public class SquirrelMonkeyEntity extends ZawaLandEntity implements SpeciesVariantsEntity, ClimbingEntity {
     public static final EntityDataAccessor<Boolean> CLIMBING;
 
+    static {
+        CLIMBING = SynchedEntityData.defineId(SquirrelMonkeyEntity.class, EntityDataSerializers.BOOLEAN);
+    }
+
     public SquirrelMonkeyEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
         super(type, world);
     }
@@ -95,10 +99,6 @@ public class SquirrelMonkeyEntity extends ZawaLandEntity implements SpeciesVaria
 
     public void setClimbing(boolean climbing) {
         this.entityData.set(CLIMBING, climbing);
-    }
-
-    static {
-        CLIMBING = SynchedEntityData.defineId(SquirrelMonkeyEntity.class, EntityDataSerializers.BOOLEAN);
     }
 
     @Override

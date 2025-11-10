@@ -11,6 +11,7 @@ public class SouthernCaracaraRenderer extends ZawaMobRenderer<SouthernCaracaraEn
     public SouthernCaracaraRenderer(EntityRendererProvider.Context context) {
         super(context, new SouthernCaracaraModel.Adult(context.bakeLayer(WOTWModelLayers.SOUTHERN_CARACARA_ADULT)), new SouthernCaracaraModel.Child(context.bakeLayer(WOTWModelLayers.SOUTHERN_CARACARA_CHILD)), 0.25F);
     }
+
     @Override
     protected void scale(SouthernCaracaraEntity entity, PoseStack matrixStack, float partialTickTime) {
         float scale = entity.isBaby() ? 0.7F : 1.1F;

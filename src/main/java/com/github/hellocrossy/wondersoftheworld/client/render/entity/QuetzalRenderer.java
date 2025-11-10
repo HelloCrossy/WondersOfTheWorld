@@ -11,16 +11,19 @@ public class QuetzalRenderer extends ZawaMobRenderer<QuetzalEntity, QuetzalModel
     public QuetzalRenderer(EntityRendererProvider.Context context) {
         super(context, new QuetzalModel.Adult(context.bakeLayer(WOTWModelLayers.QUETZAL_ADULT)), new QuetzalModel.Flying(context.bakeLayer(WOTWModelLayers.QUETZAL_FLYING)), new QuetzalModel.Child(context.bakeLayer(WOTWModelLayers.QUETZAL_CHILD)), 0.25F);
     }
+
     @Override
     protected void scale(QuetzalEntity entity, PoseStack matrixStack, float partialTickTime) {
         float scale = entity.isBaby() ? 0.4F : 0.9F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
+
     @Override
     protected boolean hasBabyVariants(QuetzalEntity entity) {
         return false;
     }
+
     @Override
     protected boolean isSexuallyDimorphic() {
         return true;

@@ -330,7 +330,6 @@ public abstract class HoneyBadgerModel extends ZawaBaseModel<HoneyBadgerEntity> 
                 float speed = 0.9f;
                 float degree = 0.8f;
                 this.Neck.xRot = Mth.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.39F;
-                ;
                 this.Head.xRot = Mth.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.2F) * 0.5F + 0.469F;
 
                 this.Chest.y = Mth.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.7F) * 0.5F + 20.2F;

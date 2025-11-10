@@ -28,6 +28,10 @@ import javax.annotation.Nullable;
 public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEntity, ClimbingEntity {
     public static final EntityDataAccessor<Boolean> CLIMBING;
 
+    static {
+        CLIMBING = SynchedEntityData.defineId(TamarinEntity.class, EntityDataSerializers.BOOLEAN);
+    }
+
     public TamarinEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
         super(type, world);
     }
@@ -95,10 +99,6 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
 
     public void setClimbing(boolean climbing) {
         this.entityData.set(CLIMBING, climbing);
-    }
-
-    static {
-        CLIMBING = SynchedEntityData.defineId(TamarinEntity.class, EntityDataSerializers.BOOLEAN);
     }
 
     @Override
