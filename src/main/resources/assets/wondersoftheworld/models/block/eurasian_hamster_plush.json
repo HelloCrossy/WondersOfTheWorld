@@ -1,7 +1,7 @@
 {
   "parent": "zawa:block/plushies/plush",
   "textures": {
-    "0": "wondersoftheworld:block/eurasian_hamster_plush"
+    "0": "wondersoftheworld:block/eurasian_eurasian_hamster_plush"
   },
   "elements": [
     {

@@ -1,6 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
-import com.github.hellocrossy.wondersoftheworld.entity.HamsterEntity;
+import com.github.hellocrossy.wondersoftheworld.entity.EurasianHamsterEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -8,7 +8,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
-public abstract class HamsterModel extends ZawaBaseModel<HamsterEntity> {
+public abstract class EurasianHamsterModel extends ZawaBaseModel<EurasianHamsterEntity> {
     public ModelRenderer Hips;
     protected Iterable<ModelRenderer> parts;
 
@@ -22,7 +22,7 @@ public abstract class HamsterModel extends ZawaBaseModel<HamsterEntity> {
         return this.parts;
     }
 
-    public static class Adult extends HamsterModel {
+    public static class Adult extends EurasianHamsterModel {
         public ModelRenderer Rear;
         public ModelRenderer ThighLeft;
         public ModelRenderer ThighRight;
@@ -175,7 +175,7 @@ public abstract class HamsterModel extends ZawaBaseModel<HamsterEntity> {
         }
 
         @Override
-        public void setupAnim(HamsterEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(EurasianHamsterEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.802F;
             this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI);
@@ -221,7 +221,7 @@ public abstract class HamsterModel extends ZawaBaseModel<HamsterEntity> {
         }
     }
 
-    public static class Child extends HamsterModel {
+    public static class Child extends EurasianHamsterModel {
         public ModelRenderer Belly;
         public ModelRenderer Chest;
         public ModelRenderer Tail1;
@@ -365,7 +365,7 @@ public abstract class HamsterModel extends ZawaBaseModel<HamsterEntity> {
         }
 
         @Override
-        public void setupAnim(HamsterEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(EurasianHamsterEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Head.xRot = (headPitch / (180F / (float) Math.PI)) + 0.411F;
             this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI);

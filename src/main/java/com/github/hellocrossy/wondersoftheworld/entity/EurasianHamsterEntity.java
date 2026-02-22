@@ -18,8 +18,8 @@ import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class HamsterEntity extends ZawaLandEntity {
-    public HamsterEntity(EntityType<? extends ZawaLandEntity> type, World world) {
+public class EurasianHamsterEntity extends ZawaLandEntity {
+    public EurasianHamsterEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
 
@@ -41,15 +41,15 @@ public class HamsterEntity extends ZawaLandEntity {
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
-        return WOTWEntities.HAMSTER.get().create(world);
+        return WOTWEntities.EURASIAN_HAMSTER.get().create(world);
     }
         @Override
         protected SoundEvent getAmbientSound() {
-            return WOTWSounds.HAMSTER_AMBIENT.get();
+            return WOTWSounds.EURASIAN_HAMSTER_AMBIENT.get();
         }
 
         @Override
         protected SoundEvent getHurtSound(DamageSource source) {
-            return WOTWSounds.HAMSTER_HURT.get();
+            return WOTWSounds.EURASIAN_HAMSTER_HURT.get();
         }
     }
