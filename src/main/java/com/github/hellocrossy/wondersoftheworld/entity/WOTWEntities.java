@@ -126,13 +126,13 @@ public class WOTWEntities {
                     .spawns(8, 1, 1, ZawaSpawnCategory.DRY_RAINFOREST, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.6F, 0.6F).clientTrackingRange(10))
                     .build("margay");
-    public static final RegistryObject<EntityType<CaimanEntity>> CAIMAN =
-            REGISTRY.builder(CaimanEntity::new, EntityClassification.CREATURE)
-                    .attributes(CaimanEntity::registerAttributes)
-                    .renderer(() -> CaimanRenderer::new)
+    public static final RegistryObject<EntityType<SpectacledCaimanEntity>> SPECTACLED_CAIMAN =
+            REGISTRY.builder(SpectacledCaimanEntity::new, EntityClassification.CREATURE)
+                    .attributes(SpectacledCaimanEntity::registerAttributes)
+                    .renderer(() -> SpectacledCaimanRenderer::new)
                     .spawns(8, 1, 2, ZawaSpawnCategory.SLOW_FRESH_WATER)
                     .data(entityBuilder -> entityBuilder.sized(1.4F, 0.4F).clientTrackingRange(10))
-                    .build("caiman");
+                    .build("spectacled_caiman");
 
     public static final RegistryObject<EntityType<HamsterEntity>> HAMSTER =
             REGISTRY.builder(HamsterEntity::new, EntityClassification.CREATURE)
@@ -325,7 +325,7 @@ public class WOTWEntities {
         EntitySpawnPlacementRegistry.register(DISCUS_FISH.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
         EntitySpawnPlacementRegistry.register(OSCAR.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
 
-        EntitySpawnPlacementRegistry.register(CAIMAN.get(), EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkSemiAquaticSpawnRules);
+        EntitySpawnPlacementRegistry.register(SPECTACLED_CAIMAN.get(), EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkSemiAquaticSpawnRules);
         EntitySpawnPlacementRegistry.register(HAMSTER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(GUANACO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(CARACAL.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);

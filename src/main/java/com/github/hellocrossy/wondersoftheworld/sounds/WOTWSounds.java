@@ -43,9 +43,9 @@ public class WOTWSounds {
     public static RegistryObject<SoundEvent> CARACAL_ATTACK = registerSound("caracal_attack");
     public static RegistryObject<SoundEvent> MANAKIN_AMBIENT = registerSound("manakin_ambient");
     public static RegistryObject<SoundEvent> MANAKIN_HURT = registerSound("manakin_hurt");
-    public static RegistryObject<SoundEvent> CAIMAN_AMBIENT = registerSound("caiman_ambient");
-    public static RegistryObject<SoundEvent> CAIMAN_HURT = registerSound("caiman_hurt");
-    public static RegistryObject<SoundEvent> CAIMAN_ATTACK = registerSound("caiman_attack");
+    public static RegistryObject<SoundEvent> SPECTACLED_CAIMAN_AMBIENT = registerSound("spectacled_caiman_ambient");
+    public static RegistryObject<SoundEvent> SPECTACLED_CAIMAN_HURT = registerSound("spectacled_caiman_hurt");
+    public static RegistryObject<SoundEvent> SPECTACLED_CAIMAN_ATTACK = registerSound("spectacled_caiman_attack");
     public static RegistryObject<SoundEvent> SQUIRREL_MONKEY_AMBIENT = registerSound("squirrel_monkey_ambient");
     public static RegistryObject<SoundEvent> SQUIRREL_MONKEY_HURT = registerSound("squirrel_monkey_hurt");
     public static RegistryObject<SoundEvent> GUANACO_AMBIENT = registerSound("guanaco_ambient");

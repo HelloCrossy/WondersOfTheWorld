@@ -260,29 +260,29 @@
       }
     ]
   },
-  "caiman_ambient": {
-    "subtitle": "subtitle.wondersoftheworld.caiman_ambient",
+  "spectacled_caiman_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.spectacled_caiman_ambient",
     "sounds": [
       {
-        "name": "wondersoftheworld:caiman_ambient",
+        "name": "wondersoftheworld:spectacled_caiman_ambient",
         "volume": 1.0
       }
     ]
   },
-  "caiman_hurt": {
-    "subtitle": "subtitle.wondersoftheworld.caiman_hurt",
+  "spectacled_caiman_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.spectacled_caiman_hurt",
     "sounds": [
       {
-        "name": "wondersoftheworld:caiman_hurt",
+        "name": "wondersoftheworld:spectacled_caiman_hurt",
         "volume": 1.0
       }
     ]
   },
-  "caiman_attack": {
-    "subtitle": "subtitle.wondersoftheworld.caiman_attack",
+  "spectacled_caiman_attack": {
+    "subtitle": "subtitle.wondersoftheworld.spectacled_caiman_attack",
     "sounds": [
       {
-        "name": "wondersoftheworld:caiman_attack",
+        "name": "wondersoftheworld:spectacled_caiman_attack",
         "volume": 1.0
       }
     ]

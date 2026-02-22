@@ -13,15 +13,14 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
-import org.zawamod.zawa.sounds.ZawaSounds;
 import org.zawamod.zawa.world.entity.OviparousEntity;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
 import org.zawamod.zawa.world.entity.animal.ZawaSemiAquaticEntity;
 
 import javax.annotation.Nullable;
 
-public class CaimanEntity extends ZawaSemiAquaticEntity implements OviparousEntity {
-    public CaimanEntity(EntityType<? extends ZawaSemiAquaticEntity> type, World world) {
+public class SpectacledCaimanEntity extends ZawaSemiAquaticEntity implements OviparousEntity {
+    public SpectacledCaimanEntity(EntityType<? extends ZawaSemiAquaticEntity> type, World world) {
         super(type, world);
     }
 
@@ -32,12 +31,12 @@ public class CaimanEntity extends ZawaSemiAquaticEntity implements OviparousEnti
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
-        return WOTWEntities.CAIMAN.get().create(world);
+        return WOTWEntities.SPECTACLED_CAIMAN.get().create(world);
     }
 
     @Override
     public ItemStack getBreedEggItem() {
-        return WOTWItems.CAIMAN_EGG.get().getDefaultInstance();
+        return WOTWItems.SPECTACLED_CAIMAN_EGG.get().getDefaultInstance();
     }
 
     @Override
@@ -77,16 +76,16 @@ public class CaimanEntity extends ZawaSemiAquaticEntity implements OviparousEnti
     @Override
     public boolean doHurtTarget(Entity entity) {
         boolean didHurtTarget = super.doHurtTarget(entity);
-        if (didHurtTarget) playSound(WOTWSounds.CAIMAN_ATTACK.get(), 1.0F, 1.0F);
+        if (didHurtTarget) playSound(WOTWSounds.SPECTACLED_CAIMAN_ATTACK.get(), 1.0F, 1.0F);
         return didHurtTarget;
     }
     @Override
     protected SoundEvent getAmbientSound() {
-        return WOTWSounds.CAIMAN_AMBIENT.get();
+        return WOTWSounds.SPECTACLED_CAIMAN_AMBIENT.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return WOTWSounds.CAIMAN_HURT.get();
+        return WOTWSounds.SPECTACLED_CAIMAN_HURT.get();
     }
 }
