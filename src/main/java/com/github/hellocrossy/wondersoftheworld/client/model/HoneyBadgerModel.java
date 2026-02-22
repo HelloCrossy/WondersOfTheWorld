@@ -219,15 +219,6 @@ public abstract class HoneyBadgerModel extends ZawaBaseModel<HoneyBadgerEntity> 
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            }
-
-            if (entity.isSprinting()) {
-                float speed = 0.5f;
-                float degree = 0.5f;
-           } else {
                 float speed = 0.75f;
                 float degree = 0.75f;
                 this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.469F;
@@ -256,8 +247,6 @@ public abstract class HoneyBadgerModel extends ZawaBaseModel<HoneyBadgerEntity> 
                 this.Tail2.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.4F) * 0.5F + 0.273F;
                 this.Tail1.zRot = MathHelper.cos(3.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -0.8F) * 0.5F;
                 this.Tail2.zRot = MathHelper.cos(5.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -0.8F) * 0.5F;
-
-            }
         }
     }
 
@@ -549,15 +538,6 @@ public abstract class HoneyBadgerModel extends ZawaBaseModel<HoneyBadgerEntity> 
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            }
-
-            if (entity.isSprinting()) {
-                float speed = 0.75f;
-                float degree = 0.5f;
-            } else {
                 float speed = 0.9f;
                 float degree = 0.8f;
                 this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.39F;;
@@ -585,8 +565,6 @@ public abstract class HoneyBadgerModel extends ZawaBaseModel<HoneyBadgerEntity> 
                 this.Tail2.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -0.4F) * 0.5F + 0.273F;
                 this.Tail1.zRot = MathHelper.cos(3.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -0.8F) * 0.5F;
                 this.Tail2.zRot = MathHelper.cos(5.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -0.8F) * 0.5F;
-
-            }
         }
     }
 }

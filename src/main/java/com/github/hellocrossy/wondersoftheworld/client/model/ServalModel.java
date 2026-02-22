@@ -242,11 +242,6 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
             this.loadBase();
             float speed = 1.0F;
             float degree = 0.2F;
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            }
-
             if (entity.isSprinting()) {
                 speed = 1.8F;
                 degree = 0.1F;
@@ -535,10 +530,6 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            } else {
                 float speed = 1.0f;
                 float degree = 0.75f;
                 this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * 0.2F) * 0.5F - 0.53F;
@@ -568,7 +559,6 @@ public abstract class ServalModel extends ZawaBaseModel<ServalEntity> {
                 this.Tail2.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.4F) * limbSwingAmount * (degree * -1.2F) * 0.5F + 0.184F;
                 this.Tail1.zRot = MathHelper.cos(3.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -0.8F) * 0.5F;
                 this.Tail2.zRot = MathHelper.cos(5.0F + limbSwing * speed * 0.2F) * limbSwingAmount * (degree * -1F) * 0.5F;
-            }
         }
     }
 }

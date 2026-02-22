@@ -523,10 +523,6 @@ public abstract class TakinModel extends ZawaBaseModel<TakinEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            } else {
                 float speed = 1.0f;
                 float degree = 1.0f;
                 this.Neck.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.4F) * 0.5F - 0.118F;
@@ -546,7 +542,6 @@ public abstract class TakinModel extends ZawaBaseModel<TakinEntity> {
                 this.ThighRight.xRot = MathHelper.cos(3.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.341F;
                 this.UpperLegRight.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -1.5F) * 0.5F + 0.663F;
                 this.LowerLegRight.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 1.5F) * 0.5F - 0.767F;
-            }
         }
     }
 }

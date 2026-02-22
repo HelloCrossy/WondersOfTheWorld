@@ -227,11 +227,6 @@ public abstract class EmuModel extends ZawaBaseModel<EmuEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            }
-
             if (entity.isSprinting()) {
                 float speed = 1.0f;
                 float degree = 0.5f;
@@ -450,11 +445,6 @@ public abstract class EmuModel extends ZawaBaseModel<EmuEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-
-            } else {
                 float speed = 1.0f;
                 float degree = 1.0f;
                 this.NeckBase.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.4F) * 0.5F - 0.180F;
@@ -470,7 +460,6 @@ public abstract class EmuModel extends ZawaBaseModel<EmuEntity> {
                 this.ThighRight.y = MathHelper.cos(2.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.8F;
                 this.LegTopRight.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -3F) * 0.5F;
                 this.FootRight.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.045F;
-            }
         }
     }
 }

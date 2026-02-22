@@ -1,8 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.client.model.GaboonViperModel;
-import com.github.hellocrossy.wondersoftheworld.client.model.HoopoeModel;
-import com.github.hellocrossy.wondersoftheworld.entity.CapeBuffaloEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.GaboonViperEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.entity.EntityRendererManager;

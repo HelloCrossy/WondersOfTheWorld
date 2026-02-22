@@ -157,11 +157,6 @@ public abstract class KiwiModel extends ZawaBaseModel<KiwiEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            }
-
             if (entity.isSprinting()) {
                 float speed = 1.0f;
                 float degree = 1.0f;
@@ -308,10 +303,6 @@ public abstract class KiwiModel extends ZawaBaseModel<KiwiEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            } else {
                 float speed = 1.0f;
                 float degree = 1.0f;
                 this.Body.y = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.5F) * 0.5F + 20.1F;
@@ -322,8 +313,6 @@ public abstract class KiwiModel extends ZawaBaseModel<KiwiEntity> {
                 this.FootLeft.xRot = MathHelper.cos(5.5F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F + 0.255F;
                 this.LegRight.xRot = MathHelper.cos(0.5F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * -2F) * 0.5F - 0.175F;
                 this.FootRight.xRot = MathHelper.cos(5.5F + limbSwing * speed * 0.25F) * limbSwingAmount * (degree * 2F) * 0.5F + 0.255F;
-
-            }
         }
     }
 }

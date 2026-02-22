@@ -212,10 +212,6 @@ public abstract class SlothBearModel extends ZawaBaseModel<SlothBearEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            if (isSwimming) {
-                limbSwing = (float) entity.tickCount;
-                limbSwingAmount = 0.3F;
-            } else {
                 float speed = 0.8f;
                 float degree = 0.7f;
 
@@ -238,8 +234,6 @@ public abstract class SlothBearModel extends ZawaBaseModel<SlothBearEntity> {
                 this.ForearmRight.xRot = MathHelper.cos(limbSwing * speed * 0.2F) * degree * -1.5F * limbSwingAmount - 0.273F;
                 this.ArmRight.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.2F) * degree * 1.0F * limbSwingAmount - 0.091F;
                 this.HandRight.xRot = MathHelper.cos(limbSwing * speed * 0.2F) * degree * 1.5F * limbSwingAmount + 0.091F;
-
-            }
         }
     }
 
@@ -430,11 +424,6 @@ public abstract class SlothBearModel extends ZawaBaseModel<SlothBearEntity> {
             this.loadBase();
             float speed = 1.0F;
             float degree = 0.8F;
-            if (this.isSwimming) {
-                limbSwing = (float)entity.tickCount;
-                limbSwingAmount = 0.3F;
-                speed = 2.0F;
-            }
 
             this.ArmBaseLeft.xRot = MathHelper.cos(limbSwing * speed * 0.2F) * degree * 1.0F * limbSwingAmount + 0.27F;
             this.ArmLeft.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.2F) * degree * -1.0F * limbSwingAmount - 0.21F;
@@ -457,7 +446,6 @@ public abstract class SlothBearModel extends ZawaBaseModel<SlothBearEntity> {
             this.Head.zRot = MathHelper.cos(3.0F + limbSwing * speed * 0.2F) * degree * -0.2F * limbSwingAmount;
             this.Head.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.4F) * degree * 0.2F * limbSwingAmount + 0.202F;
             this.Neck.xRot = this.isSwimming ? -0.2F : -0.015F;
-
             }
         }
     }
