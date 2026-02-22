@@ -125,20 +125,20 @@
       }
     ]
   },
-  "hoopoe_ambient": {
-    "subtitle": "subtitle.wondersoftheworld.hoopoe_ambient",
+  "eurasian_hoopoe_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.eurasian_hoopoe_ambient",
     "sounds": [
       {
-        "name": "wondersoftheworld:hoopoe_ambient",
+        "name": "wondersoftheworld:eurasian_hoopoe_ambient",
         "volume": 1.25
       }
     ]
   },
-  "hoopoe_hurt": {
-    "subtitle": "subtitle.wondersoftheworld.hoopoe_hurt",
+  "eurasian_hoopoe_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.eurasian_hoopoe_hurt",
     "sounds": [
       {
-        "name": "wondersoftheworld:hoopoe_hurt",
+        "name": "wondersoftheworld:eurasian_hoopoe_hurt",
         "volume": 1.0
       }
     ]
@@ -170,20 +170,20 @@
       }
     ]
   },
-  "hamster_ambient": {
-    "subtitle": "subtitle.wondersoftheworld.hamster_ambient",
+  "eurasian_hamster_ambient": {
+    "subtitle": "subtitle.wondersoftheworld.eurasian_hamster_ambient",
     "sounds": [
       {
-        "name": "wondersoftheworld:hamster_ambient",
+        "name": "wondersoftheworld:eurasian_hamster_ambient",
         "volume": 1.0
       }
     ]
   },
-  "hamster_hurt": {
-    "subtitle": "subtitle.wondersoftheworld.hamster_hurt",
+  "eurasian_hamster_hurt": {
+    "subtitle": "subtitle.wondersoftheworld.eurasian_hamster_hurt",
     "sounds": [
       {
-        "name": "wondersoftheworld:hamster_hurt",
+        "name": "wondersoftheworld:eurasian_hamster_hurt",
         "volume": 1.0
       }
     ]

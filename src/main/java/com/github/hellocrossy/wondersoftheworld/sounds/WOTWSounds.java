@@ -26,13 +26,13 @@ public class WOTWSounds {
     public static RegistryObject<SoundEvent> MARGAY_AMBIENT = registerSound("margay_ambient");
     public static RegistryObject<SoundEvent> MARGAY_HURT = registerSound("margay_hurt");
     public static RegistryObject<SoundEvent> MARGAY_ATTACK = registerSound("margay_attack");
-    public static RegistryObject<SoundEvent> HOOPOE_AMBIENT = registerSound("hoopoe_ambient");
-    public static RegistryObject<SoundEvent> HOOPOE_HURT = registerSound("hoopoe_hurt");
+    public static RegistryObject<SoundEvent> EURASIAN_HOOPOE_AMBIENT = registerSound("eurasian_hoopoe_ambient");
+    public static RegistryObject<SoundEvent> EURASIAN_HOOPOE_HURT = registerSound("eurasian_hoopoe_hurt");
     public static RegistryObject<SoundEvent> SLOTH_BEAR_AMBIENT = registerSound("sloth_bear_ambient");
     public static RegistryObject<SoundEvent> SLOTH_BEAR_HURT = registerSound("sloth_bear_hurt");
     public static RegistryObject<SoundEvent> SLOTH_BEAR_ATTACK = registerSound("sloth_bear_attack");
-    public static RegistryObject<SoundEvent> HAMSTER_AMBIENT = registerSound("hamster_ambient");
-    public static RegistryObject<SoundEvent> HAMSTER_HURT = registerSound("hamster_hurt");
+    public static RegistryObject<SoundEvent> EURASIAN_HAMSTER_AMBIENT = registerSound("eurasian_hamster_ambient");
+    public static RegistryObject<SoundEvent> EURASIAN_HAMSTER_HURT = registerSound("eurasian_hamster_hurt");
     public static RegistryObject<SoundEvent> PALLAS_CAT_AMBIENT = registerSound("pallas_cat_ambient");
     //public static RegistryObject<SoundEvent> PALLAS_CAT_HURT = registerSound("pallas_cat_hurt");
     //public static RegistryObject<SoundEvent> PALLAS_CAT_ATTACK = registerSound("pallas_cat_attack");

@@ -21,8 +21,8 @@ import org.zawamod.zawa.world.entity.animal.ZawaFlyingEntity;
 
 import javax.annotation.Nullable;
 
-public class HoopoeEntity extends ZawaFlyingEntity implements OviparousEntity {
-    public HoopoeEntity(EntityType<? extends ZawaFlyingEntity> type, World world) {
+public class EurasianHoopoeEntity extends ZawaFlyingEntity implements OviparousEntity {
+    public EurasianHoopoeEntity(EntityType<? extends ZawaFlyingEntity> type, World world) {
         super(type, world);
     }
 
@@ -40,7 +40,7 @@ public class HoopoeEntity extends ZawaFlyingEntity implements OviparousEntity {
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
-        return WOTWEntities.HOOPOE.get().create(world);
+        return WOTWEntities.EURASIAN_HOOPOE.get().create(world);
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
@@ -49,16 +49,16 @@ public class HoopoeEntity extends ZawaFlyingEntity implements OviparousEntity {
 
     @Override
     public ItemStack getBreedEggItem() {
-        return WOTWItems.HOOPOE_EGG.get().getDefaultInstance();
+        return WOTWItems.EURASIAN_HOOPOE_EGG.get().getDefaultInstance();
     }
     @Override
     protected SoundEvent getAmbientSound() {
-        return WOTWSounds.HOOPOE_AMBIENT.get();
+        return WOTWSounds.EURASIAN_HOOPOE_AMBIENT.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return WOTWSounds.HOOPOE_HURT.get();
+        return WOTWSounds.EURASIAN_HOOPOE_HURT.get();
     }
 }
 

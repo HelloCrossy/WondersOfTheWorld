@@ -112,13 +112,13 @@ public class WOTWEntities {
                     .spawns(5, 1, 2, ZawaSpawnCategory.WET_FOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.55F, 0.55F).clientTrackingRange(10))
                     .build("mouse_deer");
-    public static final RegistryObject<EntityType<HoopoeEntity>> HOOPOE =
-            REGISTRY.builder(HoopoeEntity::new, EntityClassification.CREATURE)
-                    .attributes(HoopoeEntity::registerAttributes)
-                    .renderer(() -> HoopoeRenderer::new)
+    public static final RegistryObject<EntityType<EurasianHoopoeEntity>> EURASIAN_HOOPOE =
+            REGISTRY.builder(EurasianHoopoeEntity::new, EntityClassification.CREATURE)
+                    .attributes(EurasianHoopoeEntity::registerAttributes)
+                    .renderer(() -> EurasianHoopoeRenderer::new)
                     .spawns(15, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
-                    .build("hoopoe");
+                    .build("eurasian_hoopoe");
     public static final RegistryObject<EntityType<MargayEntity>> MARGAY =
             REGISTRY.builder(MargayEntity::new, EntityClassification.CREATURE)
                     .attributes(MargayEntity::registerAttributes)
@@ -134,13 +134,13 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.4F, 0.4F).clientTrackingRange(10))
                     .build("spectacled_caiman");
 
-    public static final RegistryObject<EntityType<HamsterEntity>> HAMSTER =
-            REGISTRY.builder(HamsterEntity::new, EntityClassification.CREATURE)
-                    .attributes(HamsterEntity::registerAttributes)
-                    .renderer(() -> HamsterRenderer::new)
+    public static final RegistryObject<EntityType<EurasianHamsterEntity>> EURASIAN_HAMSTER =
+            REGISTRY.builder(EurasianHamsterEntity::new, EntityClassification.CREATURE)
+                    .attributes(EurasianHamsterEntity::registerAttributes)
+                    .renderer(() -> EurasianHamsterRenderer::new)
                     .spawns(15, 2, 4, ZawaSpawnCategory.DRY_GRASSLAND)
                     .data(entityBuilder -> entityBuilder.sized(0.3F, 0.3F).clientTrackingRange(10))
-                    .build("hamster");
+                    .build("eurasian_hamster");
 
     public static final RegistryObject<EntityType<GuanacoEntity>> GUANACO =
             REGISTRY.builder(GuanacoEntity::new, EntityClassification.CREATURE)
@@ -320,13 +320,13 @@ public class WOTWEntities {
         EntitySpawnPlacementRegistry.register(KIWI.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(FENNEC_FOX.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(MOUSE_DEER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
-        EntitySpawnPlacementRegistry.register(HOOPOE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
+        EntitySpawnPlacementRegistry.register(EURASIAN_HOOPOE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
         EntitySpawnPlacementRegistry.register(MARGAY.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(DISCUS_FISH.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
         EntitySpawnPlacementRegistry.register(OSCAR.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
 
         EntitySpawnPlacementRegistry.register(SPECTACLED_CAIMAN.get(), EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkSemiAquaticSpawnRules);
-        EntitySpawnPlacementRegistry.register(HAMSTER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(EURASIAN_HAMSTER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(GUANACO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(CARACAL.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(PALLAS_CAT.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);

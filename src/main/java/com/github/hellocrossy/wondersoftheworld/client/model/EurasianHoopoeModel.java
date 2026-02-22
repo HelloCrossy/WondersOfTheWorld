@@ -1,6 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
-import com.github.hellocrossy.wondersoftheworld.entity.HoopoeEntity;
+import com.github.hellocrossy.wondersoftheworld.entity.EurasianHoopoeEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -8,7 +8,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
-public abstract class HoopoeModel extends ZawaBaseModel<HoopoeEntity> {
+public abstract class EurasianHoopoeModel extends ZawaBaseModel<EurasianHoopoeEntity> {
     public ModelRenderer Body;
     protected Iterable<ModelRenderer> parts;
 
@@ -22,7 +22,7 @@ public abstract class HoopoeModel extends ZawaBaseModel<HoopoeEntity> {
         return this.parts;
     }
 
-    public static class Adult extends HoopoeModel {
+    public static class Adult extends EurasianHoopoeModel {
         public ModelRenderer TailBase;
         public ModelRenderer WingLeft;
         public ModelRenderer WingRight;
@@ -196,7 +196,7 @@ public abstract class HoopoeModel extends ZawaBaseModel<HoopoeEntity> {
         }
 
         @Override
-        public void setupAnim(HoopoeEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(EurasianHoopoeEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, entity.tickCount, 0.3F, ageInTicks, netHeadYaw, headPitch);
             this.Neck1.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
@@ -222,7 +222,7 @@ public abstract class HoopoeModel extends ZawaBaseModel<HoopoeEntity> {
         }
     }
 
-    public static class Flying extends HoopoeModel {
+    public static class Flying extends EurasianHoopoeModel {
         public ModelRenderer TailBase;
         public ModelRenderer Neck1;
         public ModelRenderer LegLeft;
@@ -503,7 +503,7 @@ public abstract class HoopoeModel extends ZawaBaseModel<HoopoeEntity> {
         }
 
         @Override
-        public void setupAnim(HoopoeEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(EurasianHoopoeEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck1.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
@@ -558,7 +558,7 @@ public abstract class HoopoeModel extends ZawaBaseModel<HoopoeEntity> {
         }
     }
 
-    public static class Child extends HoopoeModel {
+    public static class Child extends EurasianHoopoeModel {
         public ModelRenderer TailBase;
         public ModelRenderer LegRight;
         public ModelRenderer LegLeft;
@@ -667,7 +667,7 @@ public abstract class HoopoeModel extends ZawaBaseModel<HoopoeEntity> {
         }
 
         @Override
-        public void setupAnim(HoopoeEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(EurasianHoopoeEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck1.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
