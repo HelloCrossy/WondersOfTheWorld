@@ -1,6 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
-import com.github.hellocrossy.wondersoftheworld.entity.DikDikEntity;
+import com.github.hellocrossy.wondersoftheworld.entity.KirksDikDikEntity;
 import com.google.common.collect.ImmutableList;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -8,7 +8,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
-public abstract class DikDikModel extends ZawaBaseModel<DikDikEntity> {
+public abstract class KirksDikDikModel extends ZawaBaseModel<KirksDikDikEntity> {
     public ModelRenderer Chest;
     protected Iterable<ModelRenderer> parts;
 
@@ -22,7 +22,7 @@ public abstract class DikDikModel extends ZawaBaseModel<DikDikEntity> {
         return this.parts;
     }
 
-    public static class Adult extends DikDikModel {
+    public static class Adult extends KirksDikDikModel {
         public ModelRenderer Neck;
         public ModelRenderer LeftArmBase;
         public ModelRenderer Body;
@@ -215,7 +215,7 @@ public abstract class DikDikModel extends ZawaBaseModel<DikDikEntity> {
         }
 
         @Override
-        public void setupAnim(DikDikEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(KirksDikDikEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             //    this.Neck1.yRot = netHeadYaw / (180F / (float) Math.PI) * - 1.451F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
@@ -291,7 +291,7 @@ public abstract class DikDikModel extends ZawaBaseModel<DikDikEntity> {
         }
     }
 
-    public static class Child extends DikDikModel {
+    public static class Child extends KirksDikDikModel {
         public ModelRenderer Neck;
         public ModelRenderer LeftArmBase;
         public ModelRenderer Body;
@@ -484,7 +484,7 @@ public abstract class DikDikModel extends ZawaBaseModel<DikDikEntity> {
         }
 
         @Override
-        public void setupAnim(DikDikEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(KirksDikDikEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             //    this.Neck1.yRot = netHeadYaw / (180F / (float) Math.PI) * - 1.451F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;

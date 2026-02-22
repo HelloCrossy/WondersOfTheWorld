@@ -1,6 +1,5 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
-import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
@@ -8,20 +7,16 @@ import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.AvoidEntityGoal;
-import net.minecraft.entity.ai.goal.HurtByTargetGoal;
-import net.minecraft.entity.ai.goal.NonTamedTargetGoal;
 import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
-import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
-public class DikDikEntity extends ZawaLandEntity {
-    public DikDikEntity(EntityType<? extends ZawaLandEntity> type, World world) {
+public class KirksDikDikEntity extends ZawaLandEntity {
+    public KirksDikDikEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
 
@@ -32,7 +27,7 @@ public class DikDikEntity extends ZawaLandEntity {
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
-        return WOTWEntities.DIK_DIK.get().create(world);
+        return WOTWEntities.KIRKS_DIK_DIK.get().create(world);
     }
 
     @Override
