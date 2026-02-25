@@ -19,4 +19,8 @@ public class KirksDikDikRenderer extends ZawaMobRenderer<KirksDikDikEntity, Kirk
         super.scale(entity, matrixStack, partialTickTime);
 
     }
+    @Override
+    protected boolean isSexuallyDimorphic() {
+        return true;
+    }
 }

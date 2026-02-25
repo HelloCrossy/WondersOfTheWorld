@@ -20,11 +20,6 @@ public class LowlandNyalaRenderer extends ZawaMobRenderer<LowlandNyalaEntity, Lo
     }
 
     @Override
-    protected boolean hasBabyVariants(LowlandNyalaEntity entity) {
-        return false;
-    }
-
-    @Override
     protected boolean isSexuallyDimorphic() {
         return true;
     }
