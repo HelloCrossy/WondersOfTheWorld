@@ -1,13 +1,18 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "group": "wondersoftheworldgroup",
-  "ingredients": [
-    {
-      "item": "zawa:johnson_grass"
-    }
+  "pattern": [
+    "   ",
+    " G ",
+    "   "
   ],
+  "key": {
+    "P": [
+      { "item": "zawa:johnson_grass" }
+    ]
+  },
   "result": {
-    "item": "wondersoftheworld:small_johnson_grass",
+    "item": "wondersoftheworld:short_johnson_grass",
     "count": 2
   }
 }

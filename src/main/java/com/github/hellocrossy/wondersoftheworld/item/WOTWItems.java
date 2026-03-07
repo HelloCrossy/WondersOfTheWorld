@@ -45,8 +45,8 @@ public class WOTWItems {
 
     public static final RegistryObject<Item> EMU_EGG = ITEMS_REGISTRAR.register("emu_egg", () -> new ZawaEggItem(WOTWEntities.EMU, new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> KIWI_EGG = ITEMS_REGISTRAR.register("kiwi_egg", () -> new ZawaEggItem(WOTWEntities.KIWI, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> HOOPOE_EGG = ITEMS_REGISTRAR.register("hoopoe_egg", () -> new ZawaEggItem(WOTWEntities.HOOPOE, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> CAIMAN_EGG = ITEMS_REGISTRAR.register("caiman_egg", () -> new ZawaEggItem(WOTWEntities.CAIMAN, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> EURASIAN_HOOPOE_EGG = ITEMS_REGISTRAR.register("eurasian_hoopoe_egg", () -> new ZawaEggItem(WOTWEntities.EURASIAN_HOOPOE, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> SPECTACLED_CAIMAN_EGG = ITEMS_REGISTRAR.register("spectacled_caiman_egg", () -> new ZawaEggItem(WOTWEntities.SPECTACLED_CAIMAN, new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> MANAKIN_EGG = ITEMS_REGISTRAR.register("manakin_egg", () -> new ZawaEggItem(WOTWEntities.MANAKIN, new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> QUETZAL_EGG = ITEMS_REGISTRAR.register("quetzal_egg", () -> new ZawaEggItem(WOTWEntities.QUETZAL, new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> HAMMERKOP_EGG = ITEMS_REGISTRAR.register("hammerkop_egg", () -> new ZawaEggItem(WOTWEntities.HAMMERKOP, new Item.Properties().stacksTo(16)));

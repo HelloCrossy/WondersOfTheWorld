@@ -100,31 +100,31 @@ public class WOTWEntities {
                     .spawns(5, 1, 2, ZawaSpawnCategory.WET_FOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.55F, 0.55F).clientTrackingRange(10))
                     .build("mouse_deer");
-    public static final RegistryObject<EntityType<HoopoeEntity>> HOOPOE =
-            REGISTRY.builder(HoopoeEntity::new, MobCategory.CREATURE)
-                    .attributes(HoopoeEntity::registerAttributes)
+    public static final RegistryObject<EntityType<EurasianHoopoeEntity>> EURASIAN_HOOPOE =
+            REGISTRY.builder(EurasianHoopoeEntity::new, MobCategory.CREATURE)
+                    .attributes(EurasianHoopoeEntity::registerAttributes)
                     .spawns(15, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
-                    .build("hoopoe");
+                    .build("eurasian_hoopoe");
     public static final RegistryObject<EntityType<MargayEntity>> MARGAY =
             REGISTRY.builder(MargayEntity::new, MobCategory.CREATURE)
                     .attributes(MargayEntity::registerAttributes)
                     .spawns(8, 1, 1, ZawaSpawnCategory.DRY_RAINFOREST, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.6F, 0.6F).clientTrackingRange(10))
                     .build("margay");
-    public static final RegistryObject<EntityType<CaimanEntity>> CAIMAN =
-            REGISTRY.builder(CaimanEntity::new, MobCategory.CREATURE)
-                    .attributes(CaimanEntity::registerAttributes)
+    public static final RegistryObject<EntityType<SpectacledCaimanEntity>> SPECTACLED_CAIMAN =
+            REGISTRY.builder(SpectacledCaimanEntity::new, MobCategory.CREATURE)
+                    .attributes(SpectacledCaimanEntity::registerAttributes)
                     .spawns(8, 1, 2, ZawaSpawnCategory.SLOW_FRESH_WATER)
                     .data(entityBuilder -> entityBuilder.sized(1.4F, 0.4F).clientTrackingRange(10))
-                    .build("caiman");
+                    .build("spectacled_caiman");
 
-    public static final RegistryObject<EntityType<HamsterEntity>> HAMSTER =
-            REGISTRY.builder(HamsterEntity::new, MobCategory.CREATURE)
-                    .attributes(HamsterEntity::registerAttributes)
+    public static final RegistryObject<EntityType<EurasianHamsterEntity>> EURASIAN_HAMSTER =
+            REGISTRY.builder(EurasianHamsterEntity::new, MobCategory.CREATURE)
+                    .attributes(EurasianHamsterEntity::registerAttributes)
                     .spawns(15, 2, 4, ZawaSpawnCategory.DRY_GRASSLAND)
                     .data(entityBuilder -> entityBuilder.sized(0.3F, 0.3F).clientTrackingRange(10))
-                    .build("hamster");
+                    .build("eurasian_hamster");
 
     public static final RegistryObject<EntityType<GuanacoEntity>> GUANACO =
             REGISTRY.builder(GuanacoEntity::new, MobCategory.CREATURE)
@@ -238,12 +238,12 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(1.6F, 0.3F).clientTrackingRange(10))
                     .build("gaboon_viper");
 
-    public static final RegistryObject<EntityType<DikDikEntity>> DIK_DIK =
-            REGISTRY.builder(DikDikEntity::new, MobCategory.CREATURE)
-                    .attributes(DikDikEntity::registerAttributes)
+    public static final RegistryObject<EntityType<KirksDikDikEntity>> KIRKS_DIK_DIK =
+            REGISTRY.builder(KirksDikDikEntity::new, MobCategory.CREATURE)
+                    .attributes(KirksDikDikEntity::registerAttributes)
                     .spawns(10, 1, 2, ZawaSpawnCategory.DRY_GRASSLAND)
                     .data(entityBuilder -> entityBuilder.sized(0.6F, 0.6F).clientTrackingRange(10))
-                    .build("dik_dik");
+                    .build("kirks_dik_dik");
 
     public static final RegistryObject<EntityType<CapeBuffaloEntity>> CAPE_BUFFALO =
             REGISTRY.builder(CapeBuffaloEntity::new, MobCategory.CREATURE)
@@ -284,13 +284,13 @@ public class WOTWEntities {
         SpawnPlacements.register(KIWI.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(FENNEC_FOX.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(MOUSE_DEER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
-        SpawnPlacements.register(HOOPOE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
+        SpawnPlacements.register(EURASIAN_HOOPOE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING, ZawaFlyingEntity::checkFlyingSpawnRules);
         SpawnPlacements.register(MARGAY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(DISCUS_FISH.get(), SpawnPlacements.Type.IN_WATER, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
         SpawnPlacements.register(OSCAR.get(), SpawnPlacements.Type.IN_WATER, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
 
-        SpawnPlacements.register(CAIMAN.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkSemiAquaticSpawnRules);
-        SpawnPlacements.register(HAMSTER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        SpawnPlacements.register(SPECTACLED_CAIMAN.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaSemiAquaticEntity::checkSemiAquaticSpawnRules);
+        SpawnPlacements.register(EURASIAN_HAMSTER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(GUANACO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(CARACAL.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(PALLAS_CAT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
@@ -309,7 +309,7 @@ public class WOTWEntities {
         SpawnPlacements.register(HONEY_BADGER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(CAPE_BUFFALO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(SABLE_ANTELOPE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
-        SpawnPlacements.register(DIK_DIK.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        SpawnPlacements.register(KIRKS_DIK_DIK.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(GABOON_VIPER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(ORYX.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         SpawnPlacements.register(SOUTHERN_CARACARA.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING, ZawaBaseEntity::checkLandSpawnRules);
@@ -328,10 +328,10 @@ public class WOTWEntities {
         EntityRenderers.register(TIBETAN_ANTELOPE.get(), TibetanAntelopeRenderer::new);
         EntityRenderers.register(LOWLAND_NYALA.get(), LowlandNyalaRenderer::new);
         EntityRenderers.register(MOUSE_DEER.get(), MouseDeerRenderer::new);
-        EntityRenderers.register(HOOPOE.get(), HoopoeRenderer::new);
+        EntityRenderers.register(EURASIAN_HOOPOE.get(), EurasianHoopoeRenderer::new);
         EntityRenderers.register(MARGAY.get(), MargayRenderer::new);
-        EntityRenderers.register(CAIMAN.get(), CaimanRenderer::new);
-        EntityRenderers.register(HAMSTER.get(), HamsterRenderer::new);
+        EntityRenderers.register(SPECTACLED_CAIMAN.get(), SpectacledCaimanRenderer::new);
+        EntityRenderers.register(EURASIAN_HAMSTER.get(), EurasianHamsterRenderer::new);
         EntityRenderers.register(GUANACO.get(), GuanacoRenderer::new);
         EntityRenderers.register(CARACAL.get(), CaracalRenderer::new);
         EntityRenderers.register(SLOTH_BEAR.get(), SlothBearRenderer::new);
@@ -348,7 +348,7 @@ public class WOTWEntities {
         EntityRenderers.register(KILLIFISH.get(), KillifishRenderer::new);
         EntityRenderers.register(HONEY_BADGER.get(), HoneyBadgerRenderer::new);
         EntityRenderers.register(GABOON_VIPER.get(), GaboonViperRenderer::new);
-        EntityRenderers.register(DIK_DIK.get(), DikDikRenderer::new);
+        EntityRenderers.register(KIRKS_DIK_DIK.get(), KirksDikDikRenderer::new);
         EntityRenderers.register(CAPE_BUFFALO.get(), CapeBuffaloRenderer::new);
         EntityRenderers.register(ORYX.get(), OryxRenderer::new);
         EntityRenderers.register(SABLE_ANTELOPE.get(), SableAntelopeRenderer::new);
