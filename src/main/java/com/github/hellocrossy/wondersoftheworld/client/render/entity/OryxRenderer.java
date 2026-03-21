@@ -13,7 +13,7 @@ public class OryxRenderer extends ZawaMobRenderer<OryxEntity, OryxModel> {
 
     @Override
     protected void scale(OryxEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.85F : 0.8F;
+        float scale = entity.isBaby() ? 0.85F : 0.75F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
 

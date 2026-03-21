@@ -15,7 +15,7 @@ public class MargayRenderer extends ZawaMobRenderer<MargayEntity, MargayModel> {
 
     @Override
     protected void scale(MargayEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.8F : 0.9F;
+        float scale = entity.isBaby() ? 0.8F : 0.8F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

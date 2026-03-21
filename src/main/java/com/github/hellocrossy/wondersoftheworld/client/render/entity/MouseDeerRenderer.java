@@ -15,7 +15,7 @@ public class MouseDeerRenderer extends ZawaMobRenderer<MouseDeerEntity, MouseDee
     @Override
     protected void scale(MouseDeerEntity entity, MatrixStack matrixStack, float partialTickTime) {
         if (entity.isBaby() || entity.getVariant() > 0) {
-            matrixStack.scale(0.9F, 0.9F, 0.9F);
+            matrixStack.scale(0.8F, 0.8F, 0.8F);
         }
         super.scale(entity, matrixStack, partialTickTime);
     }

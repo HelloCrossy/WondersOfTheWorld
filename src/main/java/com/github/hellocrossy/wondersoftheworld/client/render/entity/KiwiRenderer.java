@@ -13,7 +13,7 @@ public class KiwiRenderer extends ZawaMobRenderer<KiwiEntity, KiwiModel> {
     }
     @Override
     protected void scale(KiwiEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.75F : 1.0F;
+        float scale = entity.isBaby() ? 0.75F : 0.85F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

@@ -13,7 +13,7 @@ public class CapeBuffaloRenderer extends ZawaMobRenderer<CapeBuffaloEntity, Cape
 
     @Override
     protected void scale(CapeBuffaloEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.85F : 1.0F;
+        float scale = entity.isBaby() ? 0.85F : 1.05F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
 
