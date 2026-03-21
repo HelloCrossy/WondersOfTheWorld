@@ -22,7 +22,7 @@ import java.util.function.Supplier;
 @Mod(WondersOfTheWorld.MOD_ID)
 public class WondersOfTheWorld {
     public static final String MOD_ID = "wondersoftheworld";
-    public static final String[] PLUSHIES_LIST = new String[]{"emu", "scimitar_oryx", "takin", "bongo", "kiwi", "fennec_fox", "serval", "eurasian_hamster", "pallas_cat", "caracal"};
+    public static final String[] PLUSHIES_LIST = new String[]{"emu", "scimitar_oryx", "takin", "bongo", "kiwi", "fennec_fox", "serval", "eurasian_eurasian_hamster", "pallas_cat", "caracal"};
 
     public WondersOfTheWorld() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
