@@ -39,20 +39,10 @@ public class MargayEntity extends ZawaLandEntity {
         this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, PlayerEntity.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0));
     }
 
-    @Override
-    protected void customServerAiStep() {
-        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
-        super.customServerAiStep();
-    }
-
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
 
-    @Override
-    public float getMaleRatio() {
-        return 0.33F;
-    }
     @Override
     public boolean doHurtTarget(Entity entity) {
         boolean didHurtTarget = super.doHurtTarget(entity);

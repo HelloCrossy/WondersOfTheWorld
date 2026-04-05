@@ -33,7 +33,11 @@ public class EurasianHamsterEntity extends ZawaLandEntity {
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
         this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, PlayerEntity.class, 16.0F, 0.8, 1.33, (entity) -> AVOID_PLAYERS.test(entity) && !this.isTame()));
     }
-
+    @Override
+    protected void customServerAiStep() {
+        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
+        super.customServerAiStep();
+    }
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }

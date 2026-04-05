@@ -25,7 +25,7 @@ public class SpectacledCaimanEntity extends ZawaSemiAquaticEntity implements Ovi
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.15F).add(Attributes.MAX_HEALTH, 22.0).add(Attributes.ATTACK_DAMAGE, 6.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.15F).add(Attributes.MAX_HEALTH, 24.0).add(Attributes.ATTACK_DAMAGE, 6.0);
     }
 
     @Nullable
@@ -57,11 +57,6 @@ public class SpectacledCaimanEntity extends ZawaSemiAquaticEntity implements Ovi
         }
 
         super.customServerAiStep();
-    }
-
-    @Override
-    public float getMaleRatio() {
-        return 0.25F;
     }
 
     @Override

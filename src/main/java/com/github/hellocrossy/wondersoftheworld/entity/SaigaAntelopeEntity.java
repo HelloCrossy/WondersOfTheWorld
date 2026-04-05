@@ -19,7 +19,7 @@ public class SaigaAntelopeEntity extends ZawaLandEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 16.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 24.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class SaigaAntelopeEntity extends ZawaLandEntity {
 
     @Override
     public float getMaleRatio() {
-        return 0.25F;
+        return 0.17F;
     }
 }
 

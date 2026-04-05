@@ -23,19 +23,13 @@ public class SableAntelopeEntity extends ZawaLandEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 32.0).add(Attributes.ATTACK_DAMAGE, 5.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 32.0).add(Attributes.ATTACK_DAMAGE, 5.0);
     }
 
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.SABLE_ANTELOPE.get().create(world);
-    }
-
-    @Override
-    protected void customServerAiStep() {
-        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
-        super.customServerAiStep();
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
@@ -52,6 +46,6 @@ public class SableAntelopeEntity extends ZawaLandEntity {
 
     @Override
     public float getMaleRatio() {
-        return 0.25F;
+        return 0.17F;
     }
 }

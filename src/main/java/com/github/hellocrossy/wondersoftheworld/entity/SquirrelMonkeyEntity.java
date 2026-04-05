@@ -34,7 +34,7 @@ public class SquirrelMonkeyEntity extends ZawaLandEntity implements SpeciesVaria
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 8.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 10.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Override
@@ -43,13 +43,11 @@ public class SquirrelMonkeyEntity extends ZawaLandEntity implements SpeciesVaria
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
         this.goalSelector.addGoal(7, new SittingEntity.SitGoal(this));
     }
-
     @Override
     protected void customServerAiStep() {
         if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
         super.customServerAiStep();
     }
-
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(CLIMBING, false);

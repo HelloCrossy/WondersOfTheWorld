@@ -20,14 +20,13 @@ public class TibetanAntelopeEntity extends ZawaLandEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 24.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 28.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Override
     protected void registerGoals() {
         super.registerGoals();
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
-        this.goalSelector.addGoal(7, new SittingEntity.SitGoal(this));
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
@@ -42,7 +41,7 @@ public class TibetanAntelopeEntity extends ZawaLandEntity {
 
     @Override
     public float getMaleRatio() {
-        return 0.25F;
+        return 0.17F;
     }
 }
 

@@ -22,7 +22,7 @@ public class ServalEntity extends ZawaLandEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 12.0).add(Attributes.ATTACK_DAMAGE, 2.0);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 18.0).add(Attributes.ATTACK_DAMAGE, 2.0);
     }
 
     @Nullable
@@ -49,10 +49,6 @@ public class ServalEntity extends ZawaLandEntity {
         return size.height * 0.85F;
     }
 
-    @Override
-    public float getMaleRatio() {
-        return 0.33F;
-    }
     @Override
     public boolean doHurtTarget(Entity entity) {
         boolean didHurtTarget = super.doHurtTarget(entity);

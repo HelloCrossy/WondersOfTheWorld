@@ -30,7 +30,7 @@ public class WOTWEntities {
             REGISTRY.builder(EmuEntity::new, EntityClassification.CREATURE)
                     .attributes(EmuEntity::registerAttributes)
                     .renderer(() -> EmuRenderer::new)
-                    .spawns(10, 3, 5, ZawaSpawnCategory.WET_SAVANNA)
+                    .spawns(15, 3, 5, ZawaSpawnCategory.WET_SAVANNA)
                     .data(entityBuilder -> entityBuilder.sized(1.4F, 1.4F).clientTrackingRange(10))
                     .build("emu");
 
@@ -94,7 +94,7 @@ public class WOTWEntities {
             REGISTRY.builder(TibetanAntelopeEntity::new, EntityClassification.CREATURE)
                     .attributes(TibetanAntelopeEntity::registerAttributes)
                     .renderer(() -> TibetanAntelopeRenderer::new)
-                    .spawns(5, 3, 4, ZawaSpawnCategory.COLD_GRASSLAND)
+                    .spawns(8, 3, 4, ZawaSpawnCategory.COLD_GRASSLAND)
                     .data(entityBuilder -> entityBuilder.sized(0.9F, 1.2F).clientTrackingRange(10))
                     .build("tibetan_antelope");
     public static final RegistryObject<EntityType<LowlandNyalaEntity>> LOWLAND_NYALA =
@@ -162,7 +162,7 @@ public class WOTWEntities {
             REGISTRY.builder(SlothBearEntity::new, EntityClassification.CREATURE)
                     .attributes(SlothBearEntity::registerAttributes)
                     .renderer(() -> SlothBearRenderer::new)
-                    .spawns(5, 1, 1, ZawaSpawnCategory.DRY_FOREST)
+                    .spawns(8, 1, 1, ZawaSpawnCategory.DRY_FOREST)
                     .data(entityBuilder -> entityBuilder.sized(1.3F, 1.2F).clientTrackingRange(10))
                     .build("sloth_bear");
 
@@ -170,7 +170,7 @@ public class WOTWEntities {
             REGISTRY.builder(PallasCatEntity::new, EntityClassification.CREATURE)
                     .attributes(PallasCatEntity::registerAttributes)
                     .renderer(() -> PallasCatRenderer::new)
-                    .spawns(8, 1, 1, ZawaSpawnCategory.TUNDRA_ALPINE)
+                    .spawns(5, 1, 1, ZawaSpawnCategory.TUNDRA_ALPINE)
                     .data(entityBuilder -> entityBuilder.sized(0.7F, 0.5F).clientTrackingRange(10))
                     .build("pallas_cat");
 
@@ -242,7 +242,7 @@ public class WOTWEntities {
             REGISTRY.builder(QuetzalEntity::new, EntityClassification.CREATURE)
                     .attributes(QuetzalEntity::registerAttributes)
                     .renderer(() -> QuetzalRenderer::new)
-                    .spawns(15, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
+                    .spawns(5, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
                     .build("quetzal");
     public static final RegistryObject<EntityType<KillifishEntity>> KILLIFISH =
@@ -289,7 +289,7 @@ public class WOTWEntities {
             REGISTRY.builder(OryxEntity::new, EntityClassification.CREATURE)
                     .attributes(OryxEntity::registerAttributes)
                     .renderer(() -> OryxRenderer::new)
-                    .spawns(2, 3, 4, ZawaSpawnCategory.WET_SAVANNA)
+                    .spawns(8, 3, 4, ZawaSpawnCategory.WET_SAVANNA)
                     .data(entityBuilder -> entityBuilder.sized(1.4F, 1.4F).clientTrackingRange(10))
                     .build("oryx");
 
@@ -305,7 +305,7 @@ public class WOTWEntities {
             REGISTRY.builder(SouthernCaracaraEntity::new, EntityClassification.CREATURE)
                     .attributes(SouthernCaracaraEntity::registerAttributes)
                     .renderer(() -> SouthernCaracaraRenderer::new)
-                    .spawns(8, 1, 2, ZawaSpawnCategory.DRY_RAINFOREST)
+                    .spawns(10, 1, 2, ZawaSpawnCategory.DRY_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
                     .build("southern_caracara");
 

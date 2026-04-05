@@ -8,6 +8,7 @@ import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
+import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.IWorld;
@@ -48,14 +49,12 @@ public class TakinEntity extends ZawaLandEntity implements SpeciesVariantsEntity
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(4, new BreachGoal(this, 5));
-        this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 4.0, 1.33, true));
-        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
     }
 
     @Override
     public float getMaleRatio() {
-        return 0.33F;
+        return 0.25F;
     }
     @Override
     protected SoundEvent getAmbientSound() {

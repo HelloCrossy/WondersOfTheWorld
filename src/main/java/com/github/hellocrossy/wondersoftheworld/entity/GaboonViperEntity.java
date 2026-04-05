@@ -28,19 +28,13 @@ public class GaboonViperEntity extends ZawaLandEntity implements OviparousEntity
     }
 
     public static AttributeModifierMap.MutableAttribute registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 10.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 18.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Nullable
     @Override
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.GABOON_VIPER.get().create(world);
-    }
-
-    @Override
-    protected void customServerAiStep() {
-        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
-        super.customServerAiStep();
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
@@ -51,13 +45,8 @@ public class GaboonViperEntity extends ZawaLandEntity implements OviparousEntity
     protected void registerGoals() {
         super.registerGoals();
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
-        this.goalSelector.addGoal(7, new SittingEntity.SitGoal(this));
     }
 
-    @Override
-    public float getMaleRatio() {
-        return 0.33F;
-    }
     @Override
     public ItemStack getBreedEggItem() {
         return WOTWItems.GABOON_VIPER_EGG.get().getDefaultInstance();

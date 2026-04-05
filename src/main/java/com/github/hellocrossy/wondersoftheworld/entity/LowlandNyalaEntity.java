@@ -7,6 +7,7 @@ import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
+import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import org.zawamod.zawa.world.entity.ai.goal.BreachGoal;
@@ -33,9 +34,7 @@ public class LowlandNyalaEntity extends ZawaLandEntity {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(4, new BreachGoal(this, 5));
-        this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 4.0, 1.33, true));
-        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+        this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
@@ -43,6 +42,6 @@ public class LowlandNyalaEntity extends ZawaLandEntity {
     }
     @Override
     public float getMaleRatio() {
-        return 0.20F;
+        return 0.17F;
     }
 }

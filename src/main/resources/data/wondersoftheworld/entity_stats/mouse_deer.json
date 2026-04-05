@@ -1,8 +1,8 @@
 {
   "temperament": "timid",
   "kibble": "zawa:herbivore_kibble",
-  "size": "small",
-  "fertility": "medium",
+  "size": "tiny",
+  "fertility": "low",
   "breeding_item": "zawa:legume",
   "litter_size": {
     "min": 1,
