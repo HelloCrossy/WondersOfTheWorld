@@ -1,7 +1,7 @@
 {
   "temperament": "neutral",
   "kibble": "zawa:herbivore_kibble",
-  "size": "large",
+  "size": "medium",
   "fertility": "low",
   "breeding_item": "minecraft:oak_leaves",
   "litter_size": {
@@ -9,12 +9,16 @@
     "max": 1
   },
   "diet": "zawa:herbivore",
-  "speed": "fast",
+  "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:salt_lick",
-      "zawa:sprinkler",
       "zawa:scratching_post",
+      "zawa:leaf_browse",
+      "zawa:hay_browse",
+      "zawa:sprinkler",
+      "zawa:salt_lick"
+    ],
+    "zawa:entities": [
       "zawa:apple_ice_treat"
     ]
   },

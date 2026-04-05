@@ -1,5 +1,5 @@
 {
-  "temperament": "territorial",
+  "temperament": "defensive",
   "kibble": "zawa:omnivore_kibble",
   "size": "large",
   "fertility": "high",
@@ -12,11 +12,13 @@
   "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:apple_ice_treat",
+      "zawa:hay_browse",
+      "zawa:leaf_browse",
       "zawa:sprinkler"
     ],
     "zawa:entities": [
-      "zawa:boomer_ball"
+      "zawa:scented_ball",
+      "zawa:apple_ice_treat"
     ]
   },
   "variant_count": 5,

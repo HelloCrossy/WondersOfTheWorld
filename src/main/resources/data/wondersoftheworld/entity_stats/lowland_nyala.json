@@ -1,8 +1,8 @@
 {
-  "temperament": "defensive",
+  "temperament": "neutral",
   "kibble": "zawa:herbivore_kibble",
   "size": "large",
-  "fertility": "medium",
+  "fertility": "high",
   "breeding_item": "minecraft:hay_block",
   "litter_size": {
     "min": 1,
@@ -13,8 +13,12 @@
   "enrichment": {
     "zawa:blocks": [
       "zawa:scratching_post",
-      "zawa:salt_lick",
+      "zawa:leaf_browse",
+      "zawa:hay_browse",
       "zawa:sprinkler",
+      "zawa:salt_lick"
+    ],
+    "zawa:entities": [
       "zawa:apple_ice_treat"
     ]
   },

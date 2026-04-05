@@ -9,15 +9,17 @@
     "max": 3
   },
   "diet": "zawa:small_carnivore",
-  "speed": "medium",
+  "speed": "fast",
   "enrichment": {
     "zawa:blocks": [
+      "zawa:scratching_post",
       "zawa:heat_rock",
       "zawa:sprinkler",
-      "zawa:beef_ice_treat"
+      "zawa:ball_pit"
     ],
     "zawa:entities": [
-      "zawa:scented_ball"
+      "zawa:scented_ball",
+      "zawa:beef_ice_treat"
     ]
   },
   "variant_count": 7,

@@ -1,5 +1,5 @@
 {
-  "temperament": "territorial",
+  "temperament": "defensive",
   "kibble": "zawa:carnivore_kibble",
   "size": "small",
   "fertility": "low",
@@ -9,15 +9,18 @@
     "max": 3
   },
   "diet": "zawa:small_carnivore",
-  "speed": "fast",
+  "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
+      "zawa:scratching_post",
       "zawa:heat_rock",
       "zawa:sprinkler",
+      "zawa:ball_pit",
       "zawa:snow_pit"
     ],
     "zawa:entities": [
-      "zawa:scented_ball"
+      "zawa:scented_ball",
+      "zawa:beef_ice_treat"
     ]
   },
   "variant_count": 4,

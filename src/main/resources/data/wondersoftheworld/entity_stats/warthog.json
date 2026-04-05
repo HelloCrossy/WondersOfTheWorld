@@ -1,5 +1,5 @@
 {
-  "temperament": "territorial",
+  "temperament": "defensive",
   "kibble": "zawa:omnivore_kibble",
   "size": "medium",
   "fertility": "medium",
@@ -9,7 +9,7 @@
     "max": 4
   },
   "diet": "zawa:omnivore",
-  "speed": "fast",
+  "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
       "zawa:hay_browse",

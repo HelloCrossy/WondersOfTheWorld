@@ -2,7 +2,7 @@
   "temperament": "neutral",
   "kibble": "zawa:omnivore_kibble",
   "size": "small",
-  "fertility": "high",
+  "fertility": "medium",
   "breeding_item": "zawa:small_meat",
   "litter_size": {
     "min": 2,
@@ -12,13 +12,14 @@
   "speed": "fast",
   "enrichment": {
     "zawa:blocks": [
+      "zawa:scratching_post",
       "zawa:heat_rock",
-      "zawa:ball_pit",
       "zawa:sprinkler",
-      "zawa:beef_ice_treat"
+      "zawa:ball_pit"
     ],
     "zawa:entities": [
-      "zawa:scented_ball"
+      "zawa:scented_ball",
+      "zawa:beef_ice_treat"
     ]
   },
   "variant_count": 4,

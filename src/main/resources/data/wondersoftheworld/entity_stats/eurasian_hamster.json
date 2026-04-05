@@ -13,8 +13,10 @@
   "enrichment": {
     "zawa:blocks": [
       "zawa:heat_lamp",
-      "zawa:apple_ice_treat",
       "zawa:ball_pit"
+    ],
+    "zawa:entities": [
+      "zawa:apple_ice_treat"
     ]
   },
   "variant_count": 17,
