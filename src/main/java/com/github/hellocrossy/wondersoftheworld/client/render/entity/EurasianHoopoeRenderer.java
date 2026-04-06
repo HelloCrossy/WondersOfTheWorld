@@ -17,9 +17,4 @@ public class EurasianHoopoeRenderer extends ZawaMobRenderer<EurasianHoopoeEntity
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
-
-    @Override
-    protected boolean hasBabyVariants(EurasianHoopoeEntity entity) {
-        return false;
-    }
 }

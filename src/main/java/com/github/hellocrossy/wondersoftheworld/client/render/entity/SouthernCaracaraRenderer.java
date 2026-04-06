@@ -8,11 +8,12 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class SouthernCaracaraRenderer extends ZawaMobRenderer<SouthernCaracaraEntity, SouthernCaracaraModel> {
     public SouthernCaracaraRenderer(EntityRendererManager manager) {
-        super(manager, new SouthernCaracaraModel.Adult(), new SouthernCaracaraModel.Child(), 0.25F);
+        super(manager, new SouthernCaracaraModel.Adult(), new SouthernCaracaraModel.Flying(), new SouthernCaracaraModel.Child(), 0.25F);
     }
+
     @Override
     protected void scale(SouthernCaracaraEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.7F : 1.0F;
+        float scale = entity.isBaby() ? 0.4F : 0.9F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
