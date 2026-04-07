@@ -638,7 +638,7 @@ public abstract class SouthernCaracaraModel extends ZawaBaseModel<SouthernCaraca
             @Override
             public void playIdleAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
                 float speed = 1.0f;
-                float degree = 1.0f;
+                float degree = 0.75f;
                 this.Neck1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.8F) * 0.5F + 0.774F;
                 this.Neck2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.8F) * 0.5F - 0.5F;
                 this.Head.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.2F) * 0.5F - 1.234F;
@@ -661,7 +661,7 @@ public abstract class SouthernCaracaraModel extends ZawaBaseModel<SouthernCaraca
             @Override
             public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
                 float speed = 1.0f;
-                float degree = 1.0f;
+                float degree = 0.75f;
                 this.Neck1.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.8F) * 0.5F + 0.774F;
                 this.Neck2.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.8F) * 0.5F - 0.5F;
                 this.Head.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.2F) * 0.5F - 1.234F;

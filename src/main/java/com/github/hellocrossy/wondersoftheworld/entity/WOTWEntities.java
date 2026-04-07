@@ -309,6 +309,14 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
                     .build("southern_caracara");
 
+    public static final RegistryObject<EntityType<RufousElephantShrewEntity>> RUFOUS_ELEPHANT_SHREW =
+            REGISTRY.builder(RufousElephantShrewEntity::new, EntityClassification.CREATURE)
+                    .attributes(RufousElephantShrewEntity::registerAttributes)
+                    .renderer(() -> RufousElephantShrewRenderer::new)
+                    .spawns(10, 1, 1, ZawaSpawnCategory.DRY_GRASSLAND)
+                    .data(entityBuilder -> entityBuilder.sized(0.3F, 0.3F).clientTrackingRange(10))
+                    .build("rufous_elephant_shrew");
+
     public static void registerSpawnPlacements() {
         EntitySpawnPlacementRegistry.register(TAKIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(WESTERN_LOWLAND_BONGO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
