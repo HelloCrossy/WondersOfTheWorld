@@ -34,6 +34,11 @@ public class EmuEntity extends ZawaLandEntity implements OviparousEntity {
     public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.EMU.get().create(world);
     }
+    @Override
+    protected void customServerAiStep() {
+        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
+        super.customServerAiStep();
+    }
 
     @Override
     public ItemStack getBreedEggItem() {
@@ -46,10 +51,10 @@ public class EmuEntity extends ZawaLandEntity implements OviparousEntity {
 
     @Override
     protected void registerGoals() {
-        super.registerGoals();
-        this.goalSelector.addGoal(4, new BreachGoal(this, 5));
-        this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 4.0, 1.33, true));
-        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+      super.registerGoals();
+      this.goalSelector.addGoal(4, new BreachGoal(this, 5));
+      this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 4.0, 1.33, true));
+      this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
     }
 
     @Override
