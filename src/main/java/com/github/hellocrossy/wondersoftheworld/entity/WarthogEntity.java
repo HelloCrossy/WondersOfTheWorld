@@ -33,7 +33,6 @@ public class WarthogEntity extends ZawaLandEntity {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(4, new BreachGoal(this, 5));
         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 4.0, 1.33, true));
         this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
     }
