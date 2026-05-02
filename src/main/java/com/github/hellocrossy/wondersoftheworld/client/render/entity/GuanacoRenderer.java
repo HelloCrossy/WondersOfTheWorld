@@ -13,7 +13,7 @@ public class GuanacoRenderer extends ZawaMobRenderer<GuanacoEntity, GuanacoModel
 
     @Override
     protected void scale(GuanacoEntity entity, MatrixStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 1.1F : 0.9F;
+        float scale = entity.isBaby() ? 1.1F : 0.85F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

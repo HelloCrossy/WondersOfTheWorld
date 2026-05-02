@@ -35,7 +35,7 @@ public class GuanacoEntity extends ZawaLandEntity {
     }
 
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return size.height * 0.85F;
+        return size.height * 0.95F;
     }
 
     @Override
