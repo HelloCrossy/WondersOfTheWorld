@@ -8,7 +8,7 @@ import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class CapeBuffaloRenderer extends ZawaMobRenderer<CapeBuffaloEntity, CapeBuffaloModel> {
     public CapeBuffaloRenderer(EntityRendererManager manager) {
-        super(manager, new CapeBuffaloModel.Adult(), new CapeBuffaloModel.Child(), 0.6F);
+        super(manager, new CapeBuffaloModel.Adult(), new CapeBuffaloModel.Child(), 1.2F);
     }
 
     @Override

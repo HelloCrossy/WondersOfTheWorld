@@ -51,9 +51,8 @@ public abstract class GaboonViperModel extends ZawaBaseModel<GaboonViperEntity> 
             this.Tongue.setPos(0.0F, 0.75F, 2.5F);
             this.Tongue.addBox(-1.5F, 0.0F, -4.0F, 3.0F, 0.0F, 4.0F, 0.0F, 0.0F, 0.0F);
             this.Base = new ModelRenderer(this, 0, 0);
-            this.Base.setPos(0.0F, 22.5F, -10.5F);
-            this.Base.addBox(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F);
-            this.Tail4 = new ModelRenderer(this, 50, 17);
+            this.Base.setPos(-1.3F, 20.0F, 2.1F);
+            this.Base.addBox(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F);this.Tail4 = new ModelRenderer(this, 50, 17);
             this.Tail4.setPos(0.0F, 0.1F, 4.5F);
             this.Tail4.addBox(-1.5F, 0.0F, 0.0F, 3.0F, 2.0F, 4.0F, 0.0F, 0.3F, 0.0F);
             this.setRotateAngle(Tail4, -0.03490658503988659F, 0.0F, 0.0F);
@@ -225,7 +224,7 @@ public abstract class GaboonViperModel extends ZawaBaseModel<GaboonViperEntity> 
             this.Tongue.setPos(0.0F, 0.75F, 2.5F);
             this.Tongue.addBox(-1.5F, 0.0F, -4.0F, 3.0F, 0.0F, 4.0F, 0.0F, 0.0F, 0.0F);
             this.Base = new ModelRenderer(this, 0, 0);
-            this.Base.setPos(0.0F, 22.5F, -10.5F);
+            this.Base.setPos(0.0F, 22.5F, -17.6F);
             this.Base.addBox(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F);
             this.Tail4 = new ModelRenderer(this, 50, 17);
             this.Tail4.setPos(0.0F, 0.1F, 4.5F);

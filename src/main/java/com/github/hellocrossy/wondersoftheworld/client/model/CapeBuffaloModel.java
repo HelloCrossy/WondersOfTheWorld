@@ -96,7 +96,7 @@ public abstract class CapeBuffaloModel extends ZawaBaseModel<CapeBuffaloEntity> 
             this.Horn2Left.addBox(-6.0F, -2.0F, -1.0F, 6.0F, 3.0F, 3.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Horn2Left, 0.0F, 0.0F, -0.27366763203903305F);
             this.Chest = new ModelRenderer(this, 0, 0);
-            this.Chest.setPos(0.0F, 2.5F, -2.5F);
+            this.Chest.setPos(-0.3F, 2.5F, -12.0F);
             this.Chest.addBox(-6.5F, -8.0F, -4.5F, 13.0F, 16.0F, 9.0F, 0.0F, 0.0F, 0.0F);
             this.setRotateAngle(Chest, -0.2275909337942703F, 0.0F, 0.0F);
             this.NeckLower = new ModelRenderer(this, 48, 63);
