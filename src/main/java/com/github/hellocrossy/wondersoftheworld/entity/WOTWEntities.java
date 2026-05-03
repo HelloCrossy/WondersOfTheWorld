@@ -277,13 +277,13 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(0.6F, 0.8F).clientTrackingRange(10))
                     .build("kirks_dik_dik");
 
-    public static final RegistryObject<EntityType<CapeBuffaloEntity>> CAPE_BUFFALO =
-            REGISTRY.builder(CapeBuffaloEntity::new, EntityClassification.CREATURE)
-                    .attributes(CapeBuffaloEntity::registerAttributes)
-                    .renderer(() -> CapeBuffaloRenderer::new)
+    public static final RegistryObject<EntityType<AfricanWaterBuffaloEntity>> AFRICAN_WATER_BUFFALO =
+            REGISTRY.builder(AfricanWaterBuffaloEntity::new, EntityClassification.CREATURE)
+                    .attributes(AfricanWaterBuffaloEntity::registerAttributes)
+                    .renderer(() -> AfricanWaterBuffaloRenderer::new)
                     .spawns(10, 3, 5, ZawaSpawnCategory.WET_SAVANNA)
                     .data(entityBuilder -> entityBuilder.sized(1.9F, 1.9F).clientTrackingRange(10))
-                    .build("cape_buffalo");
+                    .build("african_water_buffalo");
 
     public static final RegistryObject<EntityType<OryxEntity>> ORYX =
             REGISTRY.builder(OryxEntity::new, EntityClassification.CREATURE)
@@ -352,7 +352,7 @@ public class WOTWEntities {
         EntitySpawnPlacementRegistry.register(KILLIFISH.get(), EntitySpawnPlacementRegistry.PlacementType.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaAmbientFishEntity::checkAquaticSpawnRules);
 
         EntitySpawnPlacementRegistry.register(HONEY_BADGER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
-        EntitySpawnPlacementRegistry.register(CAPE_BUFFALO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
+        EntitySpawnPlacementRegistry.register(AFRICAN_WATER_BUFFALO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(SABLE_ANTELOPE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(KIRKS_DIK_DIK.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(GABOON_VIPER.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
