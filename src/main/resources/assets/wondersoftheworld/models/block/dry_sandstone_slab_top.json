@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "wondersoftheworld:block/dry_sandstone",
+    "top": "wondersoftheworld:block/dry_sandstone",
+    "side": "wondersoftheworld:block/dry_sandstone"
+  }
+}

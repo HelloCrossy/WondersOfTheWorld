@@ -115,10 +115,23 @@ public class WOTWBlocks {
     });
     public static final RegistryObject<Block> RED_BRICK_WALL = registerWithItem("red_brick_wall", () -> {
         return new WallBlock(AbstractBlock.Properties.copy((AbstractBlock) RED_BRICK.get()));
+
+    });
+    public static final RegistryObject<Block> DRY_SANDSTONE = registerWithItem("dry_sandstone", () -> new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DRY_SANDSTONE_SLAB = registerWithItem("dry_sandstone_slab", () -> {
+        return new SlabBlock(AbstractBlock.Properties.copy((AbstractBlock) DRY_SANDSTONE.get()));
+    });
+    public static final RegistryObject<Block> DRY_SANDSTONE_STAIRS = registerWithItem("dry_sandstone_stairs", () -> {
+        return new StairsBlock(() -> {
+            return ((Block) DRY_SANDSTONE.get()).defaultBlockState();
+        }, AbstractBlock.Properties.copy((AbstractBlock) DRY_SANDSTONE.get()));
+    });
+    public static final RegistryObject<Block> DRY_SANDSTONE_WALL = registerWithItem("dry_sandstone_wall", () -> {
+        return new WallBlock(AbstractBlock.Properties.copy((AbstractBlock) DRY_SANDSTONE.get()));
     });
     public static final RegistryObject<Block> FINE_DIRT = registerWithItem("fine_dirt", () -> new Block(AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).harvestTool(ToolType.SHOVEL)));
     public static final RegistryObject<Block> FINE_SAND = registerWithItem("fine_sand", () -> new Block(AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).harvestTool(ToolType.SHOVEL)));
-    public static final RegistryObject<Block> DRY_COBBLESTONE = registerWithItem("dry_sandstone", () -> new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> BLACK_BRICK = registerWithItem("black_brick", () -> new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> BLACK_BRICK_SLAB = registerWithItem("black_brick_slab", () -> {
         return new SlabBlock(AbstractBlock.Properties.copy((AbstractBlock) BLACK_BRICK.get()));
