@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "wondersoftheworld:block/dry_cobblestone"
+    "all": "wondersoftheworld:block/dry_sandstone"
   }
 }

@@ -118,7 +118,7 @@ public class WOTWBlocks {
     });
     public static final RegistryObject<Block> FINE_DIRT = registerWithItem("fine_dirt", () -> new Block(AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).harvestTool(ToolType.SHOVEL)));
     public static final RegistryObject<Block> FINE_SAND = registerWithItem("fine_sand", () -> new Block(AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).harvestTool(ToolType.SHOVEL)));
-    public static final RegistryObject<Block> DRY_COBBLESTONE = registerWithItem("dry_cobblestone", () -> new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DRY_COBBLESTONE = registerWithItem("dry_sandstone", () -> new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> BLACK_BRICK = registerWithItem("black_brick", () -> new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(2.0F, 6.0F).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> BLACK_BRICK_SLAB = registerWithItem("black_brick_slab", () -> {
         return new SlabBlock(AbstractBlock.Properties.copy((AbstractBlock) BLACK_BRICK.get()));
