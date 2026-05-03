@@ -38,7 +38,11 @@ public class KiwiEntity extends ZawaLandEntity implements OviparousEntity, Speci
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
         this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, Player.class, 16.0F, 0.8, 1.33, (entity) -> AVOID_PLAYERS.test(entity) && !this.isTame()));
     }
-
+    @Override
+    protected void customServerAiStep() {
+        if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
+        super.customServerAiStep();
+    }
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {

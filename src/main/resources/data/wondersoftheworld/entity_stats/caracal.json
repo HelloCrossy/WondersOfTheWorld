@@ -1,8 +1,8 @@
 {
-  "temperament": "territorial",
+  "temperament": "aggressive",
   "kibble": "zawa:carnivore_kibble",
   "size": "medium",
-  "fertility": "low",
+  "fertility": "medium",
   "breeding_item": "zawa:medium_meat",
   "litter_size": {
     "min": 1,
@@ -12,12 +12,14 @@
   "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
+      "zawa:scratching_post",
       "zawa:heat_rock",
       "zawa:sprinkler",
-      "zawa:beef_ice_treat"
+      "zawa:ball_pit"
     ],
     "zawa:entities": [
-      "zawa:scented_ball"
+      "zawa:scented_ball",
+      "zawa:beef_ice_treat"
     ]
   },
   "variant_count": 4,

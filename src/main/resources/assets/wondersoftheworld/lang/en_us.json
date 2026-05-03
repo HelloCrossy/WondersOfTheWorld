@@ -37,6 +37,7 @@
   "entity.wondersoftheworld.dik_dik": "Kirk's Dik-Dik",
   "entity.wondersoftheworld.gaboon_viper": "Gaboon Viper",
   "entity.wondersoftheworld.southern_caracara": "Southern Caracara",
+  "entity.wondersoftheworld.rufous_elephant_shrew": "Rufous Elephant Shrew",
 
   "__comment": "Sound Subtitles",
   "subtitle.wondersoftheworld.takin_ambient": "Takin Whups",
@@ -236,6 +237,8 @@
   "item.wondersoftheworld.southern_caracara_spawn_egg": "Southern Caracara Spawn Egg",
   "item.wondersoftheworld.southern_caracara_egg": "Southern Caracara Egg",
 
+  "item.wondersoftheworld.rufous_elephant_shrew_spawn_egg": "Rufous Elephant Shrew Spawn Egg",
+  
   "__comment": "1.0 Data Books",
   "scientific.wondersoftheworld.takin_0": "Burdorcas taxicolor taxicolor",
   "scientific.wondersoftheworld.takin_1": "Burdorcas taxicolor bedfordi",
@@ -820,6 +823,17 @@
   "informational_blurb.wondersoftheworld.oryx_2": "Beisa Oryx are a medium-sized species of Oryx native from the semideserts and steppes in the Horn Of Africa. They have a brownish grey coat with a white underside, separated by a stripe of black, with black stripes where the head attaches to the neck. This particular species is listed as Endangered by the IUCN status, mainly because of the excessive hunting and habitat destruction.",
   "informational_blurb.wondersoftheworld.oryx_3": "The largest species of Oryx, Gemsbok are found in the dry bushland regions of Southern Africa, mainly in the Kalahari and Namib Desert. Gemsbok live in herds of about 10–40 animals, which consist of a dominant male, a few nondominant males, and females. Despite currently being listed as ‘Least Concern’ by the IUCn, they are widely hunted for their spectacular horns that can reach 85 cm (33 in) in length.",
   "informational_blurb.wondersoftheworld.oryx_4": "Fringe-Eared Oryx area species of Oryx found in the acacia woodlands and bushlands of East Africa.  Their main characteristics are their fawn-coloured hair across almost their entire body, with a black stripe down the flanks. Similarly to other Oryx, Fringe-Eared Oryxes travel in nomadic herds, typically composed of 30 to 40 individuals. Unfortunately, they are subject to poaching and habitat loss, so are classified as ‘Vulnerable’ by the IUCN Red List.",
+
+  "__comment": "2.2.5 Data Books",
+
+  "scientific.wondersoftheworld.rufous_elephant_shrew": "Rhynchocyon petersi",
+  "variant.wondersoftheworld.rufous_elephant_shrew_0": "Eastern Arc",
+  "variant.wondersoftheworld.rufous_elephant_shrew_1": "Chome Forest",
+  "variant.wondersoftheworld.rufous_elephant_shrew_2": "Taita Hill",
+  "taxonomic_class.wondersoftheworld.rufous_elephant_shrew": "Mammal",
+  "range.wondersoftheworld.rufous_elephant_shrew": "Tanzania",
+  "conservation_status.wondersoftheworld.rufous_elephant_shrew": "Least Concern",
+  "informational_blurb.wondersoftheworld.rufous_elephant_shrew": "Black and rufous elephant shrews are terrestrial and diurnal animals. They spend most of their time running from predators or using their good sense of hearing and smell to watch out for predators. When foraging these shrews use their proboscises to dig insects from the soil and their tongues to lick them up. They typically build nests on the ground for shelter requiring dry leaf litter often at the base of trees.",
 
   "__comment": "Ambient Variants",
   "variant.wondersoftheworld.discus_fish_0": "Turquoise",

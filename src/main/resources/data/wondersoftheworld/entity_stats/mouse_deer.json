@@ -1,8 +1,8 @@
 {
   "temperament": "timid",
   "kibble": "zawa:herbivore_kibble",
-  "size": "small",
-  "fertility": "medium",
+  "size": "tiny",
+  "fertility": "low",
   "breeding_item": "zawa:legume",
   "litter_size": {
     "min": 1,
@@ -12,7 +12,11 @@
   "speed": "fast",
   "enrichment": {
     "zawa:blocks": [
-      "zawa:salt_lick",
+      "zawa:sprinkler",
+      "zawa:hay_browse",
+      "zawa:leaf_browse"
+    ],
+    "zawa:entities": [
       "zawa:apple_ice_treat"
     ]
   },

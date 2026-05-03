@@ -9,12 +9,16 @@
     "max": 1
   },
   "diet": "zawa:herbivore",
-  "speed": "fast",
+  "speed": "medium",
   "enrichment": {
     "zawa:blocks": [
       "zawa:scratching_post",
-      "zawa:salt_lick",
+      "zawa:leaf_browse",
+      "zawa:hay_browse",
       "zawa:sprinkler",
+      "zawa:salt_lick"
+    ],
+    "zawa:entities": [
       "zawa:apple_ice_treat"
     ]
   },

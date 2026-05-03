@@ -2,7 +2,7 @@
   "temperament": "neutral",
   "kibble": "zawa:carnivore_kibble",
   "size": "small",
-  "fertility": "low",
+  "fertility": "medium",
   "breeding_item": "zawa:brown_rat",
   "litter_size": {
     "min": 4,

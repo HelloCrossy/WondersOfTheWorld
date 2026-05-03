@@ -13,12 +13,12 @@
   "enrichment": {
     "zawa:blocks": [
       "zawa:puzzle_feeder",
-      "zawa:scratching_post",
-      "zawa:sprinkler",
-      "zawa:beef_ice_treat"
+      "zawa:scratching_post"
     ],
     "zawa:entities": [
-      "zawa:boomer_ball"
+      "zawa:boomer_ball",
+      "zawa:beef_ice_treat",
+      "zawa:scented_ball"
     ]
   },
   "variant_count": 3,

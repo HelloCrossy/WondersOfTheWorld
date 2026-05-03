@@ -1,43 +1,40 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.PanicGoal;
-import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.entity.ai.navigation.WallClimberNavigation;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.entity.AgeableEntity;
+import net.minecraft.entity.EntitySize;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.Pose;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.goal.PanicGoal;
+import net.minecraft.network.datasync.DataParameter;
+import net.minecraft.network.datasync.DataSerializers;
+import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.pathfinding.ClimberPathNavigator;
+import net.minecraft.pathfinding.PathNavigator;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import org.zawamod.zawa.world.entity.ClimbingEntity;
 import org.zawamod.zawa.world.entity.SittingEntity;
 import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
+import org.zawamod.zawa.world.entity.animal.SpiderMonkey;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
 
 public class SquirrelMonkeyEntity extends ZawaLandEntity implements SpeciesVariantsEntity, ClimbingEntity {
-    public static final EntityDataAccessor<Boolean> CLIMBING;
+    public static final DataParameter<Boolean> CLIMBING;
 
-    static {
-        CLIMBING = SynchedEntityData.defineId(SquirrelMonkeyEntity.class, EntityDataSerializers.BOOLEAN);
-    }
-
-    public SquirrelMonkeyEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
+    public SquirrelMonkeyEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
 
-    public static AttributeSupplier.Builder registerAttributes() {
-        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 8.0).add(Attributes.ATTACK_DAMAGE, 0.5);
+    public static AttributeModifierMap.MutableAttribute registerAttributes() {
+        return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 10.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
     @Override
@@ -46,26 +43,24 @@ public class SquirrelMonkeyEntity extends ZawaLandEntity implements SpeciesVaria
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
         this.goalSelector.addGoal(7, new SittingEntity.SitGoal(this));
     }
-
     @Override
     protected void customServerAiStep() {
         if (getMoveControl().hasWanted()) setSprinting(getMoveControl().getSpeedModifier() >= 1.33D);
         super.customServerAiStep();
     }
-
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(CLIMBING, false);
     }
 
-    protected PathNavigation createNavigation(Level world) {
-        return new WallClimberNavigation(this, world);
+    protected PathNavigator createNavigation(World world) {
+        return new ClimberPathNavigator(this, world);
     }
 
     public void tick() {
         super.tick();
-        if (!this.level().isClientSide && this.horizontalCollision) {
-            this.setClimbing(this.isClimbableBlock(this.level(), this.blockPosition().relative(this.getDirection())));
+        if (!this.level.isClientSide && this.horizontalCollision) {
+            this.setClimbing(this.isClimbableBlock(this.level, this.blockPosition().relative(this.getDirection())));
         }
 
     }
@@ -78,18 +73,18 @@ public class SquirrelMonkeyEntity extends ZawaLandEntity implements SpeciesVaria
         return false;
     }
 
-    protected float getStandingEyeHeight(Pose pose, EntityDimensions size) {
+    protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
 
     @Override
-    public int getVariantByBiome(LevelAccessor iWorld) {
+    public int getVariantByBiome(IWorld iWorld) {
         return random.nextInt(getWildVariants());
     }
 
     @Nullable
     @Override
-    public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {
+    public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.SQUIRREL_MONKEY.get().create(world);
     }
 
@@ -101,6 +96,9 @@ public class SquirrelMonkeyEntity extends ZawaLandEntity implements SpeciesVaria
         this.entityData.set(CLIMBING, climbing);
     }
 
+    static {
+        CLIMBING = EntityDataManager.defineId(SquirrelMonkeyEntity.class, DataSerializers.BOOLEAN);
+    }
     @Override
     protected SoundEvent getAmbientSound() {
         return WOTWSounds.SQUIRREL_MONKEY_AMBIENT.get();

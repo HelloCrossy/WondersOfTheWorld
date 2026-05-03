@@ -1,8 +1,8 @@
 {
-  "temperament": "neutral",
+  "temperament": "territorial",
   "kibble": "zawa:carnivore_kibble",
   "size": "small",
-  "fertility": "low",
+  "fertility": "medium",
   "breeding_item": "zawa:earthworm",
   "litter_size": {
     "min": 2,
@@ -15,7 +15,11 @@
       "zawa:perching_stand",
       "zawa:sprinkler",
       "zawa:branch",
-      "zawa:pineapple_pinata"
+      "zawa:rope"
+    ],
+    "zawa:entities": [
+      "zawa:boomer_ball",
+      "zawa:beef_ice_treat"
     ]
   },
   "variant_count": 3
