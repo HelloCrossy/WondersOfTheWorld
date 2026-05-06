@@ -697,8 +697,8 @@ public abstract class HammerkopModel extends ZawaBaseModel<HammerkopEntity> {
 
         @Override
         public void playMovementAnimation(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-            float speed = 2.0f;
-            float degree = 1.0f;
+            float speed = 1.8f;
+            float degree = 0.7f;
             this.NeckBase.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * 0.8F) * 0.5F - 0.331F;
             this.Neck.xRot = MathHelper.cos(2.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.8F) * 0.5F - 0.563F;
             this.Head.xRot = MathHelper.cos(4.0F + limbSwing * speed * 0.5F) * limbSwingAmount * (degree * -0.2F) * 0.5F - 0.315F;
