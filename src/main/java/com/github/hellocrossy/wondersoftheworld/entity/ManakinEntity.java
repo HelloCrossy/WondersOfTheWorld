@@ -55,7 +55,7 @@ public class ManakinEntity extends ZawaFlyingEntity implements OviparousEntity, 
     }
 
     @Override
-    public int getVariantByBiome(LevelAccessor iWorld) {
+    public int getVariantByBiome(LevelAccessor iLevel) {
         return random.nextInt(getWildVariants());
     }
 

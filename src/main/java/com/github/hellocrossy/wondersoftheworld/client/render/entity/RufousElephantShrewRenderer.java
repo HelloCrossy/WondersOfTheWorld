@@ -1,22 +1,26 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.client.model.RufousElephantShrewModel;
+import com.github.hellocrossy.wondersoftheworld.client.model.RufousElephantShrewModel;
+import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.RufousElephantShrewEntity;
-import com.mojang.blaze3d.matrix.MatrixStack;
-import net.minecraft.client.renderer.entity.EntityRendererManager;
+import com.github.hellocrossy.wondersoftheworld.entity.RufousElephantShrewEntity;
+import com.mojang.blaze3d.matrix.PoseStack;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.EntityRendererProvider.Context;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class RufousElephantShrewRenderer extends ZawaMobRenderer<RufousElephantShrewEntity, RufousElephantShrewModel> {
-    public RufousElephantShrewRenderer(EntityRendererManager manager) {
-        super(manager, new RufousElephantShrewModel.Adult(), new RufousElephantShrewModel.Child(), 0.175F);
-
+    public RufousElephantShrewRenderer(EntityRendererProvider.Context context) {
+        super(context, new RufousElephantShrewModel.Adult(context.bakeLayer(WOTWModelLayers.RUFOUS_ELEPHANT_SHREW_ADULT)), new RufousElephantShrewModel.Child(context.bakeLayer(WOTWModelLayers.RUFOUS_ELEPHANT_SHREW_CHILD)), 0.175F);
     }
 
     @Override
-    protected void scale(RufousElephantShrewEntity entity, MatrixStack matrixStack, float partialTickTime) {
+    protected void scale(RufousElephantShrewEntity entity, com.mojang.blaze3d.vertex.PoseStack matrixStack, float partialTickTime) {
         float scale = entity.isBaby() ? 0.4F : 0.55F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
+
     }
 
     @Override

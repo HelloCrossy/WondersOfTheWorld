@@ -1,6 +1,6 @@
 package com.github.hellocrossy.wondersoftheworld.client.model;
 
-import com.github.hellocrossy.wondersoftheworld.entity.CapeBuffaloEntity;
+import com.github.hellocrossy.wondersoftheworld.entity.AfricanWaterBuffaloEntity;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -12,7 +12,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import org.zawamod.zawa.client.model.ZawaBaseModel;
 
-public abstract class CapeBuffaloModel extends ZawaBaseModel<CapeBuffaloEntity> {
+public abstract class AfricanWaterBuffaloModel extends ZawaBaseModel<AfricanWaterBuffaloEntity> {
     protected ModelPart Chest;
     protected Iterable<ModelPart> parts;
 
@@ -25,7 +25,7 @@ public abstract class CapeBuffaloModel extends ZawaBaseModel<CapeBuffaloEntity> 
         return this.parts;
     }
 
-    public static class Adult extends CapeBuffaloModel {
+    public static class Adult extends AfricanWaterBuffaloModel {
         public ModelPart Neck;
         public ModelPart ArmBaseRight;
         public ModelPart ArmBaseLeft;
@@ -174,7 +174,7 @@ public abstract class CapeBuffaloModel extends ZawaBaseModel<CapeBuffaloEntity> 
         }
 
         @Override
-        public void setupAnim(CapeBuffaloEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(AfricanWaterBuffaloEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
@@ -225,7 +225,7 @@ public abstract class CapeBuffaloModel extends ZawaBaseModel<CapeBuffaloEntity> 
         }
     }
 
-    public static class Child extends CapeBuffaloModel {
+    public static class Child extends AfricanWaterBuffaloModel {
         public ModelPart ArmBaseLeft;
         public ModelPart ArmBaseRight;
         public ModelPart Body;
@@ -346,7 +346,7 @@ public abstract class CapeBuffaloModel extends ZawaBaseModel<CapeBuffaloEntity> 
         }
 
         @Override
-        public void setupAnim(CapeBuffaloEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(AfricanWaterBuffaloEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             this.Neck.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;
             this.Head.yRot = netHeadYaw / (180F / (float) Math.PI) * 0.25F;

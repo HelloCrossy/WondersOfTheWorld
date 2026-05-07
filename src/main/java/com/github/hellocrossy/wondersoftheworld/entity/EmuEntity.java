@@ -2,36 +2,33 @@ package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
 import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
-import net.minecraft.entity.*;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.goal.HurtByTargetGoal;
-import net.minecraft.entity.ai.goal.NonTamedTargetGoal;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.item.ItemStack;
 import org.zawamod.zawa.world.entity.OviparousEntity;
-import org.zawamod.zawa.world.entity.ai.goal.BreachGoal;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
+import java.util.logging.Level;
 
 public class EmuEntity extends ZawaLandEntity implements OviparousEntity {
-    public EmuEntity(EntityType<? extends ZawaLandEntity> type, World world) {
+    public EmuEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
         super(type, world);
     }
 
-    public static AttributeModifierMap.MutableAttribute registerAttributes() {
+    public static AttributeSupplier.Builder registerAttributes() {
         return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.225F).add(Attributes.MAX_HEALTH, 28.0).add(Attributes.ATTACK_DAMAGE, 5.0);
     }
 
     @Nullable
     @Override
-    public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
+    public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {
         return WOTWEntities.EMU.get().create(world);
     }
     @Override
@@ -45,7 +42,7 @@ public class EmuEntity extends ZawaLandEntity implements OviparousEntity {
         return WOTWItems.EMU_EGG.get().getDefaultInstance();
     }
 
-    protected float getStandingEyeHeight(Pose pose, EntitySize size) {
+    protected float getStandingEyeHeight(Pose pose, EntityDimensions size) {
         return size.height * 0.85F;
     }
 
