@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wondersoftheworld:block/dry_sandstone_slab"
+    },
+    "type=double": {
+      "model": "wondersoftheworld:block/dry_sandstone"
+    },
+    "type=top": {
+      "model": "wondersoftheworld:block/dry_sandstone_slab_top"
+    }
+  }
+}

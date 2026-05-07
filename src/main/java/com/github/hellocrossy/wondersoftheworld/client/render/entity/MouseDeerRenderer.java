@@ -1,23 +1,23 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.client.model.MouseDeerModel;
-import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
+import com.github.hellocrossy.wondersoftheworld.entity.MargayEntity;
 import com.github.hellocrossy.wondersoftheworld.entity.MouseDeerEntity;
-import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import com.mojang.blaze3d.matrix.MatrixStack;
+import net.minecraft.client.renderer.entity.EntityRendererManager;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
+import org.zawamod.zawa.world.entity.animal.Macaw;
 
 public class MouseDeerRenderer extends ZawaMobRenderer<MouseDeerEntity, MouseDeerModel> {
-    public MouseDeerRenderer(EntityRendererProvider.Context context) {
-        super(context, new MouseDeerModel.Adult(context.bakeLayer(WOTWModelLayers.MOUSE_DEER_ADULT)), new MouseDeerModel.Child(context.bakeLayer(WOTWModelLayers.MOUSE_DEER_CHILD)), 0.25F);
+    public MouseDeerRenderer(EntityRendererManager manager) {
+        super(manager, new MouseDeerModel.Adult(), new MouseDeerModel.Child(), 0.25F);
 
     }
 
     @Override
-    protected void scale(MouseDeerEntity entity, PoseStack matrixStack, float partialTickTime) {
-        if (entity.isBaby() || entity.getVariant() > 0) {
-            matrixStack.scale(0.8F, 0.8F, 0.8F);
-        }
+    protected void scale(MouseDeerEntity entity, MatrixStack matrixStack, float partialTickTime) {
+        float scale = entity.isBaby() ? 0.5F : 0.8F;
+        matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }
 }

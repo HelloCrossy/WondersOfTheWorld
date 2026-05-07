@@ -21,7 +21,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:raw_beef",
+          "name": "minecraft:beef",
           "functions": [
             {
               "function": "minecraft:set_count",
