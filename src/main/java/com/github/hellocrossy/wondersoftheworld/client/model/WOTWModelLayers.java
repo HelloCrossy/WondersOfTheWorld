@@ -79,14 +79,17 @@ public class WOTWModelLayers {
     public static final ModelLayerLocation GABOON_VIPER_CHILD = register("gaboon_viper", "child", GaboonViperModel.Child::createBodyLayer);
     public static final ModelLayerLocation KIRKS_DIK_DIK_ADULT = register("kirks_dik_dik", "adult", KirksDikDikModel.Adult::createBodyLayer);
     public static final ModelLayerLocation KIRKS_DIK_DIK_CHILD = register("kirks_dik_dik", "child", KirksDikDikModel.Child::createBodyLayer);
-    public static final ModelLayerLocation CAPE_BUFFALO_ADULT = register("cape_buffalo", "adult", CapeBuffaloModel.Adult::createBodyLayer);
-    public static final ModelLayerLocation CAPE_BUFFALO_CHILD = register("cape_buffalo", "child", CapeBuffaloModel.Child::createBodyLayer);
+    public static final ModelLayerLocation AFRICAN_WATER_BUFFALO_ADULT = register("cape_buffalo", "adult", AfricanWaterBuffaloModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation AFRICAN_WATER_BUFFALO_CHILD = register("cape_buffalo", "child", AfricanWaterBuffaloModel.Child::createBodyLayer);
     public static final ModelLayerLocation ORYX_ADULT = register("oryx", "adult", OryxModel.Adult::createBodyLayer);
     public static final ModelLayerLocation ORYX_CHILD = register("oryx", "child", OryxModel.Child::createBodyLayer);
     public static final ModelLayerLocation SABLE_ANTELOPE_ADULT = register("sable_antelope", "adult", SableAntelopeModel.Adult::createBodyLayer);
     public static final ModelLayerLocation SABLE_ANTELOPE_CHILD = register("sable_antelope", "child", SableAntelopeModel.Child::createBodyLayer);
     public static final ModelLayerLocation SOUTHERN_CARACARA_ADULT = register("southern_caracara", "adult", SouthernCaracaraModel.Adult::createBodyLayer);
     public static final ModelLayerLocation SOUTHERN_CARACARA_CHILD = register("southern_caracara", "child", SouthernCaracaraModel.Child::createBodyLayer);
+    public static final ModelLayerLocation SOUTHERN_CARACARA_FLYING = register("southern_caracara", "flying", SouthernCaracaraModel.Flying::createBodyLayer);
+    public static final ModelLayerLocation RUFOUS_ELEPHANT_SHREW_ADULT = register("rufous_elephant_shrew", "adult", RufousElephantShrewModel.Adult::createBodyLayer);
+    public static final ModelLayerLocation RUFOUS_ELEPHANT_SHREW_CHILD = register("rufous_elephant_shrew", "child", RufousElephantShrewModel.Child::createBodyLayer);
 
     public static final ModelLayerLocation OSCAR = register("oscar", OscarModel::createBodyLayer);
     public static final ModelLayerLocation DISCUS_FISH = register("discus_fish", DiscusFishModel::createBodyLayer);
