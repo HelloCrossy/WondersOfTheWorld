@@ -59,7 +59,7 @@ public class KiwiEntity extends ZawaLandEntity implements OviparousEntity, Speci
     }
 
     @Override
-    public int getVariantByBiome(LevelAccessor iLevel) {
+    public int getVariantByBiome(LevelAccessor iWorld) {
         return random.nextInt(getWildVariants());
     }
 

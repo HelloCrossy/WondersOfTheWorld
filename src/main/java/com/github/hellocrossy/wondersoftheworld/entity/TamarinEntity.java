@@ -1,8 +1,25 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.entity.AgeableEntity;
+import net.minecraft.entity.EntitySize;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.Pose;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.goal.AvoidEntityGoal;
+import net.minecraft.entity.ai.goal.PanicGoal;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.network.datasync.DataParameter;
+import net.minecraft.network.datasync.DataSerializers;
+import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.pathfinding.ClimberPathNavigator;
+import net.minecraft.pathfinding.PathNavigator;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import org.zawamod.zawa.world.entity.ClimbingEntity;
 import org.zawamod.zawa.world.entity.SittingEntity;
 import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
@@ -14,11 +31,11 @@ import javax.annotation.Nullable;
 public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEntity, ClimbingEntity {
     public static final DataParameter<Boolean> CLIMBING;
 
-    public TamarinEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
+    public TamarinEntity(EntityType<? extends ZawaLandEntity> type, World world) {
         super(type, world);
     }
 
-    public static AttributeSupplier.Builder registerAttributes() {
+    public static AttributeModifierMap.MutableAttribute registerAttributes() {
         return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.30F).add(Attributes.MAX_HEALTH, 8.0).add(Attributes.ATTACK_DAMAGE, 0.5);
     }
 
@@ -26,7 +43,7 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
     protected void registerGoals() {
         super.registerGoals();
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.33));
-        this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, Player.class, 16.0F, 0.8, 1.33, (entity) -> AVOID_PLAYERS.test(entity) && !this.isTame()));
+        this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, PlayerEntity.class, 16.0F, 0.8, 1.33, (entity) -> AVOID_PLAYERS.test(entity) && !this.isTame()));
     }
 
     @Override
@@ -40,7 +57,7 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
         this.entityData.define(CLIMBING, false);
     }
 
-    protected PathNavigator createNavigation(Level world) {
+    protected PathNavigator createNavigation(World world) {
         return new ClimberPathNavigator(this, world);
     }
 
@@ -60,18 +77,18 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
         return false;
     }
 
-    protected float getStandingEyeHeight(Pose pose, EntityDimensions size) {
+    protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
 
     @Override
-    public int getVariantByBiome(ILevel iLevel) {
+    public int getVariantByBiome(IWorld iWorld) {
         return random.nextInt(getWildVariants());
     }
 
     @Nullable
     @Override
-    public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {
+    public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.TAMARIN.get().create(world);
     }
 
