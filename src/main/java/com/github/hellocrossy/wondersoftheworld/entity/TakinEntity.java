@@ -2,7 +2,16 @@ package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.PanicGoal;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
@@ -29,7 +38,7 @@ public class TakinEntity extends ZawaLandEntity implements SpeciesVariantsEntity
     }
 
     @Override
-    public int getVariantByBiome(ILevel iLevel) {
+    public int getVariantByBiome(LevelAccessor iLevel) {
         return random.nextInt(getWildVariants());
     }
 

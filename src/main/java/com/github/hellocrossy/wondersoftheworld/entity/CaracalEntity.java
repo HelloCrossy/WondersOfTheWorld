@@ -11,11 +11,11 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NonTameRandomTargetGoal;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
-import java.util.logging.Level;
 
 public class CaracalEntity extends ZawaLandEntity {
     public CaracalEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
@@ -41,7 +41,7 @@ public class CaracalEntity extends ZawaLandEntity {
         super.registerGoals();
         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 1.5, 1.33, true));
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(3, new NonTameRandomTargetGoal(this, Player.class, true, (entity) -> {
+        this.targetSelector.addGoal(3, new NonTameRandomTargetGoal<>(this, Player.class, true, (entity) -> {
             return !this.isBaby();
         }));
     }

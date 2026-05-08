@@ -3,6 +3,16 @@ package com.github.hellocrossy.wondersoftheworld.entity;
 import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.NonTameRandomTargetGoal;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import org.zawamod.zawa.world.entity.OviparousEntity;
 import org.zawamod.zawa.world.entity.ai.goal.ZawaMeleeAttackGoal;
 import org.zawamod.zawa.world.entity.animal.ZawaFlyingEntity;
@@ -10,7 +20,8 @@ import org.zawamod.zawa.world.entity.animal.ZawaFlyingEntity;
 import javax.annotation.Nullable;
 
 public class SouthernCaracaraEntity extends ZawaFlyingEntity implements OviparousEntity {
-    public SouthernCaracaraEntity(EntityType<? extends ZawaFlyingEntity> type, Level world) { super(type, world);
+    public SouthernCaracaraEntity(EntityType<? extends ZawaFlyingEntity> type, Level world) {
+        super(type, world);
     }
 
     public static AttributeSupplier.Builder registerAttributes() {
@@ -22,7 +33,7 @@ public class SouthernCaracaraEntity extends ZawaFlyingEntity implements Oviparou
         super.registerGoals();
         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0, 1.33, true));
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(3, new NonTamedTargetGoal<>(this, Player.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0));
+        this.targetSelector.addGoal(3, new NonTameRandomTargetGoal<>(this, Player.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0));
     }
 
     @Nullable

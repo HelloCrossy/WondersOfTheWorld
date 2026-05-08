@@ -1,8 +1,25 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.sounds.WOTWSounds;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
+import net.minecraft.world.entity.ai.goal.PanicGoal;
+import net.minecraft.world.entity.ai.navigation.PathNavigation;
+import net.minecraft.world.entity.ai.navigation.WallClimberNavigation;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import org.zawamod.zawa.world.entity.ClimbingEntity;
 import org.zawamod.zawa.world.entity.SittingEntity;
 import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
@@ -12,7 +29,7 @@ import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 import javax.annotation.Nullable;
 
 public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEntity, ClimbingEntity {
-    public static final DataParameter<Boolean> CLIMBING;
+    public static final EntityDataAccessor<Boolean> CLIMBING;
 
     public TamarinEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
         super(type, world);
@@ -40,14 +57,14 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
         this.entityData.define(CLIMBING, false);
     }
 
-    protected PathNavigator createNavigation(Level world) {
-        return new ClimberPathNavigator(this, world);
+    protected PathNavigation createNavigation(Level world) {
+        return new WallClimberNavigation(this, world);
     }
 
     public void tick() {
         super.tick();
-        if (!this.level.isClientSide && this.horizontalCollision) {
-            this.setClimbing(this.isClimbableBlock(this.level, this.blockPosition().relative(this.getDirection())));
+        if (!this.level().isClientSide && this.horizontalCollision) {
+            this.setClimbing(this.isClimbableBlock(this.level(), this.blockPosition().relative(this.getDirection())));
         }
 
     }
@@ -65,7 +82,7 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
     }
 
     @Override
-    public int getVariantByBiome(ILevel iLevel) {
+    public int getVariantByBiome(LevelAccessor iLevel) {
         return random.nextInt(getWildVariants());
     }
 
@@ -84,7 +101,7 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
     }
 
     static {
-        CLIMBING = EntityDataManager.defineId(TamarinEntity.class, DataSerializers.BOOLEAN);
+        CLIMBING = SynchedEntityData.defineId(SpiderMonkey.class, EntityDataSerializers.BOOLEAN);
     }
 
     @Override

@@ -3,6 +3,15 @@ package com.github.hellocrossy.wondersoftheworld.entity;
 import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.PanicGoal;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import org.zawamod.zawa.world.entity.OviparousEntity;
 import org.zawamod.zawa.world.entity.SpeciesVariantsEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaFlyingEntity;
@@ -38,8 +47,9 @@ public class QuetzalEntity extends ZawaFlyingEntity implements OviparousEntity, 
     public ItemStack getBreedEggItem() {
         return WOTWItems.QUETZAL_EGG.get().getDefaultInstance();
     }
+
     @Override
-    public int getVariantByBiome(ILevel iLevel) {
+    public int getVariantByBiome(LevelAccessor iLevel) {
         return random.nextInt(getWildVariants());
     }
 }

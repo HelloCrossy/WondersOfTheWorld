@@ -10,11 +10,11 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import org.zawamod.zawa.world.entity.OviparousEntity;
 import org.zawamod.zawa.world.entity.animal.ZawaLandEntity;
 
 import javax.annotation.Nullable;
-import java.util.logging.Level;
 
 public class GaboonViperEntity extends ZawaLandEntity implements OviparousEntity {
     public GaboonViperEntity(EntityType<? extends ZawaLandEntity> type, Level world) {
