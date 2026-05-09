@@ -14,7 +14,7 @@ public class QuetzalRenderer extends ZawaMobRenderer<QuetzalEntity, QuetzalModel
 
     @Override
     protected void scale(QuetzalEntity entity, PoseStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.4F : 0.9F;
+        float scale = entity.isBaby() ? 0.4F : 0.8F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

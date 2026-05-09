@@ -62,7 +62,10 @@ public class WOTWBlocks {
     public static final RegistryObject<Block> RED_BRICK_WALL = registerWithItem("red_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(RED_BRICK.get())));
     public static final RegistryObject<Block> FINE_DIRT = registerWithItem("fine_dirt", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.SAND).sound(SoundType.SAND).strength(0.5F)));
     public static final RegistryObject<Block> FINE_SAND = registerWithItem("fine_sand", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.SAND).sound(SoundType.SAND).strength(0.5F)));
-    public static final RegistryObject<Block> DRY_COBBLESTONE = registerWithItem("dry_cobblestone", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(2.0F, 6.0F).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DRY_SANDSTONE = registerWithItem("dry_sandstone", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(2.0F, 6.0F).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DRY_SANDSTONE_SLAB = registerWithItem("dry_sandstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(DRY_SANDSTONE.get())));
+    public static final RegistryObject<Block> DRY_SANDSTONE_STAIRS = registerWithItem("dry_sandstone_stairs", () -> new StairBlock(() -> (DRY_SANDSTONE.get()).defaultBlockState(), BlockBehaviour.Properties.copy(DRY_SANDSTONE.get())));
+    public static final RegistryObject<Block> DRY_SANDSTONE_WALL = registerWithItem("dry_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(DRY_SANDSTONE.get())));
     public static final RegistryObject<Block> BLACK_BRICK = registerWithItem("black_brick", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(2.0F, 6.0F).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> BLACK_BRICK_SLAB = registerWithItem("black_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(BLACK_BRICK.get())));
     public static final RegistryObject<Block> BLACK_BRICK_STAIRS = registerWithItem("black_brick_stairs", () -> new StairBlock(() -> (BLACK_BRICK.get()).defaultBlockState(), BlockBehaviour.Properties.copy(BLACK_BRICK.get())));

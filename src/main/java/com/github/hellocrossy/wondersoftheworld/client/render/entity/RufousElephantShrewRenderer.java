@@ -1,13 +1,9 @@
 package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.client.model.RufousElephantShrewModel;
-import com.github.hellocrossy.wondersoftheworld.client.model.RufousElephantShrewModel;
 import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.RufousElephantShrewEntity;
-import com.github.hellocrossy.wondersoftheworld.entity.RufousElephantShrewEntity;
-import com.mojang.blaze3d.matrix.PoseStack;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.EntityRendererProvider.Context;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 
 public class RufousElephantShrewRenderer extends ZawaMobRenderer<RufousElephantShrewEntity, RufousElephantShrewModel> {

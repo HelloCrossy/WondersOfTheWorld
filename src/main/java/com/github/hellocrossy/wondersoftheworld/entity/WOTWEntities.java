@@ -28,8 +28,8 @@ public class WOTWEntities {
     public static final RegistryObject<EntityType<EmuEntity>> EMU =
             REGISTRY.builder(EmuEntity::new, MobCategory.CREATURE)
                     .attributes(EmuEntity::registerAttributes)
-                    .spawns(10, 3, 5, ZawaSpawnCategory.WET_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(1.4F, 1.4F).clientTrackingRange(10))
+                    .spawns(15, 3, 5, ZawaSpawnCategory.WET_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(1.1F, 1.4F).clientTrackingRange(10))
                     .build("emu");
 
     public static final RegistryObject<EntityType<KiwiEntity>> KIWI =
@@ -43,7 +43,7 @@ public class WOTWEntities {
             REGISTRY.builder(SaigaAntelopeEntity::new, MobCategory.CREATURE)
                     .attributes(SaigaAntelopeEntity::registerAttributes)
                     .spawns(8, 2, 4, ZawaSpawnCategory.TEMPERATE_ALPINE, ZawaSpawnCategory.COLD_GRASSLAND)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 0.95F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.85F, 1.05F).clientTrackingRange(10))
                     .build("saiga_antelope");
 
     public static final RegistryObject<EntityType<WesternLowlandBongoEntity>> WESTERN_LOWLAND_BONGO =
@@ -57,14 +57,14 @@ public class WOTWEntities {
             REGISTRY.builder(OscarEntity::new, MobCategory.WATER_AMBIENT)
                     .attributes(OscarEntity::registerAttributes)
                     .spawns(10, 2, 4, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
+                    .data(tBuilder -> tBuilder.sized(0.3F, 0.3F).clientTrackingRange(4))
                     .build("oscar");
 
     public static final RegistryObject<EntityType<DiscusFishEntity>> DISCUS_FISH =
             REGISTRY.builder(DiscusFishEntity::new, MobCategory.WATER_AMBIENT)
                     .attributes(DiscusFishEntity::registerAttributes)
                     .spawns(15, 3, 5, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
+                    .data(tBuilder -> tBuilder.sized(0.33F, 0.3F).clientTrackingRange(4))
                     .build("discus_fish");
 
     public static final RegistryObject<EntityType<TakinEntity>> TAKIN =
@@ -84,8 +84,8 @@ public class WOTWEntities {
     public static final RegistryObject<EntityType<TibetanAntelopeEntity>> TIBETAN_ANTELOPE =
             REGISTRY.builder(TibetanAntelopeEntity::new, MobCategory.CREATURE)
                     .attributes(TibetanAntelopeEntity::registerAttributes)
-                    .spawns(5, 3, 4, ZawaSpawnCategory.COLD_GRASSLAND)
-                    .data(entityBuilder -> entityBuilder.sized(0.9F, 1.2F).clientTrackingRange(10))
+                    .spawns(8, 3, 4, ZawaSpawnCategory.COLD_GRASSLAND)
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 1.2F).clientTrackingRange(10))
                     .build("tibetan_antelope");
     public static final RegistryObject<EntityType<LowlandNyalaEntity>> LOWLAND_NYALA =
             REGISTRY.builder(LowlandNyalaEntity::new, MobCategory.CREATURE)
@@ -98,13 +98,13 @@ public class WOTWEntities {
             REGISTRY.builder(MouseDeerEntity::new, MobCategory.CREATURE)
                     .attributes(MouseDeerEntity::registerAttributes)
                     .spawns(5, 1, 2, ZawaSpawnCategory.WET_FOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.55F, 0.55F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.5F, 0.55F).clientTrackingRange(10))
                     .build("mouse_deer");
     public static final RegistryObject<EntityType<EurasianHoopoeEntity>> EURASIAN_HOOPOE =
             REGISTRY.builder(EurasianHoopoeEntity::new, MobCategory.CREATURE)
                     .attributes(EurasianHoopoeEntity::registerAttributes)
                     .spawns(15, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
+                    .data(entityBuilder -> entityBuilder.sized(0.45F, 0.55F).clientTrackingRange(8))
                     .build("eurasian_hoopoe");
     public static final RegistryObject<EntityType<MargayEntity>> MARGAY =
             REGISTRY.builder(MargayEntity::new, MobCategory.CREATURE)
@@ -130,7 +130,7 @@ public class WOTWEntities {
             REGISTRY.builder(GuanacoEntity::new, MobCategory.CREATURE)
                     .attributes(GuanacoEntity::registerAttributes)
                     .spawns(8, 2, 4, ZawaSpawnCategory.DRY_SAVANNA, ZawaSpawnCategory.DRY_ALPINE)
-                    .data(entityBuilder -> entityBuilder.sized(1.5F, 1.8F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.4F, 1.8F).clientTrackingRange(10))
                     .build("guanaco");
 
     public static final RegistryObject<EntityType<CaracalEntity>> CARACAL =
@@ -143,77 +143,77 @@ public class WOTWEntities {
     public static final RegistryObject<EntityType<SlothBearEntity>> SLOTH_BEAR =
             REGISTRY.builder(SlothBearEntity::new, MobCategory.CREATURE)
                     .attributes(SlothBearEntity::registerAttributes)
-                    .spawns(5, 1, 1, ZawaSpawnCategory.DRY_FOREST)
+                    .spawns(8, 1, 1, ZawaSpawnCategory.DRY_FOREST)
                     .data(entityBuilder -> entityBuilder.sized(1.3F, 1.2F).clientTrackingRange(10))
                     .build("sloth_bear");
 
     public static final RegistryObject<EntityType<PallasCatEntity>> PALLAS_CAT =
             REGISTRY.builder(PallasCatEntity::new, MobCategory.CREATURE)
                     .attributes(PallasCatEntity::registerAttributes)
-                    .spawns(8, 1, 1, ZawaSpawnCategory.TUNDRA_ALPINE)
-                    .data(entityBuilder -> entityBuilder.sized(0.7F, 0.5F).clientTrackingRange(10))
+                    .spawns(5, 1, 1, ZawaSpawnCategory.TUNDRA_ALPINE)
+                    .data(entityBuilder -> entityBuilder.sized(0.7F, 0.6F).clientTrackingRange(10))
                     .build("pallas_cat");
 
     public static final RegistryObject<EntityType<ManakinEntity>> MANAKIN =
             REGISTRY.builder(ManakinEntity::new, MobCategory.CREATURE)
                     .attributes(ManakinEntity::registerAttributes)
                     .spawns(10, 2, 5, ZawaSpawnCategory.TEMPERATE_FOREST, ZawaSpawnCategory.DRY_FOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.4F, 0.4F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.35F, 0.35F).clientTrackingRange(10))
                     .build("manakin");
 
     public static final RegistryObject<EntityType<TamarinEntity>> TAMARIN =
             REGISTRY.builder(TamarinEntity::new, MobCategory.CREATURE)
                     .attributes(TamarinEntity::registerAttributes)
                     .spawns(10, 2, 4, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.3F, 0.4F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.45F, 0.35F).clientTrackingRange(10))
                     .build("tamarin");
 
     public static final RegistryObject<EntityType<SquirrelMonkeyEntity>> SQUIRREL_MONKEY =
             REGISTRY.builder(SquirrelMonkeyEntity::new, MobCategory.CREATURE)
                     .attributes(SquirrelMonkeyEntity::registerAttributes)
                     .spawns(10, 4, 5, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.75F, 0.7F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.55F, 0.5F).clientTrackingRange(10))
                     .build("squirrel_monkey");
 
     public static final RegistryObject<EntityType<TetraEntity>> TETRA =
             REGISTRY.builder(TetraEntity::new, MobCategory.WATER_AMBIENT)
                     .attributes(TetraEntity::registerAttributes)
                     .spawns(15, 4, 7, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.DEEP_RAINFOREST)
-                    .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
+                    .data(tBuilder -> tBuilder.sized(0.3F, 0.25F).clientTrackingRange(4))
                     .build("tetra");
 
     public static final RegistryObject<EntityType<FlowerhornCichlidEntity>> FLOWERHORN_CICHILID =
             REGISTRY.builder(FlowerhornCichlidEntity::new, MobCategory.WATER_AMBIENT)
                     .attributes(FlowerhornCichlidEntity::registerAttributes)
                     .spawns(10, 1, 1, ZawaSpawnCategory.WET_RAINFOREST, ZawaSpawnCategory.DEEP_RAINFOREST)
-                    .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
+                    .data(tBuilder -> tBuilder.sized(0.3F, 0.3F).clientTrackingRange(4))
                     .build("flowerhorn_cichlid");
 
     public static final RegistryObject<EntityType<WarthogEntity>> WARTHOG =
             REGISTRY.builder(WarthogEntity::new, MobCategory.CREATURE)
                     .attributes(WarthogEntity::registerAttributes)
                     .spawns(10, 1, 2, ZawaSpawnCategory.WET_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(0.8F, 0.7F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.95F, 0.95F).clientTrackingRange(10))
                     .build("warthog");
 
     public static final RegistryObject<EntityType<PygmyHippoEntity>> PYGMY_HIPPO =
             REGISTRY.builder(PygmyHippoEntity::new, MobCategory.CREATURE)
                     .attributes(PygmyHippoEntity::registerAttributes)
                     .spawns(8, 1, 1, ZawaSpawnCategory.DEEP_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.0F, 0.9F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.25F, 1.1F).clientTrackingRange(10))
                     .build("pygmy_hippo");
 
     public static final RegistryObject<EntityType<HammerkopEntity>> HAMMERKOP =
             REGISTRY.builder(HammerkopEntity::new, MobCategory.CREATURE)
                     .attributes(HammerkopEntity::registerAttributes)
                     .spawns(15, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
+                    .data(entityBuilder -> entityBuilder.sized(0.45F, 0.6F).clientTrackingRange(8))
                     .build("hammerkop");
 
     public static final RegistryObject<EntityType<QuetzalEntity>> QUETZAL =
             REGISTRY.builder(QuetzalEntity::new, MobCategory.CREATURE)
                     .attributes(QuetzalEntity::registerAttributes)
-                    .spawns(15, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
+                    .spawns(5, 3, 5, ZawaSpawnCategory.DRY_GRASSLAND, ZawaSpawnCategory.WET_RAINFOREST)
                     .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
                     .build("quetzal");
 
@@ -221,62 +221,61 @@ public class WOTWEntities {
             REGISTRY.builder(KillifishEntity::new, MobCategory.WATER_AMBIENT)
                     .attributes(KillifishEntity::registerAttributes)
                     .spawns(10, 2, 3, ZawaSpawnCategory.WET_RAINFOREST)
-                    .data(tBuilder -> tBuilder.sized(0.4F, 0.4F).clientTrackingRange(4))
+                    .data(tBuilder -> tBuilder.sized(0.3F, 0.3F).clientTrackingRange(4))
                     .build("killifish");
 
     public static final RegistryObject<EntityType<HoneyBadgerEntity>> HONEY_BADGER =
             REGISTRY.builder(HoneyBadgerEntity::new, MobCategory.CREATURE)
                     .attributes(HoneyBadgerEntity::registerAttributes)
                     .spawns(8, 1, 1, ZawaSpawnCategory.DRY_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(0.8F, 0.7F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.85F, 0.65F).clientTrackingRange(10))
                     .build("honey_badger");
 
     public static final RegistryObject<EntityType<GaboonViperEntity>> GABOON_VIPER =
             REGISTRY.builder(GaboonViperEntity::new, MobCategory.CREATURE)
                     .attributes(GaboonViperEntity::registerAttributes)
                     .spawns(8, 1, 1, ZawaSpawnCategory.WET_FOREST)
-                    .data(entityBuilder -> entityBuilder.sized(1.6F, 0.3F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.0F, 0.3F).clientTrackingRange(10))
                     .build("gaboon_viper");
 
     public static final RegistryObject<EntityType<KirksDikDikEntity>> KIRKS_DIK_DIK =
             REGISTRY.builder(KirksDikDikEntity::new, MobCategory.CREATURE)
                     .attributes(KirksDikDikEntity::registerAttributes)
                     .spawns(10, 1, 2, ZawaSpawnCategory.DRY_GRASSLAND)
-                    .data(entityBuilder -> entityBuilder.sized(0.6F, 0.6F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 0.8F).clientTrackingRange(10))
                     .build("kirks_dik_dik");
 
     public static final RegistryObject<EntityType<AfricanWaterBuffaloEntity>> AFRICAN_WATER_BUFFALO =
             REGISTRY.builder(AfricanWaterBuffaloEntity::new, MobCategory.CREATURE)
                     .attributes(AfricanWaterBuffaloEntity::registerAttributes)
                     .spawns(10, 3, 5, ZawaSpawnCategory.WET_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(1.4F, 1.4F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.9F, 1.9F).clientTrackingRange(10))
                     .build("african_water_buffalo");
 
     public static final RegistryObject<EntityType<OryxEntity>> ORYX =
             REGISTRY.builder(OryxEntity::new, MobCategory.CREATURE)
                     .attributes(OryxEntity::registerAttributes)
-                    .spawns(2, 3, 4, ZawaSpawnCategory.WET_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(1.4F, 1.4F).clientTrackingRange(10))
+                    .spawns(8, 3, 4, ZawaSpawnCategory.WET_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(1.5F, 1.55F).clientTrackingRange(10))
                     .build("oryx");
 
     public static final RegistryObject<EntityType<SableAntelopeEntity>> SABLE_ANTELOPE =
             REGISTRY.builder(SableAntelopeEntity::new, MobCategory.CREATURE)
                     .attributes(SableAntelopeEntity::registerAttributes)
                     .spawns(8, 2, 4, ZawaSpawnCategory.WET_SAVANNA)
-                    .data(entityBuilder -> entityBuilder.sized(1.4F, 1.4F).clientTrackingRange(10))
+                    .data(entityBuilder -> entityBuilder.sized(1.45F, 1.65F).clientTrackingRange(10))
                     .build("sable_antelope");
 
     public static final RegistryObject<EntityType<SouthernCaracaraEntity>> SOUTHERN_CARACARA =
             REGISTRY.builder(SouthernCaracaraEntity::new, MobCategory.CREATURE)
                     .attributes(SouthernCaracaraEntity::registerAttributes)
-                    .spawns(8, 1, 2, ZawaSpawnCategory.DRY_RAINFOREST)
-                    .data(entityBuilder -> entityBuilder.sized(0.45F, 0.45F).clientTrackingRange(8))
+                    .spawns(10, 1, 2, ZawaSpawnCategory.DRY_RAINFOREST)
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 0.65F).clientTrackingRange(8))
                     .build("southern_caracara");
-
+    
     public static final RegistryObject<EntityType<RufousElephantShrewEntity>> RUFOUS_ELEPHANT_SHREW =
             REGISTRY.builder(RufousElephantShrewEntity::new, MobCategory.CREATURE)
                     .attributes(RufousElephantShrewEntity::registerAttributes)
-                    .renderer(() -> RufousElephantShrewRenderer::new)
                     .spawns(10, 1, 1, ZawaSpawnCategory.DRY_GRASSLAND)
                     .data(entityBuilder -> entityBuilder.sized(0.3F, 0.3F).clientTrackingRange(8))
                     .build("rufous_elephant_shrew");

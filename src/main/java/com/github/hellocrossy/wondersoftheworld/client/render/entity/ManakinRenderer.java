@@ -14,7 +14,7 @@ public class ManakinRenderer extends ZawaMobRenderer<ManakinEntity, ManakinModel
 
     @Override
     protected void scale(ManakinEntity entity, PoseStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.4F : 0.75F;
+        float scale = entity.isBaby() ? 0.4F : 0.6F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
     }

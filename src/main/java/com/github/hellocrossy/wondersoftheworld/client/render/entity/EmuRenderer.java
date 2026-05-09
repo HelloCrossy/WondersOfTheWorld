@@ -14,7 +14,7 @@ public class EmuRenderer extends ZawaMobRenderer<EmuEntity, EmuModel> {
 
     @Override
     protected void scale(EmuEntity entity, PoseStack matrixStack, float partialTickTime) {
-        float scale = entity.isBaby() ? 0.85F : 1.1F;
+        float scale = entity.isBaby() ? 0.85F : 1.025F;
         matrixStack.scale(scale, scale, scale);
         super.scale(entity, matrixStack, partialTickTime);
 

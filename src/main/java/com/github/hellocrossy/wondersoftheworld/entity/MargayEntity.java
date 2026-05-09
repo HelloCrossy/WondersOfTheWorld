@@ -36,7 +36,7 @@ public class MargayEntity extends ZawaLandEntity {
         super.registerGoals();
         this.goalSelector.addGoal(5, new ZawaMeleeAttackGoal(this, 2.0, 1.33, true));
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(3, new NonTameRandomTargetGoal(this, Player.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0));
+        this.targetSelector.addGoal(3, new NonTameRandomTargetGoal<>(this, Player.class, true, (entity) -> this.distanceToSqr(entity) <= 10.0));
     }
 
     protected float getStandingEyeHeight(Pose pose, EntityDimensions size) {
