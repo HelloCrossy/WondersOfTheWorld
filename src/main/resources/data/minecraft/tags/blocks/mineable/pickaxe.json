@@ -65,6 +65,10 @@
     "wondersoftheworld:light_gray_asphalt",
     "wondersoftheworld:light_gray_asphalt_slab",
     "wondersoftheworld:light_gray_asphalt_stairs",
-    "wondersoftheworld:light_gray_asphalt_wall"
+    "wondersoftheworld:light_gray_asphalt_wall",
+    "wondersoftheworld:framed_black_wire_fence",
+    "wondersoftheworld:black_wire_fence",
+    "wondersoftheworld:supported_black_wire_fence",
+    "wondersoftheworld:straight_black_wire_fence"
   ]
 }
