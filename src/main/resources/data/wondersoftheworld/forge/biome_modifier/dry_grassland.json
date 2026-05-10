@@ -24,13 +24,13 @@
   },
   "spawners": [
     {
-      "type": "wondersoftheworld:hoopoe",
+      "type": "wondersoftheworld:eurasian_hoopoe",
       "weight": 15,
       "minCount": 3,
       "maxCount": 5
     },
     {
-      "type": "wondersoftheworld:hamster",
+      "type": "wondersoftheworld:eurasian_hamster",
       "weight": 15,
       "minCount": 2,
       "maxCount": 4
@@ -43,15 +43,21 @@
     },
     {
       "type": "wondersoftheworld:quetzal",
-      "weight": 15,
+      "weight": 5,
       "minCount": 3,
       "maxCount": 5
     },
     {
-      "type": "wondersoftheworld:dik_dik",
+      "type": "wondersoftheworld:kirks_dik_dik",
       "weight": 10,
       "minCount": 1,
       "maxCount": 2
+    },
+    {
+      "type": "wondersoftheworld:rufous_elephant_shrew",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 1
     }
   ]
 }

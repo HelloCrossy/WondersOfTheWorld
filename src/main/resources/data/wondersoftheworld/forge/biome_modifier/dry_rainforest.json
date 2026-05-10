@@ -32,7 +32,7 @@
     },
     {
       "type": "wondersoftheworld:southern_caracara",
-      "weight": 8,
+      "weight": 10,
       "minCount": 1,
       "maxCount": 2
     }

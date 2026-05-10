@@ -13,7 +13,7 @@
   "spawners": [
     {
       "type": "wondersoftheworld:emu",
-      "weight": 10,
+      "weight": 15,
       "minCount": 3,
       "maxCount": 5
     },
@@ -30,14 +30,14 @@
       "maxCount": 2
     },
     {
-      "type": "wondersoftheworld:cape_buffalo",
+      "type": "wondersoftheworld:african_water_buffalo",
       "weight": 10,
       "minCount": 3,
       "maxCount": 5
     },
     {
       "type": "wondersoftheworld:oryx",
-      "weight": 2,
+      "weight": 8,
       "minCount": 3,
       "maxCount": 4
     },
