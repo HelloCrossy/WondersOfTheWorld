@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "wondersoftheworldgroup",
   "pattern": [
-    "G ",
-    "P "
+    "GP",
+    "PG"
   ],
   "key": {
     "P": [
-      { "item": "wondersoftheworld:savanna_grass" }
+      { "item": "minecraft:wheat_seeds" }
     ],
     "G": [
       { "item": "minecraft:grass" }
     ]
   },
   "result": {
-    "item": "wondersoftheworld:savanna_bush",
-    "count": 2
+    "item": "wondersoftheworld:weeds",
+    "count": 4
   }
 }

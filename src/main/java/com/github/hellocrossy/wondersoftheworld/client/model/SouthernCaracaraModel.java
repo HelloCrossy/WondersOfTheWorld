@@ -166,7 +166,7 @@ public abstract class SouthernCaracaraModel extends ZawaBaseModel<SouthernCaraca
             float speed = 1.0f;
             float degree = 1.0f;
             this.Neck1.xRot = Mth.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * 0.1F) * 0.5F + 0.774F;
-            this.Head.xRot = Mth.cos(3.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.3F) * 0.5F - 1.234F;
+            this.Head.xRot = Mth.cos(2.0F + limbSwing * speed * 0.1F) * limbSwingAmount * (degree * -0.2F) * 0.5F - 1.234F;
         }
 
         @Override

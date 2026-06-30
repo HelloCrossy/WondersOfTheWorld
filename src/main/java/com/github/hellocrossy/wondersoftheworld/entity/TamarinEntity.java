@@ -73,7 +73,7 @@ public class TamarinEntity extends ZawaLandEntity implements SpeciesVariantsEnti
         return this.isClimbing();
     }
 
-    public boolean causeFallDamage(float distance, float damageMultiplier) {
+    public boolean causeFallDamage(float fallDistance, float multiplier, DamageSource source) {
         return false;
     }
 
