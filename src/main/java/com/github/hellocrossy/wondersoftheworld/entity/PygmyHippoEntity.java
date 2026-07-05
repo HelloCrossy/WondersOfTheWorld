@@ -45,7 +45,7 @@ public class PygmyHippoEntity extends ZawaSemiAquaticEntity {
 
     @Override
     public boolean canBabySwim() {
-        return false;
+        return true;
     }
 
     @Override
