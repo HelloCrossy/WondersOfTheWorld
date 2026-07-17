@@ -5,10 +5,14 @@ import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
 import net.minecraft.Util;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
@@ -17,10 +21,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.zawamod.zawa.world.block.PlantBlock;
-import org.zawamod.zawa.world.block.PlushBlock;
-import org.zawamod.zawa.world.block.ZawaFenceBlock;
-import org.zawamod.zawa.world.block.ZawaFenceGateBlock;
+import org.zawamod.zawa.world.block.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -109,6 +110,7 @@ public class WOTWBlocks {
 
     public static final RegistryObject<Block> GLASS_KEEPER_DOOR = registerWithItem("glass_keeper_door", () -> new DoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(3.0F).sound(SoundType.METAL).noOcclusion(), BlockSetType.STONE));
     public static final RegistryObject<Block> VERTICAL_PLANK_DOOR = registerWithItem("vertical_plank_door", () -> new DoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(3.0F).sound(SoundType.WOOD).noOcclusion(), BlockSetType.OAK));
+    public static final RegistryObject<Block> BLACK_WIRE_BARS = registerWithItem("black_wire_bars", () -> new GlassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(2.0F, 3.0F).sound(SoundType.METAL).noOcclusion().isValidSpawn(WOTWBlocks::neverSpawns).isRedstoneConductor(WOTWBlocks::never).isSuffocating(WOTWBlocks::never).isViewBlocking(WOTWBlocks::never)));
     public static final RegistryObject<Block> BLACK_WIRE_FENCE = registerWithItem("black_wire_fence", () -> new IronBarsBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(2.0F, 3.0F).sound(SoundType.METAL).noOcclusion()));
     public static final RegistryObject<Block> FRAMED_BLACK_WIRE_FENCE = registerWithItem("framed_black_wire_fence", () -> new IronBarsBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(2.0F, 3.0F).sound(SoundType.METAL).noOcclusion()));
     public static final RegistryObject<Block> SUPPORTED_BLACK_WIRE_FENCE = registerWithItem("supported_black_wire_fence", () -> new IronBarsBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(2.0F, 3.0F).sound(SoundType.METAL).noOcclusion()));
@@ -125,6 +127,13 @@ public class WOTWBlocks {
         RegistryObject<T> registryObject = REGISTRAR.register(name, block);
         WOTWItems.DECORATIONS_REGISTRAR.register(name, () -> new BlockItem(registryObject.get(), new Item.Properties()));
         return registryObject;
+    }
+    private static boolean neverSpawns(BlockState state, BlockGetter reader, BlockPos pos, EntityType<?> type) {
+        return false;
+    }
+
+    private static boolean never(BlockState state, BlockGetter reader, BlockPos pos) {
+        return false;
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -143,6 +152,7 @@ public class WOTWBlocks {
         ItemBlockRenderTypes.setRenderLayer(SAVANNA_GRASS.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(BRUSH_GRASS.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(BLACK_WIRE_FENCE.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(BLACK_WIRE_BARS.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(FRAMED_BLACK_WIRE_FENCE.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(SUPPORTED_BLACK_WIRE_FENCE.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(STRAIGHT_BLACK_WIRE_FENCE.get(), cutout);
