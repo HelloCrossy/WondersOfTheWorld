@@ -3,7 +3,8 @@
   "group": "wondersoftheworldgroup",
   "pattern": [
     "G ",
-    "P "
+    "P ",
+    "   "
   ],
   "key": {
     "P": [

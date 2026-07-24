@@ -1,33 +1,33 @@
 package com.github.hellocrossy.wondersoftheworld.entity;
 
 import com.github.hellocrossy.wondersoftheworld.item.WOTWItems;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
+import net.minecraft.entity.AgeableEntity;
+import net.minecraft.entity.EntitySize;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.Pose;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
+import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import org.zawamod.zawa.world.entity.ai.goal.GroupPanicGoal;
 import org.zawamod.zawa.world.entity.ambient.ZawaAmbientFishEntity;
 
 import javax.annotation.Nullable;
 
 public class FlowerhornCichlidEntity extends ZawaAmbientFishEntity {
-    public FlowerhornCichlidEntity(EntityType<? extends ZawaAmbientFishEntity> type, Level world) {
+    public FlowerhornCichlidEntity(EntityType<? extends ZawaAmbientFishEntity> type, World world) {
         super(type, world);
     }
 
-    public static AttributeSupplier.Builder registerAttributes() {
+    public static AttributeModifierMap.MutableAttribute registerAttributes() {
         return createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.255F).add(Attributes.MAX_HEALTH, 4.0);
     }
 
     @Override
-    public ItemStack getBucketItemStack() {
+    protected ItemStack getBucketItemStack() {
         return new ItemStack(WOTWItems.FLOWERHORN_CICHILID_BUCKET.get());
     }
 
@@ -39,11 +39,11 @@ public class FlowerhornCichlidEntity extends ZawaAmbientFishEntity {
 
     @Nullable
     @Override
-    public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob entity) {
+    public AgeableEntity getBreedOffspring(ServerWorld world, AgeableEntity entity) {
         return WOTWEntities.FLOWERHORN_CICHILID.get().create(world);
     }
 
-    protected float getStandingEyeHeight(Pose pose, EntityDimensions size) {
+    protected float getStandingEyeHeight(Pose pose, EntitySize size) {
         return size.height * 0.85F;
     }
 

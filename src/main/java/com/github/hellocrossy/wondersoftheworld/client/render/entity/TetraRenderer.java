@@ -2,21 +2,20 @@ package com.github.hellocrossy.wondersoftheworld.client.render.entity;
 
 import com.github.hellocrossy.wondersoftheworld.WondersOfTheWorld;
 import com.github.hellocrossy.wondersoftheworld.client.model.TetraModel;
-import com.github.hellocrossy.wondersoftheworld.client.model.WOTWModelLayers;
 import com.github.hellocrossy.wondersoftheworld.entity.TetraEntity;
-import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.resources.ResourceLocation;
+import com.mojang.blaze3d.matrix.MatrixStack;
+import net.minecraft.client.renderer.entity.EntityRendererManager;
+import net.minecraft.util.ResourceLocation;
 import org.zawamod.zawa.client.renderer.entity.ZawaMobRenderer;
 import org.zawamod.zawa.resources.EntityStatsManager;
 
 public class TetraRenderer extends ZawaMobRenderer<TetraEntity, TetraModel> {
-    public TetraRenderer(EntityRendererProvider.Context context) {
-        super(context, new TetraModel(context.bakeLayer(WOTWModelLayers.TETRA)), 0.2F);
+    public TetraRenderer(EntityRendererManager manager) {
+        super(manager, new TetraModel(), 0.2F);
     }
 
     @Override
-    protected void scale(TetraEntity entity, PoseStack matrixStack, float partialTickTime) {
+    protected void scale(TetraEntity entity, MatrixStack matrixStack, float partialTickTime) {
         matrixStack.scale(0.3F, 0.3F, 0.3F);
         super.scale(entity, matrixStack, partialTickTime);
     }
