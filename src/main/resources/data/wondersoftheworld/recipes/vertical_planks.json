@@ -2,20 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "group": "wondersoftheworldgroup",
   "pattern": [
-    "PGP",
-    "PGP",
-    "PGP"
+    "GP",
+    "PG"
   ],
   "key": {
     "P": [
-      { "item": "minecraft:spruce_planks" }
+      { "tag": "minecraft:planks" }
     ],
     "G": [
-      { "item": "zawa:yellow_bamboo" }
+      { "item": "minecraft:bamboo" },
+      { "item": "zawa:yellow_bamboo" },
+      { "item": "zawa:black_bamboo" }
     ]
   },
   "result": {
     "item": "wondersoftheworld:vertical_planks",
-    "count": 8
+    "count": 4
   }
 }
