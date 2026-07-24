@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "wondersoftheworld:block/aquarium_door_bottom",
+    "top": "wondersoftheworld:block/aquarium_door_top"
+  }
+}
