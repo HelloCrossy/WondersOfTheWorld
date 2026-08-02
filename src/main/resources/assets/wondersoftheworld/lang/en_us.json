@@ -172,13 +172,12 @@
   "block.wondersoftheworld.glass_keeper_door": "Glass Keeper Door",
   "block.wondersoftheworld.black_wire_fence": "Black Wire Fence",
   "block.wondersoftheworld.black_wire_bars": "Black Wire Bars",
+  "block.wondersoftheworld.black_wire_trapdoor": "Black Wire Trapdoor",
   "block.wondersoftheworld.framed_black_wire_fence": "Framed Black Wire Fence",
   "block.wondersoftheworld.straight_black_wire_fence": "Straight Black Wire Fence",
   "block.wondersoftheworld.supported_black_wire_fence": "Supported Black Wire Fence",
   "block.wondersoftheworld.dried_bamboo_fence": "Dried Bamboo Fence",
   "block.wondersoftheworld.dried_bamboo_fence_gate": "Dried Bamboo Fence Gate",
-  
-  
 
   "__comment": "Items",
   "item.wondersoftheworld.takin_spawn_egg": "Takin Spawn Egg",

@@ -115,6 +115,7 @@ public class WOTWBlocks {
     public static final RegistryObject<Block> FRAMED_BLACK_WIRE_FENCE = registerWithItem("framed_black_wire_fence", () -> new IronBarsBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(2.0F, 3.0F).sound(SoundType.METAL).noOcclusion()));
     public static final RegistryObject<Block> SUPPORTED_BLACK_WIRE_FENCE = registerWithItem("supported_black_wire_fence", () -> new IronBarsBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(2.0F, 3.0F).sound(SoundType.METAL).noOcclusion()));
     public static final RegistryObject<Block> STRAIGHT_BLACK_WIRE_FENCE = registerWithItem("straight_black_wire_fence", () -> new IronBarsBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(2.0F, 3.0F).sound(SoundType.METAL).noOcclusion()));
+    public static final RegistryObject<Block> BLACK_WIRE_TRAPDOOR = registerWithItem("black_wire_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(3.0F).sound(SoundType.METAL).noOcclusion(), BlockSetType.STONE));
     public static final RegistryObject<Block> DRIED_BAMBOO_FENCE = registerWithItem("dried_bamboo_fence", () -> new ZawaFenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.5F).sound(SoundType.BAMBOO)));
     public static final RegistryObject<Block> DRIED_BAMBOO_FENCE_GATE = registerWithItem("dried_bamboo_fence_gate", () -> new ZawaFenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.5F).sound(SoundType.BAMBOO), WoodType.BAMBOO));
 
@@ -142,6 +143,7 @@ public class WOTWBlocks {
         RenderType cutout = RenderType.cutout();
         ItemBlockRenderTypes.setRenderLayer(KEEPER_DOOR.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(KEEPER_TRAPDOOR.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(BLACK_WIRE_TRAPDOOR.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(GLASS_KEEPER_DOOR.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(VERTICAL_PLANK_DOOR.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(AQUARIUM_DOOR.get(), cutout);
