@@ -38,6 +38,13 @@
   "entity.wondersoftheworld.gaboon_viper": "Gaboon Viper",
   "entity.wondersoftheworld.southern_caracara": "Southern Caracara",
   "entity.wondersoftheworld.rufous_elephant_shrew": "Rufous Elephant Shrew",
+  "entity.wondersoftheworld.gelada": "Gelada",
+  "entity.wondersoftheworld.white_tailed_deer": "White Tailed Deer",
+  "entity.wondersoftheworld.wild_boar": "Wild Boar",
+  "entity.wondersoftheworld.wolverine": "Wolverine",
+  "entity.wondersoftheworld.north_sulawesi_babirusa": "North Sulawesi Babirusa",
+  "entity.wondersoftheworld.curassow": "Curassow",
+  "entity.wondersoftheworld.black_footed_cat": "Black Footed Cat",
 
   "__comment": "Sound Subtitles",
   "subtitle.wondersoftheworld.takin_ambient": "Takin Whups",
@@ -241,6 +248,15 @@
   "item.wondersoftheworld.southern_caracara_egg": "Southern Caracara Egg",
 
   "item.wondersoftheworld.rufous_elephant_shrew_spawn_egg": "Rufous Elephant Shrew Spawn Egg",
+
+  "item.wondersoftheworld.gelada_spawn_egg": "Gelada Spawn Egg",
+  "item.wondersoftheworld.wild_boar_spawn_egg": "Wild Boar Spawn Egg",
+  "item.wondersoftheworld.wolverine_spawn_egg": "Wolverine Spawn Egg",
+  "item.wondersoftheworld.white_tailed_deer_spawn_egg": "White Tailed Deer Spawn Egg",
+  "item.wondersoftheworld.north_sulawesi_babirusa_spawn_egg": "North Sulawesi Babirusa Spawn Egg",
+  "item.wondersoftheworld.curassow_spawn_egg": "Curassow Spawn Egg",
+  "item.wondersoftheworld.curassow_egg": "Curassow Egg",
+  "item.wondersoftheworld.black_footed_cat_spawn_egg": "Black Footed Cat Spawn Egg",
   
   "__comment": "1.0 Data Books",
   "scientific.wondersoftheworld.takin_0": "Burdorcas taxicolor taxicolor",

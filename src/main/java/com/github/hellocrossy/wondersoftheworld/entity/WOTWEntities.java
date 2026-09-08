@@ -317,6 +317,62 @@ public class WOTWEntities {
                     .data(entityBuilder -> entityBuilder.sized(0.3F, 0.3F).clientTrackingRange(10))
                     .build("rufous_elephant_shrew");
 
+    public static final RegistryObject<EntityType<WhiteTailedDeerEntity>> WHITE_TAILED_DEER =
+            REGISTRY.builder(WhiteTailedDeerEntity::new, EntityClassification.CREATURE)
+                    .attributes(WhiteTailedDeerEntity::registerAttributes)
+                    .renderer(() -> WhiteTailedDeerRenderer::new)
+                    .spawns(10, 1, 1, ZawaSpawnCategory.DRY_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 1.0F).clientTrackingRange(10))
+                    .build("white_tailed_deer");
+
+    public static final RegistryObject<EntityType<BlackFootedCatEntity>> BLACK_FOOTED_CAT =
+            REGISTRY.builder(BlackFootedCatEntity::new, EntityClassification.CREATURE)
+                    .attributes(BlackFootedCatEntity::registerAttributes)
+                    .renderer(() -> BlackFootedCatRenderer::new)
+                    .spawns(10, 1, 1, ZawaSpawnCategory.DRY_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(0.5F, 0.5F).clientTrackingRange(10))
+                    .build("black_footed_cat");
+
+    public static final RegistryObject<EntityType<CurassowEntity>> CURASSOW =
+            REGISTRY.builder(CurassowEntity::new, EntityClassification.CREATURE)
+                    .attributes(CurassowEntity::registerAttributes)
+                    .renderer(() -> CurassowRenderer::new)
+                    .spawns(10, 1, 1, ZawaSpawnCategory.DRY_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 1.0F).clientTrackingRange(10))
+                    .build("curassow");
+
+    public static final RegistryObject<EntityType<WolverineEntity>> WOLVERINE =
+            REGISTRY.builder(WolverineEntity::new, EntityClassification.CREATURE)
+                    .attributes(WolverineEntity::registerAttributes)
+                    .renderer(() -> WolverineRenderer::new)
+                    .spawns(10, 1, 1, ZawaSpawnCategory.DRY_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 1.0F).clientTrackingRange(10))
+                    .build("wolverine");
+
+    public static final RegistryObject<EntityType<NorthSulawesiBabirusaEntity>> NORTH_SULAWESI_BABIRUSA =
+            REGISTRY.builder(NorthSulawesiBabirusaEntity::new, EntityClassification.CREATURE)
+                    .attributes(NorthSulawesiBabirusaEntity::registerAttributes)
+                    .renderer(() -> NorthSulawesiBabirusaRenderer::new)
+                    .spawns(10, 1, 1, ZawaSpawnCategory.DRY_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(0.75F, 1.0F).clientTrackingRange(10))
+                    .build("north_sulawesi_babirusa");
+
+    public static final RegistryObject<EntityType<GeladaEntity>> GELADA =
+            REGISTRY.builder(GeladaEntity::new, EntityClassification.CREATURE)
+                    .attributes(GeladaEntity::registerAttributes)
+                    .renderer(() -> GeladaRenderer::new)
+                    .spawns(10, 1, 1, ZawaSpawnCategory.DRY_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 1.0F).clientTrackingRange(10))
+                    .build("gelada");
+
+    public static final RegistryObject<EntityType<WildBoarEntity>> WILD_BOAR =
+            REGISTRY.builder(WildBoarEntity::new, EntityClassification.CREATURE)
+                    .attributes(WildBoarEntity::registerAttributes)
+                    .renderer(() -> WildBoarRenderer::new)
+                    .spawns(10, 1, 1, ZawaSpawnCategory.DRY_SAVANNA)
+                    .data(entityBuilder -> entityBuilder.sized(0.6F, 1.0F).clientTrackingRange(10))
+                    .build("wild_boar");
+    
     public static void registerSpawnPlacements() {
         EntitySpawnPlacementRegistry.register(TAKIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);
         EntitySpawnPlacementRegistry.register(WESTERN_LOWLAND_BONGO.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ZawaBaseEntity::checkLandSpawnRules);

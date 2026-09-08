@@ -66,6 +66,5 @@ public class WOTWItems {
     public static final RegistryObject<Item> HAMMERKOP_EGG = REGISTRAR.register("hammerkop_egg", () -> new ZawaEggItem(WOTWEntities.HAMMERKOP, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item> SOUTHERN_CARACARA_EGG = REGISTRAR.register("southern_caracara_egg", () -> new ZawaEggItem(WOTWEntities.SOUTHERN_CARACARA, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
     public static final RegistryObject<Item> GABOON_VIPER_EGG = REGISTRAR.register("gaboon_viper_egg", () -> new ZawaEggItem(WOTWEntities.GABOON_VIPER, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
-
-
+    public static final RegistryObject<Item> CURASSOW_EGG = REGISTRAR.register("curassow_egg", () -> new ZawaEggItem(WOTWEntities.CURASSOW, new Item.Properties().stacksTo(16).tab(Zawa.ITEMS_GROUP)));
 }
